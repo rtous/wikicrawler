@@ -1,0 +1,66 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Firefly.png"><img alt="" class="thumbimage" data-file-height="454" data-file-width="537" decoding="async" height="169" src="/pti/images/thumb/d/d7/Firefly.png/200px-Firefly.png" srcset="/pti/images/thumb/d/d7/Firefly.png/300px-Firefly.png 1.5x, /pti/images/thumb/d/d7/Firefly.png/400px-Firefly.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Firefly.png" title="Enlarge"></a></div>Logo del proyecto.</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:1425px;"><a class="image" href="/pti/index.php/File:Principal.png"><img alt="" class="thumbimage" data-file-height="972" data-file-width="1908" decoding="async" height="725" src="/pti/images/thumb/e/ea/Principal.png/1423px-Principal.png" srcset="/pti/images/e/ea/Principal.png 1.5x" width="1423"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Principal.png" title="Enlarge"></a></div>Pagina principal</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_FileFly.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es FileFly?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura_y_Stack_Tecnol.C3.B3gico"><span class="tocnumber">2</span> <span class="toctext">Infraestructura y Stack Tecnológico</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Integraci.C3.B3n_continua_y_desligue_continuo_.28CI.2FCD.29"><span class="tocnumber">3</span> <span class="toctext">Integración continua y desligue continuo (CI/CD)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Github_Actions"><span class="tocnumber">3.1</span> <span class="toctext">Github Actions</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Docker"><span class="tocnumber">3.2</span> <span class="toctext">Docker</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Cuando empezamos a pensar en el proyecto que nos gustaría implementar, dándole vueltas a la cabeza se nos ocurrió está aplicación llamada FileFly. Básicamente esta aplicación consiste en una página web para el intercambio de ficheros.
+</p>
+<h2><span id="¿Qué_es_FileFly?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_FileFly.3F">¿Qué es FileFly?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es FileFly?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es FileFly?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Todos conocemos mil páginas en las que podemos intercambiar ficheros pero en prácticamente todas necesitamos registrarnos y dejar datos personales con los que nos pueden relacionar. De esto se trata la innovación de nuestro proyecto, en nuestra aplicación no necesitaremos registrarnos para poder compartir ficheros, simplemente se pedirá al usuario los campos necesarios para subir el fichero y de esta forma se le otorgara un enlace mediante el que se podrá descargar el contenido.
+</p><p>Nuestra idea también es hacer ficheros efímeros, es decir, ficheros que no perduran para la eternidad, por ejemplo un usuario puede subir un archivo con limitación de tiempo y de numero de descargas. 
+</p>
+<h1><span id="Infraestructura_y_Stack_Tecnológico"></span><span class="mw-headline" id="Infraestructura_y_Stack_Tecnol.C3.B3gico">Infraestructura y Stack Tecnológico</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura y Stack Tecnológico">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=3" title="Edit section: Infraestructura y Stack Tecnológico">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:398px;"><a class="image" href="/pti/index.php/File:Stack_MERN%C3%8D.png"><img alt="" class="thumbimage" data-file-height="364" data-file-width="809" decoding="async" height="178" src="/pti/images/thumb/a/aa/Stack_MERN%C3%8D.png/396px-Stack_MERN%C3%8D.png" srcset="/pti/images/thumb/a/aa/Stack_MERN%C3%8D.png/594px-Stack_MERN%C3%8D.png 1.5x, /pti/images/thumb/a/aa/Stack_MERN%C3%8D.png/792px-Stack_MERN%C3%8D.png 2x" width="396"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Stack_MERN%C3%8D.png" title="Enlarge"></a></div>Stack MERNÍ</div></div></div>
+<p>Nuestro infraestructura consiste de distintos componentes. En primer lugar todo esta hosteado en DigitalOcean una nube publica que concede créditos gratuitos a estudiantes para proyectos como este. En ella tenemos nuestras maquinas virtuales, donde corre la aplicación, bases de datos y el almacenamiento.
+</p><p>Nuestra aplicación esta compuesta por diferentes tecnologías de las cuáles podríamos decir que no son las mas habituales para este tipo de aplicaciones, usamos un stack tecnológico llamado MERN, M de MongoDB, E de Express, R de React y por último N de Nodejs, todo este stack combinado con IPFS.
+</p><p><br/>
+</p><p><br/>
+</p>
+<h1><span id="Integración_continua_y_desligue_continuo_(CI/CD)"></span><span class="mw-headline" id="Integraci.C3.B3n_continua_y_desligue_continuo_.28CI.2FCD.29">Integración continua y desligue continuo (CI/CD)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=4" title="Edit section: Integración continua y desligue continuo (CI/CD)">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=4" title="Edit section: Integración continua y desligue continuo (CI/CD)">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Una de las tareas más repetitivas en un proyecto de software es el proceso de build y deploy de la aplicación. Si estas deben realizarse de manera manual cada vez que queremos testear la aplicación o desplegarla para producción acabaremos invirtiendo en ellas tiempo que podría haberse dedicado al desarrollo de la aplicación.
+</p>
+<h2><span class="mw-headline" id="Github_Actions">Github Actions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=5" title="Edit section: Github Actions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=5" title="Edit section: Github Actions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dado que ya estábamos usando GitHub antes de decidir que herramienta de CI/CD usaríamos, optamos por usar el sistema de GitHub Actions. Actions permite definir una serie de tareas que se realizan cuando ocurren determinadas acciones en el repositorio, como por ejemplo un push en una rama. Cada tarea tiene una serie de pasos a realizar y se pueden definir dependencias entre tareas.
+</p><p>En nuestro proyecto hemos definido 3 tareas diferenciadas. Una primera acción para comprobar que la aplicación funciona y no produce errores de compilación, una segunda para compilar tanto el frontend como el backend y construir una imagen Docker a partir de ambos y una tercera para desplegar la imagen creada en DigitalOcean.
+</p>
+<h2><span class="mw-headline" id="Docker">Docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;veaction=edit&amp;section=6" title="Edit section: Docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FileFly&amp;action=edit&amp;section=6" title="Edit section: Docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Como ya se ha comentado en el apartado anterior, hemos utilizado Docker para realizar el despliegue de la aplicación. Docker no solo nos permite ofrecer una imagen compacta con la aplicación, sino que gracias al registro de contenedores de DigitalOcean también podemos acceder a estas de manera rápida y sencilla desde las VM.
+</p><p>Para nuestra imagen hemos escogido una distribución ligera como es AlpineLinux. En caso de necesitar escalar en el futuro podríamos dividir la aplicación en dos microservicios de backend y frontend para replicarlos con un sistema de orquestración como Docker Swarm o Kubernetes.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083840
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.020 seconds
+Real time usage: 0.027 seconds
+Preprocessor visited node count: 20/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:617-0!canonical and timestamp 20250710083840 and revision id 1333
+ -->
+</div>

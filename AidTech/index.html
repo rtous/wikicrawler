@@ -1,0 +1,40 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:442px;"><a class="image" href="/pti/index.php/File:LogoPTIBig.png"><img alt="" class="thumbimage" data-file-height="719" data-file-width="677" decoding="async" height="467" src="/pti/images/thumb/6/61/LogoPTIBig.png/440px-LogoPTIBig.png" srcset="/pti/images/thumb/6/61/LogoPTIBig.png/660px-LogoPTIBig.png 1.5x, /pti/images/6/61/LogoPTIBig.png 2x" width="440"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:LogoPTIBig.png" title="Enlarge"></a></div>Logo</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:759px;"><a class="image" href="/pti/index.php/File:HomePage.png"><img alt="" class="thumbimage" data-file-height="815" data-file-width="1845" decoding="async" height="334" src="/pti/images/thumb/0/00/HomePage.png/757px-HomePage.png" srcset="/pti/images/thumb/0/00/HomePage.png/1136px-HomePage.png 1.5x, /pti/images/thumb/0/00/HomePage.png/1514px-HomePage.png 2x" width="757"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:HomePage.png" title="Enlarge"></a></div>HomePage</div></div></div></div>
+<p><br/>
+</p>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para nuestro proyecto de la asignatura de Proyecto de Tecnologías de la Información, decidimos desarrollar una aplicación web para conectar voluntarios con diferentes oportunidades de voluntariado. 
+</p>
+<h2><span id="¿Qué_es_AIDTECH?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_AIDTECH.3F">¿Qué es AIDTECH?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es AIDTECH?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es AIDTECH?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Aidtech es una aplicación que permite a los usuarios aplicar a ofertas creadas por empresas participantes, los usuarios pueden customizar sus preferencias para mostrar aquellas en las que estén mas interesados y ver la ubicación de las ofertas en un mapa interactivo. Además, se integra un modelo de LLM para la asistencia de los usuarios y existe implementado un sistema de mensajes global para promover la comunicación entre los voluntarios y las entidades. Se dispone de un sistema de credenciales verificables para validar las certificaciones de los usuarios como cursos que hayan realizado y un sistema de CI/CD que actualiza los cambios de desarrollo hechos en la aplicación automáticamente.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:AidTech&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La aplicación se encontraba hosteada en las Máquinas Virtuales de openNebula disponibles para el proyecto. Debido al sistema de CI/CD, los contenedores docker de la aplicación se encontraban dentro de una instancia de minikube, que utilizábamos para actualizar el contenido de la página con cambios en nuestro repositorio, se explica en más detalle en el apartado de implementación de CI/CD. Los tres contenedores son el frontend, y las apis de Backend y BD. Originalmente, queríamos que la BD funcionase localmente y se situase separada en su propia máquina virtual, pero finalmente por simplicidad la BD accede a una instancia de MongoDB Atlas en la nube. 
+</p><p>Las máquinas virtuales equipadas con NAT se podían acceder desde internet, desde el link http://nattech.fib.upc.edu:40470/. El puerto 40470 se traduce al puerto 8080 de la VM, y mediante un proxy de nginx redirigimos el tráfico al puerto 30007 del cluster de kubernetes, para acceder a la página interna.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Arquitectura_diagrama.drawio.png"><img alt="" class="thumbimage" data-file-height="714" data-file-width="996" decoding="async" height="215" src="/pti/images/thumb/0/00/Arquitectura_diagrama.drawio.png/300px-Arquitectura_diagrama.drawio.png" srcset="/pti/images/thumb/0/00/Arquitectura_diagrama.drawio.png/450px-Arquitectura_diagrama.drawio.png 1.5x, /pti/images/thumb/0/00/Arquitectura_diagrama.drawio.png/600px-Arquitectura_diagrama.drawio.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Arquitectura_diagrama.drawio.png" title="Enlarge"></a></div>Arquitectura de la Aplicación</div></div></div>
+<p>Externamente, en un ordenador actuando como servidor, hosteamos el chabot. Haciendo port forwarding por el router propio, para que se pueda resolver la petición del embed, mediante la dirección http://83.50.44.112:3001/api/embed, que contiene la IP del router y el puerto de AnythingLLM. Cada vez que la dirección pública se modifica por el ISP, hace falta cambiar el contenido del embed.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250709134557
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.021 seconds
+Real time usage: 0.024 seconds
+Preprocessor visited node count: 16/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 67/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:874-0!canonical and timestamp 20250709134557 and revision id 2111
+ -->
+</div>

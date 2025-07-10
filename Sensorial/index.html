@@ -1,0 +1,76 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_SensaReal.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es SensaReal?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Sensores_y_comunicaci.C3.B3n"><span class="tocnumber">2.1</span> <span class="toctext">Sensores y comunicación</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Backend_y_procesamiento_de_datos"><span class="tocnumber">2.2</span> <span class="toctext">Backend y procesamiento de datos</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Frontend_e_interfaz_de_usuario"><span class="tocnumber">2.3</span> <span class="toctext">Frontend e interfaz de usuario</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Despliegue_y_orquestaci.C3.B3n"><span class="tocnumber">2.4</span> <span class="toctext">Despliegue y orquestación</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Conclusi.C3.B3n"><span class="tocnumber">3</span> <span class="toctext">Conclusión</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="¿Qué_es_SensaReal?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_SensaReal.3F">¿Qué es SensaReal?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es SensaReal?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es SensaReal?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SensaReal es una plataforma de monitoreo ambiental que permite a los usuarios visualizar en tiempo real las condiciones de temperatura y humedad en distintos entornos físicos. La solución fue diseñada para ser accesible, precisa y escalable, permitiendo su uso tanto en contextos domésticos como en laboratorios, invernaderos, almacenes, entre otros.
+</p><p>La idea central surge de la necesidad de contar con una herramienta confiable que permita registrar, analizar y alertar sobre condiciones ambientales fuera de lo esperado. Para ello, se construyó un sistema que integra sensores físicos, protocolos de comunicación eficientes para IoT, una base de datos relacional y una interfaz web moderna.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La arquitectura de SensaReal se basa en una estructura modular y distribuida, dividida en tres capas principales: la capa de datos (sensores y microcontroladores), la capa de lógica (backend y base de datos) y la capa de presentación (frontend web).
+</p>
+<h2><span id="Sensores_y_comunicación"></span><span class="mw-headline" id="Sensores_y_comunicaci.C3.B3n">Sensores y comunicación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=4" title="Edit section: Sensores y comunicación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=4" title="Edit section: Sensores y comunicación">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En la base del sistema se encuentran sensores digitales **DHT22**, encargados de medir temperatura y humedad relativa con buena precisión y bajo consumo energético. Estos sensores están conectados a microcontroladores **ESP32**, dispositivos que combinan capacidad de procesamiento con conectividad WiFi.
+</p><p>El ESP32 toma lecturas del sensor cada pocos segundos y transmite la información utilizando el protocolo **MQTT**, un estándar liviano ideal para entornos IoT. Para ello, cada ESP32 se conecta a una red WiFi local y publica los datos en un **broker Mosquitto**, en tópicos identificados por cada sensor. Esta comunicación de tipo *publisher/subscriber* permite una transmisión eficiente, tolerante a desconexiones, y sin necesidad de solicitudes constantes desde el servidor.
+</p>
+<h2><span class="mw-headline" id="Backend_y_procesamiento_de_datos">Backend y procesamiento de datos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=5" title="Edit section: Backend y procesamiento de datos">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=5" title="Edit section: Backend y procesamiento de datos">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El backend del sistema, desarrollado con **Node.js** y el framework **Express**, se encarga de recibir las mediciones desde el broker MQTT. Se encuentra suscripto a los tópicos correspondientes, y cada mensaje recibido se valida, se procesa y se guarda en una base de datos **MySQL**, junto con su respectivo timestamp.
+</p><p>Además de manejar los datos de los sensores, el backend ofrece una **API RESTful** que permite a los usuarios interactuar con el sistema: registrarse, iniciar sesión, registrar sensores, configurar umbrales de alerta y visualizar los datos históricos. Cada solicitud está protegida con **tokens JWT**, lo que garantiza sesiones seguras y sin estado.
+</p><p>El backend también implementa mecanismos de alerta: si una medición excede los límites configurados por el usuario, se genera automáticamente una alerta asociada, que puede luego ser visualizada en la interfaz o gestionada para futuras notificaciones.
+</p>
+<h2><span class="mw-headline" id="Frontend_e_interfaz_de_usuario">Frontend e interfaz de usuario</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=6" title="Edit section: Frontend e interfaz de usuario">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=6" title="Edit section: Frontend e interfaz de usuario">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La capa de presentación fue desarrollada utilizando **Vue 3**, responsiva y centrada en la experiencia del usuario. La interfaz permite:
+</p><p>- Visualizar los sensores registrados y sus mediciones más recientes en gráficos actualizados en tiempo real.
+- Configurar los sensores (nombre, ubicación, límites de temperatura y humedad).
+- Gestionar alertas y estados.
+- Acceder a datos históricos.
+</p><p>Para la gestión del estado se utilizó **Pinia**, lo que facilita mantener sincronizada la información del usuario, sensores y alertas. La comunicación con el backend se realiza exclusivamente mediante la API REST, utilizando tokens JWT para cada solicitud.
+</p>
+<h2><span id="Despliegue_y_orquestación"></span><span class="mw-headline" id="Despliegue_y_orquestaci.C3.B3n">Despliegue y orquestación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=7" title="Edit section: Despliegue y orquestación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=7" title="Edit section: Despliegue y orquestación">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Todos los servicios de SensaReal (frontend, backend, base de datos y broker MQTT) están contenidos en **Docker** y desplegados utilizando **Kubernetes**. El despliegue se realizó sobre una infraestructura de **máquinas virtuales**, gestionadas a través de **OpenNebula**, siguiendo una arquitectura con un nodo maestro y dos worker nodes.
+</p><p>Se utilizaron archivos de configuración generados mediante **kompose** para traducir la estructura definida en `docker-compose.yaml` al formato necesario para Kubernetes. Los servicios públicos son expuestos mediante un proxy inverso **nginx**, que enruta el tráfico hacia los pods correspondientes, utilizando distintos puertos externos para acceder a frontend, backend y MQTT.
+</p><p>La base de datos es accedida únicamente a través de túneles SSH para garantizar la seguridad, y se aplicaron mecanismos como `imagePullPolicy: IfNotPresent`, almacenamiento local persistente, y monitoreo del estado de los pods mediante `kubectl`.
+</p>
+<h1><span id="Conclusión"></span><span class="mw-headline" id="Conclusi.C3.B3n">Conclusión</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;veaction=edit&amp;section=8" title="Edit section: Conclusión">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Sensorial&amp;action=edit&amp;section=8" title="Edit section: Conclusión">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>SensaReal integra de manera eficiente hardware de bajo costo con software moderno y tecnologías de contenedorización, resultando en una solución práctica y escalable para el monitoreo ambiental.
+</p><p>Gracias al uso de tecnologías como **ESP32**, **MQTT**, **Node.js**, **Vue 3**, **MySQL**, **Docker** y **Kubernetes**, el proyecto ofrece una arquitectura robusta, extensible y alineada con buenas prácticas tanto en el desarrollo web como en entornos IoT.
+</p><p>El sistema no solo permite visualizar datos en tiempo real, sino también gestionar sensores y alertas de forma intuitiva, lo cual lo convierte en una herramienta útil para diversas aplicaciones donde el control ambiental es crítico.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083848
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.006 seconds
+Real time usage: 0.007 seconds
+Preprocessor visited node count: 23/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:872-0!canonical and timestamp 20250710083848 and revision id 2182
+ -->
+</div>

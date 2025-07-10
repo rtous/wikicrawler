@@ -1,0 +1,82 @@
+<div class="mw-parser-output"><div id="bodyDiv" style="text-align:center; background-color:#D0D0D0;padding:15px; font-family: 'Trebuchet MS', Helvetica, sans-serif">
+<p style="font-size:100px">  Rasp<a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Smalllogo.png" title="File:Smalllogo.png">File:Smalllogo.png</a>Media </p>
+<div id="MainDiv" style="background-color: #B8B8B8; width:70%; margin:0 auto; padding:15px; border-radius:10px; font-size:14px;">
+<p>Entrega final: 30 - 5 - 2014</p>
+<p><br/>
+</p>
+<p align="justify">RaspMedia és un media center controlat remotament mitjançant una aplicació per Android que permet tant la pujada de fitxers com la seva reproducció i control. A més de la aplicació Android disposa d'una interfície web que els usuaris poden fer servir per a gestionar els arxius remotament. El servidor és una RaspBerry Pi model B i el codi que executa està implementat completament utilitzant Node.js. </p>
+<p><br/>
+</p>
+<p><strong>Participants: </strong></p>
+<p> Adrián Álvarez, Miquel Masriera, Carles Capellas, Antonio Domínguez</p>
+<p><strong>Tutor: </strong><br/>Rubén Tous</p>
+<p><br/>
+</p>
+<p><a class="image" href="/pti/index.php/File:Esquema2.png"><img alt="Esquema2.png" data-file-height="303" data-file-width="804" decoding="async" height="207" src="/pti/images/thumb/6/68/Esquema2.png/550px-Esquema2.png" srcset="/pti/images/6/68/Esquema2.png 1.5x" width="550"/></a></p><br/>
+<p>Tecnologies implicades: Android, Node.js, HTTP, JSON, webSockets, web(HTML+CSS+JS &amp; Bootstrap), Raspberry Pi, Raspbian</p><br/>
+<p><br/>
+</p>
+<hr/>
+<p style="font-size:15px"><strong>Aplicació Android</strong></p>
+<p align="justify">El primer que fa l'aplicació Raspmedia quan arrenca, és escanejar la nostra xarxa local en busca de la RaspBerry Pi, la qual està programada per respondre a les peticions del dispositiu Android. Perquè el mòbil i el servidor es puguin comunicar, cal que els dos sidpositius estiguin a la mateixa xarxa WiFi. Al trobar el servidor, apareix un botó de Start a la pantalla a través del qual es pot accedir al menú principal de la aplicació.</p>
+<p><a class="image" href="/pti/index.php/File:2.png"><img alt="2.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/f/fb/2.png/160px-2.png" srcset="/pti/images/thumb/f/fb/2.png/240px-2.png 1.5x, /pti/images/f/fb/2.png 2x" width="160"/></a><a class="image" href="/pti/index.php/File:1.png"><img alt="1.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/4/4a/1.png/160px-1.png" srcset="/pti/images/thumb/4/4a/1.png/240px-1.png 1.5x, /pti/images/4/4a/1.png 2x" width="160"/></a><br/>
+</p>
+<p align="justify">En el menú principal disposem de 4 opcions: reproduir música, video, fotos i pujar contingut d'aquests tipus des del mòbil al servidor.</p>
+<p><a class="image" href="/pti/index.php/File:3.png"><img alt="3.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/1/10/3.png/160px-3.png" srcset="/pti/images/thumb/1/10/3.png/240px-3.png 1.5x, /pti/images/1/10/3.png 2x" width="160"/></a><br/>
+</p>
+<p align="justify">A l'entrar en qualsevol de les opcions per a reproduir arxius (music, video o photo), sortirà per pantalla una llista amb tot el contingut d'aquell tipus que s'hagi pujat a la RaspBerry, i informació de cada un. En el cas de les fotografies per a cada una en veurem una miniatura, per els videos, es mostrà una miniatura de amb una imatge del video, i el seu nom, i en el cas de la música, per a cada cançó es mostrarà títol, grup, any, i una foto sempre que sigui possible.</p>
+<p><a class="image" href="/pti/index.php/File:4.png"><img alt="4.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/0/09/4.png/160px-4.png" srcset="/pti/images/thumb/0/09/4.png/240px-4.png 1.5x, /pti/images/0/09/4.png 2x" width="160"/></a><a class="image" href="/pti/index.php/File:5.png"><img alt="5.png" data-file-height="383" data-file-width="218" decoding="async" height="281" src="/pti/images/thumb/8/82/5.png/160px-5.png" srcset="/pti/images/8/82/5.png 1.5x" width="160"/></a><a class="image" href="/pti/index.php/File:6.png"><img alt="6.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/f/f1/6.png/160px-6.png" srcset="/pti/images/thumb/f/f1/6.png/240px-6.png 1.5x, /pti/images/f/f1/6.png 2x" width="160"/></a><br/>
+</p>
+<p align="justify">si seleccionem algun arxiu de la llista, inmediatament es començarà a reproduir al televisor que està connectat a la RaspBerry, i mentre s'estigui reproduint tindrem algunes opcions de control desde la aplicació, que ens servirà com a comandament a distància, en el cas de los fotos i els videos podrem pausari tornar a reproduir, o sortir. En el cas de les fotos podem passar a la següent i anterior, posar-les en pnatalla completa o sortir. </p>
+<p><a class="image" href="/pti/index.php/File:9.png"><img alt="9.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/7/7a/9.png/160px-9.png" srcset="/pti/images/thumb/7/7a/9.png/240px-9.png 1.5x, /pti/images/7/7a/9.png 2x" width="160"/></a><a class="image" href="/pti/index.php/File:10.png"><img alt="10.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/5/58/10.png/160px-10.png" srcset="/pti/images/thumb/5/58/10.png/240px-10.png 1.5x, /pti/images/5/58/10.png 2x" width="160"/></a><a class="image" href="/pti/index.php/File:11.png"><img alt="11.png" data-file-height="569" data-file-width="286" decoding="async" height="318" src="/pti/images/thumb/5/59/11.png/160px-11.png" srcset="/pti/images/thumb/5/59/11.png/240px-11.png 1.5x, /pti/images/5/59/11.png 2x" width="160"/></a><br/>
+</p>
+<p align="justify">En cas de voler pujar un fitxer, seleccionem la opció de upload, que ens portarà a un menú en el qual s'ha de triar quin tipus de contingut volem pujar (fotos, videos  o música), per dirigir-se directament a la part de la galeria d'Android d'on s'han que seleccionar, un cop s'hagi escollit un arxiu es començarà a pujar al servidor i es mostrarà una barra de progés del procés.</p>
+<p><a class="image" href="/pti/index.php/File:7.png"><img alt="7.png" data-file-height="569" data-file-width="286" decoding="async" height="348" src="/pti/images/thumb/9/9e/7.png/175px-7.png" srcset="/pti/images/thumb/9/9e/7.png/263px-7.png 1.5x, /pti/images/9/9e/7.png 2x" width="175"/></a><a class="image" href="/pti/index.php/File:8.png"><img alt="8.png" data-file-height="569" data-file-width="286" decoding="async" height="348" src="/pti/images/thumb/6/60/8.png/175px-8.png" srcset="/pti/images/thumb/6/60/8.png/263px-8.png 1.5x, /pti/images/6/60/8.png 2x" width="175"/></a><br/><br/>
+</p>
+<p>A part  d'això, en tot moment apareix a la part inferior de al aplicació una IP de gestió, que podem fer servir des del navegador de qualsevol dispositiu de la nostra xarxa local per a gestionar els arxius del servidor desde una web que permet pujar i esborrar fitxers.</p><br/>
+<p><a class="image" href="/pti/index.php/File:RaspWeb.png"><img alt="RaspWeb.png" data-file-height="655" data-file-width="1224" decoding="async" height="375" src="/pti/images/thumb/6/66/RaspWeb.png/700px-RaspWeb.png" srcset="/pti/images/thumb/6/66/RaspWeb.png/1050px-RaspWeb.png 1.5x, /pti/images/6/66/RaspWeb.png 2x" width="700"/></a><br/>
+</p>
+<br/><br/><hr/>
+<p style="font-size:15px"><strong>Servidor</strong></p>
+<p align="justify"><br/>Aquesta secció tracta sobre la aplicació servidor que corre sobre la Raspberry, i amb la que interactuen tant l'aplicació Android com la web esmentada anteriorment. El servidor esta programat amb Node.js, el principal paquet que fem servir és Express, que és el framework web més famós i usat per a aplicacions Node. La aplicació servidor crea una instància de express que inicialitza un servidor http al port 8000, i és sobre aquesta, sobre la qual afegim les funcions associades a cada petició. La aplicació té un arxiu main.js, que és el que conté tots els moduls en els que hem dividit la aplicació. Per executar-la només cal executar aquest arxiu.</p><br/>
+<p align="justify">El servidor està dividit en 5 parts que es corresponen amb les funcionalitats principals: el sistema de fitxers, l'uploader d'arxius, gestor de llistes, gestor d'esdeveniments amb la aplicació i la web, i la part corresponent a la interacció amb la web.</p>
+<p align="justify">El sistema de fitxers correspon a l’ arxiu fsManager.js de la aplicació i fa servir el modul "fs" pròpi de Node.js. La idea és que crei i veriﬁqui que l’estructura del sistema de ﬁtxers és la que toca. En el directori del servidor hi ha un directori per al codi anomenat serverCode, i tres directoris més, un per a cada tipus de contingut (imatges, videos i música) que és on es guardaran els arxius que es pugin al sistema, i els que es llegiran per a obtenir llistes i reproduir arxius.</p><br/>
+<p><a class="image" href="/pti/index.php/File:FileSystem.png"><img alt="FileSystem.png" data-file-height="213" data-file-width="495" decoding="async" height="172" src="/pti/images/thumb/9/93/FileSystem.png/400px-FileSystem.png" srcset="/pti/images/9/93/FileSystem.png 1.5x" width="400"/></a><br/>
+</p>
+<p align="justify">La funcionalitat de pujar fitxers es correspon amb l’uploader.js i fa servir els moduls express i imagemagick. Aquesta part de la aplicació s’encarrega de rebre els ﬁtxers que li arriben via web o aplicació Android, i els guarda al directori que toqui depenent del tipus d’arxiu que sigui. Els arxius arriben en una (o varies) peticions post, el servidor, comprova el tipus d’arxiu i decideix on emmagatezemar-lo, en el cas que es pujim imatges, crea les miniatures.</p><br/>
+<p align="justify">El gestor de llistes correspon a ListManager.js en el directori del servidor, i utilitza els moduls Express, imagemagick, musicmetadata i base64. La principal funcionalitat d’aquesta part del codi, és respondre a les peticions de llistes d’arxius que conté el servidor multimèdia. Quan un usuari prem una carpeta de la aplicació (música, vídeos o imatges), es genera una petició cap al servidor, i aquest respon amb la llista de ﬁtxers demanats. Quan rep una petició el servidor obre el directori corresponent, i crea una llista d’elements JSON per a les dades de cada arxiu, les dades que no són text, és a dir les imatges de les miniatures i thumbnails es codifiquen a base64 abans de ser enviades.</p>
+<p align="justify">var jsonSong = { name:"-", title:"-", artist:"-", year:"-", pic:"-" }
+</p>
+<p align="justify">var jsonVideo = { name:"", base64:"" }
+</p>
+<p align="justify">var jsonPhoto = { name:"", base64:"" }
+</p><br/>
+<p align="justify">El codi que implementa la gestió d’events és a eventManager.js. El problema a resoldre era que els esdeveniments per al que fa a reproducció de continguts que genera el mòbil, tenen que passar a través del servidor ﬁns al reproductor. La manera més correcte i senzilla que hem trobat per a que aquesta comunicació es dugui a terme és que el mòbil i el servidor es comuniquin de la mateixa manera que amb la resta de la aplicació, és a dir, amb peticions i respostes HTTP,i la comunicació sevidor-repoductor sigui utilitzant un modul de Node dissenyat especíﬁcament per a controlar el reproductor OMXPlayer anomenat omxctrl per a musica i vídeo, que proporciona una API molt senzilla i que funciona molt bé per a aquest propòsit, i gpicview per a les imagtes.
+</p><br/>
+<p align="justify">Tots els esdeveniments que associats a la web es troben a webManager.js. Pel que fa a la comunicació entre la web i el servidor, hem decidit basar-la en websockets. Ja que un dels mòduls més famosos de Node.js és socket.io, que ofereix una API a alt nivell per a tractar comunicació en temps real. El servidor es posa a escoltar pel port 3434 i la web fa les peticions a aquest port.
+</p><br/>
+</div>
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20250710083826
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.038 seconds
+Real time usage: 0.047 seconds
+Preprocessor visited node count: 22/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:53-0!canonical and timestamp 20250710083826 and revision id 79
+ -->
+</div>

@@ -1,0 +1,85 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Logo-BlueLoc.png"><img alt="Logo-BlueLoc.png" data-file-height="608" data-file-width="2000" decoding="async" height="243" src="/pti/images/thumb/3/31/Logo-BlueLoc.png/800px-Logo-BlueLoc.png" srcset="/pti/images/thumb/3/31/Logo-BlueLoc.png/1200px-Logo-BlueLoc.png 1.5x, /pti/images/thumb/3/31/Logo-BlueLoc.png/1600px-Logo-BlueLoc.png 2x" width="800"/></a></div></div>
+<p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Projecte_EasyPass"><span class="tocnumber">1</span> <span class="toctext">Projecte EasyPass</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Tecnologies"><span class="tocnumber">2</span> <span class="toctext">Tecnologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#NFC"><span class="tocnumber">2.1</span> <span class="toctext">NFC</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Servidor_web"><span class="tocnumber">2.2</span> <span class="toctext">Servidor web</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Implementaci.C3.B3_del_sistema"><span class="tocnumber">3</span> <span class="toctext">Implementació del sistema</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Base_de_Dades"><span class="tocnumber">3.1</span> <span class="toctext">Base de Dades</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Aplicaci.C3.B3_Android"><span class="tocnumber">3.2</span> <span class="toctext">Aplicació Android</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Software_NFC"><span class="tocnumber">3.3</span> <span class="toctext">Software NFC</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#P.C3.A0gina_Web"><span class="tocnumber">3.4</span> <span class="toctext">Pàgina Web</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Conclusions"><span class="tocnumber">4</span> <span class="toctext">Conclusions</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Projecte_EasyPass">Projecte EasyPass</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=1" title="Edit section: Projecte EasyPass">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=1" title="Edit section: Projecte EasyPass">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>EasyPass és un sistema que permet unificar les targetes de transport públic de AMB en una sola targeta NFC, fent que l’accés al transport públic sigui més ràpid i còmode que el actual mètode. A més a més, el sistema permet tenir un control del viatges que realitzes (origen i destí, hora d’entrada i sortida), un control dels bitllets comprats i permet tenir una visió general del ús dels accessos al transport públic en una estació i hora concreta. 
+</p><p>La informació extreta a partir de les entrades i sortides dels usuaris pot servir a la empresa, per exemple TMB, en saber el us que tenen les seves estacions de metro o parades de autobús, per tal de millorar el rendiment d’aquests, o bé per l’usuari, per poder tenir la opció de triar l’estació de metro o parada de autobús a la que vol anar segons la gent que hi pugui haver.
+</p>
+<h1><span class="mw-headline" id="Tecnologies">Tecnologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=2" title="Edit section: Tecnologies">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=2" title="Edit section: Tecnologies">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="NFC">NFC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=3" title="Edit section: NFC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=3" title="Edit section: NFC">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Raspberry Pi 3 Model B</li>
+<li>Connexió a Internet</li>
+<li>Explore-NFC-WW (Lector NFC de la marca NXP)</li>
+<li>MIFARE ultralight EV1 (Targeta contactless)</li></ul>
+<h2><span class="mw-headline" id="Servidor_web">Servidor web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=4" title="Edit section: Servidor web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=4" title="Edit section: Servidor web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El servei de hosting que hem fet servir és de la empresa Hosteurope. Les carecterístiques del servidor no les podem saber del tot ja que el servei contractat que hem fet servir es un hosting compartit, és a dir, el hardware que tenim assignat no el podem saber.
+</p>
+<h1><span id="Implementació_del_sistema"></span><span class="mw-headline" id="Implementaci.C3.B3_del_sistema">Implementació del sistema</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=5" title="Edit section: Implementació del sistema">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=5" title="Edit section: Implementació del sistema">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Base de Dades (MySql)</li>
+<li>Aplicació Android</li>
+<li>Software NFC</li>
+<li>Pàgina Web</li></ul>
+<h2><span class="mw-headline" id="Base_de_Dades">Base de Dades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=6" title="Edit section: Base de Dades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=6" title="Edit section: Base de Dades">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Un dels punts fonamentals del nostre projecte és la base de dades. Hem fet servir un sistema MySQL. Ens ajuda a conectar el usuari amb la targeta i tots els seus moviments de viatges i compres.
+</p>
+<h2><span id="Aplicació_Android"></span><span class="mw-headline" id="Aplicaci.C3.B3_Android">Aplicació Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=7" title="Edit section: Aplicació Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=7" title="Edit section: Aplicació Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>L’aplicació d’android de Easypass es una aplicació nativa, es dir, els llenguatges utilitzats en la apliació son Java i XML, i el programa empreat per crear-lo es l’Android Studio. Aquesta aplicació s’ha creat amb API 22 i per tant es compatible desde la versió 5.1 d’Android fins l’actual en el moment (6.0). 
+Aquesta aplicació te diferents utilitats, intentant oferir un servei usable i fàcil d’entendre a l’usuari, per fer-ho així, em fet ús d’un menú lateral, el que ens comporta que utilitzem fragments per mostrar totes la pantalles de la aplicació.
+</p>
+<h2><span class="mw-headline" id="Software_NFC">Software NFC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=8" title="Edit section: Software NFC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=8" title="Edit section: Software NFC">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A continuació us explicarem detalladament el sistema NFC. Per entendre-ho millor hem separat els softwares en diferents arxius, ja que a la vida real tindrem varies maquines (la màquina validadora que ens permet accedir al transport públic, la màquina per comprar els bitllets i finalment la màquina que permetrà registrar la targeta al sistema i comprovar que s’ha gravar correctament). 
+</p>
+<h2><span id="Pàgina_Web"></span><span class="mw-headline" id="P.C3.A0gina_Web">Pàgina Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=9" title="Edit section: Pàgina Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=9" title="Edit section: Pàgina Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>L’inici de la pàgina web s’ha fet amb una plantilla de bootstrap, tot i que no se n’ha aprofitat gaire i s’ha fet a la nostra manera, ens donava un punt per començar. Sense assemblar-se a la plantilla inicial, s’ha anat modificant tot l’aspecte de la pàgina web mitjançant html 5 i css, per tal de donar forma i fer la imatge de la plana web. A més a més, amb bootstrap hem aconseguit que la pàgina web sigui responsive.
+</p><p>Seguidament, per tal d’implementar totes les funcionalitats, s’ha fet mitjançant php i javascript. Php s’ha fet servir per la majoria de serveis, principalment quan s’ha d’accedir a la base de dades per obtenir informació i per transmetre-ho a la web, javascript en canvi, ho hem fet servir per mostrar el resultat de les cerques de l’apartat de dades en format d’una gràfica lineal que té fins a dues estacions per tal de poder comparar la quantitat de gent que hi passa.
+</p><p>Podeu visitar la pàgina web fent click al següent enllaç: <a class="external text" href="http://www.dispenia.com/easypass" rel="nofollow">EasyPass</a>
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="Conclusions">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;veaction=edit&amp;section=10" title="Edit section: Conclusions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:EasyPass&amp;action=edit&amp;section=10" title="Edit section: Conclusions">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En aquest projecte hem escollit que cadascú desenvolupi una part que no coneixia anteriorment, per tal d’aprendre noves tecnologies. El resultat després d’aquests mesos barallant-nos, preguntant, i cercant a Internet com bojos ha sigut Easypass, un projecte que intenta millorar el sistema de validació dels tiquets del transport públic, així com dotar d’una interfície per a que l’usuari hi pugui interactuar i un rere fons per a completar la gestió de les dades. 
+Aquest projecte ens ha aportat saber com comunicar-nos entre el grup, gestionar les feines pendents, saber com planificar el temps per no deixar-ho tot l’últim dia, i també ens ha obligat a buscar-nos la vida cercant per Internet i/o preguntant als respectius companys. 
+</p><p>Moltes gràcies per llegir el projecte i esperem que us hagi agradat!
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083828
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 30/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:149-0!canonical and timestamp 20250710083828 and revision id 179
+ -->
+</div>

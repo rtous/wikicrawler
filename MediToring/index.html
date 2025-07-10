@@ -1,0 +1,121 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Logo-MediToring.png"><img alt="Logo-MediToring.png" data-file-height="244" data-file-width="596" decoding="async" height="184" src="/pti/images/thumb/9/93/Logo-MediToring.png/450px-Logo-MediToring.png" srcset="/pti/images/9/93/Logo-MediToring.png 1.5x" width="450"/></a></div></div>
+<p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Projecte_MediToring"><span class="tocnumber">1</span> <span class="toctext">Projecte MediToring</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Components"><span class="tocnumber">2</span> <span class="toctext">Components</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Pastiller"><span class="tocnumber">2.1</span> <span class="toctext">Pastiller</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Raspberry_Pi"><span class="tocnumber">2.2</span> <span class="toctext">Raspberry Pi</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Detecci.C3.B3_de_pastilles"><span class="tocnumber">2.3</span> <span class="toctext">Detecció de pastilles</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Client_Web"><span class="tocnumber">2.4</span> <span class="toctext">Client Web</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Servidor"><span class="tocnumber">2.5</span> <span class="toctext">Servidor</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Conclusions"><span class="tocnumber">3</span> <span class="toctext">Conclusions</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Bibliografia"><span class="tocnumber">4</span> <span class="toctext">Bibliografia</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Projecte_MediToring">Projecte MediToring</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=1" title="Edit section: Projecte MediToring">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=1" title="Edit section: Projecte MediToring">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>MediToring és un projecte que pretén solucionar un problema existenta la societat d'avui en dia, com ho és el fet que la gent gran pot no tenir bona memòria, sent un cas crític a l'hora de prendre's les seves pastilles. 
+</p><p>La nostra proposta es basa en la creació d'un pastiller que permet detectar si l'usuari s'ha près les seves pastilles corresponents. Concretament, tindrem un pastiller amb una Raspberry Pi al seu interior que controla una càmera, la qual s'encarrega d'anar prenent imatges des d'una vista inferior del pastiller amb l'objectiu que ella mateixa pugui processar-les mitjançant un algorisme de visió per computadors, com és el cas d'OpenCV, i així detectar si l'usuari s'ha près les pastilles, si se n'ha oblidat o, fins i tot saber si s'ha près les que corresponien a un altre dia o hora. En qualsevol d'aquests casos, la Raspberry enviarà una alerta al servidor. Aquest contindrà una pàgina web, on l'usuari podrà definir els responsables als quals s'ha d'alertar en cas que es detecti una de les situacions mencionades anteriorment, juntament amb la configuració necessària de l'agenda de medicació del pacient.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Pastiller.png" title="Imatge del pastiller"><img alt="Imatge del pastiller" data-file-height="281" data-file-width="374" decoding="async" height="376" src="/pti/images/3/3f/Pastiller.png" width="500"/></a></div></div>
+<h1><span class="mw-headline" id="Components">Components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=2" title="Edit section: Components">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=2" title="Edit section: Components">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Pastiller">Pastiller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=3" title="Edit section: Pastiller">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=3" title="Edit section: Pastiller">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatright"><a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Pastiller_interior.png" title="File:Pastiller interior.png">115px</a></div>
+<p>El pastiller és un dels blocs fonamentals dins del nostre projecte, juntament amb la Raspberry, ja que és l’encarregat de guardar les pastilles ordenades per dies (columnes) i per franges horàries (files). A més, l’embolcall, construït utilitzant cartró ploma, és l’encarregat de contenir la Raspberry i mantenir-la fixa, ja que per la detecció de pastilles és molt important que les imatges  estiguin sempre en la mateixa posició.
+</p><p><br/>
+Per la construcció del pastiller vam utilitzar cartró ploma com a material principal. Primer vam prendre les mides del pastiller en sí, i un cop obtingudes, juntament amb l'alçada necessària, vam prosseguir a la construcció de l'embolcall, fixant la Raspberry i la càmera a la base. També vam afegir un LED per tal d'il·luminar la caixa al moment de prendre les imatges per tal de tenir més llum per a facilitar la detecció. Un cop tota la part de muntatge va acabar, vam afegir el logo del projecte en un lateral com a estètica. 
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<h2><span class="mw-headline" id="Raspberry_Pi">Raspberry Pi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=4" title="Edit section: Raspberry Pi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=4" title="Edit section: Raspberry Pi">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Pel que fa a la Raspberry Pi, és l’encarregada de prendre les imatges periòdicament i de processar-les utilitzant l’algorisme de visió per computadors (OpenCV). Un cop processades, sabem en quines caselles del pastiller hi ha pastilles, i aquesta informació es codifica en JSON, juntament amb el dia de la setmana, hora actual i un identificador únic per a cada Raspberry i es transmet al servidor mitjançant el mètode POST del protocol HTTPS, i ell s’encarrega de processar aquesta informació rebuda, tal qual s’explica a la part del Servidor. 
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:EsquemaRaspberry.png"><img alt="EsquemaRaspberry.png" data-file-height="455" data-file-width="1008" decoding="async" height="226" src="/pti/images/thumb/f/f6/EsquemaRaspberry.png/500px-EsquemaRaspberry.png" srcset="/pti/images/thumb/f/f6/EsquemaRaspberry.png/750px-EsquemaRaspberry.png 1.5x, /pti/images/thumb/f/f6/EsquemaRaspberry.png/1000px-EsquemaRaspberry.png 2x" width="500"/></a></div></div>
+<h2><span id="Detecció_de_pastilles"></span><span class="mw-headline" id="Detecci.C3.B3_de_pastilles">Detecció de pastilles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=5" title="Edit section: Detecció de pastilles">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=5" title="Edit section: Detecció de pastilles">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Un dels punts importants del projectes és la detecció de pastilles, per tal de saber si el pacient s’ha pres la pastilla que li tocava o se l’ha deixat de pendre. Primer vam pensar en utilitzar sensors en cadascuna de les caselles per tal de detectar si hi havia pastilles. Però vam veure que la visió per computador encaixava perfectament en el nostra projecta i és una eina moderna i en un futur ens podria ajudar a implementar més funcionalitats.
+</p><p>D’aquesta manera vam descobrir una llibreria de visió per computador OpenSource anomenada OpenCV que ens permetia complir el nostre objectiu i a més té suport per Python (el llenguatge que utilitzem a la raspberry) i la Raspberry compleix els requisits mínims per tal de poder córrer la llibreria en aquesta.
+</p><p>Dins d’OpenCV hi ha un algorisme anomenat Watershed que permet segmentar les imatge i això ens ha anat molt bé en el projecte per tal de detectar si hi ha pastilles o no i en un futur inclòs contar les que hi ha.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Opencv.png"><img alt="Opencv.png" data-file-height="166" data-file-width="156" decoding="async" height="166" src="/pti/images/7/75/Opencv.png" width="156"/></a></div></div>
+<p>L’algorisme per detectar les la presència de pastilles principalment realitza els següents passos :
+</p><p>Primer es fa la foto del pastiller tot encenent el LED per fer-la i apagant-lo seguidament .Un cop tenim la imatge presa , aquesta es retalla per tal de deixar en la imatge solament el pastiller i eliminar tota la part visible de l’estructura del pastiller.
+A continuació a partir d’unes posicions ja definides per al pastiller es retallen cadascuna de les caselles per aplicar l’algorisme en cadascuna d’aquestes. 
+La imatge de la casella es binaritza , a continuació es crea un marcador per poder executar el watershed i s’executa. Després s’aplica una màscara per tal de deixar en negre tot el que no siguin pastilles que ha detectat. Finalment comprovant píxel a píxel que el color sigui diferent de negre i amb un threshold podem decidir si hi ha pastilles o no.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Opencv_flow.png"><img alt="Opencv flow.png" data-file-height="432" data-file-width="619" decoding="async" height="419" src="/pti/images/thumb/3/35/Opencv_flow.png/600px-Opencv_flow.png" srcset="/pti/images/3/35/Opencv_flow.png 1.5x" width="600"/></a></div></div>
+<h2><span class="mw-headline" id="Client_Web">Client Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=6" title="Edit section: Client Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=6" title="Edit section: Client Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per tal de poder monitoritzar la presa de medicaments és necessari fer saber al sistema quan el pacient ha de prendre medicaments i per tant, cal controlar si efectivament se’ls pren. Endemés, cal fer una interfície de forma atractiva i intuïtiva als usuaris ja que en cap moment podem pressuposar un coneixement més enllà del que té qualsevol persona. És per això que ens hem pres un gran interès en que la web sigui fàcil d’utilitzar i en cap cas sigui un impediment per interactuar amb el sistema.
+</p><p>Així doncs, la pàgina web és la forma que el responsable del pacient pot definir quan s’han de prendre la medicació, és a dir, el l’hora en concret de cada dia de la setmana; el marge de temps, és a dir, quan de temps més cal esperar a partir de l’hora que hauria de prendre’s la pastilla i els responsables a qui cal alertar en cas que el pacient s’oblidi de prendre la pastilla o bé se’n prengui algunes que no li toca prendre’s. Les alertes es produiran per correu electrònic, per tant, per definir el conjunt de gent a qui cal alertar caldrà introduir el correu electrònic de les respectives persones. A més a més, la pàgina web permetrà registrar nous usuaris així com accedir a la configuració als usuaris que prèviament s’hagin registrat. En resum, la pàgina web actua d’intermediari entre l’usuari i el sistema.
+</p><p><br/>
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Webpti.png"><img alt="Webpti.png" data-file-height="858" data-file-width="1152" decoding="async" height="447" src="/pti/images/thumb/f/fe/Webpti.png/600px-Webpti.png" srcset="/pti/images/thumb/f/fe/Webpti.png/900px-Webpti.png 1.5x, /pti/images/f/fe/Webpti.png 2x" width="600"/></a></div></div>
+<p><br/>
+</p>
+<div class="floatright"><a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Webmobil.png" title="File:Webmobil.png">200px</a></div>
+<p><br/>
+Per tal de fer la pàgina web accessible per a diferents dispositius utilitzem una plantilla de Bootstrap. Vista des de la pantalla d’un dispositiu relativament gran (com un ordinador) la pàgina web es veu tal i com mostra la següent figura.
+</p><p>Un cop hem iniciat sessió, podem accedir a la pestanya de configuració, que ens permetrà definir l’agenda de medicació del pacient tal i com mostra la següent imatge:
+</p><p>Hi ha una casella per a cada casella del pastiller. Tal i com es pot observar, la distribució també es correspon amb la del pastiller ja que les caselles estan classificades per dies de la setmana i moment del dia. Per a cada casella, hi ha l’opció de deixar-la amb valor “NONE”, corresponent a que el pacient no s’ha de prendre medicació en aquell moment del dia. Si el pacient ha de prendre’s medicació en algun moment del dia, clicant a una casella, veurem un desplegable que permetrà seleccionar l’hora que sigui convenient.
+</p><p><br/>
+Ademés de l’hora a la que el pacient s’ha de prendre la medicació, el responsable també pot fixar el marge de temps, que actuarà tant abans de l’hora com després. És a dir, si el pacient es pren les pastilles abans de l’hora i abans del marge de temps el sistema detectarà que se les ha pres massa d’hora. Simètricament si se les pren desprès de l’hora i més tard que el marge de temps, el sistema detectarà que se les ha pres massa tard.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Marge.png"><img alt="Marge.png" data-file-height="189" data-file-width="674" decoding="async" height="168" src="/pti/images/thumb/b/bb/Marge.png/600px-Marge.png" srcset="/pti/images/b/bb/Marge.png 1.5x" width="600"/></a></div></div>
+<h2><span class="mw-headline" id="Servidor">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=7" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=7" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>L'objectiu del servidor en el nostre projecte és servir de backend de la web i comunicar-se amb la raspberry dels pastillers. En particular, realitza les següents funcions:
+</p><p>– Proveir autenticació als usuaris a través de la web
+</p><p>– Proveir les funcions per guardar i recuperar la configuració dels usuaris
+</p><p>– Guardar i recuperar les dades de forma segura de la BD
+</p><p>– Processar les actualitzacions dels pastillers
+</p><p>– Enviar emails d'alerta als usuaris
+</p><p>El servidor està desenvolupat amb Node.js. Hem triat aquest entorn perquè ens permet desenvolupar el servidor de manera ràpida i eficaç. Utilitzem el mòdul Express, que és una infraestructura d'aplicacions web que proporciona un conjunt sòlid de característiques que ens ajuda al desenvolupament. Per implementar l'autenticació, fem servir el mòdul passport, que ens facilita la creació del sistema de signup, login i logout i proporciona middleware per gestionar-ho. Pel que fa a seguretat, en cap cas guardem les contrasenyes en clar, si no que  l'algorisme bcrypt crea un hash de les contrasenyes que es guarda a la base de dades. Aquest algorisme està àmpliament provat i utilitzem una implementació de Node.js. A més, si els usuaris també utilitzen una connexió HTTPS, es garanteix que la transmissió de les dades serà segura. La raspberry utilitza HTTPS per defecte. Per emmagatzemar les dades de manera permanent al servidor utilitzem mongoDB. MongoDB és una base de dades NoSQL àmpliament utilitzada per grans empreses. L'hem utilitzat al nostre projecte perquè s'integra molt bé amb Node.js utilitzant el mòdul “mongoose”.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Nodejs1.png"><img alt="Nodejs1.png" data-file-height="196" data-file-width="320" decoding="async" height="196" src="/pti/images/0/09/Nodejs1.png" width="320"/></a></div></div>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Mongodb1.png"><img alt="Mongodb1.png" data-file-height="87" data-file-width="320" decoding="async" height="87" src="/pti/images/1/16/Mongodb1.png" width="320"/></a></div></div>
+<h1><span class="mw-headline" id="Conclusions">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=8" title="Edit section: Conclusions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=8" title="Edit section: Conclusions">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El resultat d’aquest projecte ha estat un sistema que integra diferents tecnologies tan  vistes a classe com no habituals a les assignatures del grau. Des de les bases de dades fins el sistema encastat que utilitzem al pastiller, s’han adaptat i configurat amb el màxim detall per tal d’assolir de forma conjunta les funcionalitats establertes com a objectius del projecte. El resultat ha estat un producte que satisfà una necessitat i resol un problema present en la societat actual; el producte és el resultat de la integració de diferents tecnologies que en conjunt i de forma sinèrgica formen un tot.
+</p><p>Un dels objectius que ens vam fixar des del començament del projecte ha estat el de desenvolupar un producte que tingués una utilitat social tot descobrint i aprenent sobre noves tecnologies. A nivell funcional, creiem que hem assolit aquest objectiu ja que el nostre producte final té una clara utilitat. Semblantment, a nivell formatiu tots els membres hem après sobre un conjunt de tecnologies que prèviament desconeixíem. A més a més, hem millorat la nostra capacitat d’organització i treball en equip, habilitats tant o més importants que les capacitats tècniques. 
+</p><p>Pel que fa al producte, creiem que el producte és una idea original que hem aconseguit materialitzar correctament i que ha gaudit d’una bona acceptació. De cara a l’usuari, el servei és transparent, ja que només ha de configurar l’agenda a través de la pàgina web.
+</p><p>En conclusió, tots els membres de l’equip estem molt satisfets i orgullosos de la feina realitzada i del resultat del projecte.
+</p>
+<h1><span class="mw-headline" id="Bibliografia">Bibliografia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;veaction=edit&amp;section=9" title="Edit section: Bibliografia">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MediToring&amp;action=edit&amp;section=9" title="Edit section: Bibliografia">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>[1] Raspberry PI webpage: <a class="external free" href="https://www.raspberrypi.org/" rel="nofollow">https://www.raspberrypi.org/</a>
+</p><p>[2] Python: <a class="external free" href="https://www.python.org/" rel="nofollow">https://www.python.org/</a>
+</p><p>[3] Angular documentation : <a class="external free" href="http://www.w3schools.com/angular/" rel="nofollow">http://www.w3schools.com/angular/</a>
+</p><p>[4] Html documentation: <a class="external free" href="http://www.w3schools.com/html/" rel="nofollow">http://www.w3schools.com/html/</a>
+</p><p>[5] NodeJs documentation : <a class="external free" href="https://nodejs.org/api/" rel="nofollow">https://nodejs.org/api/</a>
+</p><p>[6] MongoDB documentation: <a class="external free" href="https://docs.mongodb.org" rel="nofollow">https://docs.mongodb.org</a>
+</p><p>[7] OpenCV python tutorials : <a class="external free" href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html" rel="nofollow">https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html</a>
+</p><p>[8] OpenCV watershed tutorial: <a class="external free" href="http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_watershed/py_watershed.html" rel="nofollow">http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_watershed/py_watershed.html</a>
+</p><p>[9] Cloud9 webpage: <a class="external free" href="https://c9.io/" rel="nofollow">https://c9.io/</a>
+</p><p>[10] Docker docs : <a class="external free" href="https://docs.docker.com/" rel="nofollow">https://docs.docker.com/</a>
+</p><p>[11] Express api : <a class="external free" href="http://expressjs.com/en/api.html" rel="nofollow">http://expressjs.com/en/api.html</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083829
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.026 seconds
+Real time usage: 0.029 seconds
+Preprocessor visited node count: 41/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:208-0!canonical and timestamp 20250710083829 and revision id 241
+ -->
+</div>

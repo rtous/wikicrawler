@@ -1,0 +1,184 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Smart_Core"><span class="tocnumber">1</span> <span class="toctext">Smart Core</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Autors"><span class="tocnumber">1.1</span> <span class="toctext">Autors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Tecnologies"><span class="tocnumber">2</span> <span class="toctext">Tecnologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Base_de_dades"><span class="tocnumber">2.1</span> <span class="toctext">Base de dades</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Servidors"><span class="tocnumber">2.2</span> <span class="toctext">Servidors</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Raspberry_Pi"><span class="tocnumber">2.3</span> <span class="toctext">Raspberry Pi</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Arduino"><span class="tocnumber">2.4</span> <span class="toctext">Arduino</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Llum_exterior"><span class="tocnumber">2.4.1</span> <span class="toctext">Llum exterior</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Temperatura"><span class="tocnumber">2.4.2</span> <span class="toctext">Temperatura</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Alarma"><span class="tocnumber">2.4.3</span> <span class="toctext">Alarma</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Llum_interior_.28ultrasons.29"><span class="tocnumber">2.4.4</span> <span class="toctext">Llum interior (ultrasons)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Seguretat"><span class="tocnumber">2.5</span> <span class="toctext">Seguretat</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Comunicaci.C3.B3_Externa"><span class="tocnumber">2.5.1</span> <span class="toctext">Comunicació Externa</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Comunicaci.C3.B3_Interna"><span class="tocnumber">2.5.2</span> <span class="toctext">Comunicació Interna</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Aplicaci.C3.B3_Android"><span class="tocnumber">2.6</span> <span class="toctext">Aplicació Android</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#P.C3.A0gina_Web"><span class="tocnumber">2.7</span> <span class="toctext">Pàgina Web</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Demostracions"><span class="tocnumber">3</span> <span class="toctext">Demostracions</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Smart_Core">Smart Core</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=1" title="Edit section: Smart Core">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=1" title="Edit section: Smart Core">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatright"><a class="image" href="/pti/index.php/File:SmartCore.png"><img alt="SmartCore.png" data-file-height="607" data-file-width="559" decoding="async" height="326" src="/pti/images/thumb/b/b9/SmartCore.png/300px-SmartCore.png" srcset="/pti/images/thumb/b/b9/SmartCore.png/450px-SmartCore.png 1.5x, /pti/images/b/b9/SmartCore.png 2x" width="300"/></a></div>
+<p>L’anomenat Internet de les Coses (Internet of Things, IoT) està propiciant la creació de dispositius intel·ligents per part de grans marques comercials, que a més, ofereixen plataformes de gestió per aquests. Però no només les grans empreses estan desenvolupant aparells per a què formin part d’aquesta nova xarxa.
+</p><p>Pràcticament qualsevol dispositiu de casa nostra pot ser transformat a un aparell amb funcions smart, des d’un llum de menjador fins a una rentadora, però no existeix una manera fàcil i senzilla de gestionar-los tots còmodament. D'aquesta idea neix el nostres projecte, Smart Core. Volíem proposar un servei homogeni d’automatització i control per a qualsevol dispositiu intel·ligent de la llar, per així unificar tota la gestió en una sola plataforma i fer que aquest procés sigui eficient i senzill.
+</p><p>Aquesta plataforma dóna a l‘usuari el control de casa seva sigui on sigui, permetent que controli la il·luminació, la temperatura, i qualsevol aparell més que prèviament hagi connectat al servei. Oferim als usuaris una manera de controlar les seves cases per tal de garantir seguretat i tranquil·litat.
+</p><p>Per aconseguir aquest objectiu, partirem d’uns elements no intel·ligents que ens agradaria poder controlar a casa nostra, els convertirem en dispositius smart mitjançant vàries tecnologies de comunicació i plaques de circuit imprès, instal·lant un minicomputador i sensors per aconseguir algunes funcions que pot tenir un dispositiu smart. Tot això s’elaborarà amb dispositius de baix consum, per millorar també el consum energètic i procurar deixar la mínima petjada energètica possible al realitzar-ho.
+</p><p>Després, implementarem les aplicacions Android i Web per poder comunicar-nos amb l’usuari i un servidor capaç de processar les peticions demanades per l’usuari.
+</p><p>Finalment, afegirem mètodes que puguin protegir el nostre sistema dels atacs i de les intrusions, com per exemple utilitzant protocols segurs, i a més, evitar la pèrdua de dades.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Autors">Autors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=2" title="Edit section: Autors">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=2" title="Edit section: Autors">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Els membres que han realitzat el desenvolupament d'aquest projecte són:
+</p><p>- Coordinador del Projecte i Responsable de Raspberry Pi: Sergi Bartolomé Muñoz
+</p><p>- Responsable d’Arduino: Joan Rodas Cusidó
+</p><p>- Responsable d’Android: Riogemm Panopio Magsaysay
+</p><p>- Responsable de Web i Backend: David Molins Gomà
+</p><p>- Responsable Seguretat: Ricard Pastor Navarro
+</p>
+<h2><span class="mw-headline" id="Tecnologies">Tecnologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=3" title="Edit section: Tecnologies">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=3" title="Edit section: Tecnologies">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Base_de_dades">Base de dades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=4" title="Edit section: Base de dades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=4" title="Edit section: Base de dades">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La persistència de dades s'ha decidit treballar amb SQLite, prenent les precaucions necessàries per a emmagatzemar les nostres dades.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Servidors">Servidors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=5" title="Edit section: Servidors">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=5" title="Edit section: Servidors">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La selecció de tecnologies que hem fet servir està basada en el propòsit d’oferir escalabilitat al projecte a l’hora d’afegir més usuaris i més dispositius. Per això hem optat per una arquitectura centralitzada localment, utilitzant una Raspberry Pi com a servidor pel seu baix consum, la seva mida, el seu rendiment i el poc impacte sonor i visual que comporta. També hem fet servir un Web Service, de tipus Restful, ja que és una tecnologia que hem après que permet escalabilitat i portabilitat.
+</p><p>Aquest Web Service s’ha muntat sobre un servidor d’aplicacions Glassfish, aprofitant la seva capacitat de gestió web que ofereix a tots els integrants de pujar projectes remotament ja que aquest lloc web també està allotjat al Glassfish. El fet d’escollir Glassfish és degut a què l’IDE utilitzat per crear el codi i les seves funcions és el Netbeans, que té una millor integració amb Glassfish que amb Tomcat.
+</p><p><a class="image" href="/pti/index.php/File:Glassfish_logo.jpg"><img alt="Glassfish logo.jpg" data-file-height="160" data-file-width="160" decoding="async" height="160" src="/pti/images/c/cc/Glassfish_logo.jpg" width="160"/></a>
+</p>
+<h3><span class="mw-headline" id="Raspberry_Pi">Raspberry Pi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=6" title="Edit section: Raspberry Pi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=6" title="Edit section: Raspberry Pi">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Per gestionar els aparells de la llar de manera centralitzada, primer necessitem un nexe per tots ells; un dispositiu on es puguin connectar entre ells i comunicar-se amb els servidors, però que també sigui assequible i energèticament eficient.
+Per això vam decidir utilitzar una Raspberry Pi B+, ja que les seves prestacions eren suficients pel nostre projecte i té un preu molt adequat pel que ofereix.
+</p><p>La seva funció és mantenir una comunicació constant i bidireccional amb els Arduinos, ja sigui per enviar-hi ordres o per rebre el seu estat actual. Perquè aquests no hagin d’estar al costat de la Raspberry Pi i tinguin certa mobilitat, la comunicació la duem a terme mitjançant Bluetooth, ja que ens permet un radi d’acció de fins a 10 metres i evitem haver de cablejar tota la zona, apart de ser una tecnologia molt estesa i per tant força econòmica (Només necessitarem un receptor Bluetooth USB 4.0 per la Raspberry Pi i un adaptador serial Bluetooth per a cada Arduino, ambdós amb preus molt correctes).
+</p><p><a class="image" href="/pti/index.php/File:Raspberry-Bluetooth.jpg"><img alt="Raspberry-Bluetooth.jpg" data-file-height="307" data-file-width="503" decoding="async" height="307" src="/pti/images/c/c9/Raspberry-Bluetooth.jpg" width="503"/></a>
+</p><p>Per gestionar els Arduinos connectats vam decidir utilitzar scripts de Python, ja que les seves llibreries per tractar amb comunicació serial són molt flexibles i pràctiques, i també teníem curiositat per experimentar amb aquest llenguatge de programació que encara no havíem tingut la oportunitat de conèixer a fons.
+</p><p>L’execució dels scripts la fem via CGI executats des de peticions POST del webservice, així que la Raspberry Pi també compta amb un servidor web Apache2 que ens permet enviar-ne i rebre’n. Després de configurar el router on aquesta està connectada, assignant-li una IP estàtica i obrint els ports web i SSH (Per fer-hi una gestió remota), vam contractar un domini de Dynamic DNS No-IP per comptar amb una direcció actualitzada que apunti sempre a la Raspberry Pi. A l’hora de les demostracions i les reunions on havíem de provar la comunicació entre Arduinos i Raspberry Pi, situacions on aquesta última no disposava d’una IP pública perquè estava connectada a la xarxa de la Universitat, hem usat un servei que crea un túnel entre un host i una direcció pública, permetent així l’accés a la Raspberry Pi mitjançant una URL temporal, anomenat Ngrok.
+</p><p><a class="image" href="/pti/index.php/File:Noip-Ngrok.jpg"><img alt="Noip-Ngrok.jpg" data-file-height="111" data-file-width="530" decoding="async" height="111" src="/pti/images/e/ef/Noip-Ngrok.jpg" width="530"/></a>
+</p><p>També ens va sorgir la idea d’enviar un correu electrònic quan passés cert esdeveniment, com en el cas de la detecció d’extranys quan l’alarma està activada. Per això vam instal·lar també un servidor de correu, SSMTP, per poder enviar correus de manera fàcil i directa des dels propis scripts Python.
+</p><p>Vistes totes aquestes necessitats el sistema operatiu que vam instal·lar a la Raspberry Pi va ser Raspbian, una distribució d’escriptori derivada de Debian i adaptada al seu hardware, ja que així la gestió de diferents servidors i la interacció entre diferents dispositius Bluetooth seria més còmode, apart de l’avantatge de conèixer amb anterioritat i de manera avançada el funcionament d’una distribució basada en Debian a altres assignatures cursades a l’especialitat.
+</p>
+<h3><span class="mw-headline" id="Arduino">Arduino</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=7" title="Edit section: Arduino">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=7" title="Edit section: Arduino">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Els Arduino tenen bàsicament dues funcions. Per una banda, s’encarreguen d’obtenir dades de diferents sensors (temperatura, llum, moviment, etc.) i de comunicar-les a la Raspberry. L’altra funció seria la de controlar els dispositius de la llar, ja sigui per ells mateixos o a través d’ordres rebudes desde la Raspberry.
+</p><p><br/>
+</p>
+<h4><span class="mw-headline" id="Llum_exterior">Llum exterior</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=8" title="Edit section: Llum exterior">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=8" title="Edit section: Llum exterior">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a class="image" href="/pti/index.php/File:Llum-exterior.png"><img alt="" class="thumbimage" data-file-height="1356" data-file-width="2049" decoding="async" height="119" src="/pti/images/thumb/2/2f/Llum-exterior.png/180px-Llum-exterior.png" srcset="/pti/images/thumb/2/2f/Llum-exterior.png/270px-Llum-exterior.png 1.5x, /pti/images/thumb/2/2f/Llum-exterior.png/360px-Llum-exterior.png 2x" width="180"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Llum-exterior.png" title="Enlarge"></a></div>Llum amb LDR</div></div></div>
+<p><br/>
+Un dels dispositius que vam muntar simula un llum exterior (p.e. en una terrassa). Per fer-lo hem utilitzat un LED, un parell de resistències i un LDR (per detectar la lluminositat).
+</p><p>A part de poder obrir i tancar el llum via webservice/Raspberry, també podem posar el dispositiu en mode automàtic. Quan l’Arduino es troba en aquest mode, obrirà i tancarà el llum automàticament segons la lluminositat de l’ambient. Això es fa agafant el valor que ens dona el LDR, ja que aquest dispositiu varia la seva resistència segons la llum que rep.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h4><span class="mw-headline" id="Temperatura">Temperatura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=9" title="Edit section: Temperatura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=9" title="Edit section: Temperatura">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a class="image" href="/pti/index.php/File:TMP.png"><img alt="" class="thumbimage" data-file-height="1182" data-file-width="942" decoding="async" height="226" src="/pti/images/thumb/2/23/TMP.png/180px-TMP.png" srcset="/pti/images/thumb/2/23/TMP.png/270px-TMP.png 1.5x, /pti/images/thumb/2/23/TMP.png/360px-TMP.png 2x" width="180"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:TMP.png" title="Enlarge"></a></div>Sensor de temperatura</div></div></div>
+<p><br/>
+Per obtenir la temperatura hem comprat un sensor TMP36, que té un rang operatiu de -40ºC a 125ºC i un error de +-2ºC.
+</p><p>Donem la temperatura mitjançant un serial Bluetooth connectat als ports 0 (RX) i 1 (TX). Connectant-lo directament a aquests ports, no fa falta utilitzar cap llibreria externa i podem enviar missatges a través de Serial.write() o Serial.print(). 
+</p><p>Tots els dispositius haurien de funcionar a través de Bluetooth, pero no disposem de més serials. De tota manera, el codi de l’Arduino no es veu modificat si utilitzem Bluetooth o ens connectem directament via USB.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h4><span class="mw-headline" id="Alarma">Alarma</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=10" title="Edit section: Alarma">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=10" title="Edit section: Alarma">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a class="image" href="/pti/index.php/File:Alarm.png"><img alt="" class="thumbimage" data-file-height="945" data-file-width="957" decoding="async" height="178" src="/pti/images/thumb/e/e3/Alarm.png/180px-Alarm.png" srcset="/pti/images/thumb/e/e3/Alarm.png/270px-Alarm.png 1.5x, /pti/images/thumb/e/e3/Alarm.png/360px-Alarm.png 2x" width="180"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Alarm.png" title="Enlarge"></a></div>Alarma amb PIR</div></div></div>
+<p><br/>
+Per fer l’alarma hem utilitzat un detector de moviment (PIR) i un brunzidor piezoelèctric, que emetrà un so en cas que l'alarma estigui activada i es detecti qualsevol moviment en la zona.
+</p><p>Aquesta alarma es pot trobar en tres possibles estats: desactivada, activada amb so i activada en mode silenciós.
+</p><p>Si l'alarma està activada, el dispositiu utilitzarà el PIR per detectar moviments i avisarà a la Raspberry en cas de detectar alguna cosa. Un cop avisa a la Raspbery, aquesta s'encarregarà de cridar al webservice i avisar a l'usuari mitjançant un correu electrònic. Si el so està activat, sonarà el buzzer, pero si no volem que el lladre s'adoni que ha estat detectat, amb l'opció d'alarma silenciosa el dispositiu realitzarà les mateixes tasques pero sense emetre cap so.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h4><span id="Llum_interior_(ultrasons)"></span><span class="mw-headline" id="Llum_interior_.28ultrasons.29">Llum interior (ultrasons)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=11" title="Edit section: Llum interior (ultrasons)">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=11" title="Edit section: Llum interior (ultrasons)">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:252px;"><a class="image" href="/pti/index.php/File:Llum-interior.png"><img alt="" class="thumbimage" data-file-height="1356" data-file-width="2049" decoding="async" height="165" src="/pti/images/thumb/d/dd/Llum-interior.png/250px-Llum-interior.png" srcset="/pti/images/thumb/d/dd/Llum-interior.png/375px-Llum-interior.png 1.5x, /pti/images/thumb/d/dd/Llum-interior.png/500px-Llum-interior.png 2x" width="250"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Llum-interior.png" title="Enlarge"></a></div>Llum amb ultrasons</div></div></div>
+<p><br/>
+Per mostrar un comportament una mica més intel·ligent dels dispositius, hem utilitzat un Arduino per controlar un llum de manera automàtica gràcies a 2 sensors d’ultrasons.
+</p><p>També hem posat un relé, que ens permet endollar qualsevol dispositiu a la corrent (230V). Per fer les proves hem utilitzat una làmpada i un LED.
+</p><p>Igual que amb la llum exterior, el dispositiu pot estar en “on”, “off” i mode automàtic. Amb aquest últim mode, fem servir dos sensors d’ultrasons per saber si una persona entra o surt d’una habitació i obrir els llums només quan hi ha algú dins. Hem afegit un comptador binari format per 4 leds per poder visualitzar fàcilment el nombre de persones que indica l’Arduino.
+</p><p><br/>
+<b>Nota:</b> En tots els esquemes utilitzem un condensador de 10µF, connectat entre GND (negatiu) i RESET per evitar que la placa es reiniciï quan establim una comunicació.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Seguretat">Seguretat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=12" title="Edit section: Seguretat">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=12" title="Edit section: Seguretat">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="Comunicació_Externa"></span><span class="mw-headline" id="Comunicaci.C3.B3_Externa">Comunicació Externa</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=13" title="Edit section: Comunicació Externa">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=13" title="Edit section: Comunicació Externa">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:OpenVPN.png"><img alt="" class="thumbimage" data-file-height="443" data-file-width="603" decoding="async" height="220" src="/pti/images/thumb/f/f5/OpenVPN.png/300px-OpenVPN.png" srcset="/pti/images/thumb/f/f5/OpenVPN.png/450px-OpenVPN.png 1.5x, /pti/images/thumb/f/f5/OpenVPN.png/600px-OpenVPN.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:OpenVPN.png" title="Enlarge"></a></div>Exemple OpenVPN</div></div></div>
+<p><br/>
+Per la comunicació entre la raspberry pi i el servidor principal utilitzem OpenVPN, una eina per crear VPN fàcilment, ja que ofereix major seguretat que HTTPS i no volem que algú pugui interactuar amb el nostre sistema sense permís.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h4><span id="Comunicació_Interna"></span><span class="mw-headline" id="Comunicaci.C3.B3_Interna">Comunicació Interna</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=14" title="Edit section: Comunicació Interna">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=14" title="Edit section: Comunicació Interna">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Per la comunicació interna la primera idea va ser utilitzar Kerberos un protocol del MIT per fer la identificació dels dispositius, però Bluetooth utilitza adreces MAC i a Kerberos es necessiten adreces IP, per tant vam acabar fent servir un altre mètode, quan la Raspberry Pi es vol comunicar amb cada un dels arduinos, primer genera un número de 256 bits aleatoris i envia aquest sense encriptar al arduino, el arduino agafa aquest número i li fa el hash (SHA256), vam trobar problemes en enviar aquest hash, ja que el seu tipus era uint8_t, al final vam descobrir que havíem de fer un a descodificació a hexadecimal. Després generem una clau per cada parella raspberry pie/arduino, i la introduïm en els dos dispositius. Es fa una Xor entre la clau i el número generat i llavors la raspberry pi encripta les ordres que enviem amb un AES-256 CBC, que l’arduino desencripta i executa l’ordre. La nostra idea és que l’arduino no hagi de codificar res.
+<a class="image" href="/pti/index.php/File:Esquema_com_interna.png"><img alt="Esquema com interna.png" data-file-height="435" data-file-width="609" decoding="async" height="435" src="/pti/images/c/ce/Esquema_com_interna.png" width="609"/></a>
+</p>
+<h3><span id="Aplicació_Android"></span><span class="mw-headline" id="Aplicaci.C3.B3_Android">Aplicació Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=15" title="Edit section: Aplicació Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=15" title="Edit section: Aplicació Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Per desenvolupar aquesta aplicació Android, s’han utilitzat els coneixements apresos de les altres assignatures de la carrera. Primer, s’han analitzat els requisits i casos d’ús i s’ha creat l’esquema i el disseny de l’aplicació. S’ha instal·lat l’IDE per desenvolupar-la; s’ha optat per l’Android Studio entre les tecnologies existents, ja que, incorpora eines per simular l’aplicació en un dispositiu virtual per poder provar-la a qualsevol lloc, permetent un treball més còmode i portable.
+</p><p>S’han desenvolupat 4 vistes per portar a terme les funcionalitats analitzades:
+</p><p><a class="image" href="/pti/index.php/File:Login.png"><img alt="Login.png" data-file-height="590" data-file-width="309" decoding="async" height="477" src="/pti/images/thumb/6/68/Login.png/250px-Login.png" srcset="/pti/images/6/68/Login.png 1.5x" width="250"/></a><a class="image" href="/pti/index.php/File:Register.png"><img alt="Register.png" data-file-height="1920" data-file-width="1080" decoding="async" height="444" src="/pti/images/thumb/0/0f/Register.png/250px-Register.png" srcset="/pti/images/thumb/0/0f/Register.png/375px-Register.png 1.5x, /pti/images/thumb/0/0f/Register.png/500px-Register.png 2x" width="250"/></a><a class="image" href="/pti/index.php/File:Home.png"><img alt="Home.png" data-file-height="1053" data-file-width="588" decoding="async" height="448" src="/pti/images/thumb/9/9a/Home.png/250px-Home.png" srcset="/pti/images/thumb/9/9a/Home.png/375px-Home.png 1.5x, /pti/images/thumb/9/9a/Home.png/500px-Home.png 2x" width="250"/></a><a class="image" href="/pti/index.php/File:Add.png"><img alt="Add.png" data-file-height="1053" data-file-width="588" decoding="async" height="448" src="/pti/images/thumb/a/a7/Add.png/250px-Add.png" srcset="/pti/images/thumb/a/a7/Add.png/375px-Add.png 1.5x, /pti/images/thumb/a/a7/Add.png/500px-Add.png 2x" width="250"/></a>
+</p>
+<h3><span id="Pàgina_Web"></span><span class="mw-headline" id="P.C3.A0gina_Web">Pàgina Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=16" title="Edit section: Pàgina Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=16" title="Edit section: Pàgina Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Per la web s'ha emprat les tecnologies Html per mostrar les vistes, CSS per donar-li un aspecte agradable, Java Servlets per administrar les dades dels formularis i Java Sessions per afegir seguretat. Òbviament, les dades sensibles s’envien per peticions POST al Web Service.
+</p><p>En aquesta imatge podem veure que el lloc web disposa d’un Login on cada usuari de la plataforma es pot autenticar per a poder accedir a la part d’administració i gestió de dispositius.
+</p><p><a class="image" href="/pti/index.php/File:SmarcoreWebLogin.png"><img alt="SmarcoreWebLogin.png" data-file-height="323" data-file-width="404" decoding="async" height="323" src="/pti/images/e/e5/SmarcoreWebLogin.png" width="404"/></a>
+</p><p>En aquesta altra imatge, es mostra l’administració de dispositius que podria fer un usuari. Podem veure que li oferim la possiblitat  de canviar l’estat de certs dispositius i en un futur, oferir també la possibilitat d’enviar alertes/alarmes quan certs dispositius entren en estat crític com podrien ser les alarmes. Aquest estat es registraria i es mostraria en un mail que l’usuari rebrà i l’informarà.
+</p><p><a class="image" href="/pti/index.php/File:SmartCoreWebMenu.png"><img alt="SmartCoreWebMenu.png" data-file-height="363" data-file-width="583" decoding="async" height="363" src="/pti/images/1/18/SmartCoreWebMenu.png" width="583"/></a>
+</p>
+<h2><span class="mw-headline" id="Demostracions">Demostracions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;veaction=edit&amp;section=17" title="Edit section: Demostracions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Smart_Core&amp;action=edit&amp;section=17" title="Edit section: Demostracions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A continuació, es mostren videos que ensenyen el funcionament del projecte:
+<a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Demo1.mov" title="File:Demo1.mov">File:Demo1.mov</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083828
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.035 seconds
+Real time usage: 0.045 seconds
+Preprocessor visited node count: 66/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:126-0!canonical and timestamp 20250710083828 and revision id 156
+ -->
+</div>

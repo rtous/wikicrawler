@@ -1,0 +1,100 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Proyecto_SpeakShark"><span class="tocnumber">1</span> <span class="toctext">Proyecto SpeakShark</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Objetivos_del_proyecto"><span class="tocnumber">1.1</span> <span class="toctext">Objetivos del proyecto</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Caracter.C3.ADsticas"><span class="tocnumber">1.2</span> <span class="toctext">Características</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Tecnolog.C3.ADas"><span class="tocnumber">1.3</span> <span class="toctext">Tecnologías</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#How_to_Use"><span class="tocnumber">1.4</span> <span class="toctext">How to Use</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Proyecto_SpeakShark">Proyecto SpeakShark</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;veaction=edit&amp;section=1" title="Edit section: Proyecto SpeakShark">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;action=edit&amp;section=1" title="Edit section: Proyecto SpeakShark">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Logospeakshark.png"><img alt="Logospeakshark.png" data-file-height="302" data-file-width="315" decoding="async" height="302" src="/pti/images/1/16/Logospeakshark.png" width="315"/></a></div></div>
+<p><br/>
+<b> SpeakShark es una aplicación web </b> que tiene como objetivo comunicar diferentes usuarios por VoIP de forma fácil sin necesidad de
+</p><p>tener conocimientos de un programa específico, ni de realizar una descarga. 
+</p><p>SpeakShark propone una solución sencilla para establecer comunicaciones entre usuarios (personas) mediante un navegador web, ya sea 
+</p><p>desde un ordenador con micrófono y webcam, un ordenador portátil, una tablet o un smartphone.
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Objetivos_del_proyecto">Objetivos del proyecto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;veaction=edit&amp;section=2" title="Edit section: Objetivos del proyecto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;action=edit&amp;section=2" title="Edit section: Objetivos del proyecto">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Tomando como referencia aplicaciones del estilo a Skype o TeamSpeak, nuestro objetivo es crear una aplicación web multiplataforma, 
+</p><p>accesible desde cualquier dispositivo y sin necesidad de instalación de software, que sea capaz de establecer una comunicación mediante 
+</p><p>VoIP entre varios clientes a la vez a través de Peer-to-Peer y si es posible de una forma más rápida y sencilla que las actuales. Todo
+</p><p>ello unido a un presupuesto y unos recursos limitados, utilizamos una Raspberry Pi B+ conectada a Internet a través de una conexión de 
+</p><p>fibra óptica propiedad de uno de los miembros del grupo y al uso de tecnologías basadas en software libre. 
+</p><p>Adicionalmente también estaba en nuestros planes ser sostenibles con el medio ambiente y para cumplir con un mínimo de sostenibilidad 
+</p><p>decidimos escoger como servidor, el hardware que lleva la Raspberry Pi B+, ya que permite proporcionar el servicio esperado consumiendo 
+</p><p>el mínimo de energía posible.
+</p><p><br/>
+</p>
+<h2><span id="Características"></span><span class="mw-headline" id="Caracter.C3.ADsticas">Características</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;veaction=edit&amp;section=3" title="Edit section: Características">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;action=edit&amp;section=3" title="Edit section: Características">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Creación de salas y listado de usuarios en las mismas.</li></ul>
+<ul><li>Creación de salas privadas protegidas con contraseña en un futuro.</li></ul>
+<ul><li>Compresión de audio con el codec OPUS de código abierto (<a class="external free" href="http://www.opus-codec.org/" rel="nofollow">http://www.opus-codec.org/</a>).</li></ul>
+<ul><li>Total ausencia de aplicación en el cliente, con el navegador Chrome basta, hay que destacar que dicha característica hace posible la comunicación mediante cualquier dispositivo que tenga instalado este navegador.</li></ul>
+<ul><li>Protocolo WebRTC para streaming de audio, con posibilidad de video y datos en un futuro.</li></ul>
+<ul><li>Implementación de un chat de texto en un futuro.</li></ul>
+<ul><li>Posibilidad de compartir un enlace directo a una sala creada sin necesidad de registro previo.</li></ul>
+<ul><li>Notificaciones por texto.</li></ul>
+<h2><span id="Tecnologías"></span><span class="mw-headline" id="Tecnolog.C3.ADas">Tecnologías</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;veaction=edit&amp;section=4" title="Edit section: Tecnologías">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;action=edit&amp;section=4" title="Edit section: Tecnologías">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Servicio Web: NodeJS <div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Nodejs.png"><img alt="Nodejs.png" data-file-height="159" data-file-width="318" decoding="async" height="159" src="/pti/images/4/4c/Nodejs.png" width="318"/></a></div></div></li>
+<li>Framework: Express <div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Express.png"><img alt="Express.png" data-file-height="141" data-file-width="465" decoding="async" height="141" src="/pti/images/9/9e/Express.png" width="465"/></a></div></div></li>
+<li>Web dinámica: AJAX <div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Ajax.png"><img alt="Ajax.png" data-file-height="148" data-file-width="341" decoding="async" height="148" src="/pti/images/c/c0/Ajax.png" width="341"/></a></div></div></li>
+<li>Base de datos: MySQL Server <div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Mysql.png"><img alt="Mysql.png" data-file-height="161" data-file-width="312" decoding="async" height="161" src="/pti/images/d/d3/Mysql.png" width="312"/></a></div></div></li></ul>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="How_to_Use">How to Use</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;veaction=edit&amp;section=5" title="Edit section: How to Use">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SpeakShark&amp;action=edit&amp;section=5" title="Edit section: How to Use">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En este apartado haremos una pequeña guía de uso (How to use) de nuestra aplicación web. A modo de ejemplo recorreremos toda la página 
+</p><p>viendo y explicando cada funcionalidad a través de capturas de imagen reales.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:18.png"><img alt="" class="thumbimage" data-file-height="655" data-file-width="1299" decoding="async" height="353" src="/pti/images/thumb/8/88/18.png/700px-18.png" srcset="/pti/images/thumb/8/88/18.png/1050px-18.png 1.5x, /pti/images/8/88/18.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:18.png" title="Enlarge"></a></div>Si nos dirigimos a speakshark.ddns.net entraremos en la pantalla de login donde podemos ver dos formularios el primero para poder loguearse y el segundo para registrarse.</div></div></div></div>
+<p><br/>
+</p><p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:22.png"><img alt="" class="thumbimage" data-file-height="655" data-file-width="1299" decoding="async" height="353" src="/pti/images/thumb/7/75/22.png/700px-22.png" srcset="/pti/images/thumb/7/75/22.png/1050px-22.png 1.5x, /pti/images/7/75/22.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:22.png" title="Enlarge"></a></div>En la pantalla de registro podremos registrarnos si aun no lo hemos hecho, solo hará falta un nombre de usuario y contraseña.</div></div></div></div>
+<p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:33.png"><img alt="" class="thumbimage" data-file-height="657" data-file-width="1301" decoding="async" height="353" src="/pti/images/thumb/9/9c/33.png/700px-33.png" srcset="/pti/images/thumb/9/9c/33.png/1050px-33.png 1.5x, /pti/images/9/9c/33.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:33.png" title="Enlarge"></a></div>Si no hay error podremos entrar con nuestro usuario y contraseña.</div></div></div></div>
+<p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:44.png"><img alt="" class="thumbimage" data-file-height="657" data-file-width="1283" decoding="async" height="358" src="/pti/images/thumb/8/8b/44.png/700px-44.png" srcset="/pti/images/thumb/8/8b/44.png/1050px-44.png 1.5x, /pti/images/8/8b/44.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:44.png" title="Enlarge"></a></div>En la pantalla principal podemos hacer el resto de cosas. Unirnos a salas, crear salas, ver quién hay en las salas, compartir salas.</div></div></div></div>
+<p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:55.png"><img alt="" class="thumbimage" data-file-height="654" data-file-width="1285" decoding="async" height="356" src="/pti/images/thumb/8/83/55.png/700px-55.png" srcset="/pti/images/thumb/8/83/55.png/1050px-55.png 1.5x, /pti/images/8/83/55.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:55.png" title="Enlarge"></a></div>Para crear una sala es tan fácil como escribir un nombre de sala en el recuadro de texto y hacer click al botón Create!</div></div></div></div>
+<p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:66.png"><img alt="" class="thumbimage" data-file-height="657" data-file-width="1284" decoding="async" height="358" src="/pti/images/thumb/9/99/66.png/700px-66.png" srcset="/pti/images/thumb/9/99/66.png/1050px-66.png 1.5x, /pti/images/9/99/66.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:66.png" title="Enlarge"></a></div>Una vez creada si queremos entrar en esa sala o en cualquier otra solo hay que hacer click en el símbolo correspondiente de “entrar”   ubicada en la sala deseada. También podemos además silenciar nuestro micro o silenciar nuestro altavoz para no escuchar al resto de   participantes con los botones diseñados para tal fin en la parte superior derecha de la pantalla.</div></div></div></div>
+<p><br/>
+</p><p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:77.png"><img alt="" class="thumbimage" data-file-height="655" data-file-width="1282" decoding="async" height="358" src="/pti/images/thumb/4/4a/77.png/700px-77.png" srcset="/pti/images/thumb/4/4a/77.png/1050px-77.png 1.5x, /pti/images/4/4a/77.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:77.png" title="Enlarge"></a></div>Estando en una sala tenemos la oportunidad de compartir nuestra sala para invitar a que entren sin necesidad de registro previo. Solo   hay que entrar en la sala que deseemos compartir y hacer click en el botón correspondiente de compartir link en la parte superior   derecha de la pantalla.</div></div></div></div>
+<p><br/>
+</p><p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:88.png"><img alt="" class="thumbimage" data-file-height="659" data-file-width="1286" decoding="async" height="359" src="/pti/images/thumb/9/9d/88.png/700px-88.png" srcset="/pti/images/thumb/9/9d/88.png/1050px-88.png 1.5x, /pti/images/9/9d/88.png 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:88.png" title="Enlarge"></a></div>Esta pantalla sería el ejemplo de entrar con el link de la figura 8. podemos observar que entramos con un usuario especial llamado   guest (invitado). Los invitados no pueden crear salas.</div></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250710083827
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.027 seconds
+Real time usage: 0.036 seconds
+Preprocessor visited node count: 19/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:85-0!canonical and timestamp 20250710083827 and revision id 115
+ -->
+</div>

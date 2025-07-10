@@ -1,0 +1,56 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.C2.BFQu.C3.A9_es_taskclock.3F"><span class="tocnumber">1</span> <span class="toctext">¿Qué es taskclock?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Vaadin"><span class="tocnumber">3</span> <span class="toctext">Vaadin</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Cliente"><span class="tocnumber">4</span> <span class="toctext">Cliente</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Servidor"><span class="tocnumber">5</span> <span class="toctext">Servidor</span></a></li>
+</ul>
+</div>
+<h1><span id="¿Qué_es_taskclock?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_taskclock.3F">¿Qué es taskclock?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;veaction=edit&amp;section=1" title="Edit section: ¿Qué es taskclock?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;action=edit&amp;section=1" title="Edit section: ¿Qué es taskclock?">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Taskclock es un proyecto orientado a la gestión de fichajes para trabajadores que tienen servicios descentralizados, como es personal de mantenimiento o de limpieza. El usuario a través de la aplicación puede fichar en la tarea correspondiente que le toca en aquel instante de tiempo. Además también puede ver todas las tareas hechas o por hacer a través de un calendario. 
+</p><p><a class="image" href="/pti/index.php/File:Imagen1.png"><img alt="Imagen1.png" data-file-height="333" data-file-width="567" decoding="async" height="333" src="/pti/images/d/d0/Imagen1.png" width="567"/></a>
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;veaction=edit&amp;section=2" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;action=edit&amp;section=2" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para llevar a cabo el proyecto se han usado distintas tecnologías. El desarrollo del proyecto se ha llevado a través del IDE Netbeans 8. El programa ha estado escrito en Java y se ha usado un framework llamado Vaadin, del cual hemos usado la versión 8. Para la gestión de datos se ha usado una base de datos SQL alojada en un servidor remoto. Este servidor remoto, es una máquina virtual que ha proporcionado la FIB.
+</p>
+<h1><span class="mw-headline" id="Vaadin">Vaadin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;veaction=edit&amp;section=3" title="Edit section: Vaadin">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;action=edit&amp;section=3" title="Edit section: Vaadin">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Vaadin es un framework que estiliza la parte de front-end de la aplicación. Funciona sobre Java u el usuario tiene que programar en este lenguaje, de esta forma no hace falta que toque código HTML ya que es el propio framework el que se encarga de ello.
+Ofrece una gran variedad de funcionalidades en cuanto a diseño. 
+</p>
+<h1><span class="mw-headline" id="Cliente">Cliente</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;veaction=edit&amp;section=4" title="Edit section: Cliente">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;action=edit&amp;section=4" title="Edit section: Cliente">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La parte del cliente se ha dividido en dos. Por un lado tenemos las vistas de un trabajador y por la otra las vistas del cliente.
+El trabajador una vez inicia la sesión en la aplicación, va a un calendario donde se muestran todas las tareas que tiene, tanto las que están hechas como las que faltan por hacer. En esta página de calendario puede realizar varias acciones como fichar en la tarea que le toque en ese momento, ver sus datos personales y ver todos los fichajes. En la vista de ver todos los fichajes, puede aceptar los cambios de un fichaje en caso que se haya modificado la hora o haya hecho horas extras, todo esto bajo previo consentimiento del jefe. 
+</p><p><a class="image" href="/pti/index.php/File:Imagen2.png"><img alt="Imagen2.png" data-file-height="268" data-file-width="567" decoding="async" height="268" src="/pti/images/a/ad/Imagen2.png" width="567"/></a>
+</p><p>El jefe, una vez ha iniciado la sesión, ve un calendario donde se muestran todas las tareas de los trabajadores. Dispone de un panel donde puede filtrar por trabajadores. Además tiene la opción de añadir tareas, añadir lugares y ver fichajes. En esta última vista, la de ver fichajes, podrá editar un fichaje de un trabajador una vez haya fichado. Para que los cambios se acepten, el trabajador tendrá que aceptar las modificaciones. 
+</p><p><a class="image" href="/pti/index.php/File:Imagen3.png"><img alt="Imagen3.png" data-file-height="289" data-file-width="567" decoding="async" height="289" src="/pti/images/a/ac/Imagen3.png" width="567"/></a>
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="Servidor">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;veaction=edit&amp;section=5" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Taskclock&amp;action=edit&amp;section=5" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para desarrollar el programa se ha separado la parte de front-end de la de back-end. El back-end, es una aplicación web, que se encarga de gestionar las llamadas con la base de datos y enviar o recibir datos del cliente. La recepción y/o envío de datos con el cliente se hace mediante llamadas SOAP. 
+La aplicación servidor, esta alojada en una máquina virtual de la FIB y se puede acceder a través de una IP. Previamente tienes que conectar el ordenador a la VPN de la FIB a través de UPCLink.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083838
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 18/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:535-0!canonical and timestamp 20250710083838 and revision id 877
+ -->
+</div>

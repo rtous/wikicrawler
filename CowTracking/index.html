@@ -1,0 +1,235 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:284px;"><a class="image" href="/pti/index.php/File:CowLocalizer.png"><img alt="CowLocalizer.png" class="thumbimage" data-file-height="83" data-file-width="282" decoding="async" height="83" src="/pti/images/5/5c/CowLocalizer.png" width="282"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:CowLocalizer.png" title="Enlarge"></a></div></div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.C2.BFQu.C3.A9_es_Cowlocalizer.3F"><span class="tocnumber">1</span> <span class="toctext">¿Qué es Cowlocalizer?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Motivaci.C3.B3n"><span class="tocnumber">2</span> <span class="toctext">Motivación</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Visi.C3.B3n_general"><span class="tocnumber">3</span> <span class="toctext">Visión general</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Demo"><span class="tocnumber">3.1</span> <span class="toctext">Demo</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Tecnolog.C3.ADas_usadas"><span class="tocnumber">3.2</span> <span class="toctext">Tecnologías usadas</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Funcionamiento_general"><span class="tocnumber">3.3</span> <span class="toctext">Funcionamiento general</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Funcionamiento_espec.C3.ADfico"><span class="tocnumber">3.4</span> <span class="toctext">Funcionamiento específico</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Funcionamiento_TTGO_T-Beam"><span class="tocnumber">3.4.1</span> <span class="toctext">Funcionamiento TTGO T-Beam</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="#Funcionamiento_tecnolog.C3.ADa_GPS"><span class="tocnumber">3.4.1.1</span> <span class="toctext">Funcionamiento tecnología GPS</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#Funcionamiento_tecnolog.C3.ADa_LoRa"><span class="tocnumber">3.4.1.2</span> <span class="toctext">Funcionamiento tecnología LoRa</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#Funcionamiento_tecnolog.C3.ADa_WiFi"><span class="tocnumber">3.4.1.3</span> <span class="toctext">Funcionamiento tecnología WiFi</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-12"><a href="#Funcionamiento_Google_Maps_API"><span class="tocnumber">3.4.2</span> <span class="toctext">Funcionamiento Google Maps API</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Requerimiento_t.C3.A9cnico"><span class="tocnumber">4</span> <span class="toctext">Requerimiento técnico</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Arquitectura"><span class="tocnumber">5</span> <span class="toctext">Arquitectura</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Front_end"><span class="tocnumber">5.1</span> <span class="toctext">Front end</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Back_end"><span class="tocnumber">5.2</span> <span class="toctext">Back end</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Node.js"><span class="tocnumber">5.2.1</span> <span class="toctext">Node.js</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Mongo_DB"><span class="tocnumber">5.2.2</span> <span class="toctext">Mongo DB</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Conclusiones_y_futuras_mejoras"><span class="tocnumber">6</span> <span class="toctext">Conclusiones y futuras mejoras</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Conclusiones"><span class="tocnumber">6.1</span> <span class="toctext">Conclusiones</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Futuras_mejoras"><span class="tocnumber">6.2</span> <span class="toctext">Futuras mejoras</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Manual_de_usuario"><span class="tocnumber">7</span> <span class="toctext">Manual de usuario</span></a></li>
+</ul>
+</div>
+<h1><span id="¿Qué_es_Cowlocalizer?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_Cowlocalizer.3F">¿Qué es Cowlocalizer?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=1" title="Edit section: ¿Qué es Cowlocalizer?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=1" title="Edit section: ¿Qué es Cowlocalizer?">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>CowLocalizer es un proyecto pensado y desarrollado para la localización de animales. Así, podemos ayudar en el desarrollo de la tecnología enfocado al cuidado de animales y ramaderia y pensamos que también puede impulsar a los desarolladores a hacer la tecnología más justa: pensando en los casos de uso de la población que viva en estas zonas y poniendo a su disposición la técnica, adaptandonos al terreno físico y a la conectividad actual.
+</p>
+<h1><span id="Motivación"></span><span class="mw-headline" id="Motivaci.C3.B3n">Motivación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=2" title="Edit section: Motivación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=2" title="Edit section: Motivación">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Hoy en día, la tecnología ha avanzado y popularizado a un ritmo muy rápido. Mientras que en los años 90 en España era inimaginable que en prácticamente cada casa hubiera un ordenador con conexión a Internet, hoy en día esta quimera es una realidad.
+</p><p>No obstante, esta popularización no se ha llevado al mismo ritmo en todos los lugares. Por ejemplo, en zonas rurales, muchas veces las tecnologías de acceso a internet móvil brillan por su ausencia.
+</p><p>Este hecho ha llevado a que muchas veces la tecnología no se desarrollase teniendo en cuenta las necesidades de toda la población. Mientras en las grandes ciudades la gente adapta sus hogares a la domótica y el IoT, hay poblaciones en las cuales aún se está reclamando el derecho a una línea de acceso a Internet de velocidad y estabilidad suficiente.
+</p><p>Pensando en este tipo de áreas, nos encontramos con la tecnología LoRa, que se trata de una forma de transmisión de datos de bajo consumo y largo alcance. Pensamos que podría ayudar mucho en aquellas zonas en las cuales no tenemos un acceso de calidad a internet móvil, y enfocándolo a las necesidades de la población.
+</p><p><br/>
+</p>
+<h1><span id="Visión_general"></span><span class="mw-headline" id="Visi.C3.B3n_general">Visión general</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=3" title="Edit section: Visión general">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=3" title="Edit section: Visión general">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Demo">Demo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=4" title="Edit section: Demo">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=4" title="Edit section: Demo">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Demo.gif"><img alt="Demo.gif" data-file-height="518" data-file-width="600" decoding="async" height="518" src="/pti/images/c/c7/Demo.gif" width="600"/></a></div></div>
+<h2><span id="Tecnologías_usadas"></span><span class="mw-headline" id="Tecnolog.C3.ADas_usadas">Tecnologías usadas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=5" title="Edit section: Tecnologías usadas">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=5" title="Edit section: Tecnologías usadas">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CowLocalizer es una aplicación web que depende de la tecnología lora . Aquí todos los animales que están siendo localizados tienen asignada la placa lora y usamos la tecnología Lora para enviar las ubicaciones reales de los animales al backend.Usamos Mongodb, NodeJS, servidor de la fib, Html , JS , CSS y API de Google maps.
+</p><p>Todos los componentes que hemos usado menos Google maps API son open source.
+</p>
+<h2><span class="mw-headline" id="Funcionamiento_general">Funcionamiento general</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=6" title="Edit section: Funcionamiento general">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=6" title="Edit section: Funcionamiento general">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Las siguientes son las principales funcionalidades del CowLocalizer:
+Registrar usuario en el sitio web
+El usuario registrado puede entonces mirar su perfil que tendrá información básica como el nombre de usuario,correo ,contraseñas y opciones para cambiar la contraseña y así sucesivamente.
+El usuario puede consultar los localizadores que tiene y añadir localizadores también. Aquí cada localizador tiene asignada la ID que tiene que ser única para todos los localizadores (placa lora).
+Una vez que el usuario ha agregado su localizador, es decir, las vacas registradas en el sistema, con la ayuda de los Google maps, puede monitorear la posición de las vacas en todo momento.
+Para no tener el conflicto de Ids cada usuario que tenga la placa lora lista para ser colgada en las vacas tendrá que hablar con el administrador para obtener las identificaciones que están disponibles para ser asignadas a todas las vacas.
+</p>
+<h2><span id="Funcionamiento_específico"></span><span class="mw-headline" id="Funcionamiento_espec.C3.ADfico">Funcionamiento específico</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=7" title="Edit section: Funcionamiento específico">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=7" title="Edit section: Funcionamiento específico">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Funcionamiento_TTGO_T-Beam">Funcionamiento TTGO T-Beam</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=8" title="Edit section: Funcionamiento TTGO T-Beam">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=8" title="Edit section: Funcionamiento TTGO T-Beam">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En este caso, tanto los localizadores de los animales como la “estación central” que se encargará de recibir la señal enviada por los demás, tratan de placas TTGO T-Beam.
+</p><p>Estas placas, que se pueden encontrar por unos 22€ en el mercado, disponen de un procesador ESP32, GPS, conectividad LoRa, WiFi y Bluetooth.
+</p><p>En lo que se refiere a la alimentación de las mismas, se pueden alimentar mediante puerto USB Micro A (mediante el cual también podremos establecer una conexión serie con el ordenador, a modo de pantalla, para poder debuggear nuestro programa) o bien con pilas 18650 de 3.7V. El precio de las mismas es ligeramente superior al de pilas estándar AA.
+</p><p>Además, las placas son muy ligeras, de tal manera que podemos, por ejemplo, mediante alguna especie de collar, hacer que sean portadas por los animales con total seguridad.
+</p><p>Como hemos comentado brevemente, la tecnología LoRa se trata de radiofrecuencia capaz de enviar datos a una gran distancia y baja velocidad. Pese a las limitaciones de esta tecnología, las prestaciones que nos ofrece son más que suficientes para este caso de uso.
+</p><p>En lo que se refiere a nuestro proyecto, tendremos dos tipos de placa diferentes: las placas enviadoras (las que “tienen los animales encima” y se encargan de enviar su propia posición y formar la mesh, explicaremos este funcionamiento más adelante) y las receptoras, que son las encargadas de escuchar en todo momento el espacio LoRa y, en caso de que sean capaces de encontrar algún mensaje con una posición válida (es decir, en la que hayan participado más de tres satélites para su cálculo), la enviará mediante WiFi al endpoint habilitado en el servidor.
+</p><p>Así entonces, las placas enviadoras enviarán su posición cada 5 segundos. En caso de no esté enviando su posición, estará escuchando el medio en busca de mensajes LoRa. En caso de haber recibido uno, primero mirará el identificador del mensaje (en el punto 2.3.1.2) explicaremos la estructura del mensaje) y, en caso de que lo haya recibido y enviado ya, o bien si ese mensaje viene de la misma placa, no lo enviará. En caso contrario, esperará entre medio segundo y cinco para reenviar el mensaje. La razón de esta espera variable es la de evitar colisiones en el momento en que haya varias placas que reciban un mensaje reenviable a la vez.
+</p>
+<h4><span id="Funcionamiento_tecnología_GPS"></span><span class="mw-headline" id="Funcionamiento_tecnolog.C3.ADa_GPS">Funcionamiento tecnología GPS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=9" title="Edit section: Funcionamiento tecnología GPS">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=9" title="Edit section: Funcionamiento tecnología GPS">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>En este caso, las placas que envían su propia posición, lo primero que harán es obtenerla mediante los satélites GPS.
+</p><p>Como ya sabemos, esta tecnología funciona trilaterando la posición conectándose con al menos tres satélites. De esta manera, dado que los satélites saben la distancia a la cual se mantienen entre ellos, podemos saber fácilmente la posición relativa del receptor (en este caso, de la placa TTGO).
+</p>
+<h4><span id="Funcionamiento_tecnología_LoRa"></span><span class="mw-headline" id="Funcionamiento_tecnolog.C3.ADa_LoRa">Funcionamiento tecnología LoRa</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=10" title="Edit section: Funcionamiento tecnología LoRa">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=10" title="Edit section: Funcionamiento tecnología LoRa">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Como hemos mencionado anteriormente, LoRa es una tecnología inalámbrica la cual emplea un tipo de modulación en radiofrecuencia patentado por la empresa Semtech. En este caso, tiene tres bandas de trabajo: 915 MHz en América, 433 MHz en Asia y 868 MHz en Europa. En el caso de España, el uso de esta frecuencia está regulado según la norma UN-39, y se considera “Aplicación de baja potencia con la consideración de uso común”. Por lo tanto, no necesitamos tener ninguna licencia para poder utilizarla.
+</p><p>En las pruebas que hemos podido realizar sobre este proyecto, la tecnología LoRa tiene un alcance de unos 800 metros (en ciudad, con edificios altos). No obstante, tiene un alcance en llano de unos 10 kilómetros, por lo que es ideal para nuestro caso de uso.
+</p><p>En nuestro caso en concreto, como hemos indicado anteriormente, utilizamos una estructura de mensaje bien definido:
+ID_mensajedID_placadN_SatsdLat_GPSdLong_GPS
+</p><p>Vamos a revisar para qué sirve cada uno de los campos:
+ID_mensaje: se trata de un entero no superior a 999999. De esta manera, podemos identificar si un mensaje ya ha sido reenviado o no, una vez tengamos la mesh formada. Tenemos que tener en cuenta que en reenviar el mensaje, no se modifica ningún campo: únicamente se reenvia. También lo utilizará la placa receptora para saber si el mensaje ya se ha enviado al servidor o no.
+Carácter ‘d’: Se utiliza de separador entre campo y campo.
+ID_placa: Es un entero que identifica la placa de la cual se está enviando la posición (y, por tanto, la placa originaria del mensaje). Nos servirá para poder discernir a qué usuario pertenece cada ubicación posteriormente.
+Carácter ‘d’: Se utiliza de separador entre campo y campo.
+N_Sats: Indica el número de satélites mediante los cuales se ha obtenido la posición GPS. Lo utilizará la placa receptora para poder saber si se trata de una localización fiable (y por tanto, la puede enviar al servidor) o no.
+Carácter ‘d’: Se utiliza de separador entre campo y campo.
+Lat_GPS: Indica la latitud de la posición de la placa enviadora.
+Carácter ‘d’: Se utiliza de separador entre campo y campo.
+Long_GPS: Indica la longitud de la posición de la placa enviadora.
+</p>
+<h4><span id="Funcionamiento_tecnología_WiFi"></span><span class="mw-headline" id="Funcionamiento_tecnolog.C3.ADa_WiFi">Funcionamiento tecnología WiFi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=11" title="Edit section: Funcionamiento tecnología WiFi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=11" title="Edit section: Funcionamiento tecnología WiFi">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>En este caso, nuestra placa receptora tendrá que enviar los mensajes válidos al servidor. Para ello, tenemos hardcodeado el SSID y contraseña del AP WiFi en el programa de la placa receptora. Así entonces, se conectará a la red indicada durante el inicio de la misma y después enviará los mensajes recibidos mediante LoRa al servidor mediante la API, con una petición HTTP Post.
+</p>
+<h3><span class="mw-headline" id="Funcionamiento_Google_Maps_API">Funcionamiento Google Maps API</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=12" title="Edit section: Funcionamiento Google Maps API">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=12" title="Edit section: Funcionamiento Google Maps API">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El uso de Google Maps aquí es para ver la posición de las vacas en cada momento.
+.Usamos JavaScript para utilizar la API de mapas de Google. La API de Google Maps nos da opciones para agregar tantos marcadores como queramos dada la latitud y la longitud.
+</p><p>Para usar la API de Google Maps, uno debe registrarse para obtener una clave API
+Podemos ir al sitio <a class="external free" href="https://console.cloud.google.com/" rel="nofollow">https://console.cloud.google.com/</a> donde creamos un nuevo proyecto y luego, después de crear el proyecto, podemos ir a nuestras credenciales y generar una clave API.Hay algunos documentos y ejemplos del uso de la API de Google Maps que se pueden encontrar en  <a class="external free" href="https://code.google.com/apis/maps/" rel="nofollow">http://code.google.com/apis/maps/</a> .
+</p><p>Todas las coordenadas que se enviaron se guardan en la base de datos. Aquí a través del javascript lo que hacemos es elegir la última coordenada de cada placa y luego con la ayuda de google maps mostramos la posición actual de las vacas. Teniendo en cuenta que las vacas no cambian su posición con más frecuencia recargamos la posición actual de la vaca cada 10 segundos y así mirando la última posición cada 10 segundos podemos ver la posición actual y también el movimiento de las vacas.
+</p>
+<h1><span id="Requerimiento_técnico"></span><span class="mw-headline" id="Requerimiento_t.C3.A9cnico">Requerimiento técnico</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=13" title="Edit section: Requerimiento técnico">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=13" title="Edit section: Requerimiento técnico">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Requisito del cliente</li></ul>
+<p>Como CowLocalizer es una aplicación web, se puede ejecutar en la mayoría de los sistemas operativos personalizados a través de un navegador web. Hemos probado Cowlocalizer en algunos navegadores web populares como Chrome y Mozilla y no encontramos ningunas problemas.
+</p>
+<ul><li>Requisito del servidor</li></ul>
+<p>Hemos utilizado el servidor proporcionado por nuestra universidad pero debería funcionar sin problemas en Apache 2.2.1, etc.
+</p>
+<h1><span class="mw-headline" id="Arquitectura">Arquitectura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=14" title="Edit section: Arquitectura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=14" title="Edit section: Arquitectura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La arquitectura consiste básicamente en un front-end y un back-end.
+</p>
+<h2><span class="mw-headline" id="Front_end">Front end</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=15" title="Edit section: Front end">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=15" title="Edit section: Front end">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El frontend es todo aquello con lo que interactúa el usuario, aquí el usuario puede ver el mapa que muestra las posiciones de todas las vacas que le pertenecen.
+Esta capa se creó utilizando HTML, CSS y JavaScript.Además , hemos incorporado google maps.
+</p><p>Como hemos comentado, para el FrontEnd hemos utilizado HTML5, CSS3 y JS. Con HTML y CSS hemos diseñado toda la estructura de la página web.
+</p><p>Como se puede ver en esta imagen de la pagina principal, podemos identificar un “header”, un “navegador” y todo el contenido, dónde hacemos un pequeño resumen de las tecnologias que usamos:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL1.png"><img alt="CL1.png" data-file-height="84" data-file-width="543" decoding="async" height="84" src="/pti/images/d/d0/CL1.png" width="543"/></a></div></div>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL2.png"><img alt="CL2.png" data-file-height="244" data-file-width="544" decoding="async" height="244" src="/pti/images/3/31/CL2.png" width="544"/></a></div></div>
+<p>Además para conseguir que el navegador, fuese un “sticky nav”, se usó un poco de javascript:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL3.png"><img alt="CL3.png" data-file-height="207" data-file-width="532" decoding="async" height="207" src="/pti/images/3/31/CL3.png" width="532"/></a></div></div>
+<p>Si ahora miramos tanto, la página de registrarse cómo la de iniciar sesión, podemos ver que utilizamos HTMLH y CSS3 para crear un formulario y así poder enviar la información necesaria para registrarse e iniciar sesión:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL4.png"><img alt="CL4.png" data-file-height="230" data-file-width="348" decoding="async" height="230" src="/pti/images/f/f3/CL4.png" width="348"/></a></div></div>
+<p>Para que un usuario pueda añadir sus placas LoRa, también utilizamos un formulario para enviar su identificador, en caso de querer eliminar una placa, proporcionamos un botón que sirve para eliminar a la placa de la Base de Datos del proyecto:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL6.png"><img alt="CL6.png" data-file-height="198" data-file-width="367" decoding="async" height="198" src="/pti/images/e/ef/CL6.png" width="367"/></a></div></div>
+<p>Por último, tenemos que comentar que al crear un usuario, añadir un localizador, eliminar un localizador, los errores al iniciar sesión… todas estas alertas se han conseguido a través de bootstrap, un framework de FrontEnd para que nos quede un buen diseño y el usuario pueda saber en todo momento que cosas esta haciendo bien y que cosas no:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL7.png"><img alt="CL7.png" data-file-height="139" data-file-width="565" decoding="async" height="139" src="/pti/images/a/a8/CL7.png" width="565"/></a></div></div>
+<h2><span class="mw-headline" id="Back_end">Back end</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=16" title="Edit section: Back end">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=16" title="Edit section: Back end">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El backend está implementado con Node.js que conectaba con una base de datos noSQL en este caso MonogoDB.
+</p>
+<h3><span class="mw-headline" id="Node.js">Node.js</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=17" title="Edit section: Node.js">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=17" title="Edit section: Node.js">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Los principales módulos de Nodejs que hemos usado són:
+express --&gt; framewwork node
+express-handlerbars
+express-session
+method-override --&gt;extension formularios(+PUT,DELETE...)
+mongoose --&gt;Permite unir express con la base de datos (permite conectarse, no es la BBDD)
+passport --&gt;autenticar usuário
+passport-local --&gt;autenticar usuário
+bcryptjs --&gt;Permite convertir un stirng en un hash que usaremos para cifrar passwords
+connect-flash --&gt; Para enviar diferentes vistas.
+Algunos que hemos ido añadiendo según los hemos necesitado són:
+path --&gt; este viene ya instalado sirve para realizar paths de forma multiplataforma de manera que no nos preocupamos si es en entorno windows o linux
+dotenv --&gt; Para poder usar variables de entorno (ejemplo, token de servicios, conexion bbdd...)
+nodemon -D --&gt; Para no tener que estar reiniciando el servidor
+handlebars --&gt; En caso de errores con express-handlerbars (sino no instalar)
+mpn-check-update --&gt; Para verificar si hay módulos actualizados
+</p><p>Para poder desarrollar el backend de manera que fuera sencilla de mantener y fuera lo más escalable posible creamos una estructura de directorios y una serie de ficheros de configuración tanto del propio servidor como de la conexión con la BBDD. La estructura que decidimos usar para organizar el backend es la siguiente.
+rotues = urls
+views = archivos que vamos a enviar al ordenador
+public = insertar archivos estáticos, imágenes...
+models = como serán los datos dentro de la base de datos
+helpers = funciones que podemos usar (no es necesario)
+config = variables de config del entorno, como estamos autenticando...
+</p><p>Además de tres ficheros de configuración, que realizaban el arranque del backend, la configuración de este con la base de datos, y la configuración de la propia base de datos
+</p><p><br/>
+Los end points principales y por lo tanto las funcionalidades principales de este servidor son, por un lado la comunicación con las placas LoRa, estas tienen un endPoint creado donde pueden realizar POST de las ubicaciones, y este los guardará en la BBDD si son placas de un usuario existente.
+</p><p>La segunda función principal es la de manejo de usuarios de la aplicación, ja sea creación comprobación de usuarios, así como las lógicas entre usuarios y sus placas (creación de placas de cada usuario, que solo este pueda ver sus placas…).
+</p><p>Y por último los endPoints relacionados con la API de GoogleMaps que muestra las ubicaciones de las diferentes placas que previamente hayan sido registradas por los usuarios.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL8.png"><img alt="CL8.png" data-file-height="404" data-file-width="162" decoding="async" height="404" src="/pti/images/4/47/CL8.png" width="162"/></a></div></div>
+<h3><span class="mw-headline" id="Mongo_DB">Mongo DB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=18" title="Edit section: Mongo DB">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=18" title="Edit section: Mongo DB">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Como hemos comentado anteriormente, hemos usado una base de datos noSQL para este proyecto, la principal diferencia es que en vez de contener tablas relacionadas entre ellas lo que usa Mongo son schemas. En nuestro caso tenemos definidos 3 Schemas, uno para usuarios (donde se almacenan todos los datos relacionados con este y las contraseñas previamente cifradas) , otro que relaciona los usuarios con las placas LoRa de cada usuario y el último para guardar las localizaciones de las placas LoRa.
+</p><p>Un esquema de flujo de interacción, una vez integrado el proyecto sería:
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL9.png"><img alt="CL9.png" data-file-height="409" data-file-width="345" decoding="async" height="409" src="/pti/images/b/bb/CL9.png" width="345"/></a></div></div>
+<h1><span class="mw-headline" id="Conclusiones_y_futuras_mejoras">Conclusiones y futuras mejoras</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=19" title="Edit section: Conclusiones y futuras mejoras">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=19" title="Edit section: Conclusiones y futuras mejoras">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Conclusiones">Conclusiones</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=20" title="Edit section: Conclusiones">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=20" title="Edit section: Conclusiones">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cow localizer es un proyecto para ayudar a los ramaderos a localizar a sus animales con la ayuda de la tecnología lora que tiene un alcance de unos 800 metros (en ciudad, con edificios altos). No obstante, tiene un alcance en llano de unos 10 kilómetros, por lo que es ideal para nuestro caso de uso.
+</p><p>A diferencia de otros proveedores de servicios, la tecnología que estamos utilizando no depende de la cobertura 4G para localizar los animales, lo cual es ideal en áreas remotas o rurales donde se realiza el cultivo pero la cobertura de la red no es tan buena.
+</p><p>El caso de uso no solo se limita a localizar las vacas, ya que podemos usar las tecnologías lora para rastrear animales en el zoo , rastrear animales en los parques nacionales , cuidado de ganado en espacios abiertos ,seguimiento de animales domésticos ,seguimiento de flota de coches etc.
+</p>
+<h2><span class="mw-headline" id="Futuras_mejoras">Futuras mejoras</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=21" title="Edit section: Futuras mejoras">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=21" title="Edit section: Futuras mejoras">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol><li><b>HTTPS</b> : Por el momento, nuestro sitio utiliza http, pero en un futuro próximo podemos utilizar https para hacer que el sitio sea más seguro.</li>
+<li><b>Encriptación</b> : El envío de los paquetes de una placa lora a otra placa lora y también de la placa lora al servidor no están encriptados, pero en futuro podemos usar la encriptación de algún tipo para que los paquetes enviados no sean manipulados o cambiados por hackers.</li>
+<li><b>Aplicación para móvil</b> : Por el momento, el servicio que damos está basado en la web, pero en el futuro podemos crear una aplicación móvil que podría ser más portable.</li>
+<li><b>Mostrar trayectoria</b> :Por el momento, los usuarios pueden ver la posición actual de sus animales, pero podemos trabajar para mostrar toda la trayectoria de un animal en particular para que el usuario vea dónde había estado el animal durante todo el día.</li></ol>
+<h1><span class="mw-headline" id="Manual_de_usuario">Manual de usuario</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;veaction=edit&amp;section=22" title="Edit section: Manual de usuario">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CowTracking&amp;action=edit&amp;section=22" title="Edit section: Manual de usuario">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Un usuario cuando abre la página web de CowLocalizer se puede ver una breve información sobre el proyecto.
+Sin embargo, el usuario no podrá localizar las vacas hasta que haya iniciado sesión.
+</p><p>Ahora, si el usuario quiere utilizar el producto, tiene dos opciones: iniciar sesión o registrarse.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL10.png"><img alt="CL10.png" data-file-height="228" data-file-width="563" decoding="async" height="228" src="/pti/images/b/bf/CL10.png" width="563"/></a></div></div>
+<ul><li>Inicializar la sesión es simple ya que el usuario puede ingresar el nombre de usuario y la contraseña y podrá utilizar el servicio de localización de las vacas.</li></ul>
+<ul><li>El usuario que quiera registrarse deberá poner el nombre de usuario email y contraseña. La contraseña proporcionada no puede tener menos de 4 caracteres.</li></ul>
+<ul><li>Ahora una vez que el usuario está registrado puede agregar los localizadores y también consultar sus localizadores</li></ul>
+<table class="wikitable" style="border: 1px solid black; border-spacing: 0; margin: 1em auto;">
+<tbody><tr>
+<td><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL11.png"><img alt="CL11.png" data-file-height="335" data-file-width="245" decoding="async" height="335" src="/pti/images/0/07/CL11.png" width="245"/></a></div></div></td>
+<td><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL12.png"><img alt="CL12.png" data-file-height="348" data-file-width="202" decoding="async" height="348" src="/pti/images/3/34/CL12.png" width="202"/></a></div></div></td>
+<td><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL13.png"><img alt="CL13.png" data-file-height="226" data-file-width="228" decoding="async" height="226" src="/pti/images/6/6b/CL13.png" width="228"/></a></div></div>
+</td></tr></tbody></table>
+<p>.
+</p>
+<ul><li>El usuario haciendo clic en "Localiza tus vacas" lo llevará a la página que muestra los mapas y puede ver la posición de las vacas que pertenecen al usuario.</li></ul>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL14.png"><img alt="CL14.png" data-file-height="117" data-file-width="558" decoding="async" height="117" src="/pti/images/1/1f/CL14.png" width="558"/></a></div></div>
+<ul><li>El usuario, por supuesto, tiene las opciones de acercar, alejar, cambiar la vista de normal a terreno, mirar en la vista de satélite, etc.</li></ul>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:CL15.png"><img alt="CL15.png" data-file-height="363" data-file-width="490" decoding="async" height="363" src="/pti/images/4/42/CL15.png" width="490"/></a></div></div>
+<ul><li>Y al final el usuario cuando quiera puede cerrar la sesión.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20250710083840
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.037 seconds
+Real time usage: 0.045 seconds
+Preprocessor visited node count: 75/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:561-0!canonical and timestamp 20250710083840 and revision id 1191
+ -->
+</div>

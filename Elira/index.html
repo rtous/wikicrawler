@@ -1,0 +1,81 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Objetivos_del_proyecto"><span class="tocnumber">2</span> <span class="toctext">Objetivos del proyecto</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Enfoque_y_m.C3.A9todo_seguido"><span class="tocnumber">3</span> <span class="toctext">Enfoque y método seguido</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Arquitectura_del_proyecto"><span class="tocnumber">4</span> <span class="toctext">Arquitectura del proyecto</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Asistente_virtual"><span class="tocnumber">4.1</span> <span class="toctext">Asistente virtual</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Back-end"><span class="tocnumber">4.2</span> <span class="toctext">Back-end</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Front-end"><span class="tocnumber">4.3</span> <span class="toctext">Front-end</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Demo"><span class="tocnumber">4.4</span> <span class="toctext">Demo</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El propósito de nuestro proyecto de PTI es crear un dispositivo con funcionalidades análogas a las ofrecidas por Alexa de Amazon o Google Home. Para esto, emplearemos tecnologías de código abierto. Específicamente, usaremos LlaMa 2, el modelo de lenguaje de código abierto de Facebook, que se ocupará de procesar y responder a comandos de voz. El dispositivo se construirá utilizando una Raspberry Pi como base.
+Inspirándose en productos existentes, nuestro proyecto también incluirá una aplicación móvil, que permitirá configurar y acceder al historial del dispositivo basado en Raspberry Pi.
+</p>
+<h1><span class="mw-headline" id="Objetivos_del_proyecto">Objetivos del proyecto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=2" title="Edit section: Objetivos del proyecto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=2" title="Edit section: Objetivos del proyecto">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El proyecto tiene varios objetivos tecnológicos, incluyendo:
+</p><p>● Integrar distintos modelos de lenguaje natural (como LlaMa 2), tecnologías de detección de palabras clave, y sistemas de conversión de voz a texto y de texto a voz, en una aplicación práctica.
+</p><p>● Autoalojar un modelo de lenguaje natural (LLM, LlaMa 2 en nuestro caso).
+</p><p>● Desarrollar software basado en la arquitectura cliente-servidor.
+</p><p>● Crear una aplicación para smartphones.
+</p><p>● Desarrollar software específico para dispositivos de IoT, como Raspberry Pi.
+</p><p>● Emplear bases de datos NoSQL, específicamente Cassandra DB, para tener un entorno que esté preparado para un despliegue real.
+</p><p>Este proyecto se inspira en asistentes virtuales conocidos como Alexa, Siri y Google Assistant, así como en otros proyectos menos conocidos que utilizan la Raspberry Pi, como Mycroft o Rhasspy.
+</p>
+<h1><span id="Enfoque_y_método_seguido"></span><span class="mw-headline" id="Enfoque_y_m.C3.A9todo_seguido">Enfoque y método seguido</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=3" title="Edit section: Enfoque y método seguido">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=3" title="Edit section: Enfoque y método seguido">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Como son tres componentes independientes unos de los otros hicimos el desarrollo en paralelo, y no hubo contacto entre ellos hasta que se hizo la integración. El asistente virtual no necesita de un back-end para poder funcionar, ya que siempre se puede usar un mock-up server para testearlo. Para el front-end podemos aplicar la lógica anterior. Para testear el back-end lo dividimos en dos partes: las llamadas a base de datos, las cuales se implementaron al inicio de todo y se testearon todas con Postman, y posteriormente el endpoint de LlaMa que se testeó por partes durante la integración. La integración se testeó usando una VPN de WireGuard donde todos los componentes estaban conectados como si
+fuera una red privada.
+</p>
+<h1><span class="mw-headline" id="Arquitectura_del_proyecto">Arquitectura del proyecto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=4" title="Edit section: Arquitectura del proyecto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=4" title="Edit section: Arquitectura del proyecto">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:944px;"><a class="image" href="/pti/index.php/File:Firefox_gOLxLRsUfj.png"><img alt="Firefox gOLxLRsUfj.png" class="thumbimage" data-file-height="465" data-file-width="942" decoding="async" height="465" src="/pti/images/c/c3/Firefox_gOLxLRsUfj.png" width="942"/></a> <div class="thumbcaption"></div></div></div></div>
+<h2><span class="mw-headline" id="Asistente_virtual">Asistente virtual</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=5" title="Edit section: Asistente virtual">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=5" title="Edit section: Asistente virtual">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Este asistente está diseñado para operar idealmente en una Raspberry Pi, aunque es lo suficientemente versátil como para funcionar en cualquier dispositivo que soporte Python, es decir, prácticamente todos los sistemas operativos.
+Escrito en Python, el asistente se encargará de diversas tareas relacionadas con el procesamiento de voz y la interacción con el back-end del servidor mediante HTTP.
+</p>
+<h2><span class="mw-headline" id="Back-end">Back-end</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=6" title="Edit section: Back-end">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=6" title="Edit section: Back-end">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Se desarrollará utilizando Node.js. Interactúa con la base de datos Cassandra DB,
+seleccionada por su alta escalabilidad, gran resistencia a fallos y otras características
+avanzadas. Dicho back-end realizará:
+</p><p>• La gestión de usuarios y credenciales.
+</p><p>• CRUD al historial de preguntas.
+</p><p>• La transformación de la voz del usuario a texto usando un modelo de ASR (STT).
+</p><p>• La integración de un modelo de LLM (Large Language Model) y una inteligencia artificial open source para procesar consultas, en este caso se trata del modelo LlaMa 2 de Meta.
+</p><p>• La transformación de texto a voz para ser reproducido en el asistente virtual mediante el uso de un modelo de TTS.
+</p><p>Este sistema proporcionará funcionalidades de conversión de voz a texto y de texto a voz, interactuando con varias librerías de uso gratuito.
+</p>
+<h2><span class="mw-headline" id="Front-end">Front-end</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=7" title="Edit section: Front-end">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=7" title="Edit section: Front-end">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Su diseño se realizará utilizando Figma, una herramienta que permite crear interfaces de usuario de manera intuitiva. Una vez diseñado, se exportará a Flutter, un framework de código abierto que soporta Android, iOS y web. Esto permitirá la implementación de funcionalidades diversas, incluyendo la capacidad de hacer peticiones HTTPS, lo que hace adaptable el uso de las funcionalidades del back-end para su uso en diversos lenguajes de programación.
+Es importante destacar que, aunque en la propuesta del proyecto se menciona la posibilidad de integrar funcionalidades de Bluetooth para la autenticación del asistente virtual, esta característica queda pendiente de ser implementada fuera del marco de esta PoC.
+</p>
+<h2><span class="mw-headline" id="Demo">Demo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;veaction=edit&amp;section=8" title="Edit section: Demo">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Elira&amp;action=edit&amp;section=8" title="Edit section: Demo">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>youtu.be/FV1PtHJJXpE
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Frame.png"><img alt="" class="thumbimage" data-file-height="300" data-file-width="300" decoding="async" height="300" src="/pti/images/c/c5/Frame.png" width="300"/></a> <div class="thumbcaption">Link to the demo video</div></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250710073339
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.013 seconds
+Real time usage: 0.018 seconds
+Preprocessor visited node count: 24/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:757-0!canonical and timestamp 20250710073339 and revision id 1913
+ -->
+</div>

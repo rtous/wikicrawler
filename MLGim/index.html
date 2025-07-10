@@ -1,0 +1,94 @@
+<div class="mw-parser-output"><p><br/>
+</p><p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#FIBness_App"><span class="tocnumber">1</span> <span class="toctext">FIBness App</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_FIBness_app.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es FIBness app?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Frontend"><span class="tocnumber">3</span> <span class="toctext">Frontend</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Windows"><span class="tocnumber">3.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Conexi.C3.B3_amb_la_BD"><span class="tocnumber">3.2</span> <span class="toctext">Conexió amb la BD</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Conexi.C3.B3_amb_el_ML"><span class="tocnumber">3.3</span> <span class="toctext">Conexió amb el ML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Machine_Learning:_MoveNet"><span class="tocnumber">4</span> <span class="toctext">Machine Learning: MoveNet</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Backend"><span class="tocnumber">5</span> <span class="toctext">Backend</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Problemes_i_futur_del_projecte"><span class="tocnumber">6</span> <span class="toctext">Problemes i futur del projecte</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="FIBness_App">FIBness App</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=1" title="Edit section: FIBness App">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=1" title="Edit section: FIBness App">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="¿Qué_es_FIBness_app?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_FIBness_app.3F">¿Qué es FIBness app?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es FIBness app?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es FIBness app?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El nostre projecte consisteix en una aplicació mòbil d'esport que es beneficia d'un algorisme de Machine Learning per donar feedback en temps real als usuaris que la fan servir. L'aplicació està pensada per a aquelles persones que volen començar al món de l'esport i que per manca de temps o de diners no puguin. L'objectiu de la nostra app és proporcionar una sèrie d'exercicis que qualsevol persona pugui fer des de qualsevol lloc. Aquesta aplicació està pensada per ser utilitzada en qualsevol dispositiu modern actual (sigui Android o IOS).
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Como cualquier aplicación actual la infraestructura de nuestra aplicación se divide en un Frontend y un Backend. Además también disponemos de una sección específica para el algoritmo de Machine Learning. En cada una de las secciones se explicará con más detalle cada una de las infraestructuras.
+</p>
+<h1><span class="mw-headline" id="Frontend">Frontend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=4" title="Edit section: Frontend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=4" title="Edit section: Frontend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Aplicació mòbil principalment pensada per Android i IOS, tot i que es podria utilitzar a Windows i Mac també. Per fer-la s’ha utilitzat un framework de python anomenat Beeware, que permet programar una sola vegada y exportar a qualsevol dispositiu amb una sola comanda “briefcase build [Android/IOS]”. El framework funciona molt similar a la majoria de eines per desarrollar aplicacions mòbils: Crees un canvas, on hi pots ficar diferents caixes en posicions i sentits. Dins de les caixes podem ficar qualsevol tipus de widgets, com per exemple botons, caixes de text, imatges, inputs d'usuari, taules de contingut o menus.
+</p>
+<h2><span class="mw-headline" id="Windows">Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=5" title="Edit section: Windows">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=5" title="Edit section: Windows">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Les diferents pantalles (Windows) que es mostren a l'usuari son les següents:
+</p>
+<pre>- Starting: mostra el menú inicial per poder registrarse, entrar amb el teu compte i un botó per tancar l'aplicació, així com el nom de l'aplicació en gran y el logo de la app i de la UPC. 
+- Login, window per fer el login, amb els text y password inputs i els botons per entrar y sortir de la finestra
+- Signup, window per fer el signup, amb els text inputs per introduir la informació de l'usuari i els botons per entrar y sortir de la finestra.
+- Main, la pàgina principal del usuari, on es mostra tota la seva informació dels exercicis, i es permet fer noves repeticions.
+- Exercise, finestra generica utilitzada per a tots els exercicis que mostra per pantalla el número de repeticions realitzat en aquella sessió.
+- Profile, una finestra on es mostra la informació de l'usuari que ha iniciat sessió, actualment només el nom i el email.
+</pre>
+<h2><span id="Conexió_amb_la_BD"></span><span class="mw-headline" id="Conexi.C3.B3_amb_la_BD">Conexió amb la BD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=6" title="Edit section: Conexió amb la BD">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=6" title="Edit section: Conexió amb la BD">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El frontend es comunica amb el backend mitjançant la llibreria requests de python, i codifica la informació a ser enviada amb la llibreria json. Les dades d'usuari son empaquetades en un json,  per enviarles a la BD, i la BD retorna un altre fitxer json, amb la informació dels exercicis de l'usuari.
+</p>
+<h2><span id="Conexió_amb_el_ML"></span><span class="mw-headline" id="Conexi.C3.B3_amb_el_ML">Conexió amb el ML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=7" title="Edit section: Conexió amb el ML">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=7" title="Edit section: Conexió amb el ML">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Donat que l'aplicació està feta amb Python3, per poder utilitzar la part de Machine Learning només ha calgut crear una funció amb tot el codi, i cridar quan es prem el botó per començar a fer l'exercici. També s’han inclòs les llibreries de tensorflow, numpy, matplotlib i openCV per a que tot funcioni adequadament.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Keypoints.png"><img alt="" class="thumbimage" data-file-height="511" data-file-width="500" decoding="async" height="204" src="/pti/images/thumb/b/b1/Keypoints.png/200px-Keypoints.png" srcset="/pti/images/thumb/b/b1/Keypoints.png/300px-Keypoints.png 1.5x, /pti/images/thumb/b/b1/Keypoints.png/400px-Keypoints.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Keypoints.png" title="Enlarge"></a></div>Keypoints que prediu Movenet Lightning</div></div></div>
+<h1><span class="mw-headline" id="Machine_Learning:_MoveNet">Machine Learning: MoveNet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=8" title="Edit section: Machine Learning: MoveNet">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=8" title="Edit section: Machine Learning: MoveNet">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Com a algorisme de Machine Learning nosaltres hem utilitzat un que ja ha sigut entrenat amb una gran varietat de training i data sets. Aquest es coneix com a Movenet Lightning i és una xarxa convolucional que estima la postura d'una sola persona a partir d'una imatge o un frame d'un vídeo. Cal esmentar que el model que hem fet servir és un que té menys capacitat que la seva altra versió Movenet Thunder. Tot i ser menys precís, Movenet Lightning és capaç de proporcionar uns molt bons resultats amb un bon rendiment a la majoria de dispositius actuals. És per això que vam decidir utilitzar aquest algorisme ja que, tot i ser pitjor que Movenet Thunder, aquest es pot utilitzar en la majoria dels dispositius mòbils actuals.
+</p><p><br/>
+El que fa aquest model és detectar fins a 17 articulacions o més ben dit 17 keypoints del cos d’una persona. Aquest 17 keypoints són els que es poden veure en la imatge de la dreta.
+</p><p>El que fem amb els punts que ens prediu l'algoritme de Machine Learning és calcular l'angle entre certs keypoints (en funció de l'exercici que l'usuari estigui realitzant per comptar el número de repeticions que aquest fa. D'aquesta manera és més còmoda per una persona tenir controlat el nombre de repeticions que realitza.
+</p>
+<h1><span class="mw-headline" id="Backend">Backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=9" title="Edit section: Backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=9" title="Edit section: Backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Kubernetes-FIBness.png"><img alt="" class="thumbimage" data-file-height="1334" data-file-width="2019" decoding="async" height="198" src="/pti/images/thumb/5/56/Kubernetes-FIBness.png/300px-Kubernetes-FIBness.png" srcset="/pti/images/thumb/5/56/Kubernetes-FIBness.png/450px-Kubernetes-FIBness.png 1.5x, /pti/images/thumb/5/56/Kubernetes-FIBness.png/600px-Kubernetes-FIBness.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Kubernetes-FIBness.png" title="Enlarge"></a></div>Esquema de l'arquitectura de Kubernetes</div></div></div>
+<p>Per al backend hem utilitzat node.js, juntament amb el framework de express, gràcies a la seva utilitat i facilitat d'ús. La seva funcionalitat principal es la d'oferir la comunicació entre la app mòbil (frontend) i la base de dades. Aquesta comunicació es du a terme mitjançant <i>endpoints</i>, els quals quan són cridats des de el frontend passen a executar la funció que tenen associada, que es qui acabarà comunicant-se amb la base de dades. Les funcions més rellevants serien la del login d'usuaris, register d'usuaris, l'actualització i creació d'exercicis.
+Hem estructurat el projecte de tal manera que sigui fàcilment escalable i fàcil de llegir, dividint-ho en diferents carpetes segons el que es faci.
+Al programar un backend no es pot oblidar mai de la protecció i seguretat. Hem implementat els següents mecanismes de seguretat per evitar:
+</p>
+<pre>         -Atacs XSS (Cross-Site Scripting): Els hem evitat mitjançant l'ús del mòdul <i>helmet</i> i la validació correcta dels paràmetres.
+         -Injeccions SQL: Els hem evitat mitjançant la validació correcta dels paràmetres i la parametrització o preparació de les comandes SQL amb anterioritat, en comptes de concatenar-la directament amb els paràmetres d'entrada dels usuaris.
+         -Atacs DoS: Els hem evitat mitjançant el control del nombre de peticions permeses durant un cert període de temps. Ho hem fet mitjançant el mòdul <i>express-rate-limit</i>.
+</pre>
+<p>Al final, hem dividit el backend en 2 microserveis i hem utilitzat Kubernetes per córrer-ho tot. Hem creat un clúster amb 5 servidors de FIB i hem desplegat tota la infraestructura per sota d'aquest clúster. Els microserveis tenien 4 repliquest cadascú, amb balanceig de càrrega fent servir Service de Kubernetes i també hem provat que s'escalaven a més repliques. Per fer-ho disponible a l'usuari, hem utilitzat Nginx Ingress per la multiplexació. Com la base de dades, hem utilitzat CockroachDB amb 3 rèpliques. Els microserveis que hem programat usaven la BD per guardar tot el seu estat. Hem utilitzat JSON Web Tokens per l'autenticació dels usuaris, ja que és stateless.
+</p>
+<h1><span class="mw-headline" id="Problemes_i_futur_del_projecte">Problemes i futur del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;veaction=edit&amp;section=10" title="Edit section: Problemes i futur del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MLGim&amp;action=edit&amp;section=10" title="Edit section: Problemes i futur del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En general el resultat que hem obtingut amb el nostre projecte ha sigut el que esperàvem i creiem que em més temps es podría haver fet una aplicació encara més ben feta. No obstant això, creiem que els resultats han satisfet el que havíem en un principi plantejat. A més, una cosa que ens agradaria mencionar i que també sería un punt a tenir en compte en el futur és el fet de reentrenar l'algorisme de Machine Learning perquè aquest fos capacç també de detectar que l'exercici que s'esta realitzant es fa de forma correcte. A l'inici del projecte teniem pensat realitzar aquest nou entrenament però, per falta de temps i per diferents problemes que vam tenir (probelemes amb llibreries i que per realitzar l'entrenament necessitàvem un training set força gran) no vam poder realitzar-ho. Així que com a propostes de futur, realitzar aquest reentrenament de l'algoritme sería una d'elles.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710082007
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.013 seconds
+Real time usage: 0.017 seconds
+Preprocessor visited node count: 32/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:713-0!canonical and timestamp 20250710082007 and revision id 1758
+ -->
+</div>

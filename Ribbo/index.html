@@ -1,0 +1,940 @@
+<div class="mw-parser-output"><p><a href="/pti/index.php/Fitxer:Ribbo.png" title="Fitxer:Ribbo.png">500px|center</a>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Descripci.C3.B3_general_del_projecte"><span class="tocnumber">1.1</span> <span class="toctext">Descripció general del projecte</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Objectius"><span class="tocnumber">1.2</span> <span class="toctext">Objectius</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Descripci.C3.B3_dels_components"><span class="tocnumber">2</span> <span class="toctext">Descripció dels components</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Estructura_del_projecte"><span class="tocnumber">2.1</span> <span class="toctext">Estructura del projecte</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Hardware.2C_els_motors"><span class="tocnumber">2.2</span> <span class="toctext">Hardware, els motors</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Arduino"><span class="tocnumber">2.3</span> <span class="toctext">Arduino</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Dispositiu_m.C3.B2bil"><span class="tocnumber">2.4</span> <span class="toctext">Dispositiu mòbil</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Servidor"><span class="tocnumber">2.5</span> <span class="toctext">Servidor</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Servidor_Web"><span class="tocnumber">2.5.1</span> <span class="toctext">Servidor Web</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Servidor_Multim.C3.A8dia"><span class="tocnumber">2.5.2</span> <span class="toctext">Servidor Multimèdia</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Servidor_GCM"><span class="tocnumber">2.5.3</span> <span class="toctext">Servidor GCM</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Client_Web"><span class="tocnumber">2.6</span> <span class="toctext">Client Web</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Paquets_del_projecte"><span class="tocnumber">3</span> <span class="toctext">Paquets del projecte</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Paquets_de_treball_del_projecte"><span class="tocnumber">3.1</span> <span class="toctext">Paquets de treball del projecte</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Configuraci.C3.B3_del_HW"><span class="tocnumber">3.1.1</span> <span class="toctext">Configuració del HW</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Comunicaci.C3.B3_dispositiu_m.C3.B2bil_-_servidor_Wowza"><span class="tocnumber">3.1.2</span> <span class="toctext">Comunicació dispositiu mòbil - servidor Wowza</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Comunicaci.C3.B3_servidor_GCM_-_dispositiu_m.C3.B2bil"><span class="tocnumber">3.1.3</span> <span class="toctext">Comunicació servidor GCM - dispositiu mòbil</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Comunicaci.C3.B3_dispositiu_m.C3.B2bil_-_arduino"><span class="tocnumber">3.1.4</span> <span class="toctext">Comunicació dispositiu mòbil - arduino</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Interf.C3.ADcie_web_-_no_funcional"><span class="tocnumber">3.1.5</span> <span class="toctext">Interfície web - no funcional</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Interf.C3.ADcie_web_-_funcional"><span class="tocnumber">3.1.6</span> <span class="toctext">Interfície web - funcional</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Depend.C3.A8ncies_entre_els_diferents_paquets_de_treball"><span class="tocnumber">3.2</span> <span class="toctext">Dependències entre els diferents paquets de treball</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Paquets_de_treball_assignats_a_cada_membre"><span class="tocnumber">3.3</span> <span class="toctext">Paquets de treball assignats a cada membre</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Pla_de_treball"><span class="tocnumber">3.4</span> <span class="toctext">Pla de treball</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Arduino_2"><span class="tocnumber">4</span> <span class="toctext">Arduino</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Descripci.C3.B3"><span class="tocnumber">4.1</span> <span class="toctext">Descripció</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Plataforma_LightBlue_Bean"><span class="tocnumber">4.2</span> <span class="toctext">Plataforma LightBlue Bean</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Esquema_electr.C3.B2nic_i_de_connexions"><span class="tocnumber">4.3</span> <span class="toctext">Esquema electrònic i de connexions</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Motors:_Modificaci.C3.B3.2C_Control_PWM_i_Servo.h"><span class="tocnumber">4.4</span> <span class="toctext">Motors: Modificació, Control PWM i Servo.h</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#Modificaci.C3.B3"><span class="tocnumber">4.4.1</span> <span class="toctext">Modificació</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Control_amb_PWM"><span class="tocnumber">4.4.2</span> <span class="toctext">Control amb PWM</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Servo.h"><span class="tocnumber">4.4.3</span> <span class="toctext">Servo.h</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="#Codi_de_l.E2.80.99Arduino"><span class="tocnumber">4.5</span> <span class="toctext">Codi de l’Arduino</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-34"><a href="#Dispositiu_m.C3.B2bil_2"><span class="tocnumber">5</span> <span class="toctext">Dispositiu mòbil</span></a>
+<ul>
+<li class="toclevel-2 tocsection-35"><a href="#Per_qu.C3.A8_un_dispositiu_m.C3.B2bil.3F"><span class="tocnumber">5.1</span> <span class="toctext">Per què un dispositiu mòbil?</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Preparaci.C3.B3_del_dispositiu"><span class="tocnumber">5.2</span> <span class="toctext">Preparació del dispositiu</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Aplicacions_File:"><span class="tocnumber">5.3</span> <span class="toctext">Aplicacions File:</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="#App_Ribbo_Launcher"><span class="tocnumber">5.3.1</span> <span class="toctext">App Ribbo Launcher</span></a>
+<ul>
+<li class="toclevel-4 tocsection-39"><a href="#Main_Activity"><span class="tocnumber">5.3.1.1</span> <span class="toctext">Main Activity</span></a></li>
+<li class="toclevel-4 tocsection-40"><a href="#Control_Activity"><span class="tocnumber">5.3.1.2</span> <span class="toctext">Control Activity</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-41"><a href="#App_Ribbo_Streaming"><span class="tocnumber">5.3.2</span> <span class="toctext">App Ribbo Streaming</span></a>
+<ul>
+<li class="toclevel-4 tocsection-42"><a href="#Llibreria_libstreaming"><span class="tocnumber">5.3.2.1</span> <span class="toctext">Llibreria libstreaming</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="#Implementaci.C3.B3_de_la_llibreria_libstreaming_a_l.E2.80.99aplicaci.C3.B3"><span class="tocnumber">5.3.2.2</span> <span class="toctext">Implementació de la llibreria libstreaming a l’aplicació</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-44"><a href="#Servidor_2"><span class="tocnumber">6</span> <span class="toctext">Servidor</span></a>
+<ul>
+<li class="toclevel-2 tocsection-45"><a href="#Objectius_2"><span class="tocnumber">6.1</span> <span class="toctext">Objectius</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#Configuraci.C3.B3"><span class="tocnumber">6.2</span> <span class="toctext">Configuració</span></a>
+<ul>
+<li class="toclevel-3 tocsection-47"><a href="#Servidor_virtual"><span class="tocnumber">6.2.1</span> <span class="toctext">Servidor virtual</span></a>
+<ul>
+<li class="toclevel-4 tocsection-48"><a href="#Requeriments_software"><span class="tocnumber">6.2.1.1</span> <span class="toctext">Requeriments software</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-49"><a href="#Domini"><span class="tocnumber">6.2.2</span> <span class="toctext">Domini</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-50"><a href="#Client_web_2"><span class="tocnumber">7</span> <span class="toctext">Client web</span></a>
+<ul>
+<li class="toclevel-2 tocsection-51"><a href="#Introducci.C3.B3_2"><span class="tocnumber">7.1</span> <span class="toctext">Introducció</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="#Requisits"><span class="tocnumber">7.2</span> <span class="toctext">Requisits</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="#Docker"><span class="tocnumber">7.3</span> <span class="toctext">Docker</span></a>
+<ul>
+<li class="toclevel-3 tocsection-54"><a href="#Entorn_de_desenvolupament"><span class="tocnumber">7.3.1</span> <span class="toctext">Entorn de desenvolupament</span></a>
+<ul>
+<li class="toclevel-4 tocsection-55"><a href="#Contenidors_docker"><span class="tocnumber">7.3.1.1</span> <span class="toctext">Contenidors docker</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-56"><a href="#Entorn_de_producci.C3.B3"><span class="tocnumber">7.3.2</span> <span class="toctext">Entorn de producció</span></a>
+<ul>
+<li class="toclevel-4 tocsection-57"><a href="#Contenidors_docker_2"><span class="tocnumber">7.3.2.1</span> <span class="toctext">Contenidors docker</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-58"><a href="#Com_es_despleguen_els_entorns"><span class="tocnumber">7.3.3</span> <span class="toctext">Com es despleguen els entorns</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-59"><a href="#Model_de_la_base_de_dades"><span class="tocnumber">7.4</span> <span class="toctext">Model de la base de dades</span></a>
+<ul>
+<li class="toclevel-3 tocsection-60"><a href="#Usuaris"><span class="tocnumber">7.4.1</span> <span class="toctext">Usuaris</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="#Robots"><span class="tocnumber">7.4.2</span> <span class="toctext">Robots</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-62"><a href="#Funcionalitats"><span class="tocnumber">7.5</span> <span class="toctext">Funcionalitats</span></a>
+<ul>
+<li class="toclevel-3 tocsection-63"><a href="#Registre_d.E2.80.99usuaris"><span class="tocnumber">7.5.1</span> <span class="toctext">Registre d’usuaris</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="#Login"><span class="tocnumber">7.5.2</span> <span class="toctext">Login</span></a></li>
+<li class="toclevel-3 tocsection-65"><a href="#Logout"><span class="tocnumber">7.5.3</span> <span class="toctext">Logout</span></a></li>
+<li class="toclevel-3 tocsection-66"><a href="#Llistar_els_robots"><span class="tocnumber">7.5.4</span> <span class="toctext">Llistar els robots</span></a></li>
+<li class="toclevel-3 tocsection-67"><a href="#Control_de_robots"><span class="tocnumber">7.5.5</span> <span class="toctext">Control de robots</span></a></li>
+<li class="toclevel-3 tocsection-68"><a href="#Control_d.E2.80.99usuaris"><span class="tocnumber">7.5.6</span> <span class="toctext">Control d’usuaris</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="#Interf.C3.ADcie_multidispositiu"><span class="tocnumber">7.5.7</span> <span class="toctext">Interfície multidispositiu</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-70"><a href="#Desenvolupament_del_treball"><span class="tocnumber">8</span> <span class="toctext">Desenvolupament del treball</span></a></li>
+<li class="toclevel-1 tocsection-71"><a href="#Glossari_de_Tecnologies_emprades"><span class="tocnumber">9</span> <span class="toctext">Glossari de Tecnologies emprades</span></a></li>
+<li class="toclevel-1 tocsection-72"><a href="#Conclusi.C3.B3"><span class="tocnumber">10</span> <span class="toctext">Conclusió</span></a></li>
+<li class="toclevel-1 tocsection-73"><a href="#Bibliografia"><span class="tocnumber">11</span> <span class="toctext">Bibliografia</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El projecte desenvolupat s’anomena <i>Ribbo - Robot remotament controlat a través d’Internet amb streaming de vídeo </i>. La idea conceptual del robot com a tal està inspirada en els robots que s’empren en l’àmbit militar o científic, els quals són capaços de ser operats remotament.'<b></b>
+</p>
+<h2><span id="Descripció_general_del_projecte"></span><span class="mw-headline" id="Descripci.C3.B3_general_del_projecte">Descripció general del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=2" title="Edit section: Descripció general del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=2" title="Edit section: Descripció general del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En aquest projecte, ens hem proposat muntar un sistema i una infraestructura que ens permeti disposar un robot de molt baix cost amb la possibilitat de ser controlat remotament des de qualsevol lloc amb connexió a Internet.<br/>A més, el robot disposarà d’streaming de vídeo per poder veure la seva situació en tot moment.<br/>Finalment també disposarem d’un directori amb els robots (Ribbos) disponibles al moment per poder elegir i controlar cada un d’ells i un sistema d’usuaris per reservar i controlar-ne el seu ús.
+</p>
+<h2><span class="mw-headline" id="Objectius">Objectius</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=3" title="Edit section: Objectius">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=3" title="Edit section: Objectius">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Els objectius tecnològics emprats per al projecte són:
+</p>
+<ul><li>Retransmetre a temps real el vídeo capturat pel dispositiu mitjançant RTSP.</li>
+<li>Connectar via Bluetooth el dispositiu amb l’arduino.</li>
+<li>Servir, mitjançant nginx o node.js, una pàgina web dinàmica (PHP i jQuery) via HTTP als clients.</li>
+<li>Moure les rodes del dispositiu mitjançant l’arduino</li>
+<li>Fer ús d’un servidor central en el núvol</li>
+<li>Establir un flux d’ordres entre l’usuari i el robot a través de missatges GCM.</li>
+<li>Mantenir el cost del robot al mínim per tal de fer-lo el màxim d’accessible.</li>
+<li>Experimentar amb tecnologies menys comunes que les que veiem usualment a la universitat.</li></ul>
+<h1><span id="Descripció_dels_components"></span><span class="mw-headline" id="Descripci.C3.B3_dels_components">Descripció dels components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=4" title="Edit section: Descripció dels components">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=4" title="Edit section: Descripció dels components">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Estructura_del_projecte">Estructura del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=5" title="Edit section: Estructura del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=5" title="Edit section: Estructura del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En el diagrama de la Figura 2.1 hem detallat els diferents components del projecte i quin paper juguen en el projecte en global amb les comunicacions entre ells.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:1217px;"><a class="image" href="/pti/index.php/File:Esquema.png"><img alt="" class="thumbimage" data-file-height="397" data-file-width="1215" decoding="async" height="397" src="/pti/images/7/7e/Esquema.png" width="1215"/></a> <div class="thumbcaption">Esquema conceptual de totes les comunicacions</div></div></div>
+<p>A continuació descriurem cada un d’ells, les seves característiques i perquè hem elegit aquests en concret.
+</p>
+<h2><span id="Hardware,_els_motors"></span><span class="mw-headline" id="Hardware.2C_els_motors">Hardware, els motors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=6" title="Edit section: Hardware, els motors">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=6" title="Edit section: Hardware, els motors">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com a component físic dels motors, hem re-utilitzat una estructura existent d’un vell robot de Mini Sumo, extraient tots els seus components lògics.<br/>Es tracta d’una plataforma doble amb dos Servomotors trucats per a rotació continua i un parell de rodes de 12cm de diàmetre.<br/>A la figura 2.2 es veu la unitat Ribbo finalitzada.<br/>
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:522px;"><a class="image" href="/pti/index.php/File:Estructura.png"><img alt="" class="thumbimage" data-file-height="259" data-file-width="520" decoding="async" height="259" src="/pti/images/a/ab/Estructura.png" width="520"/></a> <div class="thumbcaption">Resultat final del Ribbo</div></div></div>
+<p>Per a mes informació sobre el control dels motors, al capítol 4 s’explica amb més detall el seu funcionament.
+</p>
+<h2><span class="mw-headline" id="Arduino">Arduino</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=7" title="Edit section: Arduino">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=7" title="Edit section: Arduino">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Els motors es controlaran amb una placa Arduino. Teníem a la nostra disposició dues possibilitats per tal d’efectuar aquesta comunicació:
+</p>
+<ul>
+<li><p><b>Arduino UNO + HC06 Mòdul:</b></p>
+<ul>
+<li><p><b>Arduino UNO:</b> Disposem d’una placa de desenvolupament Arduino UNO. És actualment el model d’Arduino més popular i existeix gran quantitat d’informació i codi a Internet, però no disposa de comunicació bluetooth, per tant, necessitem un mòdul de bluetooth per poder usar aquesta opció.<br/>Es pot aconseguir un Arduino UNO entre 4 i</p></li>
+<li><p><b>HC06:</b> HC06 és un mòdul Bluetooth (Una petita placa amb els components necessaris per simplificar l’ús de Bluetooth) d’ús industrial.<br/>Disposem d’una d’aquestes plaques per dotar de comunicació Bluetooth al nostre Arduino.<br/>És un dels mòduls Bluetooth més usats i té un preu aproximat de .<br/><i>El datasheet d’aquest mòdul es pot consultar aquí:<br/><a class="external free" href="https://www.olimex.com/Products/Components/RF/BLUETOOTH-SERIAL-HC-06/resources/hc06.pdf" rel="nofollow">https://www.olimex.com/Products/Components/RF/BLUETOOTH-SERIAL-HC-06/resources/hc06.pdf</a> '</i><b></b></p>
+<div class="thumb tnone"><div class="thumbinner" style="width:622px;"><a class="image" href="/pti/index.php/File:Hc06.jpg"><img alt="" class="thumbimage" data-file-height="465" data-file-width="620" decoding="async" height="465" src="/pti/images/8/8c/Hc06.jpg" width="620"/></a> <div class="thumbcaption">Mòdul HC06</div></div></div>
+</li></ul>
+</li>
+<li><p><b>Lightblue Bean: </b> És un petit Arduino amb Bluetooth incorporat pensat per a aplicacions de IoT. Disposa també d’un SDK i una API per a facilitar el seu ús amb dispositius mòbils.<br/>Es va obtenir gratuïtament com a promoció de presentació, però el seu preu és d’aproximada-ment .<br/>El principal problema és que el seu suport oficial només és per a iOS i MacOS, existint una petita comunitat de desenvolupadors fent enginyeria inversa per a portar-ho cap a altres plataformes com File:.<br/>Tampoc es tracta d’una placa molt potent, però suficient per a les nostres necessitats.</p></li></ul>
+<p>Finalment, hem decidit usar l’opció del LightBlue Bean, ja que ocupa menys espai i és més compacte i addicional-ment ens permet col·laborar amb aquesta petita comunitat de desenvolupadors que està fent enginyeria inversa per a File:.
+</p><p>Les proves fetes amb el dispositiu es registraran i es penjaran com a documentació pública com a referència de gent que vulgui usar-ho en un futur.
+</p><p>Durant el desenvolupament, es van detectar un parell d’errors en el SDK i es van reportar. Els errors van ser localitzats i solucionats.
+</p><p>S’entrarà amb mes detall al Arduino en el capítol 4.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:1026px;"><a class="image" href="/pti/index.php/File:Lightblue.png"><img alt="" class="thumbimage" data-file-height="768" data-file-width="1024" decoding="async" height="768" src="/pti/images/e/e0/Lightblue.png" width="1024"/></a> <div class="thumbcaption">LightBlue Bean</div></div></div>
+<h2><span id="Dispositiu_mòbil"></span><span class="mw-headline" id="Dispositiu_m.C3.B2bil">Dispositiu mòbil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=8" title="Edit section: Dispositiu mòbil">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=8" title="Edit section: Dispositiu mòbil">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com a “ordinador” del Ribbo, s’usarà un dispositiu mòbil amb File:, Hem decidit que la versió mínima que usarem és File: 5.0.
+</p><p>El paper que tindrà aquest dispositiu és:
+</p>
+<ul><li>Establir la connexió amb el servidor principal i registrar-se un cop un Ribbo passa a estar disponible.</li>
+<li>Establir una connexió amb el servidor multimèdia, negociar la connexió i retransmetre vídeo.</li>
+<li>Establir la connexió amb l’Arduino per Bluetooth i enviar ordres cap als motors.</li>
+<li>Oferir una interfície al usuari per configurar el Ribbo i controlar manualment els motors.</li></ul>
+<p>Hem usat els nostres propis dispositiu mòbils per a fer les proves. Per a mes informació sobre el dispositiu File:, consultar el capítol 5.
+</p>
+<h2><span class="mw-headline" id="Servidor">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=9" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=9" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En aquest projecte s’usen 3 servidors, dos d’ells s’allotjaran en la mateixa màquina Virtual en una Granja de Servidors a Frankfurt (Digital Ocean) el tercer (GCM) es un servidor de Google.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:872px;"><a class="image" href="/pti/index.php/File:Remconrob.png"><img alt="" class="thumbimage" data-file-height="261" data-file-width="870" decoding="async" height="261" src="/pti/images/f/f6/Remconrob.png" width="870"/></a> <div class="thumbcaption">Màquina Virtual utilitzada</div></div></div>
+<p>Per a mes informació sobre els servidors, consultar els capítols 6 i 7.
+</p>
+<h3><span class="mw-headline" id="Servidor_Web">Servidor Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=10" title="Edit section: Servidor Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=10" title="Edit section: Servidor Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Disposarem d’un servidor web que s’encarregarà de gestionar tots els registres i mostrar la interfície d’usuari. Aquesta interfície permetrà tant controlar el robot com gestionar els usuaris.
+</p>
+<h3><span id="Servidor_Multimèdia"></span><span class="mw-headline" id="Servidor_Multim.C3.A8dia">Servidor Multimèdia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=11" title="Edit section: Servidor Multimèdia">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=11" title="Edit section: Servidor Multimèdia">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>També necessitem un servidor que s’encarregui de rebre el flux multimèdia del dispositiu File:, codificar-lo al format desitjat i servir-lo al servidor web perquè sigui mostrat al ususari.<br/>Utilitzarem per comoditat en aquest cas Wowza Engine, però realment serviria qualsevol altre servidor multimèdia que pogués negociar i rebre un flux RTSP i servir-lo al servidor web.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:452px;"><a class="image" href="/pti/index.php/File:Wowza3.png"><img alt="" class="thumbimage" data-file-height="225" data-file-width="450" decoding="async" height="225" src="/pti/images/9/97/Wowza3.png" width="450"/></a> <div class="thumbcaption">El paper del Wowza en el projecte es ser un intermediari entre el flux de video i el client.</div></div></div>
+<h3><span class="mw-headline" id="Servidor_GCM">Servidor GCM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=12" title="Edit section: Servidor GCM">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=12" title="Edit section: Servidor GCM">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Per tal de realitzar la comunicació Client - Ribbo, usem el servei GCM de google. Mes endavant es descriurà amb detall el seu funcionament.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:EsquemaGCM.jpg"><img alt="" class="thumbimage" data-file-height="430" data-file-width="600" decoding="async" height="430" src="/pti/images/9/99/EsquemaGCM.jpg" width="600"/></a> <div class="thumbcaption">Esquema del funcionament de GCM</div></div></div>
+<p>El funcionament general de GCM es el següent:
+</p>
+<ol><li>El dispositiu File: envia un missatge al servidor GCM de google indicant la ID del dispositiu i la ID de la Aplicació (Que s’ha obtingut anteriorment)</li>
+<li>El servidor de GCM efectua el registre i retorna un ID de registre</li>
+<li>El dispositiu File:, envia aquesta ID de registre al servidor de l’aplicació.</li>
+<li>En aquest moment el registre ha sigut efectuat amb èxit i el servidor de l’aplicació pot desar la ID de registre per a usos futurs.</li></ol>
+<p>En el moment que el servidor de l’aplicació vol enviar un missatge al dispositiu File:, enlloc d’enviar-lo al dispositiu, l’envia al servidor de GCM indicant el ID de registre, i serà el servidor de GCM el que s’encarregarà de que arribi al dispositiu File: de forma push.
+</p>
+<h2><span class="mw-headline" id="Client_Web">Client Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=13" title="Edit section: Client Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=13" title="Edit section: Client Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Finalment, es disposarà d’un client en forma de pàgina web per a que el usuari disposi d’una interfície funcional, intuïtiva i agradable per controlar el robot. Els detalls sobre el seu funcionament es troben al .
+</p>
+<h1><span class="mw-headline" id="Paquets_del_projecte">Paquets del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=14" title="Edit section: Paquets del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=14" title="Edit section: Paquets del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En aquest apartat, parlarem de la planificació prèvia que vam realitzar.
+</p>
+<h2><span class="mw-headline" id="Paquets_de_treball_del_projecte">Paquets de treball del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=15" title="Edit section: Paquets de treball del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=15" title="Edit section: Paquets de treball del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Durant la preparació del projecte, es van definir uns paquets de treball per simplificar a on centrar els nostres esforços, així com per tenir en compte les dependències d’unes tasques amb les altres. En aquest apartat definim cada una de les tasques que s’han de realitzar per paquet de treball:
+</p>
+<h3><span id="Configuració_del_HW"></span><span class="mw-headline" id="Configuraci.C3.B3_del_HW">Configuració del HW</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=16" title="Edit section: Configuració del HW">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=16" title="Edit section: Configuració del HW">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquest paquet de treball consisteix en el muntatge del dispositiu a nivell físic. Es tracta de muntar l’estructura dels servomotors connectats a l’Arduino formant una plataforma d’on es connectarà el dispositiu mòbil. Aquest paquet també inclou la configuració i programació de l’Arduino per poder controlar els servomotors.
+</p>
+<h3><span id="Comunicació_dispositiu_mòbil_-_servidor_Wowza"></span><span class="mw-headline" id="Comunicaci.C3.B3_dispositiu_m.C3.B2bil_-_servidor_Wowza">Comunicació dispositiu mòbil - servidor Wowza</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=17" title="Edit section: Comunicació dispositiu mòbil - servidor Wowza">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=17" title="Edit section: Comunicació dispositiu mòbil - servidor Wowza">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En aquest apartat es tractarà de transmetre l’streaming que gravi la càmera del dispositiu mòbil sobre la plataforma del robot, cap al servidor Wowza, que serà l’encarregat de codificar i de servir aquestes imatges cap a la nostra web.
+</p>
+<h3><span id="Comunicació_servidor_GCM_-_dispositiu_mòbil"></span><span class="mw-headline" id="Comunicaci.C3.B3_servidor_GCM_-_dispositiu_m.C3.B2bil">Comunicació servidor GCM - dispositiu mòbil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=18" title="Edit section: Comunicació servidor GCM - dispositiu mòbil">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=18" title="Edit section: Comunicació servidor GCM - dispositiu mòbil">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Des del client web s’enviarà una ordre per registrar-se contra el servidor GCM, un cop completada aquesta autenticació, es podran enviar les ordres cap al servidor GCM, el primer pas per a que arribin les ordres fins a les rodes del robot.
+</p>
+<h3><span id="Comunicació_dispositiu_mòbil_-_arduino"></span><span class="mw-headline" id="Comunicaci.C3.B3_dispositiu_m.C3.B2bil_-_arduino">Comunicació dispositiu mòbil - arduino</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=19" title="Edit section: Comunicació dispositiu mòbil - arduino">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=19" title="Edit section: Comunicació dispositiu mòbil - arduino">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquest paquet no es podrà començar fins que no s’hagi completat el paquet de Comunicació servidor GCM - dispositiu mòbil, degut a que es necessiten les ordres prèvies que provenen del servidor GCM per poder retransmetre-les cap a l’Arduino.<br/>Un cop es reben les ordres Push des del servidor GCM aquestes s’envien via Bluetooth a l’Arduino, al que, com està connectat als servomotors, farà complir les ordres de moviment de les rodes.
+</p>
+<h3><span id="Interfície_web_-_no_funcional"></span><span class="mw-headline" id="Interf.C3.ADcie_web_-_no_funcional">Interfície web - no funcional</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=20" title="Edit section: Interfície web - no funcional">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=20" title="Edit section: Interfície web - no funcional">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El paquet d’interfície web l’hem dividit en dues parts degut al tema de dependències. Hem començat per un nivell no funcional, el que ens permet anar avançant en el disseny web sense dependre d’altres paquets de treball, així que des del principi del projecte ja vam anar treballant en el disseny de la web.<br/>En aquest paquet es tractava de muntar una interfície disponible pels usuaris (creació de comptes, informació sobre el funcionament de la web...).
+</p>
+<h3><span id="Interfície_web_-_funcional"></span><span class="mw-headline" id="Interf.C3.ADcie_web_-_funcional">Interfície web - funcional</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=21" title="Edit section: Interfície web - funcional">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=21" title="Edit section: Interfície web - funcional">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquest paquet es podrà començar a treballar un cop ja s’hagin completat els paquets de comunicació des del dispositiu mòbil retransmetent l’streaming cap al servidor Wowza i les ordres push que enviem des del servidor GCM cap al dispositiu mòbil.<br/>Aquest paquet incorporarà mostrar l’streaming que envia el servidor Wowza, també tindrà uns controls per poder moure els robots des de la pàgina web.<br/>Finalment, aquest paquet també tindrà un llistat de tots els robots registrats, tant els que estan disponibles, com els que ja es van registrat i no ho estan i més funcionalitats que s’explicaran més endavant.
+</p>
+<h2><span id="Dependències_entre_els_diferents_paquets_de_treball"></span><span class="mw-headline" id="Depend.C3.A8ncies_entre_els_diferents_paquets_de_treball">Dependències entre els diferents paquets de treball</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=22" title="Edit section: Dependències entre els diferents paquets de treball">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=22" title="Edit section: Dependències entre els diferents paquets de treball">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tnone"><div class="thumbinner" style="width:510px;"><a class="image" href="/pti/index.php/File:Dependencies_entre_tasques.png"><img alt="" class="thumbimage" data-file-height="342" data-file-width="508" decoding="async" height="342" src="/pti/images/8/87/Dependencies_entre_tasques.png" width="508"/></a> <div class="thumbcaption">Dependències entre els diferents paquets de treball</div></div></div>
+<p>Tal com es pot veure a la figura 3.1, totes les tasques es podien començar al principi del projecte menys un parell: l’nterfície web a mode funcional i l’enviament de les ordres des del dispositiu mòbil fins a l’arduino via bluetooth.<br/>Les fletxes signifiquen les dependències, per tant, un paquet de treball no es podia començar a fer si no estava el paquet del que depèn acabat.<br/>Per exemple el dispositiu mòbil no podia enviar les ordres a l’arduino si encara no rebia les ordres des del servidor GCM, ni tampoc si no estava configurat l’arduino, amb el codi per interpretar aquestes ordres via bluetooth.
+</p>
+<h2><span class="mw-headline" id="Paquets_de_treball_assignats_a_cada_membre">Paquets de treball assignats a cada membre</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=23" title="Edit section: Paquets de treball assignats a cada membre">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=23" title="Edit section: Paquets de treball assignats a cada membre">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="image" href="/pti/index.php/File:Reparticio_feina_1.png" title="image"><img alt="image" data-file-height="243" data-file-width="456" decoding="async" height="243" src="/pti/images/0/0c/Reparticio_feina_1.png" width="456"/></a> <a class="image" href="/pti/index.php/File:Reparticio_feina_2.png" title="fig:"><img alt="fig:" data-file-height="241" data-file-width="437" decoding="async" height="241" src="/pti/images/7/7d/Reparticio_feina_2.png" width="437"/></a>
+</p><p>En aquest apartat hem assignat els diferents paquets del projecte entre els membres del grup. L’assignació es pot veure a la Figura 3.2, on estan els noms dels paquets de treball descrits anteriorment amb una persona com a responsable del paquet i altres membres que participaran en la realització d’aquests.
+</p>
+<h2><span class="mw-headline" id="Pla_de_treball">Pla de treball</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=24" title="Edit section: Pla de treball">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=24" title="Edit section: Pla de treball">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="image" href="/pti/index.php/File:Pla_treball_1.png" title="image"><img alt="image" data-file-height="158" data-file-width="773" decoding="async" height="158" src="/pti/images/2/20/Pla_treball_1.png" width="773"/></a><br/><a class="image" href="/pti/index.php/File:Pla_treball_2.png" title="fig:"><img alt="fig:" data-file-height="175" data-file-width="729" decoding="async" height="175" src="/pti/images/6/6e/Pla_treball_2.png" width="729"/></a>
+</p><p>El pla de treball que hem anat seguint durant tot el curs de l’assignatura és el que es pot observar a la figura 3.3. És un diagrama de Gantt el qual està el nom del paquet de treball i la duració d’aquest en dies.<br/>Per exemple veuríem que el paquet de Configuració del HW el vam començar el dia 14 de març (al començament del projecte) i el vam donar per finalitzat el dia el dia 30 del mateix mes. També per exemple vam tenir dues setmanes per fer testing perquè la pràctica del projecte funcionés correctament (del 6 de maig fins el dia 20).
+</p>
+<h1><span class="mw-headline" id="Arduino_2">Arduino</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=25" title="Edit section: Arduino">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=25" title="Edit section: Arduino">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Descripció"></span><span class="mw-headline" id="Descripci.C3.B3">Descripció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=26" title="Edit section: Descripció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=26" title="Edit section: Descripció">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com ja hem parlat en la descripció del projecte, com a component lògic del Ribbo hem decidit usar un Arduino, en aquest cas un LightBlue Bean, ja que simplifica la part del hardware de Bluetooth sent un Arduino amb Bluetooth incorporat.
+</p>
+<h2><span class="mw-headline" id="Plataforma_LightBlue_Bean">Plataforma LightBlue Bean</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=27" title="Edit section: Plataforma LightBlue Bean">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=27" title="Edit section: Plataforma LightBlue Bean">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Esquema_electrònic_i_de_connexions"></span><span class="mw-headline" id="Esquema_electr.C3.B2nic_i_de_connexions">Esquema electrònic i de connexions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=28" title="Edit section: Esquema electrònic i de connexions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=28" title="Edit section: Esquema electrònic i de connexions">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Elecrònicament és un esquema molt senzill, la Figura es el esquema de connexions de la part del Ribbo, sent BLE BEAN l’Arduino i S1 i S2 els Servomotors modificats.
+</p><p><a class="image" href="/pti/index.php/File:Shematic1.png" title="fig:"><img alt="fig:" data-file-height="214" data-file-width="387" decoding="async" height="214" src="/pti/images/f/fe/Shematic1.png" width="387"/></a>
+</p><p>Com podem veure, disposem de dues bateries, ja que l’Arduino s’alimenta a 3 Volts (una pila de botó en el nostre cas), però els Servomotors requereixen entre 5 i 12 Volts (Usarem una pila de cartutxe de 9 Volts en el nostre cas) per tant necessitem dos bateries.
+</p><p>Pel que fa als ports usats del Arduino, com podem veure a la Figura , els ports 2 i 3 poden usar PWM, per tant, aquests són els que elegim com a pins que usarem per a controlar els motors.
+</p><p><a class="image" href="/pti/index.php/File:Scheme2.png" title="fig:"><img alt="fig:" data-file-height="440" data-file-width="862" decoding="async" height="440" src="/pti/images/a/ae/Scheme2.png" width="862"/></a>
+</p><p>Com ja hem mencionat anteriorment, el software oficial per a programar via Bluetooth aquest Arduino en concret, només està disponible per a iOS i MacOS, així que per a programar-lo des de i per a un File:, s’ha usat (i participat en el desenvolupament escrivint documentació i avisos d’errors detectats) una interfície i un SDK no oficial.<br/>La interfície, l’SDK, la seva documentació i els bugs reportats que encara no s’hagin resolt es poden consular al repositori: <a class="external free" href="https://github.com/PunchThrough/bean-sdk-File" rel="nofollow">https://github.com/PunchThrough/bean-sdk-File</a>:
+</p>
+<h2><span id="Motors:_Modificació,_Control_PWM_i_Servo.h"></span><span class="mw-headline" id="Motors:_Modificaci.C3.B3.2C_Control_PWM_i_Servo.h">Motors: Modificació, Control PWM i Servo.h</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=29" title="Edit section: Motors: Modificació, Control PWM i Servo.h">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=29" title="Edit section: Motors: Modificació, Control PWM i Servo.h">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h4><span id="Modificació"></span><span class="mw-headline" id="Modificaci.C3.B3">Modificació</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=30" title="Edit section: Modificació">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=30" title="Edit section: Modificació">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Els motors que usem per a controlar les rodes són servomotors que han estat modificats per a que en lloc de tenir un angle d’actuació restringit puguin rotar de forma continua. És possible que no siguin la millor elecció de motor per a aquest tipus d’aplicació, els servomotors són molt precisos en moure uns angles en concret, però molt poc precisos en la seva velocitat, però com que ja els teníem disponibles, vam decidir usar-los per mantenir el cost al mínim. La principal modificació es pot veure a la Figura.
+<a class="image" href="/pti/index.php/File:Serv.png" title="fig:"><img alt="fig:" data-file-height="240" data-file-width="320" decoding="async" height="240" src="/pti/images/3/34/Serv.png" width="320"/></a>
+</p>
+<h4><span class="mw-headline" id="Control_amb_PWM">Control amb PWM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=31" title="Edit section: Control amb PWM">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=31" title="Edit section: Control amb PWM">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Els servomotors es controlen enviant una senyal PWM per al seu connector de control (Els servomotors usualment tenen tres connectors: GND, Vcc i Control).
+</p><p>En un servomotor estàndard, la mida d’aquests plusos, modificarà l’angle de l’eix del servomotor respecte el punt neutre. En els nostres servomotors modificats, però, el que farà és modificar la velocitat en la que l’eix es mou en una o altre direcció, sent un valor pròxim a 90 el punt neutre (com ja hem dit, la velocitat no és molt precisa, i pot variar entre servomotors).
+</p><p><a class="image" href="/pti/index.php/File:Serv2.JPG" title="fig:"><img alt="fig:" data-file-height="455" data-file-width="608" decoding="async" height="455" src="/pti/images/1/1b/Serv2.JPG" width="608"/></a>
+</p>
+<h4><span class="mw-headline" id="Servo.h">Servo.h</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=32" title="Edit section: Servo.h">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=32" title="Edit section: Servo.h">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Per programar això necessitem fer ús del timer0 i el timer1 de l’Arduino, per definir la durada del cicle i del pols.<br/>
+</p><p>Addicionalment cal adreçar un últim problema: Si simplement creéssim una funció que mogués el motor al ser cridada, aquesta funció ocuparia el flux d’execució del nostre Arduino de forma indefinida i no permetria que el Ribbo es posés a punt per a escoltar noves ordres.<br/>
+</p><p>Per tant, cal tenir una manera de desar l’últim valor escrit en un servomotor i programar el seu moviment en una rutina d’interrupció, de tal forma que el Ribbo pugui seguir escoltant ordres mentre la rutina d’interrupció s’encarrega de moure els motors en “background”.
+</p><p>Per simplificar aquesta operació, existeix la llibreria “Servo.h” que es distribueix amb la IDE d’Arduino i abstrau part d’aquest procés a l’usuari.
+</p>
+<h2><span id="Codi_de_l’Arduino"></span><span class="mw-headline" id="Codi_de_l.E2.80.99Arduino">Codi de l’Arduino</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=33" title="Edit section: Codi de l’Arduino">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=33" title="Edit section: Codi de l’Arduino">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El codi que core l’Arduino ha estat escrit i falshejat en el xip enterament des d’un dispositiu File:. El codi que conté l’Arduino és el següent:
+</p>
+<pre>#include &lt;Servo.h&gt;
+
+String command;
+boolean commandStarted = false;
+
+Servo leftServo;  
+Servo rightServo; 
+
+uint16_t servoStillL = 86; //Calibrat per al motor
+uint16_t servoStillR = 87; //^
+
+uint16_t servoFrontL = 150;
+uint16_t servoFrontR = 30;
+
+uint16_t servoBackL= 31;
+uint16_t servoBackR= 151;
+
+
+void setup() {
+   Serial.begin(57600); // Iniciem la comunicacio serie
+   Bean.enableConfigSave(false);
+   Bean.setBeanName("PTIbot");
+   
+   leftServo.attach(2);  // Vinculem el servo del pin 2 a un objecte servo 
+   rightServo.attach(3); 
+   
+   leftServo.write(servoStillL);
+   rightServo.write(servoStillR)
+}
+
+void loop() {
+  getCommand();
+}
+
+
+void getCommand() {
+   while (Serial.available()) {
+    char newChar = (char)Serial.read();
+    if (newChar == '#') { //Comensa una ordre
+      commandStarted = true;
+      command = "\0";
+    } else if (newChar == ';') { //Acaba una ordre
+      commandStarted = false;
+      commandCompleted(); //Executem l'ordre
+      command = "\0";
+    } else if (commandStarted == true) {
+      command += newChar;
+    }
+  }
+}
+
+
+void commandCompleted() {
+
+  if (command == "front") {
+    Bean.setLed( 0, 0, 255 );
+    leftServo.write(servoFrontL);
+    rightServo.write(servoFrontR);
+    delay(750);
+    leftServo.write(servoStillL);
+    rightServo.write(servoStillR);
+  }
+  
+  if (command == "back") {
+    Bean.setLed( 255, 0, 0 ); 
+    leftServo.write(servoBackL);
+    rightServo.write(servoBackR);
+    delay(750);
+    leftServo.write(servoStillL);
+    rightServo.write(servoStillR);
+  }
+  
+  if (command == "tl") {
+    Bean.setLed(255, 255, 0 );
+    leftServo.write(servoFrontL);
+    rightServo.write(servoStillR);
+    delay(250);
+    leftServo.write(servoStillL);
+    rightServo.write(servoStillR);
+  }
+  
+  if (command == "tr") {
+    Bean.setLed( 0, 255, 0 );
+    leftServo.write(servoStillL);
+    rightServo.write(servoFrontR);
+    delay(250);
+    leftServo.write(servoStillL);
+    rightServo.write(servoStillR);
+  }
+  
+  if (command == "stop") {
+    Bean.setLed( 0, 0, 0 );
+    leftServo.write(servoStillL);
+    rightServo.write(servoStillR);
+  }
+}
+
+void off() {
+  Bean.setLed( 0, 0, 0 );
+  leftServo.write(servoStillL);
+  rightServo.write(servoStillR);
+}</pre>
+<p>El codi està comentat per a claredat, però un resum del seu funcionament és:
+</p>
+<ol><li><b>Velocitats dels servos:</b> Definim variables que seran els valors que hem d’escriure els servos perquè es moguin a la velocitat desitjada. Com hem dit, aquests valors canvien entre servos, i s’han trobat fent proves.</li>
+<li><b>Comunicació sèrie:</b> Iniciem la comunicació sèrie, l’Arduino rebrà per la interfície sèrie les dades que rebi per Bluetooth.</li>
+<li><b>Objectes servo:</b> Es creen dos objectes Servo de la classe Servo.h i es vinculen als pins on tenim connectats els servos.</li>
+<li><b>Escoltant missatges:</b> S’escolta de forma continua la comunicació sèrie esperant rebre ordres. al rebre un “#”, s’interpreta que es comença a rebre una ordre i s’enregistrarà fins a rebre un “”, moment en el que s’executarà l’ordre corresponent.</li></ol>
+<h1><span id="Dispositiu_mòbil_2"></span><span class="mw-headline" id="Dispositiu_m.C3.B2bil_2">Dispositiu mòbil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=34" title="Edit section: Dispositiu mòbil">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=34" title="Edit section: Dispositiu mòbil">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Per_què_un_dispositiu_mòbil?"></span><span class="mw-headline" id="Per_qu.C3.A8_un_dispositiu_m.C3.B2bil.3F">Per què un dispositiu mòbil?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=35" title="Edit section: Per què un dispositiu mòbil?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=35" title="Edit section: Per què un dispositiu mòbil?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Una primera aproximació en el projecte havia sigut usar un micro-ordinador (Com per exemple una <i>Raspberry Pi </i>) com a component principal del robot.<br/>La segona opció era usar un dispositiu <i>File: </i>. Usant el micro-ordinador, ens dona la facilitat de que treballar amb ell és igual que treballar amb qualsevol altre ordinador amb Linux, és molt senzill trobar codi existent a Internet i usar-lo en el nostre projecte.<br/>Al final, però, ens vam decantar per usar un telèfon File: per els següents motius:'''
+</p>
+<ul><li>Un dispositiu File: incorpora connexió a Internet, càmera i bateria pròpies, cosa que redueix el cost i complexitat en comparació amb un micro-ordinador, per al qual hauríem d’aconseguir bateries, càmera i adaptador per a xarxa sense fils.</li>
+<li>També disposa de pantalla, cosa que facilita la interacció amb el robot.</li>
+<li>La majoria de gent disposa d’un telèfon i això abarateix molt el cos del robot. Un dels nostres objectius era que fos més econòmicament accessible que les alternatives que existeixen al mercat.</li>
+<li>Un dispositiu File: disposa de sensors extra que poden servir per ampliar la funcionalitat del robot de moltes més maneres que un micro-ordinador (GPS, Giroscopis, Acceleròmetres, Sensors de llum...)</li>
+<li>Finalment també ens ofereix la possibilitat de fer coses que no s’hagin fet abans, provar noves maneres d’implementar coses i no només basar-nos en codi i programari ja existent.</li></ul>
+<h2><span id="Preparació_del_dispositiu"></span><span class="mw-headline" id="Preparaci.C3.B3_del_dispositiu">Preparació del dispositiu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=36" title="Edit section: Preparació del dispositiu">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=36" title="Edit section: Preparació del dispositiu">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El dispositiu mòbil emprat pel projecte és un smartphone File: que incorpori càmera frontal i posterior i amb una versió mínima d’File: 5.0 <i>Lollipop </i>. El motiu de tenir com a versió mínima File: 5.0 és perquè per realitzar la comunicació GCM es requereix l’API 21 d’File:, i aquesta és la versió mínima que suporta la llibreria <i>Google Play Services </i>, un requeriment necessari per que funcionés.<br/>Un cop instal·lades les aplicacions desenvolupades en el dispositiu, aquest es munta en el robot en posició vertical, ja que aporta una major estabilitat al robot que en horitzontal i també per la pròpia estructura del robot.'''
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:1251px;"><a class="image" href="/pti/index.php/File:Orientacions.jpg"><img alt="" class="thumbimage" data-file-height="1250" data-file-width="1249" decoding="async" height="1250" src="/pti/images/8/8d/Orientacions.jpg" width="1249"/></a> <div class="thumbcaption">Diagrames de les dues orientacions plantejades en la fase de disseny del robot</div></div></div>
+<h2><span class="mw-headline" id="Aplicacions_File:">Aplicacions File:</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=37" title="Edit section: Aplicacions File:">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=37" title="Edit section: Aplicacions File:">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per a facilitat de programació, hem decidit dividir la programació File: en 2 apartats: <i>Ribbo Launcher </i>, aplicació que servirà per controlar el robot i registrar-lo a la base de dades de robot actius i també que realitzarà la comunicació Bluetooth amb l’Arduino, i <i>Ribbo Streaming </i>, que s’encarregarà de realitzar l’Streaming cap al servidor multimèdia.<br/>Per a desenvolupar les dues aplicacions, s’ha optat per fer servir l’entorn <i>File: Studio </i>ja que està enfocat en la programació d’aplicacions en File: i ofereix d’una manera còmoda eines com la depuració de codi i l’ús del format Gradle per a definir l’estructura del projecte. A més, incorpora un plugin de Git que permet fàcilment fer <i>push </i>i <i>pull </i>. En el nostre cas, hem fet servir per guardar el projecte un repositori Git a <i>bitbucket.org </i>.<br/>'''''''''''''''''''
+</p>
+<h3><span class="mw-headline" id="App_Ribbo_Launcher">App Ribbo Launcher</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=38" title="Edit section: App Ribbo Launcher">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=38" title="Edit section: App Ribbo Launcher">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En el cas de l’aplicació <i>Ribbo Launcher </i>hem començat primerament programant la part del Bluetooth i després de comprovar el correcte funcionament se li ha afegit la llibreria <i>Google Play Services </i>per fer la comunicació GCM.<br/>'''
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:343px;"><a class="image" href="/pti/index.php/File:EstructuraRibboLauncher.png"><img alt="" class="thumbimage" data-file-height="482" data-file-width="341" decoding="async" height="482" src="/pti/images/9/97/EstructuraRibboLauncher.png" width="341"/></a> <div class="thumbcaption">Estructura del projecte Ribbo Launcher en File: Studio</div></div></div>
+<p>A continuació s’explica de manera resumida el funcionament de l’aplicació així com els trossos de codi més destacats:
+</p>
+<h4><span class="mw-headline" id="Main_Activity">Main Activity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=39" title="Edit section: Main Activity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=39" title="Edit section: Main Activity">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tnone"><div class="thumbinner" style="width:393px;"><a class="image" href="/pti/index.php/File:ScreenMainActivity.png"><img alt="" class="thumbimage" data-file-height="760" data-file-width="391" decoding="async" height="760" src="/pti/images/7/7c/ScreenMainActivity.png" width="391"/></a> <div class="thumbcaption">Layout del MainActivity de l’app Ribbo Launcher</div></div></div>
+<p>L’aplicació s’inicia amb el main layout en el qual es demana a l’usuari que introdueixi un nom pel robot, tal i com es mostra a la figura 5.3. Després ha de clicar a “Find Ribbo”. En el cas que no s’hagi especificat cap nom, un <i>Toast </i>s’encarrega d’avisar a l’usuari que ha d’introduir un nom. Tanmateix, si el Bluetooth encarà no ha estat activat, també se li avisa. El nom es guarda com a <i>SharedPreferences </i>per a poder ser re-utilitzat de nou.<br/>'''
+</p><p>A la figura 5.4. es mostra el codi encarregat de buscar dispositius Bluetooth ( Amb un Discovery Listener, de forma asíncrona) i filtrar els que son de tipus Bean, es a dir els que son probablement Robots Ribbo.<br/>
+</p><p>A mesura que es van trobant dispositius es van afegint a la llista de forma asíncrona.<br/>
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:516px;"><a class="image" href="/pti/index.php/File:CodeSearchBT.png"><img alt="" class="thumbimage" data-file-height="389" data-file-width="514" decoding="async" height="389" src="/pti/images/f/f3/CodeSearchBT.png" width="514"/></a> <div class="thumbcaption">Codi que implementa la recerca dispositius Ribbo</div></div></div>
+<p>Com ja hem dit, el <i>discover </i>anirà llistant els diferents Ribbos, el nom que anuncien i la seva MAC. Després, només caldrà clicar a sobre seu i aleshores l’aplicació llençarà un <i>intent </i>donant pas al <i>Control Activity </i>.'''''''
+</p>
+<h4><span class="mw-headline" id="Control_Activity">Control Activity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=40" title="Edit section: Control Activity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=40" title="Edit section: Control Activity">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tnone"><div class="thumbinner" style="width:393px;"><a class="image" href="/pti/index.php/File:ScreenControlActivity.png"><img alt="" class="thumbimage" data-file-height="754" data-file-width="391" decoding="async" height="754" src="/pti/images/8/89/ScreenControlActivity.png" width="391"/></a> <div class="thumbcaption">Layout del ControlActivity de l’app Ribbo Launcher</div></div></div>
+<p>El layout del control activity, tal i com es mostra a la figura 5.5. disposa d’una etiqueta “Controlling:” i el nom del Ribbo que estem controlant. Al centre del layout es disposa dels controls de moviment, cadascun dels quals està representat per un color.<br/>Aquests controls permeten controlar el Ribbo de forma manual com si es tractés d’un comandament a distància<br/>
+</p><p>En quant a la funcionalitat d’aquesta activitat, cada botó està programat de manera que quan es cliqui sobre seu s’enviï per Bluetooth una ordre (de moviment). Les ordres son strings començades per el símbol “#” acabades amb el símbol “;” Aquest format és per minimitzar el risc de que el robot comenci a interpretar soroll (O altres senyals Bluetooth) com a ordres. Ja que simplement són strings, és molt senzill ampliar la seva funcionalitat, només cal enviar la string que es desitgi i programar en l’Arduino quines de les strings tenen funcionalitat específica.<br/>A la figura 5.6. podem veure el tros de codi encarregat d’aquesta tasca.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:611px;"><a class="image" href="/pti/index.php/File:CodeButtons.png"><img alt="" class="thumbimage" data-file-height="222" data-file-width="609" decoding="async" height="222" src="/pti/images/c/c2/CodeButtons.png" width="609"/></a> <div class="thumbcaption">Codi dels botons encarregats del moviment del robot</div></div></div>
+<p>Paral·lelament, trobem un servei GCM el qual un cop ja ha estat registrat (Al iniciar el control Activity es fa assíncronament tot el proces de registre) es troba en background esperant rebre alguna notificació GCM.
+</p><p>Com ja hem dit, un cop s’ha iniciat l’activitat de Control, automàticament l’aplicació es registrarà contra el servidor de GCM i estarà preparada per a poder rebre notificacions. El procés de registre és llançat com a servei, per tal de realitzar-se fàcilment de forma asíncrona. Aquest demana un token al servidor GCM de Google i quan li és retornat es guarda com a SharedPreferences, ja que sempre serà el mateix token per a la mateixa aplicació.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:861px;"><a class="image" href="/pti/index.php/File:CodeToken.png"><img alt="" class="thumbimage" data-file-height="165" data-file-width="859" decoding="async" height="165" src="/pti/images/f/fb/CodeToken.png" width="859"/></a> <div class="thumbcaption">Codi encarregat del registre contra Google</div></div></div>
+<p>Després d’obtenir el token de Google, cridem a la funció <i>sendRegistrationToServer </i>la qual s’encarrega d’enviar per HTTP POST tant el nom del robot com el seu token associat al nostre servidor principal. El servidor ens retorna un booleà que indica si ha hagut un error, així com un missatge amb més detalls del registre. Un toast és l’encarregat de mostrar per pantalla l’èxit o fracàs del registre.'<b></b>
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:424px;"><a class="image" href="/pti/index.php/File:CodeHTTPPost.png"><img alt="" class="thumbimage" data-file-height="201" data-file-width="422" decoding="async" height="201" src="/pti/images/b/b9/CodeHTTPPost.png" width="422"/></a> <div class="thumbcaption">Codi encarregat d’enviar el nom i token mitjançant una petició HTTP Post contra el servidor</div></div></div>
+<p>En el cas que hi hagi hagut un problema durant el registre automàticament es reiniciarà i retornarà a l’activitat principal. Per dur això a terme, es crida a la funció <i>restartFirstActivity </i>com es mostra a la figura 5.8. En el cas que el registre hagi anat bé, es llençarà el servei <i>MyInstanceIDListenerService </i>el qual espera a rebre un missatge GCM i passar-lo a l’aplicació. Gràcies a que es tracta d’un servei, pot estar corrent en background a la vegada que es fa servir una altra aplicació. A la figura 5.9. podem veure la seva implementació.'''
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:667px;"><a class="image" href="/pti/index.php/File:CodeRestartActivity.png"><img alt="" class="thumbimage" data-file-height="172" data-file-width="665" decoding="async" height="172" src="/pti/images/e/e8/CodeRestartActivity.png" width="665"/></a> <div class="thumbcaption">Codi encarregat de reiniciar i retornar al Main Activity</div></div></div>
+<div class="thumb tnone"><div class="thumbinner" style="width:821px;"><a class="image" href="/pti/index.php/File:CodeListenerService.png"><img alt="" class="thumbimage" data-file-height="262" data-file-width="819" decoding="async" height="262" src="/pti/images/2/2b/CodeListenerService.png" width="819"/></a> <div class="thumbcaption">Codi que implementa el servei d’escolta de missatges GCM</div></div></div>
+<h3><span class="mw-headline" id="App_Ribbo_Streaming">App Ribbo Streaming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=41" title="Edit section: App Ribbo Streaming">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=41" title="Edit section: App Ribbo Streaming">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>L’aplicació Ribbo Streaming està basada en un exemple extret del repositori de GitHub <i><a class="external free" href="https://github.com/fyhertz/libstreaming" rel="nofollow">https://github.com/fyhertz/libstreaming</a> </i>. Es basa en l’ús d’una llibreria de codi obert anomenada <i>libstreaming </i>.'''
+</p>
+<h4><span class="mw-headline" id="Llibreria_libstreaming">Llibreria libstreaming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=42" title="Edit section: Llibreria libstreaming">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=42" title="Edit section: Llibreria libstreaming">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><i>Libstreaming </i>és una llibreria/API la qual, un cop afegida al projecte d’File:, et permet capturar i retransmetre el contingut de la càmera i/o el micròfon fent ús del protocol RTSP sobre UDP. Requereix File: 4.0 i disposa dels següents <i>encoders</i>de vídeo: H.264, H.263, AAC and AMR. Implementa tres maneres diferents de codificar el vídeo/àudio:'''
+</p><p>Per a començar una retransmissió, el primer pas s’anomena <i>“signaling” </i>. Durant aquest pas, ens connectem al receptor i negociem la descripció del stream.'<b></b>
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:779px;"><a class="image" href="/pti/index.php/File:Rtpcoses.png"><img alt="" class="thumbimage" data-file-height="360" data-file-width="777" decoding="async" height="360" src="/pti/images/b/bc/Rtpcoses.png" width="777"/></a> <div class="thumbcaption">Esquema simplificat del funcionament d’RTP/RTSP</div></div></div>
+<p>Libstreaming pot fer això de tres maneres:
+</p>
+<ul><li><b>Des del client RTSP: </b> En aquest cas és el client el que es troba esperant una connexió (El servidor multimèdia en el nostre cas) i des del servidor (El nostre telèfon) iniciem una comunicació amb aquest client. Aquest es el mètode que usem nosaltres.</li>
+<li><b>Des del servidor RTSP:</b> En aquest cas, libstreaming fa que el telèfon es comporti com un un servidor de RTSP i espera a que un client li demani una connexió. Un ús per aquest mode és per exemple una càmera de vigilància que només volem que faci streaming quan ho demanem explícitament.</li>
+<li><b>sense RTSP:</b> La ultima opció que ens permet libstreaming és no usar el protocol RTSP, si no enviar la sessió a través d’un protocol que vulguem nosaltres mateixos. Això suposaria, es clar, la necessitat d’implementar el protocol sencer.</li></ul>
+<p>Un cop negociat l’streaming, libstreaming s’encarregarà d’obtenir el vídeo de la càmera i enviar-ho per RTP cap al nostre servidor multimèdia.
+</p>
+<h4><span id="Implementació_de_la_llibreria_libstreaming_a_l’aplicació"></span><span class="mw-headline" id="Implementaci.C3.B3_de_la_llibreria_libstreaming_a_l.E2.80.99aplicaci.C3.B3">Implementació de la llibreria libstreaming a l’aplicació</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=43" title="Edit section: Implementació de la llibreria libstreaming a l’aplicació">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=43" title="Edit section: Implementació de la llibreria libstreaming a l’aplicació">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Per al desenvolupament de l’aplicació Ribbo Streaming, hem aprofitat l’exemple número 3 del propi repositori del libstreaming. Aquest exemple és una base de la implementació del primer cas descrit anteriorment (És el telèfon el que inicia l’streaming cap un client que es troba escoltant per connexions).<br/>El layout principal mostra l’aspecte de la figura 5.12.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:805px;"><a class="image" href="/pti/index.php/File:ScreenVideoStreaming.png"><img alt="" class="thumbimage" data-file-height="419" data-file-width="803" decoding="async" height="419" src="/pti/images/c/c7/ScreenVideoStreaming.png" width="803"/></a> <div class="thumbcaption">Layout de l’activitat principal de l’aplicació Ribbo Streaming</div></div></div>
+<p>En aquesta aplicació, introduïm quin és el streaming que estem realitzant (Senyalant la IP del nostre servidor de vídeo, i la pàgina específica del robot que hem registrat) A més l’streaming es pot protegir amb contrasenya si volem ser els únics en poder fer streaming per aquell Ribbo en concret.
+</p>
+<h1><span class="mw-headline" id="Servidor_2">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=44" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=44" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En aquesta punt tractarem totes les parts involucrades en el costat del servidor. Separarem aquest apartat en diversos punts per poder entrar en mes detall en el que volem aconseguir i com ho hem fet.
+</p>
+<h2><span class="mw-headline" id="Objectius_2">Objectius</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=45" title="Edit section: Objectius">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=45" title="Edit section: Objectius">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com ja hem descrit en detall al , les funcionalitats de
+</p>
+<ul><li>Retransmetre d’una manera portable, segura i controlada el streaming rebut des del dispositiu mòbil.</li>
+<li>Comunicar el servidor amb el dispositiu mòbil.</li></ul>
+<h2><span id="Configuració"></span><span class="mw-headline" id="Configuraci.C3.B3">Configuració</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=46" title="Edit section: Configuració">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=46" title="Edit section: Configuració">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Servidor_virtual">Servidor virtual</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=47" title="Edit section: Servidor virtual">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=47" title="Edit section: Servidor virtual">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Per disposar d’un servidor virtual, hem usat el paquet per a estudiants que ofereix github (més informació a <a class="external free" href="https://education.github.com/pack" rel="nofollow">https://education.github.com/pack</a>) que ens proporciona crèdit a Digital Ocean per poder llogar un servidor virtual privat (VPS). En el nostre cas hem configurat un servidor amb les característiques de la figura.
+</p><p><a class="image" href="/pti/index.php/File:Remconrob.png" title="fig:"><img alt="fig:" data-file-height="261" data-file-width="870" decoding="async" height="261" src="/pti/images/f/f6/Remconrob.png" width="870"/></a>
+</p><p>Tot i així, donat que el Wowza Engine (que detallarem més endavant), consumia molts recursos vam haver de fer varis canvis de ram (augmentant de 512MB a 1GB) que es reflecteixen en el log d’activitat del servidor de la figura. Gràcies a que es tractava d’un VPS, aquesta modificació es va poder dur a terme amb molta facilitat.
+</p><p><a class="image" href="/pti/index.php/File:Ribbo-server-conf2.png" title="fig:"><img alt="fig:" data-file-height="313" data-file-width="642" decoding="async" height="313" src="/pti/images/2/2a/Ribbo-server-conf2.png" width="642"/></a>
+</p>
+<h4><span class="mw-headline" id="Requeriments_software">Requeriments software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=48" title="Edit section: Requeriments software">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=48" title="Edit section: Requeriments software">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>El software que hem instal·lat en el servidor es el següent:
+</p>
+<ul><li><b>Docker:</b> per poder desplegar tota la web i els recursos necessaris. S’empaquetaran els components del servidor en contenidors per tal de facilitar el trasllat entre servidors i poder oferir un paquet com a producte.</li>
+<li><b>Wowza engine</b> que ens permetrà fer d’intermediari entre el streaming de vídeo i el client.</li></ul>
+<p>Per instal·lar <i>Docker</i> hem d’executar les següents comandes en un terminal, com podem veure a la taula [lst:docker-install].
+</p>
+<pre>$ sudo apt-get update
+    $ sudo apt-get install apt-transport-https ca-certificates
+    $ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+    $ sudo cat "deb https://apt.dockerproject.org/repo ubuntu-trusty main" &gt; /etc/apt/sources.list.d/docker.list
+    $ sudo apt-get update
+    $ sudo apt-get purge lxc-docker
+    $ apt-cache policy docker-engine
+    $ sudo apt-get install linux-image-extra-$(uname -r)
+    $ sudo apt-get install docker-engine
+    $ sudo service docker start</pre>
+<p>Més informació: <a class="external free" href="https://docs.docker.com/engine/installation/" rel="nofollow">https://docs.docker.com/engine/installation/</a>
+</p><p>Per instal·lar <i>Wowza</i> haurem de seguir els seguents passos:
+</p>
+<ol><li>Registrar-se i obtenir la llicencia de 6 mesos: <a class="external free" href="https://www.wowza.com/pricing/trial/" rel="nofollow">https://www.wowza.com/pricing/trial/</a></li>
+<li>Descarregar-lo de la seva pàgina web: <a class="external free" href="https://www.wowza.com/pricing/installer" rel="nofollow">https://www.wowza.com/pricing/installer</a></li>
+<li>Executar les comandes de la taula [lst:wowza-install].</li>
+<li>Accedir al WowzaStreamingEngineManager: <a class="external free" href="http://localhost:8088/enginemanager" rel="nofollow">http://localhost:8088/enginemanager</a> <i>Nota: En canvi de localhost haurem de posar el nostre domini '</i><b></b></li>
+<li>Loguejar-te i provar el test-player (el que fa es provar-ho amb un vídeo guardat).</li></ol>
+<pre>$ sudo chmod +x WowzaStreamingEngine-4.4.1-linux-x64-installer.run
+    $ sudo ./WowzaStreamingEngine-4.4.1-linux-x64-installer.run
+    $ sudo service WowzaStreamingEngine start
+    $ sudo service WowzaStreamingEngineManager start</pre>
+<p>Una vegada instal·lat, opcional-ment, podem crear identitats perquè els usuaris puguin publicar <i>stremaings</i> en el nostre servidor anant a Server-&gt;Source Authentication i fent click a “Add Source”. Podem veure la imatge del panell a la figura.
+</p><p><a class="image" href="/pti/index.php/File:Wowza-publishers.png" title="fig:"><img alt="fig:" data-file-height="704" data-file-width="1277" decoding="async" height="704" src="/pti/images/e/ef/Wowza-publishers.png" width="1277"/></a>
+</p>
+<h3><span class="mw-headline" id="Domini">Domini</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=49" title="Edit section: Domini">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=49" title="Edit section: Domini">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una vegada teníem el servidor l’hem de fer accessible per Internet per poder-nos hi connectar de manera fàcil, per aconseguir-ho hem configurat un domini (<a class="external free" href="http://ribbo.tk/" rel="nofollow">http://ribbo.tk/</a>). Hem fet ús d’un domini “.tk” donat que són gratuïts (més informació a <a class="external free" href="http://www.dot.tk/es/index.html" rel="nofollow">http://www.dot.tk/es/index.html</a>). Després de registrar el domini hem canviat el DNS que ens ofereix al registar i afegim un record apuntant a la IP del nostre servidor.
+</p>
+<h1><span class="mw-headline" id="Client_web_2">Client web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=50" title="Edit section: Client web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=50" title="Edit section: Client web">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Introducció_2"></span><span class="mw-headline" id="Introducci.C3.B3_2">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=51" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=51" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Tot el codi del core de la web està escrit en <i>Python</i> fent ús del framework <i>Flask</i>. Totes les pàgines estan estructurades amb <i>HTML</i> i estilitzades amb <i>LESS</i>. La web i els components es troben en contenidors docker. En aquest apartat detallarem com fem funcionar tot.
+</p>
+<h2><span class="mw-headline" id="Requisits">Requisits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=52" title="Edit section: Requisits">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=52" title="Edit section: Requisits">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per poder desenvolupar necessitem:
+</p>
+<ul><li>Docker</li>
+<li>Python [opcional]*</li>
+<li>PIP [opcional]*</li>
+<li>Less</li></ul>
+<p>Donat que els contenidors de Docker que usem ja tenen per defecte Python i les seves llibreries, no es estrictament necessari instalarles. Tot i així, hem desenvolupat uns scripts per fer deploy de la web. Aquests scripts si que requereixen disposar de Python.
+</p>
+<h2><span class="mw-headline" id="Docker">Docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=53" title="Edit section: Docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=53" title="Edit section: Docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Fem ús de docker poder abstreure’ns de les dependències i disposar una manera ràpida de servir la web i els diferents serveis que aquesta ofereix com un sol “paquet” que un usuari pot instal·lar al seu servidor i esta llest per usar. Amb aquest sistema podem provar qualsevol part sota el mateix entorn, independentment de la versió del sistema operatiu que tenim o d’altres característiques. Tot i així, hem de diferenciar dos entorns: <i>l’entorn de desenvolupament</i> i <i>l’entorn de producció</i>.
+</p>
+<h3><span class="mw-headline" id="Entorn_de_desenvolupament">Entorn de desenvolupament</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=54" title="Edit section: Entorn de desenvolupament">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=54" title="Edit section: Entorn de desenvolupament">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquest entorn és especific per realitzar totes les tasques de desenvolupament en <b>local</b> i poder provar els canvis que més tard es veuran reflectits en el servidor. L’entorn de desenvolupament té la particularitat de que ha de ser un entorn molt dinàmic donat que qualsevol part del codi és <b>susceptible a canvis</b>.
+</p><p>Altrament, a part dels possibles canvis de codi, també serveix els recursos de forma dinàmica (fotografies, fonts, javascripts..) sense tenir-ne una caché per poder treballar amb les versions mes recents.
+</p>
+<h4><span class="mw-headline" id="Contenidors_docker">Contenidors docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=55" title="Edit section: Contenidors docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=55" title="Edit section: Contenidors docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>L’entorn de desenvolupament es desplega fent ús dels següents contenidors:
+</p>
+<ul><li><b>Web:</b> Encarregat de servir la web mitjançant Python amb la comanda <i>runserver</i>. Aquesta manera de servir la web és una manera molt particular donat que tot i que ofereix característiques molt bones pel <i>debugging</i> no és la millor opció per un entorn de producció.</li>
+<li><b>Data:</b> Contenidor on tenim les dades de la web isolades de la instància que usarem per les consultes per motius de seguretat i persistència. Podem moure aquest contenidor si necessitem migrar el nostre servei, però no necessàriament un altre usuari hagi de disposar de les mateixes dades.</li>
+<li><b>Postgres:</b> Instància Postgres amb la que farem les operacions sobre la base de dades. Aquesta instància ens permet separar la base de dades del contenidor Web principal pel mateix motiu que el de Data.</li></ul>
+<p>Tots aquests contenidors estan definits al arxiu <i>docker-compose.yml</i>, vegem-ne el contingut a la taula [lst:docker-compose]
+</p>
+<pre>web:
+      restart: always
+      build: ./web
+      expose:
+        - "8080"
+      ports:
+        - "8080:5000"
+      links:
+        - postgres:postgres
+      volumes:
+        - ./static/:/usr/src/app/static
+        - ./web/:/usr/src/app/
+      env_file: .env
+      command: /usr/local/bin/python app.py runserver -d
+    
+    data:
+      image: postgres:latest
+      volumes:
+        - /var/lib/postgresql
+      command: "true"
+    
+    postgres:
+      restart: always
+      image: postgres:latest
+      volumes_from:
+        - data
+      ports:
+        - "5432:5432"</pre>
+<p>Aquest docker-compose defineix els contenidors de la següent , línia per línia:
+</p>
+<ul><li><b>Contenidor Web</b>
+<ol><li>El contenidor serà sempre reiniciat sigui el que sigui el que hagi provocat el tancament (per exemple, stop).</li>
+<li>Defineix la ruta de context.</li>
+<li>El contenidor serà accessible externament mitjançant el port <i>8080</i> (fem ús d’aquest port per evitar els ports <i>well-known</i> que poden estar en ús).</li>
+<li>Exposem el port <i>5000</i> a altres contenidors mitjançant el port <i>8080</i>.</li>
+<li>Enllacem el Contenidor Postgres amb el Contenidor Web.</li>
+<li>Muntem els volums <i>static</i> a <i>/usr/src/app/static</i> i web a <i>/usr/src/app/</i>.</li>
+<li>Defineix l’arxiu d’<i>environment</i> amb les seves variables d’entorn.</li>
+<li>Defineix la comanda mitjançant la qual muntarem el contenidor.</li></ol></li>
+<li><b>Contenidor Data</b>
+<ol><li>Usarem la última imatge de Postgres disponible a dockerhub.</li>
+<li>Muntem el volum pel Postgres</li>
+<li>Defineix la comanda mitjançant la qual muntarem el contenidor.</li></ol></li>
+<li><b>Contenidor Postgres</b>
+<ol><li>El contenidor serà sempre reiniciat sigui el que sigui el que hagi provocat el tancament (per exemple, stop).</li>
+<li>Usarem la última imatge de Postgres disponible a dockerhub.</li>
+<li>Exposem el port <i>5000</i> a altres contenidors mitjançant el port <i>5000</i>.</li>
+<li>Defineix la comanda mitjançant la qual muntarem el contenidor.</li></ol></li></ul>
+<h3><span id="Entorn_de_producció"></span><span class="mw-headline" id="Entorn_de_producci.C3.B3">Entorn de producció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=56" title="Edit section: Entorn de producció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=56" title="Edit section: Entorn de producció">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquest entorn ha de ser molt més <b>estàtic</b>, <b>robust</b> i <b>consistent</b> donat que és accessible a través d’Internet. Per evitar forats de seguretat també te deshabilitades les opcions de <i>debug</i> que podrien exposar vulnerabilitats als possibles atacants.
+</p>
+<h4><span class="mw-headline" id="Contenidors_docker_2">Contenidors docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=57" title="Edit section: Contenidors docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=57" title="Edit section: Contenidors docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Aquest entorn es desplega amb els següents contenidors:
+</p>
+<ul><li><b>Web:</b> encarregat de oferir la web a altres serveis de host mitjançant <i>Gunicorn</i> al port 8000.</li>
+<li><b>Nginx:</b> encarregat de servir la web. Serveix tots els recursos de forma estàtica amb un petit nivell de <i>cahcing</i> per servir les dades de manera ràpida.</li>
+<li><b>Data:</b> Igual que en el entorn de desenvolupament.</li>
+<li><b>Postgres:</b> Igual que en el entorn de desenvolupament.</li></ul>
+<p>Tots aquests contenidors estan definits al arxiu <i>docker-compose-prod.yml</i>, vegem-ne el contingut a la taula [lst:docker-compose-prod]
+</p>
+<pre>web:
+      restart: always
+      build: ./web
+      expose:
+        - "8000"
+      links:
+        - postgres:postgres
+      volumes:
+        - ./static/:/usr/src/app/static
+      env_file: .env
+      command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+    
+    nginx:
+      restart: always
+      build: ./nginx/
+      ports:
+        - "80:80"
+      volumes:
+        - /www/static
+      volumes_from:
+        - web
+      links:
+        - web:web
+    
+    data:
+      image: postgres:latest
+      volumes:
+        - /var/lib/postgresql
+      command: "true"
+    
+    postgres:
+      restart: always
+      image: postgres:latest
+      volumes_from:
+        - data
+      ports:
+        - "5432:5432"</pre>
+<p>Les principals diferències amb el <i>docker-compose.yml</i> de l’entorn de desenvolupament són les següents:
+</p>
+<ul><li>El contenidor web ja no és accessible externament mitjançant cap port.</li>
+<li>La web ja no és servida mitjançant la comanda runserver de Python sinó que es fa servir <i>Gunicorn</i>.</li>
+<li>Tenim un contenidor nginx que s’encarrega de servir la web gràcies als enllaços establerts amb el contenidor web. En aquest contenidor, contràriament al de web, s’apliquen caches.</li></ul>
+<h3><span class="mw-headline" id="Com_es_despleguen_els_entorns">Com es despleguen els entorns</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=58" title="Edit section: Com es despleguen els entorns">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=58" title="Edit section: Com es despleguen els entorns">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Els entorns es despleguen mitjançant un petit script, <i>clean-start.py</i>, escrit en Python. En aquest script és mira la variable d’entorn <i>ENV</i> i es comprova si està en mode <i>dev</i>. En cas d’estar en <i>mode developement </i>fem ús del docker-compose.yml, altrament usem docker-compose-prod.yml. Podem veure-ho en el fragment de codi de la taula [lst:clean-start]'<b></b>
+</p><p>Per canviar entre els dos entorns de desenvolupament editarem l’arxiu <i>.env</i>canviant el valor de la variable <i>ENV </i>entre <i>prod </i>o <i>dev </i>.'''''''''''
+</p>
+<pre>    if os.environ.get("ENV") == "dev":
+        print(bcolors.HEADER + bcolors.BOLD + "\nSETTING UP DEVELOPER MODE:\n" + bcolors.ENDC)
+        os.system('docker-compose up -d')
+        print(bcolors.OKBLUE + "     2) CONTAINERS BUILD" + bcolors.ENDC)
+    
+    else:
+        print(bcolors.HEADER + bcolors.BOLD + "\nSETTING UP PRODUCTION MODE:\n" + bcolors.ENDC)
+        os.system("docker-compose -f docker-compose-prod.yml up -d")
+        print(bcolors.OKBLUE + "     2) CONTAINERS BUILD" + bcolors.ENDC)</pre>
+<h2><span class="mw-headline" id="Model_de_la_base_de_dades">Model de la base de dades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=59" title="Edit section: Model de la base de dades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=59" title="Edit section: Model de la base de dades">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A l’arxiu <i>models.py</i>està definit tot el model i les seves regles de les bases de dades.'<b></b>
+</p>
+<h3><span class="mw-headline" id="Usuaris">Usuaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=60" title="Edit section: Usuaris">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=60" title="Edit section: Usuaris">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>class User(db.Model, UserMixin):
+        __tablename__ = 'users'
+    
+        id = db.Column(db.Integer, index=True, unique=True, primary_key=True)
+        username = db.Column(db.String, nullable=False, unique=True)
+        password = db.Column(db.String, nullable=False)
+        active = db.Column(db.Boolean, nullable=False, default=True)
+        authenticated = db.Column(db.Boolean, nullable=False, default=False)
+        robots = db.relationship('Robot', backref='users', lazy='dynamic')
+        admin = db.Column(db.Boolean, nullable=False, default=False)
+        date_registred = db.Column(db.DateTime, nullable=False)
+        date_lastlogin = db.Column(db.DateTime, nullable=True)
+    
+        def __init__(self, username, password, admin=False):
+            self.username = username
+            self.set_password(password)
+            self.admin = admin
+            self.date_registred = datetime.datetime.utcnow()
+    
+        def __repr__(self):
+            return '&lt;User %r&gt;' % self.username
+    
+        def is_active(self):
+            return self.active
+    
+        def get_id(self):
+            return self.id
+    
+        def is_authenticated(self):
+            return self.authenticated
+    
+        @staticmethod
+        def is_anonymous():
+            return False
+    
+        def logout(self):
+            self.date_lastlogin = datetime.datetime.utcnow()
+            self.authenticated = False
+    
+        def set_password(self, password):
+            self.password = generate_password_hash(password)
+    
+        def check_password(self, password):
+            return check_password_hash(self.password, password)
+    
+        def is_admin(self):
+            return self.admin
+    
+        def release_robots(self):
+            for robot in self.robots.all():
+                robot.release_control()
+    
+        def change_state(self):
+            self.active = not self.active</pre>
+<p>En aquest model podem observar els atributs que tenim pels usuaris:
+</p>
+<ul><li>un identificador <i><b>id''''</b></i></li>
+<li>un nom d’usuari <i><b>username''''</b></i></li>
+<li>un camp per la contrasenya <i><b>password</b></i> '<b></b></li>
+<li>un camp on tenir tots els robots que l’usuari està controlant <i><b>robots''''</b></i></li>
+<li>un camp per marcar si l’usuari està loginat <i><b>authenticated</b></i>. '<b></b></li>
+<li>un camp que indica si l’usuari és un administrador <i><b>admin</b></i>. '<b></b></li>
+<li>un timestamp de la data en que s’ha registrat <i><b>date_registred</b></i>. '<b></b></li>
+<li>un timestamp de la data en que s’ha loginat per última vegada <i><b>date_last_login''''</b></i></li></ul>
+<p>Com podem veure a partir dels camps anteriors, distingim dos tipus d’usuaris: els <i>administradors</i>i els <i>usuaris sense privilegis</i>. A la web els diferenciem per restringir l’accés segons el nivell de permisos requerits per dur a terme la petició realitzada.'''
+</p><p><i>Nota: </i>totes les contrasenyes estan xifrats amb md5 per motius de seguretat. Els administradors no poden conèixer mai les contrasenyes reals dels usuaris.'<b></b>
+</p>
+<h3><span class="mw-headline" id="Robots">Robots</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=61" title="Edit section: Robots">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=61" title="Edit section: Robots">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>class Robot(db.Model):
+    colors = {"Online": "success", "Offline": "danger", "In use": "warning"}
+
+    __tablename__ = 'robots'
+
+    id = db.Column(db.Integer, index=True, unique=True, primary_key=True)
+    name = db.Column(db.String, nullable=False, unique=True)
+    location = db.Column(db.String, nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=True)
+    in_use = db.Column(db.Boolean, nullable=False, default=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True, default=None)
+    token = db.Column(db.String, nullable=True, default=None)
+    date_registred = db.Column(db.DateTime, nullable=False)
+    date_last_use = db.Column(db.DateTime, nullable=True)
+
+    def __init__(self, name, location, active):
+        self.name = name.lower()
+        self.location = location.lower()
+        self.active = active
+        self.date_registred = datetime.datetime.utcnow()
+
+    def is_in_use(self):
+        return self.in_use
+
+    def is_active(self):
+        return self.active
+
+    def control(self, user_id):
+        self.in_use = True
+        self.user_id = user_id
+
+    def release_control(self):
+        self.in_use = False
+        self.user_id = None
+        self.date_last_use = datetime.datetime.utcnow()
+
+    def can_release_control(self, user_id):
+        return self.user_id == user_id or \
+               (user_id and User.query.get(user_id).is_admin())
+
+    def get_state(self):
+        if self.is_active():
+            if self.is_in_use():
+                return 'In use'
+            else:
+                return 'Online'
+        else:
+            return 'Offline'
+
+    def get_state_class(self):
+        return self.colors[self.get_state()]</pre>
+<p>En aquest model podem observar els atributs que tenim pels robots:
+</p>
+<ul><li>un identificador <i><b>id''''</b></i></li>
+<li>un nom <i><b>name''''</b></i></li>
+<li>un camp per la localització <i><b>location''''</b></i></li>
+<li>un camp per marcar si el robot està actiu <i><b>active''''</b></i></li>
+<li>un camp per saber quin usuari l’està controlant <i><b>user_id''''</b></i></li>
+<li>un camp per tenir el identificador GCM del robot <i><b>token</b> '</i><b></b></li>
+<li>un timestamp de la data en que s’ha registrat <i><b>date_registred</b></i>. '<b></b></li>
+<li>un timestamp de la data en que s’ha usat per última vegada <i><b>date_last_use''''</b></i></li></ul>
+<h2><span class="mw-headline" id="Funcionalitats">Funcionalitats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=62" title="Edit section: Funcionalitats">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=62" title="Edit section: Funcionalitats">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La web ha de proporcionar unes funcions bàsiques per tal de poder realitzar totes les tasques de forma fàcil i intuïtiva, les principals tasques que haurà de dur a terme la web són:
+</p>
+<ul><li>Alta, Baixa, Modificació (ABM) d’<i>usuaris</i>. '<b></b></li>
+<li>Alta, Baixa, Modificació (ABM) de <i>robots</i>. '<b></b></li>
+<li>Control de <i>robots</i>. '<b></b></li>
+<li>Control d’accés dels <i>usuaris </i><b>(ADMIN)</b>. '<b></b></li>
+<li>Control de comportament dels <i>robots</i><b> (ADMIN)</b>. '<b></b></li></ul>
+<p>Per tant, la web disposarà de les següents parts, cada una amb la seva funcionalitat.
+</p><p>Parts accessibles sense estar per a qualsevol usuari sigui o no registrat:
+</p>
+<ul><li><b>Home:</b> Pàgina de presentació del robot i les seves funcionalitats.</li>
+<li><b>Signup:</b> Pàgina per registrar nous usuaris.</li>
+<li><b>Login:</b> Pàgina per introduir les credencials i entrar com a usuari registrat.</li></ul>
+<p>Parts accessibles nomes per als usuaris registrats que han iniciat sessió:
+</p>
+<ul><li><b>Logout:</b> Pàgina per tancar sessió.</li>
+<li><b>Llista robots:</b> Pàgina on es mostren tots els robots disponibles i el seu estat, i des de la que es poden seleccionar robots per controlar.</li>
+<li><b>Control robots:</b> Pàgina on es mostren els controls del robot i el vídeo en streaming.</li></ul>
+<p>Parts accessibles nomes per a usuaris registrats amb privilegis d’ administrador:
+</p>
+<ul><li><b>Llistat d’usuaris:</b> En aquesta pàgina es mostren tots els usuaris registrats.</li></ul>
+<h3><span id="Registre_d’usuaris"></span><span class="mw-headline" id="Registre_d.E2.80.99usuaris">Registre d’usuaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=63" title="Edit section: Registre d’usuaris">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=63" title="Edit section: Registre d’usuaris">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Qualsevol usuari pot registrar-se a la web a través de la pàgina <a class="external free" href="http://ribbo.tk/signup/" rel="nofollow">http://ribbo.tk/signup/</a>. Donat que no es tracta d’un entorn real els usuaris passen a estar actius sense una validació del perfil prèvia. En un entorn real, es podria requerir que un administrador activés el perfil o que s’hagués de confirmar amb un email.
+</p><p>Com podem veure a la figura només es necessari emplenar el nom i la contrasenya per poder crear un usuari.
+</p><p><a class="image" href="/pti/index.php/File:Signup.png" title="fig:"><img alt="fig:" data-file-height="214" data-file-width="300" decoding="async" height="214" src="/pti/images/c/cf/Signup.png" width="300"/></a>
+</p><p>Una vegada emplenem totes les dades, aquestes son validades abans de ser enviades al servidor mitjançant <i>POST</i>. En el servidor tornen a ser validades i si no hi ha cap usuari més amb aquest nom d’usuari passarem a estar registrats i amb sessió iniciada amb el usuari que acabem de crear.
+</p>
+<h3><span class="mw-headline" id="Login">Login</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=64" title="Edit section: Login">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=64" title="Edit section: Login">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Com hem esmentat abans, per poder fer servir algunes de les funcionalitats de la web hem d’accedir-hi amb el nostre usuari, per fer-ho haurem d’entrar a <a class="external free" href="http://ribbo.tk/login/" rel="nofollow">http://ribbo.tk/login/</a> i emplenar els camps de les nostres credencials (usuari i contrasenya), com podem veure a la figura.
+</p><p><a class="image" href="/pti/index.php/File:Login2.png" title="fig:"><img alt="fig:" data-file-height="898" data-file-width="1264" decoding="async" height="898" src="/pti/images/e/e7/Login2.png" width="1264"/></a>
+</p><p>En cas de intentar accedir a alguna funcionalitat restringida a usuaris se’ns re-dirigirà al login. Una vegada iniciada sesió serem re-dirigits a la pàgina que preteníem accedir.
+</p>
+<h3><span class="mw-headline" id="Logout">Logout</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=65" title="Edit section: Logout">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=65" title="Edit section: Logout">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Accessible mitjançant <a class="external free" href="http://ribbo.tk/logout/" rel="nofollow">http://ribbo.tk/logout/</a> s’encarrega d’alliberar el control sobre tots els robots que l’usuari estigués fent servir i tancar la seva sessió.
+</p>
+<h3><span class="mw-headline" id="Llistar_els_robots">Llistar els robots</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=66" title="Edit section: Llistar els robots">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=66" title="Edit section: Llistar els robots">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Podem accedir al llistat de robots entrant a la pàgina <a class="external free" href="http://ribbo.tk/robots/" rel="nofollow">http://ribbo.tk/robots/</a>. En aquest pàgina veurem el llistat de robots i si es troben en us (en aquest cas no els podrem utilitzar a no se que siguem l’administrador, per motius de seguretat). També podrem conèixer la localització del robot i veure si el robot ha deixat d’estar operatiu. Podem veure com es mostra aquesta pàgina a la figura.
+</p><p><a class="image" href="/pti/index.php/File:Robots-list.png" title="fig:"><img alt="fig:" data-file-height="871" data-file-width="1263" decoding="async" height="871" src="/pti/images/2/2f/Robots-list.png" width="1263"/></a>
+</p><p>Només l’administrador pot veure el token dels robots per motius de seguretat. Tot i així només pot veure els últims 7 dígits, altre cop per motius de seguretat. Aquesta es una funció útil en cas de necessitar identificar un Ribbo si necessités ser debugejat.
+</p>
+<h3><span class="mw-headline" id="Control_de_robots">Control de robots</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=67" title="Edit section: Control de robots">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=67" title="Edit section: Control de robots">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Podem fer ús de qualsevol robot fent click sobre la seva id des del <i>llistat de robots</i>. També podem accedir directament al control del robot mitjançant el seu <b>identificador</b> <a class="external free" href="http://ribbo.tk/robots/id/4" rel="nofollow">http://ribbo.tk/robots/id/4</a> (en aquest cas estaríem accedint al robot amb id 4), o bé, amb el seu <b>nom</b> <a class="external free" href="http://ribbo.tk/robots/name/bob" rel="nofollow">http://ribbo.tk/robots/name/bob</a> (en aquest cas estaríem accedint al robot amb nom bob, accessible també en majúscules).<br/>En cas de que el robot amb aquell nom o identificador no existeixi serem re-dirigits a la llista de robots amb una notificació a la part superior que ens adverteix de que no existeix.'<b></b>
+</p><p>La pàgina de control disposa de la interfície que podem veure a la figura.
+</p><p><a class="image" href="/pti/index.php/File:Robot-control.png" title="fig:"><img alt="fig:" data-file-height="900" data-file-width="1266" decoding="async" height="900" src="/pti/images/7/74/Robot-control.png" width="1266"/></a>
+</p><p>Per controlar els robots iniciarem el streaming fent click al botó <i>start</i>, el podrem aturar en qualsevol moment mitjançant el boto <i>stop</i>. En cas de que la imatge no es vegi en la orientació adequada podem girar-la mitjançant les fletxes negres.'''
+</p><p>Podem moure el robot tant amb les fletxes que es mostren en pantalla, com amb el teclat amb les fletxes de direcció o amb les lletres W, A, S i D. Tots aquests events son capturats per <i>jQuery </i>i creen una petició al servidor per enviar les dades a GCM.<br/>'<b></b>
+</p><p>Si l’usuari que controlava el robot és desactivat pels administradors en perd el control i serà re-dirigit a la pantalla d’inici i la seva sessió serà tancada. Totes les ordres son enviades al nostre servidor per <i>ajax </i>i filtrades segons les possibilitats que tenim disponibles actualment (UP, BOTTOM, LEFT, RIGHT, STOP). Qualsevol missatge diferent als enumerats anteriorment és descartat per evitar possibles forats de seguretat.'<b></b>
+</p><p>Una vegada l’usuari vol deixar de controlar un robot per permetre a altres usuaris fer-lo servir ha de fer click al botó release control des de la pàgina de control dels robots, o bé des de la llista. També ho farà en cas de desloginar-se o bé, al intentar controlar un altre robot. D’aquesta manera, actualment, només podem fer ús d’un robot donat que no volem donar la opció de que un usuari pugui controlar més d’un robot alhora. Els robots només poden ser controlats per un usuari sense permisos o per qualsevol dels administradors per controlar-ne el bon ús.
+</p>
+<h3><span id="Control_d’usuaris"></span><span class="mw-headline" id="Control_d.E2.80.99usuaris">Control d’usuaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=68" title="Edit section: Control d’usuaris">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=68" title="Edit section: Control d’usuaris">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Els administradors poden controlar als usuaris i desactivar-los mitjançant <a class="external free" href="http://ribbo.tk/users/" rel="nofollow">http://ribbo.tk/users/</a>, podem veure-ho a la figura. En aquest panell podem veure si l’usuari te sessió iniciada i si està fent servir algun robot (es mostra la ID dels robots que està controlant).
+</p><p><a class="image" href="/pti/index.php/File:User-control.png" title="fig:"><img alt="fig:" data-file-height="604" data-file-width="1280" decoding="async" height="604" src="/pti/images/1/1d/User-control.png" width="1280"/></a>
+</p><p>Per desactivar qualsevol usuari hem de fer click sobre el botó de la columna active de l’usuari, això canviarà l’estat entre activat i desactivat, impossibilitant a l’usuari de seguir controlant robots i de logginar-se.
+</p>
+<h3><span id="Interfície_multidispositiu"></span><span class="mw-headline" id="Interf.C3.ADcie_multidispositiu">Interfície multidispositiu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=69" title="Edit section: Interfície multidispositiu">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=69" title="Edit section: Interfície multidispositiu">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Tota la web és responsiva, adaptant-se a qualsevol tipus de dispositiu. Això ha estat possible gràcies al ús de <i>mediaqueries </i>com l’exemple que podem apreciar a la figura [lst:media-query], l’ús del framework <i>Bootstrap </i>i l’ús de <i>less</i>.'''''''
+</p>
+<pre>h1{
+      font-size: @h1-size;
+      @media screen and (max-width: 768px) {
+        font-size: @h1-size*0.75 !important;
+      }
+    }</pre>
+<p>En aquest exemple podem observar com hi havia una font-size definida, <i>@h1-size</i>, pels headers h1 i com aquest tamany és reduït al 75% amb tamanys de pantalla menors a <i>768px</i>.'''
+</p><p>També ens hem recolzat al <i>grid-system </i>o sistema de quadricula de Bootstrap, com el que podem veure a la figura '<b></b>
+</p><p><a class="image" href="/pti/index.php/File:Grid-system.png" title="fig:"><img alt="fig:" data-file-height="339" data-file-width="909" decoding="async" height="339" src="/pti/images/9/92/Grid-system.png" width="909"/></a>
+</p><p><br/>
+A les imatges de la figura podem observar el comportament de la web en mode responsiu amb el menú tancat i amb el menú obert, ambdós sobre la pàgina de inici.
+</p><p>A les imatges de la figura  podem observar el comportament de la web en mode responsiu a la llista de robots i al control d’aquests.
+</p>
+<h1><span class="mw-headline" id="Desenvolupament_del_treball">Desenvolupament del treball</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=70" title="Edit section: Desenvolupament del treball">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=70" title="Edit section: Desenvolupament del treball">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Durant el desenvolupament del treball, hem anat fent setmanalment de forma prevista, cada un dels apartats amb pocs imprevistos remarcables.<br/>Tot i així, durant el desenvolupament del treball, hem realitzat alguns canvis els quals detallem a continuació:
+</p>
+<ul><li><b>Canviar Sockets Web per GCM:</b> El nostre pla inicial era connectar l’File: a un Socket Web i enviar les dades per allà, però finalment vam decidir provar una tecnologia diferent com GCM, que també simplifica el fet de que l’aplicació pugui córrer de fons.</li>
+<li><b>Ús de Docker:</b> Quan el projecte estava més avançat, vam decidir moure tots els components del servidor a contenidors Docker per poder fer-ho més traslladable.</li>
+<li><b>Canvi de la base de dades:</b> La previsió inicial era usar MySQL com a base de dades, però al final es va decidir usar PostreSQL.</li>
+<li><b>PHP per Python com a llenguatge de desenvolupament web:</b> També vam comentar a la presentació principal que el llenguatge que s’usaria per a programar la banda del servidor seria PHP, finalment però, es va usar Python, així vam poder provar noves tecnologies.</li></ul>
+<h1><span class="mw-headline" id="Glossari_de_Tecnologies_emprades">Glossari de Tecnologies emprades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=71" title="Edit section: Glossari de Tecnologies emprades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=71" title="Edit section: Glossari de Tecnologies emprades">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><b>File::</b> és un sistema operatiu per a dispositius mòbils desenvolupat per Google, és el més usat actualment.</li>
+<li><b>Arduino:</b> és una plataforma de Hardware obert que incorpora un microprocessador i tots els components necessaris per a programar-lo i usar-lo de forma senzilla.</li>
+<li><b>Bitbucket:</b> és un servei web de control de versions per projectes Mercurial o Git. Ofereix la possibilitat d’oferir els repositoris de forma pública o privada i poder controlar les versions mitjançant un entorn gràfic.</li>
+<li><b>Bluetooth:</b> és un estàndard per enviar dades a curta distància usant radiofreqüència d’ona curta.</li>
+<li><b>Bootstrap:</b> és un framework HTML, CSS i javascript pensat per desenvolupar pàgines web responsives.</li>
+<li><b>CSS:</b> (Cascading Style Sheets) és un llenguatge de fulls d’estil utilitzat per descriure la semàntica de presentació (l’aspecte i format) d’un document escrit en un llenguatge de marques.</li>
+<li><b>Docker:</b> és un entorn que automitza el desplegament d’aplicacions dins de contenidors linux, facilitant l’aïllament entre ells.</li>
+<li><b>Flask:</b> és un microframework molt lleuger escrit en Python basat en <a class="external text" href="http://werkzeug.pocoo.org/" rel="nofollow">Werkzeug</a> i <a class="external text" href="http://jinja.pocoo.org/docs/dev/" rel="nofollow">Jinja 2</a>.</li>
+<li><b>GCM:</b> (Google Cloud Messaging) és un sistema de Google per enviar missatges curts de forma push a un dispositiu File: indicant una aplicació en concret.</li>
+<li><b>Git:</b> és un programari de sistema de control de versions dissenyat per Linus Torvalds, pensat en l’eficiència i confiança de manteniment de versions d’aplicacions amb una enorme quantitat de fitxers de codi font.</li>
+<li><b>Gunicorn:</b> és un servidor WSGI HTTP Python, compatible amb múltiples frameworks capaç de servir recursos de forma ràpida i segura.</li>
+<li><b>HTML:</b> (Hyper Text Markup Language) és un llenguatge de marcat que deriva de l’SGML dissenyat per estructurar textos i relacionar-los en forma d’hipertext.</li>
+<li><b>Java:</b> és un llenguatge de programació que és compil·la per una màquina virtual especialitzada en executar aquest llenguatge.</li>
+<li><b>Javascript:</b> és un llenguatge script basat en el concepte de prototipus (herència per delegació) utilitzat en les pàgines web.</li>
+<li><b>jQuery:</b> és un framework de Javascript que permet simplificar la manera d’interaccionar amb els documents HTML, manipular l’arbre DOM, gestionar esdeveniments, desenvolupar animacions i afegir interacció amb la tecnologia AJAX en pàgines web.</li>
+<li><b>LaTeX:</b> és un sistema de composició de textos compilat. Ha estat usat per a compondre aquest document.</li>
+<li><b>Less:</b> és un pre-processador de CSS que funciona sobre node i que serveix per extendre les funcionalitats d’aquest, afegint-ne de noves (variables, “mixins”, funcions...). Less ens permet fer CSS més fàcil de mantenir, personalitzar i extendre de manera ràpida i organitzada gràcies al seu ventall de possibilitats.</li>
+<li><b>libstreaming:</b> és una llibreria que facilita la implementació del protocol RTSP per a streaming de vídeo en File:.</li>
+<li><b>Node.js:</b> és un entorn de programació dissenyat per escriure aplicacions d’Internet escalables, notablement servidors web. Els programes estan escrits en JavaScript, utilitzant una arquitectura orientada a esdeveniments, i entrada/sortida asíncrona per tal de minimitzar el temps de sistema i maximitzar l’escalabilitat.</li>
+<li><b>NPM:</b> (Node Package Manager): és un gestor de paquet de node.js que ens permet descarregar llibreries i enllaçar-les o descarregar programari de js.</li>
+<li><b>PostgreSQL:</b> és un programari lliure que implementa un sistema de gestió de bases de dades relacional, distribuït amb la llicència PostgreSQL License.</li>
+<li><b>Python:</b> és un llenguatge de programació d’alt nivell i propòsit general molt utilitzat. La seva filosofia de disseny busca llegibilitat en el codi i la seva sintaxi permet als programadors expressar conceptes en menys línies de codi del que seria possible en llenguatges com C.</li>
+<li><b>RTSP:</b> és un protocol estàndard per negociar i transmetre streamings a través d’Internet.</li>
+<li><b>SQLAlchemy:</b> és una eina SQL de mapeig d’objectes relacionals <i>open-source </i>per Python distribuïda sota la llicència del MIT.'<b></b></li>
+<li><b>Wowza:</b> és un programari destinat a la distribució i gestió del streaming que ofereix una alta fiabilitat i una portabilitat a diferents formats de vídeo.</li></ul>
+<h1><span id="Conclusió"></span><span class="mw-headline" id="Conclusi.C3.B3">Conclusió</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=72" title="Edit section: Conclusió">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=72" title="Edit section: Conclusió">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El projecte s’ha dut a terme fent ús d’una gran diversitat de tecnologies. No és només el desenvolupament de cada tecnologia sinó la combinació de totes elles el que ha permès obtenir el producte final que es buscava inicialment: un robot que és capaç de ser controlat remotament. Creiem que ha estat una bona elecció fer aquest projecte en concret i pensem que ha tingut una bona acceptació per part dels altres grups i del professorat.<br/>
+</p><p>Cada membre de l’equip s’ha encarregat d’uns paquets de treball i, com a tal, s’ha responsabilitat de la part del projecte que li corresponia. Finalment, la integració de cada una de les tasques ha permès obtenir un producte final que és factible i usable, i pot ser útil de cara a una possible comercialització, encara que això és només un prototip. És l’esforç i el treball en equip el que ha donat com a resultat aquest producte. A més, s’ha de destacar el valor educatiu que hi ha darrera, perquè cada membre ha pogut aprendre i adquirir una sèrie de capacitats tècniques i posar-les en pràctica durant totes les etapes de recerca i implementació. Per altra banda, s’han reforçat valors com el treball en equip i la responsabilitat. Les reunions setmanals, per exemple, han servit per organitzar-nos millor. Aquests valors apresos de ben segur que seran de gran utilitat pel futur professional de cadascú.<br/>
+</p><p>Per últim, informar que tot el nostre projecte és accessible des de <i><a class="external free" href="https://bitbucket.org/PTI-Lab/" rel="nofollow">https://bitbucket.org/PTI-Lab/</a></i>. En aquest enllaç s’hi poden trobar tres repositoris: '<b></b>
+</p>
+<ul><li><i>web-pti: </i>on podrem trobar tot el codi emprat pel servidor. '<b></b></li>
+<li><i>Bluetooth-App: </i>on podrem trobar tot el codi emprat per l’aplicació <i>Ribbo Launcher</i>. '''</li>
+<li><i>robot-streaming: </i>on podrem trobar tot el codi emprat per l’aplicació <i>Ribbo Streaming</i>. '''</li></ul>
+<h1><span class="mw-headline" id="Bibliografia">Bibliografia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;veaction=edit&amp;section=73" title="Edit section: Bibliografia">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ribbo&amp;action=edit&amp;section=73" title="Edit section: Bibliografia">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Repositori de la llibreria <i>libstreaming </i><br/><a class="external free" href="https://github.com/fyhertz/libstreaming" rel="nofollow">https://github.com/fyhertz/libstreaming</a> '<b></b></li>
+<li>Repositori amb exemples d’implementació de la llibreria libstreaming<br/><a class="external free" href="https://github.com/fyhertz/libstreaming-examples" rel="nofollow">https://github.com/fyhertz/libstreaming-examples</a></li>
+<li>Documentació oficial de <i>Docker </i><br/><a class="external free" href="https://www.docker.com/" rel="nofollow">https://www.docker.com/</a> '<b></b></li>
+<li>Documentació oficial de <i>Python </i><br/><a class="external free" href="https://www.python.org/" rel="nofollow">https://www.python.org/</a> '<b></b></li>
+<li>Documentació oficial de npm<br/><a class="external free" href="https://docs.npmjs.com/" rel="nofollow">https://docs.npmjs.com/</a></li>
+<li>Pàgina oficial de <i>Wowza </i><br/><a class="external free" href="https://www.wowza.com/" rel="nofollow">https://www.wowza.com/</a> '<b></b></li>
+<li>Tutorials Python<br/><a class="external free" href="https://realpython.com" rel="nofollow">https://realpython.com</a></li>
+<li>Referencies per al SDK del Arduino<br/><a class="external free" href="https://github.com/PunchThrough/bean-sdk-File" rel="nofollow">https://github.com/PunchThrough/bean-sdk-File</a>:</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20250710081426
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.205 seconds
+Real time usage: 0.226 seconds
+Preprocessor visited node count: 352/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8911/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:169-0!canonical and timestamp 20250710081426 and revision id 199
+ -->
+</div>

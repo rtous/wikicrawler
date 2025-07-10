@@ -1,0 +1,124 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.C2.BFQu.C3.A9_es_Ethervote.3F"><span class="tocnumber">1</span> <span class="toctext">¿Qué es Ethervote?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Blockchain"><span class="tocnumber">3</span> <span class="toctext">Blockchain</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Smart-Contract"><span class="tocnumber">3.1</span> <span class="toctext">Smart-Contract</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Backend"><span class="tocnumber">4</span> <span class="toctext">Backend</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Frontend"><span class="tocnumber">5</span> <span class="toctext">Frontend</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Infraestructura_2"><span class="tocnumber">6</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Tests"><span class="tocnumber">7</span> <span class="toctext">Tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Truffle"><span class="tocnumber">7.1</span> <span class="toctext">Truffle</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Programaci.C3.B3_dels_tests"><span class="tocnumber">7.2</span> <span class="toctext">Programació dels tests</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Exmples"><span class="tocnumber">7.3</span> <span class="toctext">Exmples</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Altres_considerecions_sobre_truffle"><span class="tocnumber">7.4</span> <span class="toctext">Altres considerecions sobre truffle</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><span id="¿Qué_es_Ethervote?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_Ethervote.3F">¿Qué es Ethervote?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=1" title="Edit section: ¿Qué es Ethervote?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=1" title="Edit section: ¿Qué es Ethervote?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Ethervote és un projecte que té com a objectiu posar a disposició de la comunitat una plataforma de votació fàcilment accessible i que a la vegada sigui segura, utilitzant la tecnologia blockchain per aconseguir-ho.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=2" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=2" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>L'aplicació estarà composta per un frontend escrit en React, el qual farà les crides cap a la Blockchain d'Ethereum. L'interfície que autoritzarà les operacions, proporcionarà una API i mostrarà la wallet del usuari serà Metamask, una extensió del navegador. Al backend trobarem la Blockchain d'Ethereum amb la seva API i un petit servidor Express de NodeJS per emmagatzemar alguna informació persistent. Tot això estarà empaquetat en un contenidor docker que podrà ser executat en plataformes com Kubernetes.
+</p>
+<h1><span class="mw-headline" id="Blockchain">Blockchain</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=3" title="Edit section: Blockchain">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=3" title="Edit section: Blockchain">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Podem definir Blockchain com una base de dades distribuïda que permet registrar i compartir informació dins d’una comunitat. Per a això crea un llibre de comptabilitat de les transaccions digitals compartit dins d'una xarxa distribuïda d'ordinadors.
+Nosaltres fem servir Etherum i Solidity per l'smart-contract..
+</p>
+<h2><span class="mw-headline" id="Smart-Contract">Smart-Contract</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=4" title="Edit section: Smart-Contract">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=4" title="Edit section: Smart-Contract">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El nostre smart-contract serà la lògica que processarà les diferents votacions. afegir nous usuaris, etc.
+</p><p>Hem definit una sèrie d'estructures de dades per emmagatzemar: el cens, les propostes a votar, els vots, i totes les seves metadades. A través de funcions com: Vote, addVoter, getNumProposals, entre d'altres i una llibreria com Web3 podrem interactuar amb el contracte desde qualsevol lloc.
+</p>
+<h1><span class="mw-headline" id="Backend">Backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=5" title="Edit section: Backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=5" title="Edit section: Backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El backend de l’aplicació està programat amb NodeJS. Node és un entorn de servidor per a JavaScript que permet fer operacions d’entrada i sortida de manera asíncrona que treballa amb mòduls (equivalents a llibreries de JavaScript).
+</p>
+<h1><span class="mw-headline" id="Frontend">Frontend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=6" title="Edit section: Frontend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=6" title="Edit section: Frontend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Teníem la necessitat de proporcionar l'usuari una plataforma d'interacció amb l'aplicació on es produís una abstracció completa de les funcions pròpies de smart-contract.
+Vam escollir la llibreria React per realitzar-lo.
+</p>
+<h1><span class="mw-headline" id="Infraestructura_2">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=7" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=7" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>A la part d'infraestructura hem utilitzat Kubernetes,tot i no ser un component essencial de l'aplicació ethervote, des d'un primer moment ens va semblar una tecnologia amb unes característiques molt interessants i per això és part del projecte.
+</p>
+<h1><span class="mw-headline" id="Tests">Tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=8" title="Edit section: Tests">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=8" title="Edit section: Tests">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Aquesta part està centralitzada, no en probar el funcionament correcte de tota l'aplicació, sinó de probar el que és purament blockchain, el Smart Contract. Això es va decidir per varies raons, la fonamental és perqué al ser una tecnòlogia nova, que té bugs i que no haviem utilitzat mai, ens haviem d'assegurar que funcionava correctament  per tal de no programar a cegues la resta del projecte.
+</p>
+<h2><span class="mw-headline" id="Truffle">Truffle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=9" title="Edit section: Truffle">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=9" title="Edit section: Truffle">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Truffle suite és una eina molt potent que ens permet fer probes a un o més smart contract a la vegada, sent el punt de comunicació amb la blockchain.
+</p><p>Truffle conté una carpeta amb els smart contracts que volem probar i un adicional anomentat <i>Migrations.sol</i> el qual serveix com a controlador de versions dels <i>scripts</i> utilitzats quan executem el nostre test. Les <i>migracions</i> són aquests petits \textit{scripts} que ajuden a afegir els nous canvis fets al smart contract a la blockchain. A més hi ha la carpeta <i>test</i> que com el seu nom indica, conté els tests.
+</p>
+<h2><span id="Programació_dels_tests"></span><span class="mw-headline" id="Programaci.C3.B3_dels_tests">Programació dels tests</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=10" title="Edit section: Programació dels tests">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=10" title="Edit section: Programació dels tests">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per poder fer els tests necessitem importar el nostre contracte utilitzant la funció <i>require</i> de la següent manera al principi del nostre File: 
+</p>
+<pre>    const Ethervote = artifacts.require('./ethervote.sol')
+</pre>
+<p>Seguidament instanciarem el contracte on pasarem com a paràmetre el contracte importat i una funció que contindrà tots els tests que volguem que passi aquell contracte: 
+</p>
+<pre>    contract('Ethervote', function(accounts) {  })
+</pre>
+<p>El paràmetre <i>accounts</i> és un array que es passa a la funció  que conté 10 comptes de la blockchain especials per fer tests carregats amb <i>ether</i>, que és el que es consumeix quan s'executen funcions o transaccions a la xarxa. Aquesta xarxa per fer tests juntament amb les comptes s'aconsegueix amb l'eina <i>ganache-cli</i> comentada anteriorment.
+</p><p>Per programar els diferents tests necessitem que per a cadascún, el contracte estigui inicialitzat de nou per evitar arrosegar errors entre tests i així aconseguir un certa independència d'uns dels altres. Això s'aconsegueix amb: 
+</p>
+<pre>    beforeEach('setup contract for each test', async function () {
+         ethervote = await Ethervote.new("organitzacio test", 300)
+        })}
+</pre>
+<p>Per programar tenim la funció <i>it</i> on se li passen dos paràmetres, el primer és el nom que li volem donar al test, normalment és posarà algun nom que fagi referència al que estem provant, i el segón es una funció que dins tindrà les crides al contracte i càlculs.
+</p>
+<h2><span class="mw-headline" id="Exmples">Exmples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=11" title="Edit section: Exmples">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=11" title="Edit section: Exmples">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Exemple funcionament:</b>
+</p>
+<pre>    it('has an owner', async function() {
+       assert.equal(await ethervote.owner(), owner_address)
+    })
+</pre>
+<p><br/>
+Aquest petits exmple mostra un petit test on es comprova que la crida cap a la blockchain per saber qui és el propietari es igual al propietari definit com a <i>owner_address</i> (<i>accounts[0]</i>);
+</p><p><b>Exmple més avançat:</b>
+</p>
+<pre>   it('create proposal', async function() {
+       var name = "proposal_test_1"
+       var description = "First proposal test description"
+       await ethervote.addVoter(voter_1, 2, {from: owner_address})
+       await ethervote.newProposal(name, description, {from: voter_1})
+       var res = await ethervote.getNumberOfProposals()
+       assert.equal(res, 1)
+       var name_p = await ethervote.getProposalName(1)
+       assert.equal(name, name_p)
+       var description_p = await ethervote.getProposalDescription(1)
+       assert.equal(description, description_p)
+   })
+</pre>
+<p>En aquest exemple primer de tot el propietari de l'enquesta afegirà un votant, el qual té el privilegi per poder crear una nova enquesta. Després de crearla, mirem si el número de enquestes ha aungmentat (<i>getNumberOfProposals()</i>) i mirem si s'ha creat correctament amb el nom i la descripció indicada en la seva creació.
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Altres_considerecions_sobre_truffle">Altres considerecions sobre truffle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;veaction=edit&amp;section=12" title="Edit section: Altres considerecions sobre truffle">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Ethervote&amp;action=edit&amp;section=12" title="Edit section: Altres considerecions sobre truffle">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Actualment, al ser tot això en general, una tecnologia bastant nova hi han molts errors. En truffle no és diferent, hi han opcions que estan bug, com per exmple el debugger. A més, molts errors que retorna a l'hora de compilar no són prou descriptives cosa que fa que es perdi bastant temps en buscar informació i exemples per webs externes a la oficial de truffle.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083833
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.007 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 35/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:373-0!canonical and timestamp 20250710083833 and revision id 410
+ -->
+</div>

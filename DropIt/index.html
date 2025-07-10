@@ -1,0 +1,49 @@
+<div class="mw-parser-output"><p><br/>
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Icono2.png"><img alt="" class="thumbimage" data-file-height="1024" data-file-width="1024" decoding="async" height="200" src="/pti/images/thumb/1/12/Icono2.png/200px-Icono2.png" srcset="/pti/images/thumb/1/12/Icono2.png/300px-Icono2.png 1.5x, /pti/images/thumb/1/12/Icono2.png/400px-Icono2.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Icono2.png" title="Enlarge"></a></div>Logo de la apliación</div></div></div>
+<h1><span id="¿Qué_es_Drop_It?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_Drop_It.3F">¿Qué es Drop It?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;veaction=edit&amp;section=1" title="Edit section: ¿Qué es Drop It?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;action=edit&amp;section=1" title="Edit section: ¿Qué es Drop It?">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Drop It es una aplicación pensada para compartir música utilizando la geolocalización de los usuarios.
+Es una aplicación que utiliza la API de Spotify para acceder a la información de la música y reproducción del usuario y la API de Google Maps para mostrar el mapa, ubicación del usuario y otras funciones.
+Los usuarios que utilizan esta aplicación podrán adoptar dos roles no excluyentes entre ellos.
+</p><p>-<b>Droppers</b>: Estos usuarios serán los que mientras se desplacen, dejan la canción que están escuchando en ese momento en Spotify en la ubicación actual designándole un estado de ánimo para más personalización. Estos elementos serán los llamados "drops".
+</p><p>-<b>Discoverers</b>: Este es el rol que corresponde a los usuarios que descubren los drops, los cuales se podrán filtrar por estado de ánimo asignado y gesto y de los cuales podrás descubrir información extra sobre esa canción como pueden ser la letra, conciertos del grupo o una breve descripción del artista.
+</p><p><br/>
+Con esta aplicación queremos acercar gustos musicales muy dispares a todo tipo de usuarios ya sea encontrando música de forma casual como filtrando dependiendo del género musical o el estado de ánimo. Mediante el uso de Drop It se fomenta la exploración ya que obliga al usuario a acercarse ahí donde se encuentran los drops y en ese caso poder guardarlos para escucharlos más tarde.
+</p>
+<h1><span id="Tecnologías_utilizadas"></span><span class="mw-headline" id="Tecnolog.C3.ADas_utilizadas">Tecnologías utilizadas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;veaction=edit&amp;section=2" title="Edit section: Tecnologías utilizadas">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;action=edit&amp;section=2" title="Edit section: Tecnologías utilizadas">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Este proyecto está formado por un aplicación móvil desarrollada con Android Studio y un backend con el que se conecta y donde se administran los datos.
+</p><p>La aplicación se conecta con varias API para obtener cierta información y funcionalidades, estas son: Spotify API, Google Maps API, Apiseed, Songkick API y Last.fm API.
+</p><p>El backend utiliza las siguientes tecnologías: Docker, Node.js y MongoDB.
+</p>
+<h1><span class="mw-headline" id="Funcionamiento">Funcionamiento</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;veaction=edit&amp;section=3" title="Edit section: Funcionamiento">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DropIt&amp;action=edit&amp;section=3" title="Edit section: Funcionamiento">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Captura_drop_selected.jpeg"><img alt="" class="thumbimage" data-file-height="2048" data-file-width="984" decoding="async" height="624" src="/pti/images/thumb/3/3b/Captura_drop_selected.jpeg/300px-Captura_drop_selected.jpeg" srcset="/pti/images/thumb/3/3b/Captura_drop_selected.jpeg/450px-Captura_drop_selected.jpeg 1.5x, /pti/images/thumb/3/3b/Captura_drop_selected.jpeg/600px-Captura_drop_selected.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_drop_selected.jpeg" title="Enlarge"></a></div>Captura de la apliación</div></div></div>
+<p>Como resultado final tenemos una aplicación que es capaz de dejar drops sobre un mapa, encontrarlos, poder obtener información de ellos y finalmente si el usuario lo desea, guardarlos en favoritos.
+La primera vez que iniciemos la aplicación se nos pedirán permisos de de geolocalización y para conectar esta aplicación con la app de Spotify. Una vez aceptemos todo estos requisitos accederemos a la vista principal de la aplicación con la que ya podremos interactuar. Siempre que se inicie la aplicación se comprobará que el usuario existe y sino se creará. 
+</p><p>Para realizar un drop debemos presionar el botón central ya indicado con el nombre de Drop y a continuación asignaremos un estado de animo si asi lo deseamos. El drop contendrá la canción que estemos escuchando en ese momento en Spotify junto con un estado de ánimo. Una vez realizado el drop se añadirá un marcador en el mapa representando este drop y cualquier otro usuario puede obtener su información si se encuentra lo suficientemente cerca.
+</p><p>Para encontrar los drops el usuario debe acercarse a su ubicación, si bien podemos observar los marcadores no podremos obtener su información si no nos encontramos suficientemente cerca. Una vez estemos cerca de un drop el color del marcador cambiará y podremos acceder a su información. Cuando seleccionamos un drop podemos reproducir la canción asociada, guardar el drop en favoritos o acceder a más información.
+</p><p>En la vista de más información encontramos tres pestañas con distintos tipos de información relacionada con el drop. La primera pestaña corresponde a los lyrics de la canción, la segunda contiene información relacionada con conciertos del autor de la canción y por último la tercera pestaña nos proporciona información general sobre el autor y la canción. 
+</p><p>En la vista principal también encontramos un botón en la esquina inferior izquierda que nos permite acceder a los drops favoritos del usuario. Una vez que accedamos tendremos un listado de los drops favoritos del usuario y si accedemos a cualquier de ellos no redireccionará a la vista de más información donde podremos obtener toda la información relacionada con el drop.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083836
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 10/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:475-0!canonical and timestamp 20250710083836 and revision id 579
+ -->
+</div>

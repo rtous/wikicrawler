@@ -1,0 +1,76 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Qu.C3.A8_.C3.A9s_FILETES.3F"><span class="tocnumber">2</span> <span class="toctext">Què és FILETES?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Idea_del_projecte"><span class="tocnumber">3</span> <span class="toctext">Idea del projecte</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Tecnologies_utilitzades"><span class="tocnumber">4</span> <span class="toctext">Tecnologies utilitzades</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#FRONTEND"><span class="tocnumber">4.1</span> <span class="toctext">FRONTEND</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#BACKEND"><span class="tocnumber">4.2</span> <span class="toctext">BACKEND</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#BLOCKCHAIN"><span class="tocnumber">4.3</span> <span class="toctext">BLOCKCHAIN</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#CI.2FCD"><span class="tocnumber">4.4</span> <span class="toctext">CI/CD</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Imatges_d.27exemple"><span class="tocnumber">5</span> <span class="toctext">Imatges d'exemple</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>FILE Trusted Environment Storage (FILETES) és un servei web que permet verificar la procedència i integritat dels documents pujats al mateix servei.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:FILETES_logo.png"><img alt="" class="thumbimage" data-file-height="388" data-file-width="564" decoding="async" height="344" src="/pti/images/thumb/0/00/FILETES_logo.png/500px-FILETES_logo.png" srcset="/pti/images/0/00/FILETES_logo.png 1.5x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:FILETES_logo.png" title="Enlarge"></a></div>Logo de FILETES.</div></div></div></div>
+<p><br/>
+</p>
+<h1><span id="Què_és_FILETES?"></span><span class="mw-headline" id="Qu.C3.A8_.C3.A9s_FILETES.3F">Què és FILETES?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=2" title="Edit section: Què és FILETES?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=2" title="Edit section: Què és FILETES?">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>FILE Trusted Environment Storage (FILETES) és un servei web que ens permet pujar i baixar fitxers multimèdia garantint la integritat, seguretat i procedència de tots els fitxers. En cas que un atacant modifiqui algun fitxer, a l'hora de descarregar-lo, FILETES detectarà l'anomalia i no permetrà que es pugui obtenir el fitxer. D'aquesta manera se'ns fa possible identificar els autors i verificar que el contingut és l'original.
+</p>
+<h1><span class="mw-headline" id="Idea_del_projecte">Idea del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=3" title="Edit section: Idea del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=3" title="Edit section: Idea del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Els nostres objectius són:
+</p>
+<ul><li>Creació d'una pàgina web per gestionar fitxers i poder compartir-los.</li>
+<li>Utilitzar les propietats de la blockchain per resoldre problemes relacionats amb la integritat dels fitxers.</li>
+<li>Oferir claus públiques als usuaris per a que es puguin identificar.</li>
+<li>Virtualitzar el nostre servei mitjançant kubernetes.</li></ul>
+<p>Per tant, afegint un segell de qualitat als documents pujats al nostre servei, podem garantir la procedència i integritat del document. A més a més, vam trobar una necessitat que fos fàcil d'utilitzar i obert a tot el públic.
+</p>
+<h1><span class="mw-headline" id="Tecnologies_utilitzades">Tecnologies utilitzades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=4" title="Edit section: Tecnologies utilitzades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=4" title="Edit section: Tecnologies utilitzades">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:Tecnologies_be.png"><img alt="" class="thumbimage" data-file-height="1068" data-file-width="1919" decoding="async" height="334" src="/pti/images/thumb/7/72/Tecnologies_be.png/600px-Tecnologies_be.png" srcset="/pti/images/thumb/7/72/Tecnologies_be.png/900px-Tecnologies_be.png 1.5x, /pti/images/thumb/7/72/Tecnologies_be.png/1200px-Tecnologies_be.png 2x" width="600"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Tecnologies_be.png" title="Enlarge"></a></div>Esquema de les tecnologies utilitzades</div></div></div></div>
+<p><br/>
+</p>
+<h3><span class="mw-headline" id="FRONTEND">FRONTEND</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=5" title="Edit section: FRONTEND">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=5" title="Edit section: FRONTEND">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>React</li></ul>
+<h3><span class="mw-headline" id="BACKEND">BACKEND</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=6" title="Edit section: BACKEND">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=6" title="Edit section: BACKEND">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Nodejs</li></ul>
+<h3><span class="mw-headline" id="BLOCKCHAIN">BLOCKCHAIN</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=7" title="Edit section: BLOCKCHAIN">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=7" title="Edit section: BLOCKCHAIN">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Solidity</li>
+<li>Sepolia</li>
+<li>Hardhat</li></ul>
+<h3><span id="CI/CD"></span><span class="mw-headline" id="CI.2FCD">CI/CD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=8" title="Edit section: CI/CD">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=8" title="Edit section: CI/CD">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Kubernetes</li>
+<li>Docker</li></ul>
+<h1><span id="Imatges_d'exemple"></span><span class="mw-headline" id="Imatges_d.27exemple">Imatges d'exemple</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;veaction=edit&amp;section=9" title="Edit section: Imatges d'exemple">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:FILETES&amp;action=edit&amp;section=9" title="Edit section: Imatges d'exemple">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:902px;"><a class="image" href="/pti/index.php/File:Pagina_principal.png"><img alt="" class="thumbimage" data-file-height="964" data-file-width="1841" decoding="async" height="471" src="/pti/images/thumb/7/77/Pagina_principal.png/900px-Pagina_principal.png" srcset="/pti/images/thumb/7/77/Pagina_principal.png/1350px-Pagina_principal.png 1.5x, /pti/images/thumb/7/77/Pagina_principal.png/1800px-Pagina_principal.png 2x" width="900"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Pagina_principal.png" title="Enlarge"></a></div>Homepage de FILETES</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:902px;"><a class="image" href="/pti/index.php/File:Register_user.png"><img alt="" class="thumbimage" data-file-height="476" data-file-width="1015" decoding="async" height="422" src="/pti/images/thumb/a/af/Register_user.png/900px-Register_user.png" srcset="/pti/images/a/af/Register_user.png 1.5x" width="900"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Register_user.png" title="Enlarge"></a></div>Registre d'usuaris</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:902px;"><a class="image" href="/pti/index.php/File:MyFiles.png"><img alt="" class="thumbimage" data-file-height="961" data-file-width="1848" decoding="async" height="468" src="/pti/images/thumb/5/50/MyFiles.png/900px-MyFiles.png" srcset="/pti/images/thumb/5/50/MyFiles.png/1350px-MyFiles.png 1.5x, /pti/images/thumb/5/50/MyFiles.png/1800px-MyFiles.png 2x" width="900"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:MyFiles.png" title="Enlarge"></a></div>Mostra dels meus fitxers</div></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250710083844
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.016 seconds
+Real time usage: 0.017 seconds
+Preprocessor visited node count: 28/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:756-0!canonical and timestamp 20250710083844 and revision id 1893
+ -->
+</div>

@@ -1,0 +1,217 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:UPCoin-logo.png" title="UPCoin."><img alt="" data-file-height="377" data-file-width="1267" decoding="async" height="225" src="/pti/images/thumb/a/a6/UPCoin-logo.png/756px-UPCoin-logo.png" srcset="/pti/images/thumb/a/a6/UPCoin-logo.png/1134px-UPCoin-logo.png 1.5x, /pti/images/a/a6/UPCoin-logo.png 2x" width="756"/></a></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_UPCoin.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es UPCoin?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Tecnolog.C3.ADas"><span class="tocnumber">2</span> <span class="toctext">Tecnologías</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Frontend"><span class="tocnumber">2.1</span> <span class="toctext">Frontend</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Backend"><span class="tocnumber">2.2</span> <span class="toctext">Backend</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Tecnologias_usadas_para_el_backend"><span class="tocnumber">2.2.1</span> <span class="toctext">Tecnologias usadas para el backend</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Estructura_del_backend"><span class="tocnumber">2.2.2</span> <span class="toctext">Estructura del backend</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Seguridad_en_el_backend"><span class="tocnumber">2.2.3</span> <span class="toctext">Seguridad en el backend</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Creaci.C3.B3n_de_UPCoin"><span class="tocnumber">2.3</span> <span class="toctext">Creación de UPCoin</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Base_Tecnol.C3.B3gica_de_UPCoin"><span class="tocnumber">2.3.1</span> <span class="toctext">Base Tecnológica de UPCoin</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Concepto_de_tarifa_de_Gas"><span class="tocnumber">2.3.2</span> <span class="toctext">Concepto de tarifa de Gas</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Meta-Transacciones_basadas_en_firmas_y_Relayer_UPCoin"><span class="tocnumber">2.3.3</span> <span class="toctext">Meta-Transacciones basadas en firmas y Relayer UPCoin</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Despliegue_del_Smart_Contract_en_la_Sepolia_Testnet"><span class="tocnumber">2.3.4</span> <span class="toctext">Despliegue del Smart Contract en la Sepolia Testnet</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Diagrama_de_flujo_de_transacciones_UPCoin"><span class="tocnumber">2.3.5</span> <span class="toctext">Diagrama de flujo de transacciones UPCoin</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Uso_de_Contenedores"><span class="tocnumber">2.4</span> <span class="toctext">Uso de Contenedores</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Contenedores"><span class="tocnumber">2.4.1</span> <span class="toctext">Contenedores</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Docker"><span class="tocnumber">2.4.2</span> <span class="toctext">Docker</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Contenerizaci.C3.B3n"><span class="tocnumber">2.4.3</span> <span class="toctext">Contenerización</span></a>
+<ul>
+<li class="toclevel-4 tocsection-19"><a href="#Creaci.C3.B3n_de_Im.C3.A1genes"><span class="tocnumber">2.4.3.1</span> <span class="toctext">Creación de Imágenes</span></a></li>
+<li class="toclevel-4 tocsection-20"><a href="#Comunicaci.C3.B3n_entre_Componentes"><span class="tocnumber">2.4.3.2</span> <span class="toctext">Comunicación entre Componentes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-21"><a href="#Orquestaci.C3.B3n_de_Contenedores"><span class="tocnumber">2.4.4</span> <span class="toctext">Orquestación de Contenedores</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Docker_Swarm"><span class="tocnumber">2.4.5</span> <span class="toctext">Docker Swarm</span></a>
+<ul>
+<li class="toclevel-4 tocsection-23"><a href="#Aspectos_Clave"><span class="tocnumber">2.4.5.1</span> <span class="toctext">Aspectos Clave</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>UPCoin es un proyecto innovador diseñado para transformar la economía dentro del entorno universitario de la Universitat Politècnica de Catalunya, modernizando las formas de pago y promoviendo la adopción de tecnologías avanzadas.
+</p><p>El proyecto se basa en la implementación de blockchain para crear un ecosistema económico propio, introduciendo un token exclusivo, el UPCoin.
+</p>
+<h2><span id="¿Qué_es_UPCoin?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_UPCoin.3F">¿Qué es UPCoin?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es UPCoin?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es UPCoin?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>UPCoin es un token exclusivo diseñado para la UPC que permite a los usuarios realizar transacciones, adquirir productos y servicios.
+</p>
+<h1><span id="Tecnologías"></span><span class="mw-headline" id="Tecnolog.C3.ADas">Tecnologías</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=3" title="Edit section: Tecnologías">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=3" title="Edit section: Tecnologías">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><a class="image" href="/pti/index.php/File:TecnologiesUPCoin.PNG"><img alt="Topología" data-file-height="578" data-file-width="1219" decoding="async" height="344" src="/pti/images/thumb/f/f0/TecnologiesUPCoin.PNG/725px-TecnologiesUPCoin.PNG" srcset="/pti/images/thumb/f/f0/TecnologiesUPCoin.PNG/1088px-TecnologiesUPCoin.PNG 1.5x, /pti/images/f/f0/TecnologiesUPCoin.PNG 2x" width="725"/></a>
+</p>
+<h2><span class="mw-headline" id="Frontend">Frontend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=4" title="Edit section: Frontend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=4" title="Edit section: Frontend">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Diseño de la web</b>
+</p><p>La web tiene 2 funcionalidades principales, la parte del cliente y la de administración.
+</p><p>-Parte del cliente: No requiere de autenticación, en esta parte el cliente puede utilizar la página de la tienda donde puede añadir productos a un carrito para comprarlos y los servicios relacionados con hacer transacciones en la blockchain como hacer transferencias de UPCoins a otra wallet de metamask, pagar los productos del carrito, reclamar sus UPCoins iniciales, etc.
+</p><p>-Parte de administración: Esta parte requiere autenticación con usuario y password, al entrar a las páginas de gestión se comprueban las cookies del navegador del usuario. Las funcionalidades que ofrece esta parte es modificar la base de datos, se pueden añadir o eliminar productos, y también modificar el precio o la imagen de cada producto. Este apartado también permite registrar nuevos usuarios para poder utilizar las funcionalidades anteriores. El usuario por defecto es username: adm, password: adm.
+</p><p><br/>
+<b>Estructura del frontend</b>
+</p><p>-package.json: Este fichero se encarga de especificar las dependencias del proyecto y que versión de las dependencias utiliza. También define scripts de react.
+</p><p>-public/index.html: Punto de entrada del navegador. Contiene el elemento root desde donde se renderiza la aplicación y es el punto de conexión entre react y el navegador.
+</p><p>-src/App.js: Es el componente principal de la aplicación, incluye los otros componentes, es donde se definen las rutas a las páginas y maneja el estado de la aplicación.
+</p><p>-src/components: En esta carpeta se definen los componentes de la aplicación. Dentro los componentes se clasifican por los componentes de autenticación, pagos, productos. Aquí también encontramos los estilos.
+</p><p>-src/pages: En esta carpeta encontramos las páginas de la web, las páginas agrupan diferentes componentes para ofrecer una funcionalidad concreta, el cliente puede interactuar con los componentes de la página para obtener un servicio. Las rutas están definidas en App.js.
+</p><p>-src/services: En esta carpeta se encuentran ficheros .js que ofrecen funciones que realizan llamadas de servicio para comunicarse con el backend y obtener una respuesta.
+</p><p><br/>
+<b>React</b>
+</p><p>-Componentes: Permiten crear interfaces modulares y reutilizables facilitando así el mantenimiento de la app debido a que son independientes entre sí. Se pueden juntar varios componentes entre sí para crear una interfaz más compleja y que juntos ofrezcan una funcionalidad.
+</p><p>-Virtual DOM: DOM (Document Object Model) es una representación estructurada del contenido de una página web en forma de árbol de objetos a partir de la cual se puede manipular la estructura y el contenido de los ficheros. Virtual DOM es una optimización, al hacer un cambio se crea una nueva versión del Virtual DOM y se hace una comparación con la anterior. Finalmente en el DOM real solo se actualizan las partes que han cambiado de una versión a otra.
+</p><p>-Ficheros .jsx: Dejan escribir código HTML directamente en javascript, lo que facilita la forma de construir la interfaz.
+</p><p>-Hooks: Agregan una funcionalidad a un componente.
+</p>
+<pre>- useState: Permite agregar un estado
+- useEffect: Permite manejar efectos secundarios y se ejecuta después de cada renderizado
+- useRef: Crea una referencia que se mantiene durante todo el ciclo de vida del componente
+- useContext: Permite acceder al contexto de react desde un componente, sirve para compartir datos globales en un árbol de componentes
+</pre>
+<p>-Renderizado declarativo: Permite definir el estado final describiendo cómo se tiene que ver la interfaz en cada estado en lugar de especificar paso por paso como cambiar la interfaz.
+</p><p><br/>
+<b>Metamask</b>
+</p><p>Metamask es una wallet de criptomonedas que funciona como una extensión del navegador, diseñada para interactuar con la blockchain de Ethereum. Permite a los usuarios almacenar, enviar y recibir Ether o tokens ERC-20, así como conectarse a aplicaciones descentralizadas y participar en finanzas descentralizadas de manera sencilla y segura.
+</p>
+<h2><span class="mw-headline" id="Backend">Backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=5" title="Edit section: Backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=5" title="Edit section: Backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Tecnologias_usadas_para_el_backend">Tecnologias usadas para el backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=6" title="Edit section: Tecnologias usadas para el backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=6" title="Edit section: Tecnologias usadas para el backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El backend usa dos tecnologías principales:
+</p><p>-Node.js se usa como entorno del backend, este proporciona un gran número de herramientas y librerías para el desarrollo web.
+</p><p>-MongDB se usa para la persistencia de los datos en el servidor, específicamente se guarda información sobre usuarios y sobre productos.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Estructura_del_backend">Estructura del backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=7" title="Edit section: Estructura del backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=7" title="Edit section: Estructura del backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El backend de la aplicación tiene dos tipos de llamadas principales.
+</p><p><b>Llamadas relacionadas con los usuarios</b>
+El backend proporciona 3 llamadas relacionadas con los usuarios:
+</p><p>-Login: permite a un usuario privilegiado autenticarse para gestionar la aplicación.
+</p><p>-Logout: permite a un usuario autenticado finalizar su sesión.
+</p><p>-Register: permite a un usuario autenticado crear un nuevo usuario.
+</p><p><br/>
+<b>Llamadas relacionadas con los productos</b>
+El backend proporciona 4 llamadas relacionadas con los productos:
+</p><p>-addProduct: permite añadir un nuevo producto a la base de datos.
+</p><p>-deleteProduct: permite eliminara un producto de la base de datos.
+</p><p>-modifyproduct: permite modificar un producto de la base de datos.
+</p><p>-dashboard: permite listar todos los productos de la base de datos.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Seguridad_en_el_backend">Seguridad en el backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=8" title="Edit section: Seguridad en el backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=8" title="Edit section: Seguridad en el backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Otro componente que se ha tenido muy en cuenta durante el desarrollo del backend ha sido la seguridad de este, por este motivo se han implementado las siguientes políticas:
+</p><p>-Uso de hash y salt para guardar las contraseñas en la base de datos.
+</p><p>-Uso de cookies para hacer cualquier operación privilegiada en la aplicación.
+</p><p>-Cross-origin resource sharing (CORS) para restringir des de que orígenes se pueden hacer las peticiones.
+</p><p>-Desinfectar los inputs del usuario en busca de ataques de tipo Cross Site Scripting (XSS).
+</p><p>-Desinfectar los inputs del usuario en busca de ataques de tipo NOSQL injection.
+</p><p>-Protección contra ataques de fuerza bruta en el login de la aplicación.
+</p><p>-Eliminación de cabeceras de respuesta opcionales.
+</p>
+<h2><span id="Creación_de_UPCoin"></span><span class="mw-headline" id="Creaci.C3.B3n_de_UPCoin">Creación de UPCoin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=9" title="Edit section: Creación de UPCoin">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=9" title="Edit section: Creación de UPCoin">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Base_Tecnológica_de_UPCoin"></span><span class="mw-headline" id="Base_Tecnol.C3.B3gica_de_UPCoin">Base Tecnológica de UPCoin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=10" title="Edit section: Base Tecnológica de UPCoin">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=10" title="Edit section: Base Tecnológica de UPCoin">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>UPCoin utiliza <b>Ethereum</b> como blockchain debido a su seguridad, descentralización y extenso ecosistema, ideal para proyectos basados en tokens. Implementa el estándar <b>ERC20</b>, que permite funcionalidades como consulta de saldos y transacciones. Para el desarrollo, pruebas y despliegue del smart contract, se empleó el framework <b>Hardhat</b>, reconocido por su potencia y facilidad de uso en entornos de desarrollo blockchain.
+</p>
+<h3><span class="mw-headline" id="Concepto_de_tarifa_de_Gas">Concepto de tarifa de Gas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=11" title="Edit section: Concepto de tarifa de Gas">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=11" title="Edit section: Concepto de tarifa de Gas">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La tarifa de gas es el coste a pagar para la ejecución de una transacción o contrato en la blockchain. Todas las transacciones tienen una tarifa de gas asociada, tanto en una blockchain local, en una testnet como en la mainnet, la cual ha de ser pagada por el usuario que envía la transacción, mediante el token nativo de la blockchain, ETH, SepoliaETH, etc.
+</p><p>En UPCoin se ha implementado un <b>modelo sin costes para los usuarios</b>, lo que significa que todas las transacciones realizadas a través de la aplicación web no generan ningún gasto para ellos. Esto ha sido posible gracias a la implementación de un sistema innovador en el ámbito de las transacciones en la blockchain: meta-transacciones basadas en firma, gestionadas mediante un Relayer.
+</p>
+<h3><span class="mw-headline" id="Meta-Transacciones_basadas_en_firmas_y_Relayer_UPCoin">Meta-Transacciones basadas en firmas y Relayer UPCoin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=12" title="Edit section: Meta-Transacciones basadas en firmas y Relayer UPCoin">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=12" title="Edit section: Meta-Transacciones basadas en firmas y Relayer UPCoin">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El sistema de <b>meta-transacciones permite</b> que un <b>Relayer</b> cubra las tarifas de gas, actuando como intermediario entre el usuario y la blockchain. Este Relayer encapsula los datos de la transacción que el usuario desea realizar en una transacción propia, que es enviada a la blockchain en su nombre. Al ser el Relayer quien envía la transacción, es también quien asume la tarifa de gas correspondiente.
+</p><p>Para garantizar la seguridad y evitar cualquier manipulación de datos, los usuarios firman un hash con la información relevante de la transacción, denominado <b>signature</b>. Cuando el contrato inteligente de UPCoin recibe toda la información enviada por el Relayer, valida la firma y, si esta es correcta, procede a ejecutar la transacción. Este enfoque asegura un proceso seguro, eficiente y completamente libre de costes para el usuario.
+</p>
+<h3><span class="mw-headline" id="Despliegue_del_Smart_Contract_en_la_Sepolia_Testnet">Despliegue del Smart Contract en la Sepolia Testnet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=13" title="Edit section: Despliegue del Smart Contract en la Sepolia Testnet">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=13" title="Edit section: Despliegue del Smart Contract en la Sepolia Testnet">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Como paso final en el desarrollo e implementación de UPCoin, hemos migrado el proyecto a la <b>testnet de Sepolia</b>, un entorno prácticamente idéntico a la <b>mainnet</b> de Ethereum. Esta testnet permite realizar pruebas de contratos inteligentes y aplicaciones descentralizadas (dApps) sin incurrir en costos reales, ya que utiliza un token sin valor económico para cubrir las tarifas de gas, lo que facilita la validación del comportamiento de UPCoin antes de su despliegue en la red principal.
+</p><p>Para interactuar con la testnet, se utilizó <b>Infura</b>, un servicio que proporciona acceso remoto a la red Ethereum sin necesidad de ejecutar nodos completos. Infura simplifica el proceso de conexión con Sepolia y facilita el despliegue y la interacción con el contrato inteligente de UPCoin, integrándose con Web3.js en el backend, lo que nos permite realiza las transacciones.
+</p><p>Con el smart Contract de UPCoin desplegado en la testnet de Sepolia, hemos asegurado que UPCoin funcione correctamente en un entorno similar al de la mainnet, reflejando con precisión las condiciones bajo las cuales operan criptomonedas más conocidas, lo que nos permite validar su seguridad, eficiencia y fiabilidad antes de su lanzamiento definitivo.
+</p>
+<h3><span class="mw-headline" id="Diagrama_de_flujo_de_transacciones_UPCoin">Diagrama de flujo de transacciones UPCoin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=14" title="Edit section: Diagrama de flujo de transacciones UPCoin">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=14" title="Edit section: Diagrama de flujo de transacciones UPCoin">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A continuación se presenta un diagrama de flujo que ilustra todo el proceso involucrado en el ciclo de vida de una transacción de UPCoin. Este diagrama abarca desde la inicialización de la transacción por parte del usuario hasta su ejecución final en la blockchain a través del <b>Relayer</b>, cubriendo los pasos clave, como la firma de la transacción, la validación de la firma en el contrato inteligente, y la ejecución final de la operación. 
+</p><p><a class="image" href="/pti/index.php/File:DFT-UPCoin.png"><img alt="DFT-UPCoin.png" data-file-height="2480" data-file-width="4934" decoding="async" height="493" src="/pti/images/thumb/d/d9/DFT-UPCoin.png/981px-DFT-UPCoin.png" srcset="/pti/images/thumb/d/d9/DFT-UPCoin.png/1962px-DFT-UPCoin.png 2x" width="981"/></a>
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Uso_de_Contenedores">Uso de Contenedores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=15" title="Edit section: Uso de Contenedores">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=15" title="Edit section: Uso de Contenedores">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Contenedores">Contenedores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=16" title="Edit section: Contenedores">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=16" title="Edit section: Contenedores">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Para este proyecto se decidió utilizar contenedores con el objetivo de garantizar aislamiento, seguridad, portabilidad y escalabilidad. Esta elección permite gestionar de forma eficiente las diferentes partes del sistema y experimentar con una tecnología ampliamente adoptada en la industria.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Docker">Docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=17" title="Edit section: Docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=17" title="Edit section: Docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Se utilizó Docker como herramienta principal para implementar la contenerización debido a su robustez, popularidad y relevancia en proyectos profesionales.
+</p><p><br/>
+</p>
+<h3><span id="Contenerización"></span><span class="mw-headline" id="Contenerizaci.C3.B3n">Contenerización</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=18" title="Edit section: Contenerización">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=18" title="Edit section: Contenerización">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El proceso de contenerización se dividió en dos etapas:
+</p><p><br/>
+</p>
+<h4><span id="Creación_de_Imágenes"></span><span class="mw-headline" id="Creaci.C3.B3n_de_Im.C3.A1genes">Creación de Imágenes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=19" title="Edit section: Creación de Imágenes">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=19" title="Edit section: Creación de Imágenes">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Se crearon tres imágenes:  
+</p>
+<ul><li><b>Frontend</b>: Basada en Node 20 y Alpine Linux, una opción ligera y eficiente. Incluye los pasos de copiar dependencias, instalar paquetes, y exponer el puerto 8080.</li>
+<li><b>Backend</b>: Similar al frontend, pero se enfocó en copiar únicamente los archivos JavaScript necesarios para las funcionalidades, utilizando el puerto 8081.</li>
+<li><b>MongoDB</b>: Basada en una imagen preconstruida de Docker Hub (v4.0) debido a problemas de compatibilidad con hardware para versiones más recientes.</li></ul>
+<p><br/>
+</p>
+<h4><span id="Comunicación_entre_Componentes"></span><span class="mw-headline" id="Comunicaci.C3.B3n_entre_Componentes">Comunicación entre Componentes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=20" title="Edit section: Comunicación entre Componentes">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=20" title="Edit section: Comunicación entre Componentes">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Se diseñó una arquitectura con tres componentes principales:  
+</p>
+<ul><li>Frontend</li>
+<li>Backend</li>
+<li>MongoDB (base de datos)</li></ul>
+<p>Se estableció una red entre backend y base de datos para permitir la comunicación interna. El frontend interactúa directamente con el nodo master, que redirige las solicitudes HTTP al backend.
+</p><p><br/>
+</p>
+<h3><span id="Orquestación_de_Contenedores"></span><span class="mw-headline" id="Orquestaci.C3.B3n_de_Contenedores">Orquestación de Contenedores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=21" title="Edit section: Orquestación de Contenedores">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=21" title="Edit section: Orquestación de Contenedores">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Inicialmente, se intentó usar Kubernetes como orquestador, pero surgieron problemas relacionados con `kubelet` debido a incompatibilidad de versiones. Finalmente, se optó por Docker Swarm, que proporciona una solución más simple y está integrada con Docker.
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Docker_Swarm">Docker Swarm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=22" title="Edit section: Docker Swarm">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=22" title="Edit section: Docker Swarm">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El despliegue con Docker Swarm incluyó los siguientes pasos:  
+</p>
+<ol><li>Definir el nodo master ejecutando el comando: <code>docker swarm init</code>.</li>
+<li>Registrar los nodos workers con: <code>docker swarm join</code>.</li>
+<li>Configurar los servicios en un archivo <code>compose.yaml</code> que detalla imágenes, puertos, redes y restricciones de despliegue.</li></ol>
+<p><br/>
+</p>
+<h4><span class="mw-headline" id="Aspectos_Clave">Aspectos Clave</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;veaction=edit&amp;section=23" title="Edit section: Aspectos Clave">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:UPCoin&amp;action=edit&amp;section=23" title="Edit section: Aspectos Clave">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>Las imágenes se subieron a Docker Hub para garantizar su disponibilidad en todos los nodos.</li>
+<li>Se utilizaron archivos <code>.env</code> para manejar variables de entorno en frontend y backend.</li>
+<li>Una red interna conecta backend y base de datos para mayor eficiencia.</li>
+<li>En MongoDB se implementó un volumen para garantizar persistencia de datos.</li>
+<li>Se evitaron despliegues en el nodo master y se asignó el contenedor de MongoDB a un nodo específico para mantener la integridad de los datos.</li></ul>
+<p>El despliegue del clúster se realizó con: <code>docker stack deploy -c compose.yaml &lt;nombre_contenedor&gt;</code>, y su eliminación con: <code>docker stack rm &lt;nombre_contenedor&gt;</code>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083848
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.037 seconds
+Real time usage: 1.759 seconds
+Preprocessor visited node count: 71/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:853-0!canonical and timestamp 20250710083846 and revision id 2097
+ -->
+</div>

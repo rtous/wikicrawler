@@ -1,0 +1,120 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:731px;"><a class="image" href="/pti/index.php/File:Vacasss.PNG"><img alt="" class="thumbimage" data-file-height="348" data-file-width="729" decoding="async" height="348" src="/pti/images/8/87/Vacasss.PNG" width="729"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Vacasss.PNG" title="Enlarge"></a></div>WEB.</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Qu.C3.A8_.C3.A9s_WalkCow.3F"><span class="tocnumber">1.1</span> <span class="toctext">Què és WalkCow?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Arquitectura"><span class="tocnumber">2</span> <span class="toctext">Arquitectura</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Hardware"><span class="tocnumber">2.1</span> <span class="toctext">Hardware</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#SQL"><span class="tocnumber">2.2</span> <span class="toctext">SQL</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#IPFS"><span class="tocnumber">2.3</span> <span class="toctext">IPFS</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Blockchain"><span class="tocnumber">2.4</span> <span class="toctext">Blockchain</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#FrontEnd"><span class="tocnumber">2.5</span> <span class="toctext">FrontEnd</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Integraci.C3.B3"><span class="tocnumber">3</span> <span class="toctext">Integració</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Conlusions"><span class="tocnumber">4</span> <span class="toctext">Conlusions</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La idea del projecte walkcow sorgeix de la necessitat de certificar la procedència dels aliments làctics i carnis que s’ofereixen en els establiments, amb l’objectiu únic de millorar-ne l’origen, tant en termes de qualitat, com en termes de l’estat dels animals. I és que avui en dia, moltes marques industrials intenten engatusar al consumidor amb publicitat i eslògans que no encaixen amb la realitat dels seus animals. Concretament en l’àmbit del bestiar, la indústria alimentícia en el mercat làctic i càrnic on, en nombroses ocasions, apareixen en els envasos logotips de certificacions de dubtosa procedència en els productes de les grans productores per blanquejar l’origen dels productes.
+</p><p>Walkcow consisteix en un sistema de certificació del moviment del bestiar, en concret les vaques, que es recolza en la tecnologia descentralitzada de Blockchain i de la IPFS, i mitjançant un sistema de timestamp, amb l’objectiu que a aquestes productores els sigui més difícil enganyar als consumidors.
+</p><p>Actualment ja existeixen certificacions d’aquesta mena, amb l’essencial característica que la seva veracitat recau en la confiança que es té a l’entitat que audita les granges. Walkcow és una proposta que aporta confiança distribuida: el sistema està basat en Blockchain, la confiança en el sistema en sí certifica les dades, i n’evita la modificació. Això és, teòricament, un sistema resilient a modificacions fraudulentes amb l’objectiu de tergiversar l’estat del bestiar i, en conseqüència, l’origen o procedència dels productes que adquireix el consumidor.
+</p>
+<h3><span id="Què_és_WalkCow?"></span><span class="mw-headline" id="Qu.C3.A8_.C3.A9s_WalkCow.3F">Què és WalkCow?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=2" title="Edit section: Què és WalkCow?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=2" title="Edit section: Què és WalkCow?">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En concret, el nostre projecte consisteix a monitoritzar el moviment de les vaques mitjançant la col·locació de plaques de LoRa amb GPS integrat. Aquests xips envien paquets de dades amb informació geogràfica sobre la posició de les vaques a un gateway connectat a una Raspberry Pi, les quals es guarden en una base de dades temporal. Aquesta informació s’enviarà diariament a la IPFS per a ser emmagatzemats de forma distribuïda i permanent. Llavors, el hash de l’arxiu a la IPFS serà introduït a la Blockchain per a assegurar-ne la seva immutabilitat. 
+Les dades geogràfiques són accessibles als consumidors mitjançant una pàgina web dissenyada amb ReactJS. En la pàgina web els consumidors podran veure les dades en un format més visual, concretament en un mapa. A més a més es disposa d’una base de dades que ens permet emmagatzemar els hashes de la blockchain per a poder recuperar les dades. Per a integrar totes les parts d’aquest projecte s’ha utilitzat flask i crontab.
+</p>
+<h1><span class="mw-headline" id="Arquitectura">Arquitectura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=3" title="Edit section: Arquitectura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=3" title="Edit section: Arquitectura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:ARQ.PNG"><img alt="" class="thumbimage" data-file-height="450" data-file-width="838" decoding="async" height="430" src="/pti/images/thumb/3/32/ARQ.PNG/800px-ARQ.PNG" srcset="/pti/images/3/32/ARQ.PNG 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:ARQ.PNG" title="Enlarge"></a></div>Arquitectura.</div></div></div></div>
+<p>En primer lloc, per poder fer el seguiment del bestiar s'ha utilitzat la tecnologia LoRa amb GPS. Un sistema que utilitza pocs recursos, arriba a llargues distàncies i no necessita d’una gran infraestructura.
+</p><p>Un cop tenim les dades, volem que aquestes quedin emmagatzemades d’alguna manera a la blockchain, provocant així que no puguin ser modificades. Però guardar tantes dades a la blockchain implicaria una quantitat molt gran de transaccions, que això implica una enorme quantitat de diners gastats, cosa no molt sostenible diem-ne. Per tant necessitem un mètode d’emmagatzematge de dades diferent. Per simplicitat s'ha decidit fer una base de dades SQL, els motius són igual de simples: és un estàndard dins l'emmagatzematge de dades. La quantitat de dades que s’envien, depenent de la quantitat de bestiar, poden arribar a ser abismals, per aquest motiu, s'ha decidit que es farà una de diària; a més a més, seria preferible no guardar-la en local, ja que la quantitat de dades seria una mica monumental.
+</p><p>Un cop guardades, una manera de posar-les a la blockchain seria fer un hash de la base de dades diària i posar només aquest hash a la blockchain, cosa que ens estalvia una gran quantitat de transaccions i, per tant, de diners.
+</p><p>Ara només ens resta un problema: aquest projecte és per a una granja. No podem fer que el granger hagi de tenir un sistema informàtic amb unes especificacions d’emmagatzematge tan grans, a més a més, hi ha la possibilitat de perdre les dades si s’espatlla alguna cosa.
+Aquí entra el mòdul IPFS, un sistema de fitxers distribuït. Les dades guardades a la base de dades diària es poden pujar a la IPFS, de manera que: en cas de pèrdua de dades no hi haurà cap problema ja que el node de la IPFS les guarda, i, directament, no necessitarem guardar les dades en local. Aquest sistema ens retorna un hash del fitxer, la qual cosa o cosa que ens estalvia el fet d’haver-ne de fer un.
+</p><p>L’addició d’aquest mòdul provoca que les necessitats del sistema d’integració es vegin molt reduïdes a una simple RaspberryPi amb accés a internet, que integrarà el sistema i utilitz Flask.
+</p><p>Per tant, els mòduls necessaris són: LoRa amb GPS pel seguiment i transmissió de dades, SQL per a la base de dades diària, IPFS per a guardar-ho en remot i Blockchain per a fer-les inamovibles.
+</p><p>Només ens queda una nova base de dades, també SQL, que guardi tots els hashs retornats de la Blockchain i un mòdul per a mostrar els resultats als usuaris que així ho desitgin. Per a fer això s'ha utilitzat React.
+</p>
+<h2><span class="mw-headline" id="Hardware">Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=4" title="Edit section: Hardware">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=4" title="Edit section: Hardware">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El mòdul de hardware es compon de les plaques de desenvolupament TTGO amb el software que executen, i la connexió WiFi amb la Raspberry Pi. 
+</p><p>En concret, l’arquitectura interna d’aquest mòdul és la següent:
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:737px;"><a class="image" href="/pti/index.php/File:Placa.PNG"><img alt="" class="thumbimage" data-file-height="205" data-file-width="735" decoding="async" height="205" src="/pti/images/1/12/Placa.PNG" width="735"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Placa.PNG" title="Enlarge"></a></div>Arquitectura.</div></div></div></div>
+<p>Se’n diferencien tres components (d’esquerra a dreta): els nodes LoRa, el gateway LoRa, i la Raspberry Pi.
+</p><p>Els nodes LoRa (la placa que porten les vaques) són plaques de desenvolupament TTGO T-Beam V1.1 (TTGO T22_V1.1), que tenen un processador ESP32, un xip GPS i un transmisor/receptor LoRa, entre d’altres característiques.
+</p><p>El node Gateway LoRa és una placa de desenvolupament similar, una TTGO LoRa32 V2.1.6 (TTGO T3_V1.6, o també TTGO LoRa32 V2.1 release 1.6), que conté un processador ESP32, un transmisor/receptor LoRa, connexió WiFi i Bluetooth.
+</p><p>Per últim, la Raspberry Pi, que conté connexió WiFi, la qual ens permet connectar-se amb la placa del Gateway LoRa.
+</p><p>El desenvolupament del software per a les plaques es duu a terme a Arduino IDE. 
+</p>
+<h2><span class="mw-headline" id="SQL">SQL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=5" title="Edit section: SQL">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=5" title="Edit section: SQL">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Els mètodes que proporciona aquesta llibreria són:
+</p>
+<ul><li>Construir una nova BD (fitxer)</li>
+<li>Construir una nova taula</li>
+<li>Escriure elements a la taula</li>
+<li>Llegir elements de la taula</li></ul>
+<p>La funció newFile (construir una nova BD) genera un nou fitxer amb el nom triat, encara que el fitxer existeixi, de manera que també es pot utilitzar com a mètode de destrucció.
+</p><p>S’ha conclòs que és necessària una funcionalitat addicional setFile per a assignar la base de dades que es vol modificar/llegir, de manera que facilita l’ús d’aquesta llibreria als desenvolupadors.
+</p><p>Per a construir una nova taula s’utilitzarà la funció newTable amb paràmetres: nom, camps*, tipus*, propietats*, clau primària. S’ha de tenir en compte que els paràmetres marcats amb un asterisc són vectors i l’element ièssim de cadascun d’ells ha de correspondre al mateix camp.
+</p><p>Per a escriure elements a la taula s’ha programat el write amb paràmetres: nom, valors. On el nom és el nom de la taula que es vol editar i els valors són les noves entrades que s’hi volen afegir.
+</p><p>Per a llegir elements de la taula no és necessari per a aquest projecte tenir un lector de base de dades molt específic, així que la funció read llegeix tota una taula d’una base de dades (en SQL: SELECT * FROM nom_taula).
+</p><p>Com a funcionalitat complementària s’hi ha afegit un detector simple d’injeccions SQL per a que no es puguin modificar les dades de qualsevol manera.
+</p>
+<h2><span class="mw-headline" id="IPFS">IPFS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=6" title="Edit section: IPFS">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=6" title="Edit section: IPFS">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per al mòdul IPFS, precisarem de dues funcionalitats, principalment:
+</p>
+<ul><li>Pujar un fitxer</li>
+<li>Llegir un fitxer</li></ul>
+<p>L’IPFS necessita un node on treballar, en aquest projecte se n’han emprat dos: un de públic i un de privat. El node públic és molt útil per a testejar però no és convenient utilitzar-ho en producció.
+</p><p>Per a pujar un fitxer al node IPFS s’utilitzarà la funció uploadFile amb el nom del fitxer com a paràmetre. Es retornarà un hash per a poder-hi accedir posteriorment, així que seria convenient guardar-se’l.
+</p><p>Per a llegir un fitxer del node IPFS s’emprarà el mètode readFile amb el hash guardat anteriorment com a paràmetre. Es retornarà el contingut del fitxer.
+</p><p>Quan es llegeix un fitxer d’un node IPFS pot tenir una latència considerable, cosa que provoca l’ús de la nova funció waitFile amb el hash com a paràmetre. Aquesta funció mostra el moment en què un fitxer es troba disponible per a llegir.
+</p>
+<h2><span class="mw-headline" id="Blockchain">Blockchain</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=7" title="Edit section: Blockchain">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=7" title="Edit section: Blockchain">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Respecte a aquest apartat es pot dir que ha estat fallit. La idea era crear una blockchain local amb l'ajuda de ganache i truffle, però a causa d'un error es va abandonar.
+</p><p>Ja que els altres mòduls ja estaven integrats, es va decidir fer una llibreria que simulés la blockchain per a poder fer proves. Pel que fa a la llibreria que vam implementar, aquesta es dedica a guardar els hashos de la ispf en un fitxer de text, associant-los a un tag per saber a quin hash ens estem referint. 
+</p>
+<h2><span class="mw-headline" id="FrontEnd">FrontEnd</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=8" title="Edit section: FrontEnd">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=8" title="Edit section: FrontEnd">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La página web on els consumidors poden consultar les estadístiques de moviment de les vaques va ser implementada amb ReactJS, que és una biblioteca Javascript. Vam utilitzar React degut a la facilitat i rapidesa que proporciona a l’hora d’implementar pàgines web. No obstant, més endavant vam convertir el codi a HTML per a poder integrar la pàgina web amb la resta de components.
+</p><p>La pàgina web està dividida en 3 parts: HOME, DATA y ABOUT US
+</p><p>A la pàgina de DATA mostrem un mapa (integrat amb OpenStreetMaps API) on es pot observar el recorregut de les vaques d’un dia en concret i les dades en format raw data. Aquestes dades contenen el id de la vaca i les coordenades (latitud i longitud), les quals es corresponen amb un timestamp. El consumidor pot triar el dia del qual vol veure les dades.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:MAPA.PNG"><img alt="" class="thumbimage" data-file-height="381" data-file-width="1158" decoding="async" height="263" src="/pti/images/thumb/2/29/MAPA.PNG/800px-MAPA.PNG" srcset="/pti/images/2/29/MAPA.PNG 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:MAPA.PNG" title="Enlarge"></a></div>Mapa.</div></div></div></div>
+<h1><span id="Integració"></span><span class="mw-headline" id="Integraci.C3.B3">Integració</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=9" title="Edit section: Integració">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=9" title="Edit section: Integració">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Com que s’ha fet tot de forma modular, només s’ha de passar les dades (dades GPS, un hash,...) que s’obtenen d’un mòdul cap a un altre. A vegades s’ha de fer un reformateig. 
+</p><p>Un cop desenvolupats tots els mòduls del sistema només ens queda un sistema que els unifiqui: el sistema d’integració. Aquest, s’encarrega de fer el traspàs de dades entre mòduls.
+</p><p>El procés d’obtenció de dades és el següent: es reben les coordenades per mitjà del mòdul Hardware, les emmagatzema al mòdul SQL, s’envia el fitxer a un node de la IPFS mitjançant el mòdul corresponent i rep un hash de resposta, envia aquest hash al mòdul Blockchain i rep un hash com a resposta, finalment, guarda aquest hash, junt amb els seus predecessors, a un altre BD del mòdul SQL.
+</p><p>El procés de recuperació de dades és el següent: tenim guardats els hashs del mòdul Blockchain a una base de dades SQL, els obtenim, recuperem el hash de l’IPFS del mòdul Blockchain, recuperem el fitxer de l’IPFS i mostrem les dades pel mòdul de React.
+</p>
+<h1><span class="mw-headline" id="Conlusions">Conlusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;veaction=edit&amp;section=10" title="Edit section: Conlusions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HappyCows&amp;action=edit&amp;section=10" title="Edit section: Conlusions">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Pel que fa a la part tecnològica d’aquest projecte, es pot observar que és un bon exemple d’integració ja que en formen part tecnologies que, en un principi, no semblen cohesionar. Pel que fa a aquestes tecnologies es pot dir que tots els membres han sigut capaços d'aprendre coses que no havien vist abans.
+</p><p>El producte obtingut, encara que només sigui un  proof of work, creiem que podria tenir bastant futur. És cert que es podrien falsificar les dades si el granger s’ho proposa, però solucionant aquest problema, el mercat podria tenir molt abast. Avui en dia, la gent procura ser més sana i es consciencia més amb el medi ambient i, el nostre producte podria donar als consumidors justament el que desitgen. 
+</p><p>Aquest treball està enfocat en les vaques i el seu recorregut, però es pot aplicar també a altres animals, com podrien ser ovelles, porcs, etc. la qual cosa abarcaria un mercat encara més gran. De la mateixa manera, pel fet d’haver modularitzat tot el sistema, qualsevol dels mòduls podria ser emprat en un altre sistema que així ho requereixi.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083841
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.018 seconds
+Real time usage: 0.022 seconds
+Preprocessor visited node count: 34/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:622-0!canonical and timestamp 20250710083841 and revision id 1219
+ -->
+</div>

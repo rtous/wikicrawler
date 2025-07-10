@@ -1,0 +1,232 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Minethetag_logo.jpg"><img alt="" class="thumbimage" data-file-height="369" data-file-width="932" decoding="async" height="317" src="/pti/images/thumb/6/6b/Minethetag_logo.jpg/800px-Minethetag_logo.jpg" srcset="/pti/images/6/6b/Minethetag_logo.jpg 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Minethetag_logo.jpg" title="Enlarge"></a></div>Logo del projecte</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A8_.C3.A9s_MineTheTag.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Què és MineTheTag?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Objectius_tecnol.C3.B2gics_del_projecte"><span class="tocnumber">2</span> <span class="toctext">Objectius tecnològics del projecte</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#El_joc:_Configuraci.C3.B3_i_apartat_t.C3.A8cnic"><span class="tocnumber">3</span> <span class="toctext">El joc: Configuració i apartat tècnic</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Captures_de_pantalla_i_jugabilitat"><span class="tocnumber">3.1</span> <span class="toctext">Captures de pantalla i jugabilitat</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Configuraci.C3.B3_del_servidor_amb_Ansible"><span class="tocnumber">3.2</span> <span class="toctext">Configuració del servidor amb Ansible</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Definici.C3.B3_de_la_base_de_dades"><span class="tocnumber">3.3</span> <span class="toctext">Definició de la base de dades</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Decisions_preses_respecte_d.E2.80.99Android"><span class="tocnumber">3.4</span> <span class="toctext">Decisions preses respecte d’Android</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Implementaci.C3.B3_de_backend"><span class="tocnumber">3.5</span> <span class="toctext">Implementació de backend</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Configuraci.C3.B3_de_docker_per_al_servidor_i_per_al_desenvolupament"><span class="tocnumber">3.6</span> <span class="toctext">Configuració de docker per al servidor i per al desenvolupament</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Refer.C3.A8ncies"><span class="tocnumber">4</span> <span class="toctext">Referències</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#GitHub_del_projecte"><span class="tocnumber">4.1</span> <span class="toctext">GitHub del projecte</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Refer.C3.A8ncies_externes"><span class="tocnumber">4.2</span> <span class="toctext">Referències externes</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="¿Què_és_MineTheTag?"></span><span class="mw-headline" id=".C2.BFQu.C3.A8_.C3.A9s_MineTheTag.3F">¿Què és MineTheTag?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=2" title="Edit section: ¿Què és MineTheTag?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=2" title="Edit section: ¿Què és MineTheTag?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El projecte que hem realitzat consisteix en un joc de geolocalització on cada jugador té la missió de defensar punts del mapa -tags NFC-  el màxim temps possible, així com reflexa el seu nom MineTheTag (Mina l’etiqueta, en català). Cada jugador haurà de col·locar tags NFC físicament i aquests seran visibles per tothom. Posteriorment, el jugador defensarà aquest tag amb la col·locació de mines, que només ell podrà veure, sobre el mapa virtual. Paral·lelament, tot jugador tindrà la missió també de conquerir els tags d’altres jugadors sense que cap mina li exploti en intentar accedir-hi. 
+</p><p>Les mines no existeixen físicament sinó que estan col·locades virtualment al mapa de l’aplicació i geolocalitzades amb GPS. Hi ha un cert nombre de mines que un jugador pot posar al voltant d’un tag i han de respectar una certa distància perquè sinó seria molt fàcil impedir l’accés a l’objectiu.
+</p><p>Quan un jugador trepitgi una mina perdrà la possibilitat de conquerir el tag durant un cert període de temps. Com a conseqüència tampoc li explotarà cap mina més per tal d’evitar desactivar tota la defensa del tag. La mina desapareix del joc però es pinta de color vermell com a succés que ha passat. Altrament, si un jugador aconsegueix accedir a un tag, farà check-in, es validarà al servidor i aquell tag passarà a formar part de la seva defensa.
+</p><p>Hi haurà tags registrats prèviament per a garantir una certa jugabilitat als usuaris, tot i que, si els usuaris ho desitgen, en poden posar més per on vulguin i registrar-los a través d’una opció de l’aplicació amb un nom propi.
+</p>
+<h1><span id="Objectius_tecnològics_del_projecte"></span><span class="mw-headline" id="Objectius_tecnol.C3.B2gics_del_projecte">Objectius tecnològics del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=3" title="Edit section: Objectius tecnològics del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=3" title="Edit section: Objectius tecnològics del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>L’objectiu tecnològic del projecte ha estat aprendre a combinar diferents tecnologies, algunes vistes al laboratori de l’assignatura i aprofundir en altres que ja coneixiem. En aquest sentit, avaluem de forma molt correcte i gratificadora el fet d’haver pogut interaccionar amb noves tecnologies que fins a dia d’avui no havíem pogut tocar en cap altra assignatura. Tot i que en el següent apartat definim quines tecnologies hem utilitzat, cal dir que utilitzar docker per implementar algunes funcionalitats del servidor i també com a entorn de desenvolupament per anar implementant el backend ha estat una experiència molt enriquidora.
+</p><p>De la mateixa manera, hem tingut el primer contacte amb tecnologies com SQLAlchemy, un Object Relational Mapper i toolkit de Python que serveix com a capa d’abstracció per al desenvolupador a fi d’interactuar més còmodament amb la base de dades, també hem après com connectar la aplicacioó Android amb el servidor cosa que no vam poder fer en una assignatura anterior.
+Tot i que no és l’objectiu d’aquest apartat definir les tecnologies utilitzades sí que com a grup donem per complit l’objectiu d’aprendre noves tecnologies i posar-les en pràctica de forma autònoma. Malgrat tot, considerem que la corba d’aprenentatge amb algunes d’elles ha estat alta i això ha fet que algunes tasques s’hagin vist endarrerides, tal i com descriurem en l’apartat oportú.
+</p><p>A més, per tal d’encarar el nostre projecte hem tingut en compte productes que ja estan al mercat i que ens han servit de referència a l’hora de pensar la jugabilitat de MineTheTag. En aquest sentit, alguns jocs que ja estan implementats i que parteixen de la mateixa base serien, per exemple, els de Niantic, com Ingress o Pokémon GO. Estan basats en geolocalització per interaccionar amb els punts virtuals en un mapa de realitat augmentada. 
+També en els jocs per smartphones, trobem Skylanders que usa tags NFC per llegir els personatges i poder entrar al joc.
+En el camp d’OpenStreetMap, trobem un joc MapOftheDead, el qual, has d’ajudar a identificar llocs en un mapa d’OpenStreetMap per aportar recursos per sobreviure a l’apocalipsi zombie.
+</p><p><br/>
+</p>
+<h1><span id="El_joc:_Configuració_i_apartat_tècnic"></span><span class="mw-headline" id="El_joc:_Configuraci.C3.B3_i_apartat_t.C3.A8cnic">El joc: Configuració i apartat tècnic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=4" title="Edit section: El joc: Configuració i apartat tècnic">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=4" title="Edit section: El joc: Configuració i apartat tècnic">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Captures_de_pantalla_i_jugabilitat">Captures de pantalla i jugabilitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=5" title="Edit section: Captures de pantalla i jugabilitat">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=5" title="Edit section: Captures de pantalla i jugabilitat">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Mttg_cap_1.jpg"><img alt="" class="thumbimage" data-file-height="1224" data-file-width="720" decoding="async" height="340" src="/pti/images/thumb/4/45/Mttg_cap_1.jpg/200px-Mttg_cap_1.jpg" srcset="/pti/images/thumb/4/45/Mttg_cap_1.jpg/300px-Mttg_cap_1.jpg 1.5x, /pti/images/thumb/4/45/Mttg_cap_1.jpg/400px-Mttg_cap_1.jpg 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Mttg_cap_1.jpg" title="Enlarge"></a></div>Login</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Mttg_cap_2.jpg"><img alt="" class="thumbimage" data-file-height="1224" data-file-width="720" decoding="async" height="340" src="/pti/images/thumb/9/97/Mttg_cap_2.jpg/200px-Mttg_cap_2.jpg" srcset="/pti/images/thumb/9/97/Mttg_cap_2.jpg/300px-Mttg_cap_2.jpg 1.5x, /pti/images/thumb/9/97/Mttg_cap_2.jpg/400px-Mttg_cap_2.jpg 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Mttg_cap_2.jpg" title="Enlarge"></a></div>Registre</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Mttg_cap_3.jpg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="1018" decoding="async" height="314" src="/pti/images/thumb/b/bf/Mttg_cap_3.jpg/200px-Mttg_cap_3.jpg" srcset="/pti/images/thumb/b/bf/Mttg_cap_3.jpg/300px-Mttg_cap_3.jpg 1.5x, /pti/images/thumb/b/bf/Mttg_cap_3.jpg/400px-Mttg_cap_3.jpg 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Mttg_cap_3.jpg" title="Enlarge"></a></div>Mapa</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Mttg_cap_4.jpg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="1011" decoding="async" height="317" src="/pti/images/thumb/2/26/Mttg_cap_4.jpg/200px-Mttg_cap_4.jpg" srcset="/pti/images/thumb/2/26/Mttg_cap_4.jpg/300px-Mttg_cap_4.jpg 1.5x, /pti/images/thumb/2/26/Mttg_cap_4.jpg/400px-Mttg_cap_4.jpg 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Mttg_cap_4.jpg" title="Enlarge"></a></div>Navigation drawer</div></div></div></div>
+<h2><span id="Configuració_del_servidor_amb_Ansible"></span><span class="mw-headline" id="Configuraci.C3.B3_del_servidor_amb_Ansible">Configuració del servidor amb Ansible</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=6" title="Edit section: Configuració del servidor amb Ansible">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=6" title="Edit section: Configuració del servidor amb Ansible">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hem allotjat el nostre servidor amb el serveis de Cloud Computing de Amazon: Amazon EC2. Hem decidit triar aquest proveïdor doncs un dels integrants del grup disposava de crèdit gratuït aconseguit mitjançant una Hackathon. A més a més, ens interesa aprendre el servei de Cloud d’Amazon, doncs aquest té un important grau d’implantació en el mercat.
+</p><p>Per a sol·licitar el servidor, i realitzar la configuració del registre DNS, hem utilitzat Ansible, amb l’objectiu de poder disposar d’una solució que ens permeti disposar de màquines virtuals al núvol sense excessiva intervenció humana, això ens facilitaria la vida per a escalar de forma horitzontal (és a dir, disposar de més instàncies que suportin una càrrega de forma major, distribuint la feina).
+</p><p>Al codi que es mostra a continuació podem veure l’script d’Ansible que ens permet aixecar una única instància d’Amazon, i fer que el domini minethetag.cf apunti a la adreça IP assignada a aquesta (usant la API del nostre proveïdor de DNS: he.net)
+</p>
+<pre> # This playbook needs the package python2-boto
+ ---
+ - hosts: localhost
+ connection: local
+ become: False
+ gather_facts: False
+
+ vars_files:
+   - "vars.yml" ← Aquí tenim les claus d'accés a EC2 mitjançant API registrades. Juntament amb altres variables.
+
+ environment:
+   AWS_ACCESS_KEY: "<a class="new" href="/pti/index.php?title=Template:Aws_access_key&amp;action=edit&amp;redlink=1" title="Template:Aws access key (page does not exist)">Template:Aws access key</a>"
+   AWS_SECRET_KEY: "<a class="new" href="/pti/index.php?title=Template:Aws_secret_key&amp;action=edit&amp;redlink=1" title="Template:Aws secret key (page does not exist)">Template:Aws secret key</a>"
+
+ tasks:
+   - name: Provision a instance
+     ec2:
+        key_name: "PTI_KeyPair"
+        # group: test
+        region: "<a class="new" href="/pti/index.php?title=Template:Region&amp;action=edit&amp;redlink=1" title="Template:Region (page does not exist)">Template:Region</a>"
+        instance_type: "t2.micro"
+        image: "<a class="new" href="/pti/index.php?title=Template:Ami_id&amp;action=edit&amp;redlink=1" title="Template:Ami id (page does not exist)">Template:Ami id</a>"
+        wait: true
+        exact_count: 1
+        count_tag:
+           Name: MineTheTag
+        instance_tags:
+           Name: MineTheTag
+     register: ec2
+
+   - name: Add all instance public IPs to host group
+     add_host: hostname=<a class="new" href="/pti/index.php?title=Template:Item.public_ip&amp;action=edit&amp;redlink=1" title="Template:Item.public ip (page does not exist)">Template:Item.public ip</a> groups=ec2hosts
+     with_items: "<a class="new" href="/pti/index.php?title=Template:Ec2.instances&amp;action=edit&amp;redlink=1" title="Template:Ec2.instances (page does not exist)">Template:Ec2.instances</a>"
+
+   - name: Update dns record
+     uri:
+       url: <a class="external free" href="https://dyn.dns.he.net/nic/update" rel="nofollow">https://dyn.dns.he.net/nic/update</a>
+       method: POST
+       body: "hostname=<a class="new" href="/pti/index.php?title=Template:Domain&amp;action=edit&amp;redlink=1" title="Template:Domain (page does not exist)">Template:Domain</a>&amp;password=<a class="new" href="/pti/index.php?title=Template:He_dns_password&amp;action=edit&amp;redlink=1" title="Template:He dns password (page does not exist)">Template:He dns password</a>&amp;myip=<a class="new" href="/pti/index.php?title=Template:Item.public_ip&amp;action=edit&amp;redlink=1" title="Template:Item.public ip (page does not exist)">Template:Item.public ip</a>"
+       body_format: raw
+       return_content: yes
+
+     with_items: "<a class="new" href="/pti/index.php?title=Template:Ec2.instances&amp;action=edit&amp;redlink=1" title="Template:Ec2.instances (page does not exist)">Template:Ec2.instances</a>"
+
+
+
+</pre>
+<p>Pel que fa a Docker, l’hem instal·lat usant un script de Ansible Galaxy creat per l’usuari angstwad. Podeu trobar-lo a GitHub o el repositori de Ansible Galaxy
+</p><p>També hem usat Ansible per tal de pujar les noves versions de codi al servidor, i generar la imatge de Docker corresponent, així com aixecar els contenidors de Docker ( dividit en dues fases per a millor seguretat i flexibilitat en el cas de que tinguessim diverses màquines, i.e: pujem la nova versió del codi a tots els servidors, però no l’apliquem a tots fins que s’ha provat a un entorn de prova ).
+</p><p>Per la configuració de SSL amb Letsencrypt i Nginx hem optat per configuració manual, doncs es aplicar una configuració específica de Nginx, i usar l’eina de LetsEncrypt per a generar certificats, que ja s’encarrega d’actualitzar-los automàticament quan aquests estan a punt de caducar.
+</p><p><br/>
+</p>
+<h2><span id="Definició_de_la_base_de_dades"></span><span class="mw-headline" id="Definici.C3.B3_de_la_base_de_dades">Definició de la base de dades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=7" title="Edit section: Definició de la base de dades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=7" title="Edit section: Definició de la base de dades">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com hem dit, hem definit la base de dades dins el fitxer api.py juntament amb les funcions d’API per a la interacció amb el servidor. D’aquesta manera tenim tres taules: User, Mine i Tag. 
+</p>
+<pre>   class User(db.Model):
+       __tablename__ = 'users'
+       id = db.Column(db.Integer, primary_key=True)
+       name = db.Column(db.String(80),unique=True)
+       password = db.Column(db.String(120))
+       blocked = db.Column(db.DateTime, default=datetime.now())
+</pre>
+<pre>   class Mine(db.Model):
+       __tablename__ = 'mine'
+       id = db.Column(db.Integer, primary_key=True)
+       posX = db.Column(db.Float)
+       posY = db.Column(db.Float)
+       user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+       user = db.relationship('User', backref=db.backref('mines', lazy='dynamic'))
+</pre>
+<pre>   class Tag(db.Model):
+        __tablename__ = 'tag'
+        id = db.Column(db.Integer, primary_key=True)
+        tag_id = db.Column(db.BigInteger, unique=True, nullable=False)
+        posX = db.Column(db.Float)
+        posY = db.Column(db.Float)
+        user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+        user = db.relationship('User', backref=db.backref('tags', lazy='dynamic'))
+</pre>
+<p>Aquestes classes representen les tres taules que es creen a la base de dades el primer cop que s’executa el fitxer de Python. Són només una part, ja que cada classe té internament altres funcions auxiliars. Com podem observar, doncs, hem simplificat molt el procés per als usuaris, ja que només s’identifiquen amb una id, un nom i un password. Podem veure que a més hi ha un atribut anomenat blocked de tipus DateTime, que ens serveix per bloquejar l’usuari fins a un temps determinat quan li explota una mina.
+</p><p>Una mina està definida per un id únic, unes coordenades i una foreign key que la relaciona amb un usuari. Això és així per identificar cada mina i poder fer que les mines que cada propi usuari posa al mapa no li exploten i no pugi veure les mines dels altres usuaris (a nivell de jugabilitat no tindria sentit). Finalment tenim el tag NFC, molt semblant en quant a definició a la mina, però en aquest cas tenim també un atribut tag_id que és el que es rep des de l’aplicació Android quan llegeix un tag.
+</p><p>En l’apartat de backend explicarem una mica millor com s’ha implementat tot amb Flask, Python i l’autenticació.
+</p>
+<h2><span id="Decisions_preses_respecte_d’Android"></span><span class="mw-headline" id="Decisions_preses_respecte_d.E2.80.99Android">Decisions preses respecte d’Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=8" title="Edit section: Decisions preses respecte d’Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=8" title="Edit section: Decisions preses respecte d’Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>S’ha decidit fer una aplicació molt user-friendly ja que aporta molta facilitat d’ús per als jugadors que la faran servir majoritàriament en entorns oberts.
+</p><p>Degut a certes dificultats trobades per implementar algunes funcionalitats hem decidit utilitzar llibreries externes que ens han facilitat molt el treball.
+Per agafar la localització actual de l’usuari hem utilitzat la llibreria SmartLocation en lloc de la solució oficial proveïda per Google (la qual per motius desconeguts no funcionava, segurament ha quedat antiquada).  
+Per connectar amb el servidor per fer crides a la API s’ha utilitzat Volley que és una llibreria d'HTTP que fa que el networking per a aplicacions Android sigui més fàcil i el més important, més ràpid.
+</p><p>També cal remarcar que molts tutorials a la web per ja no funcionen per que les noves versions d’Android ja no les suporten, cosa que ha portat una dificultat extra al projecte ja que hem tingut que fer moltes proves abans d’arribar a la solució implementada.
+</p>
+<h2><span id="Implementació_de_backend"></span><span class="mw-headline" id="Implementaci.C3.B3_de_backend">Implementació de backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=9" title="Edit section: Implementació de backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=9" title="Edit section: Implementació de backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com s’ha dit en l’apartat anterior, el backend, és a dir, la implementació de totes les funcionalitats per a la interacció amb el servidor i la gestió de la base de dades ho hem dut a terme amb Flask, un microframework per a Python. Flask ens ha facilitat molt la feina. En aquest apartat, farem especial menció a l’autenticació dels usuaris i als token, a les contrasenyes hashejades amb salt i a les principals funcions implementades.
+</p><p>L’autentificació dels usuaris l’hem fet mitjançant la llibreria Httpauth de Flask. Amb aquesta llibreria hem hagut de sobreescriure alguns mètodes, com per exemple, verify_password a través del qual implementem la comprovació del password de l’usuari.
+</p><p>Aquestes línies de codi ens serveixen per exemplificar com implementem l’autentificació d’usuari. En aquestes línies també hi veiem les crides a Serializer, SignatureExpired i BadSignature. Tot això forma part del paquet itsDangerous, usat per implementar els token. La gràcia d’aquesta llibreria és que un cop implementada només cal usar el decorador @auth.login_required que implica que la funció que ve a continuació requereix autentificació per a poder-se cridar.
+</p><p>Així mateix, utilitzem la llibreria passlib per fer hash dels password, de manera que a la base de dades ja no hem de guardar en cap moment les claus en clar.
+</p><p>El hash es fa a partir d’una clau secreta. La mateixa llibreria li aplica un salt per tal d’evitar passar la llista de hash per diccionaris en cas de vulneració del servidor.
+</p><p>Gràcies a aquestes llibreries hem pogut implementar les principals funcionalitats de backend com per exemple la creació d’un nou usuari, la inserció de mines i tags, l’explosió de les mines, saber si un usuari està dins el rang d’explosió d’una mina, etc.
+</p>
+<h2><span id="Configuració_de_docker_per_al_servidor_i_per_al_desenvolupament"></span><span class="mw-headline" id="Configuraci.C3.B3_de_docker_per_al_servidor_i_per_al_desenvolupament">Configuració de docker per al servidor i per al desenvolupament</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=10" title="Edit section: Configuració de docker per al servidor i per al desenvolupament">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=10" title="Edit section: Configuració de docker per al servidor i per al desenvolupament">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per a l’ús de Docker al nostre entorn, tant de desenvolupament, com de producció, hem utilitzat el programari Docker-Compose per a definir conjunts de contenidors, i com aquests estan enllaçats entre si.
+</p><p>Tenim dues configuracions de Docker-Compose, una de producció, on el codi de l’aplicació està contingut a la imatge, i l’altre de desenvolupament, on el codi es troba a un directori fora  del contenidor, però enllaçat, el que permet realitzar canvis al codi de backend, i fer proves de forma ràpida. A l’entorn de desenvolupament tampoc tenim ngnix ni SSL, doncs no és estricament necessari.
+</p><p>Per a la imatge del contenidor de la base de dades PostgreSQL, hem creat una configuració basada en la imatge oficial: definim el català com a Locale de la imatge, i creem una base de dades i un usuari associat per a MineTheTag. La definició de la imatge la podeu trobar al GitHub del projecte
+</p><p>A continuació podem veure com la definició d’imatges de Docker pot ser molt senzilla en cas de que la comunitat darrera de la imatge en que ens basem ho hagi posat fàcil, per exemple mitjançant clàusules On Build als seus DockerFiles.
+</p>
+<pre>   FROM python:2-onbuild
+   CMD [ "python", "api.py" ]
+
+</pre>
+<p>Amb aquestes dues línies, tenim definida la imatge de Docker del nostre codi de Backend, ens basem en una imatge de Python que copia el codi de la carpeta on estigui el DockerFile, instal·la amb PIP els mòduls de Python indicats al fitxer requirements.txt del mateix directori, i especifica que s’ha de córrer el fitxer de Python indicat a la segona línia.
+</p><p>Per a depuració en l’entorn Docker hem usat diferents mètodes:
+</p><p>Si volíem depurar l’aplicació Python de Backend, ens connectem directament al procés que corre el contenidor:
+</p>
+<pre>   $ docker container attach minethetag_web_1
+
+</pre>
+<p>Per a examinar els registres de la base de dades, executem un intèrpret de bash al contenidor de postgres, passem a superusuari de postgres i ens connectem a la base de dades de MineTheTag:
+</p>
+<pre>   $ docker exec -it minethetag_db_1 bash
+   root@ec51dbaaa231:/# su postgres
+   $ psql -d mttg
+   psql (9.6.2)
+   Type "help" for help.
+   mttg=# select * from users where id=1;
+    id | name | password|blocked           
+   ----+------+-----------------------------------------+----------------------------
+   1|test| $6$rounds=656000$ic10D72/fsbAxTGY$V8.7307YKr3oK/2Tgb6M.QMjmy/q2p3.ElbvnFOY0BxL4YxHCI2o7Z6A4brtZ/QxZdBX2q5NuKxPtFv/z7NpZ/ | 
+   2017-05-21 11:54:36.884878
+   (1 row)
+
+</pre>
+<p>Per a més detalls de la implementació, podeu consultar el codi.
+</p>
+<h1><span id="Referències"></span><span class="mw-headline" id="Refer.C3.A8ncies">Referències</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=11" title="Edit section: Referències">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=11" title="Edit section: Referències">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="GitHub_del_projecte">GitHub del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=12" title="Edit section: GitHub del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=12" title="Edit section: GitHub del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En el <a class="external text" href="https://github.com/MineTheTag" rel="nofollow">GitHub de MineTheTag</a> podreu trobar tot el codi que hem utilitzat
+</p>
+<h2><span id="Referències_externes"></span><span class="mw-headline" id="Refer.C3.A8ncies_externes">Referències externes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;veaction=edit&amp;section=13" title="Edit section: Referències externes">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:MineTheTag&amp;action=edit&amp;section=13" title="Edit section: Referències externes">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://httpd.apache.org/docs/" rel="nofollow">Documentació d’Apache</a></li>
+<li><a class="external text" href="https://www.nginx.com/resources/admin-guide/" rel="nofollow">Guia d’NGINX</a></li>
+<li><a class="external text" href="https://developer.android.com/index.html" rel="nofollow">Docs d’Android</a></li>
+<li><a class="external text" href="https://www.opencontainers.org/community" rel="nofollow">Open Containers</a></li>
+<li><a class="external text" href="https://developer.android.com/guide/topics/connectivity/nfc/index.html" rel="nofollow">NFC per Android</a></li>
+<li><a class="external text" href="https://wiki.openstreetmap.org/wiki/API" rel="nofollow">API OpenStreetMap</a></li>
+<li><a class="external text" href="https://docs.docker.com/" rel="nofollow">Docker</a></li>
+<li><a class="external text" href="https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html" rel="nofollow">SQLite amb Android</a></li>
+<li><a class="external text" href="http://www.ganttproject.biz" rel="nofollow">Gantt</a></li>
+<li><a class="external text" href="http://flask.pocoo.org/docs/0.12/" rel="nofollow">Flask</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20250710083831
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.024 seconds
+Real time usage: 0.030 seconds
+Preprocessor visited node count: 73/1000000
+Post‐expand include size: 255/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.477      1 -total
+ 13.92%    0.623      1 Template:Aws_access_key
+ 10.86%    0.486      1 Template:Aws_secret_key
+ 10.48%    0.469      1 Template:Domain
+ 10.36%    0.464      1 Template:Region
+ 10.25%    0.459      2 Template:Item.public_ip
+ 10.21%    0.457      1 Template:Ami_id
+ 10.14%    0.454      2 Template:Ec2.instances
+ 10.01%    0.448      1 Template:He_dns_password
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:295-0!canonical and timestamp 20250710083831 and revision id 328
+ -->
+</div>

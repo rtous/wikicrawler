@@ -1,0 +1,165 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:SecuredAccessLogo.png"><img alt="SecuredAccessLogo.png" data-file-height="153" data-file-width="685" decoding="async" height="179" src="/pti/images/e/ed/SecuredAccessLogo.png" width="800"/></a></div></div>
+<p><br/>
+</p><p><br/>
+</p>
+<div style="text-align: center;">El objetivo de este proyecto es ofrecer una solución que integre tanto componentes hardware  como  software </div>
+<div style="text-align: center;">para la implementación de un sistema de control de acceso para el hogar, la oficina o cualquier otro entorno.</div>
+<p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Contexto"><span class="tocnumber">1</span> <span class="toctext">Contexto</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Agentes_implicados"><span class="tocnumber">2</span> <span class="toctext">Agentes implicados</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#A_qui.C3.A9n_va_dirigido"><span class="tocnumber">2.1</span> <span class="toctext">A quién va dirigido</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Qui.C3.A9n_lo_usar.C3.A1"><span class="tocnumber">2.2</span> <span class="toctext">Quién lo usará</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Qui.C3.A9n_se_beneficiar.C3.A1_de_los_resultados"><span class="tocnumber">2.3</span> <span class="toctext">Quién se beneficiará de los resultados</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Formulaci.C3.B3n_del_problema"><span class="tocnumber">3</span> <span class="toctext">Formulación del problema</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Objetivo_principal"><span class="tocnumber">3.1</span> <span class="toctext">Objetivo principal</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Objetivos_espec.C3.ADficos"><span class="tocnumber">3.2</span> <span class="toctext">Objetivos específicos</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Tecnolog.C3.ADas"><span class="tocnumber">4</span> <span class="toctext">Tecnologías</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Casos_de_uso"><span class="tocnumber">5</span> <span class="toctext">Casos de uso</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#An.C3.A1lisis_de_algoritmos"><span class="tocnumber">6</span> <span class="toctext">Análisis de algoritmos</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Empaquetado_del_proyecto"><span class="tocnumber">7</span> <span class="toctext">Empaquetado del proyecto</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Contexto">Contexto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=1" title="Edit section: Contexto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=1" title="Edit section: Contexto">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Hoy en día la seguridad es una de las partes más importantes en nuestro día a día, existen empresas que a cambio de remuneración te instalan su sistema. Nuestro objetivo es proporcionar una solución que integre tanto componentes hardware  como  software para la implementación de un sistema de control de acceso para el hogar, la oficina o cualquier otro entorno para todas aquellas personas que no pueden afrontar los costes de un sistema comercial o simplemente no requieran de un nivel de seguridad tan extremo.
+</p><p>El proyecto consiste en la creación de una plataforma de administración para la apertura de un punto de acceso. Aún así, el sistema es extensible a prácticamente cualquier otro tipo de objeto. En el ámbito de la aplicación existirá un administrador que será el encargado de gestionar los usuarios que podrán acceder y los que no. Además podrá obtener estadísticas de los registros que se generan cada vez que un usuario intente acceder. 
+</p>
+<h1><span class="mw-headline" id="Agentes_implicados">Agentes implicados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=2" title="Edit section: Agentes implicados">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=2" title="Edit section: Agentes implicados">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Los principales actores implicados en este proyecto, es decir, todos los usuarios que tendrán algún tipo de relación con el proyecto; usuarios y administrador de la plataforma.
+</p>
+<h3><span id="A_quién_va_dirigido"></span><span class="mw-headline" id="A_qui.C3.A9n_va_dirigido">A quién va dirigido</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=3" title="Edit section: A quién va dirigido">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=3" title="Edit section: A quién va dirigido">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Este proyecto va dirigido a toda persona que quiera obtener un mínimo de seguridad en el ámbito del acceso de usuarios, invirtiendo poco dinero y recursos.
+</p>
+<h3><span id="Quién_lo_usará"></span><span class="mw-headline" id="Qui.C3.A9n_lo_usar.C3.A1">Quién lo usará</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=4" title="Edit section: Quién lo usará">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=4" title="Edit section: Quién lo usará">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Este proyecto está pensado para que pueda ser utilizado tanto por empresas como por usuarios finales que quieran adquirir un mínimo de seguridad por muy poca inversión económica.
+</p>
+<h3><span id="Quién_se_beneficiará_de_los_resultados"></span><span class="mw-headline" id="Qui.C3.A9n_se_beneficiar.C3.A1_de_los_resultados">Quién se beneficiará de los resultados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=5" title="Edit section: Quién se beneficiará de los resultados">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=5" title="Edit section: Quién se beneficiará de los resultados">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Los beneficiarios serán los propios usuarios que utilizan nuestra solución ya que les proporcionará una manera sencilla y segura de acceder al sitio en concreto que se desea proteger mediante el uso de su propio smartphone. Los creadores del proyecto en ningún momento obtendrán ningún tipo de compensación económica por el uso de la plataforma, sin embargo servirá de referencia para posibles oportunidades de trabajo.
+</p><p><br/>
+</p>
+<h1><span id="Formulación_del_problema"></span><span class="mw-headline" id="Formulaci.C3.B3n_del_problema">Formulación del problema</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=6" title="Edit section: Formulación del problema">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=6" title="Edit section: Formulación del problema">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para poder llegar a una solución primero se han tenido que definir una serie de objetivos ya sean de forma global o específica. En esta sección se abarcan desde el objetivo principal de la aplicación como el objetivo específico de cada parte que conforma el sistema en su totalidad. 
+</p>
+<h2><span class="mw-headline" id="Objetivo_principal">Objetivo principal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=7" title="Edit section: Objetivo principal">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=7" title="Edit section: Objetivo principal">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El proyecto consiste en la creación de una plataforma de administración para la apertura de un punto de acceso. Aún así, el sistema es extensible a prácticamente cualquier otro tipo de objeto. En el ámbito de la aplicación existirá un administrador que será el encargado de gestionar los usuarios que podrán acceder y los que no. Además podrá obtener estadísticas de los registros que se generan cada vez que un usuario intente acceder.
+</p>
+<h2><span id="Objetivos_específicos"></span><span class="mw-headline" id="Objetivos_espec.C3.ADficos">Objetivos específicos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=8" title="Edit section: Objetivos específicos">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=8" title="Edit section: Objetivos específicos">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:SecureAccessDiagram.JPG"><img alt="" class="thumbimage" data-file-height="529" data-file-width="802" decoding="async" height="330" src="/pti/images/thumb/1/19/SecureAccessDiagram.JPG/500px-SecureAccessDiagram.JPG" srcset="/pti/images/thumb/1/19/SecureAccessDiagram.JPG/750px-SecureAccessDiagram.JPG 1.5x, /pti/images/1/19/SecureAccessDiagram.JPG 2x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:SecureAccessDiagram.JPG" title="Enlarge"></a></div>Diagrama de Secured Access</div></div></div>
+<p>Los objetivos específicos del proyecto estarán enfocados en la implementación de tecnologías que hasta ahora ninguno de los integrantes del proyecto habíamos utilizado.
+</p>
+<ul><li>Para el servicio de backend se utilizará <b>Node.js</b>. Este lenguaje de programación nos proporcionará el despliegue del servidor sobre el que se creará una <b>API REST</b> que proporcionará a los clientes una plataforma sobre la que hacer peticiones a base de datos.</li></ul>
+<ul><li>Para la aplicación móvil se ha usado <b>Android</b> debido a su gran uso en el mercado actual. Para desarrollar la aplicación se ha usado Android Studio, un  IDE especializado en Android. Para la comunicación entre la aplicación Android y el servidor se ha usado un <b>REST client</b> llamado Retrofit que facilita la implementación de las conexiones con el servidor. Para el sistema de notificaciones se ha adaptado el servicio de Geofencing de Google.</li></ul>
+<ul><li>Para el servicio de frontend se utilizará <b>AngularJS</b> junto con Angular Material, un framework que nos proporcionará componentes visuales y su lógica de una manera relativamente sencilla.</li></ul>
+<ul><li>Para la creación de la <b>API REST</b> se ha utilizado el framework de Node.js llamado <b>Express</b> que nos proporcionará de una manera sencilla la creación de los servicios.</li></ul>
+<ul><li>La conexión de la base de datos con el servidor se hará con un framework de Node.js llamado <b>Mongoose</b>, desde este framework se podrá realizar queries <b>NoSQL</b> a la base de datos y recibir respuesta.</li></ul>
+<ul><li>Se utilizará la herramienta <b>Docker</b> con el fin de empaquetar la aplicación en un contenedor. Un contenedor Docker permite que la aplicación sea portable, es decir, que se pueda ejecutar en cualquier máquina independientemente del sistema operativo que corra.</li></ul>
+<ul><li>En la parte del servidor se llamarán a servicios batch para hacer la comprobación entre los patrones en base de datos y los patrones recibidos de la aplicación Android, estos servicios están programados con <b>Python</b> y <b>OpenCV</b>.</li></ul>
+<ul><li>Para la base de datos se utilizará una <b>MongoDB</b>, es decir, una base de datos NoSQL que utiliza como lenguaje de programación JavaScript. El objetivo será aprender cómo funciona Mongo y como utilizarlo dentro de una Raspberry PI 3.</li></ul>
+<ul><li>La función principal del <b>Arduino</b> es la de actuar como interfaz entre la Raspberry Pi y la realización de la tarea de dar o denegar acceso.</li></ul>
+<ul><li>La Raspberry Pi será la encargada de alojar el servidor, la base de datos y el BackOffice. Además se encargará de determinar si da la orden de abrir al Arduino. Estará conectada a este mediante un cable USB type A-B. El sistema operativo que se ha utilizado para la Raspberry Pi es Raspbian, una distribución de escritorio derivada de Debian adaptada para su hardware.</li></ul>
+<h1><span id="Tecnologías"></span><span class="mw-headline" id="Tecnolog.C3.ADas">Tecnologías</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=9" title="Edit section: Tecnologías">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=9" title="Edit section: Tecnologías">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>A continuación se listan las tecnologías utilizadas. En caso de tratarse de software, servicios o frameworks se han clasificado según sobre que plataforma se ha ejecutado. 
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:SecureAccessTechnologies.JPG"><img alt="" class="thumbimage" data-file-height="516" data-file-width="924" decoding="async" height="279" src="/pti/images/thumb/b/b3/SecureAccessTechnologies.JPG/500px-SecureAccessTechnologies.JPG" srcset="/pti/images/thumb/b/b3/SecureAccessTechnologies.JPG/750px-SecureAccessTechnologies.JPG 1.5x, /pti/images/b/b3/SecureAccessTechnologies.JPG 2x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:SecureAccessTechnologies.JPG" title="Enlarge"></a></div>Tecnologías</div></div></div>
+<p><b>Smartphone</b>
+</p>
+<ul><li>Android
+<ul><li>Servicios de Android</li>
+<li>Librerías externas
+<ul><li>Retrofit</li></ul></li></ul></li></ul>
+<p><b>Raspberry</b>
+</p>
+<ul><li>Frontend
+<ul><li>AngularJS</li>
+<li>Angular Material</li></ul></li>
+<li>Backend
+<ul><li>Node
+<ul><li>Express</li>
+<li>Mongoose</li></ul></li>
+<li>MongoDB</li></ul></li>
+<li>Scripts
+<ul><li>Python</li>
+<li>OpenCV</li></ul></li>
+<li>Docker</li></ul>
+<p><b>Arduino</b>
+</p>
+<ul><li>C</li></ul>
+<h1><span class="mw-headline" id="Casos_de_uso">Casos de uso</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=10" title="Edit section: Casos de uso">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=10" title="Edit section: Casos de uso">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Un aspecto muy importante en la organización y desarrollo del proyecto es el planteamiento de los casos de uso. A continuación se listan agrupados todos los casos de uso definidos para la aplicación. Algunos de ellos están presentes en más de una plataforma.
+</p><p><br/>
+<b>Usuarios</b>
+</p>
+<ul><li>Creación del administrador</li>
+<li>Creación de usuarios</li>
+<li>Modificación de usuarios</li>
+<li>Eliminación de usuarios</li>
+<li>Desbloqueo/bloqueo de usuarios</li></ul>
+<p><br/>
+<b>Credenciales</b>
+</p>
+<ul><li>Inicio de sesión</li>
+<li>Cierre de sesión</li>
+<li>Creación de credenciales de acceso</li>
+<li>Introducción de credenciales de acceso</li>
+<li>Modificación de credenciales de acceso</li>
+<li>Eliminación de credenciales de acceso</li></ul>
+<p><br/>
+<b>Geolocalización</b>
+</p>
+<ul><li>Obtención de la geolocalización del punto de acceso</li>
+<li>Modificación de la geolocalización del punto de acceso</li></ul>
+<p><br/>
+<b>Consultas</b>
+</p>
+<ul><li>Consulta de los usuarios</li>
+<li>Consulta de las estadísticas de los registros</li>
+<li>Consulta los datos de los registros</li></ul>
+<h1><span id="Análisis_de_algoritmos"></span><span class="mw-headline" id="An.C3.A1lisis_de_algoritmos">Análisis de algoritmos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=11" title="Edit section: Análisis de algoritmos">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=11" title="Edit section: Análisis de algoritmos">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>Reconocimiento facial</b>
+</p><p>Para poder llevar a cabo el reconocimiento facial de los usuarios, el sistema ejecutará un algoritmo que se describe con los siguientes pasos:
+</p>
+<ol><li>Detectar la región que ocupa la cara en cada una de las cinco imágenes que previamente el usuario ha guardado en la base de datos. Para ello, se emplea un Haar Cascade típico de OpenCV.</li>
+<li>Se crea un Face Recognition Object al que se le introducen las imágenes para entrenarlo y que así extraiga el patrón de reconocimiento de éstas.</li>
+<li>Se realizan los dos anteriores pasos para la imagen que se quiere evaluar, se compara con las imágenes que hay en el Face Recognition Object y se obtiene una confianza. Una confianza muy elevada significa que las imágenes de la base de datos son muy diferentes respecto a la del usuario que desea acceder. Mientras que una confianza muy baja significa que las diferencias entre las imágenes de la base de datos y la del usuario son mínimas.</li>
+<li>Por último, se debe determinar si la confianza obtenida entra en el umbral de aceptación De tal manera que si la confianza obtenida es lo suficientemente pequeña, se puede dar por válido el acceso.</li></ol>
+<p>Se han obtenido resultados satisfactorios dando confianzas muy dispares, para usuarios correctos y erróneos. No obstante, la calidad de la cámara, el fondo y la iluminación son factores claves para determinar el umbral de aceptación. El script se ha elaborado con el lenguaje de programación Python y se han necesitado los siguientes módulos: cv2 (OpenCV), os, numpy e Image.
+</p><p><b>Contraseña y patrón</b>
+</p><p>Tanto para el acceso por password como por patrón, lo único que se requiere es que los parámetros que introduce el usuario y los que tiene guardados la base de datos sean idénticos. El script se ha elaborado con el lenguaje de programación Python y se ha necesitado el módulo sys.
+</p>
+<h1><span class="mw-headline" id="Empaquetado_del_proyecto">Empaquetado del proyecto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;veaction=edit&amp;section=12" title="Edit section: Empaquetado del proyecto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecuredAccess&amp;action=edit&amp;section=12" title="Edit section: Empaquetado del proyecto">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para llevar a cabo el empaquetado del proyecto se ha utilizado una herramienta innovadora y que está teniendo muchas repercusiones en el mercado y en las aplicaciones portables.
+</p><p><b>Docker</b>
+</p><p>La principal idea de utilizar Docker es poder paquetizar todo el proyecto en una solo contenedor, de esta manera será portable y se podrá ejecutar todo el proyecto en cualquier sistema operativo.
+</p><p>Se ha instalado la versión de Hypriot’s 1.10.3, ya que la versión oficial de Docker sólo llega hasta la 1.3.3, dicha versión es antigua y está desactualizada, con lo cual habrá funcionalidades e imágenes que no funcionarán. Una vez instalado, se ha descargado e instalado la imagen resin/rpi-raspbian/, una imagen de Raspbian básica.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250709134314
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.038 seconds
+Real time usage: 0.046 seconds
+Preprocessor visited node count: 40/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:150-0!canonical and timestamp 20250709134314 and revision id 180
+ -->
+</div>

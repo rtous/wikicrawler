@@ -1,0 +1,423 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Proyecto_myAppNFC"><span class="tocnumber">1</span> <span class="toctext">Proyecto myAppNFC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#1._Resumen_de_la_propuesta"><span class="tocnumber">1.1</span> <span class="toctext">1. Resumen de la propuesta</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#MyAppNFC"><span class="tocnumber">1.1.1</span> <span class="toctext">MyAppNFC</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#RunningApp"><span class="tocnumber">1.1.2</span> <span class="toctext">RunningApp</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#2._Tecnolog.C3.ADas_utilizadas"><span class="tocnumber">1.2</span> <span class="toctext">2. Tecnologías utilizadas</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Composer"><span class="tocnumber">1.2.1</span> <span class="toctext">Composer</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Vagrant"><span class="tocnumber">1.2.2</span> <span class="toctext">Vagrant</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Zend_Framework_2"><span class="tocnumber">1.2.3</span> <span class="toctext">Zend Framework 2</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Apigility"><span class="tocnumber">1.2.4</span> <span class="toctext">Apigility</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Raspberry_Pi"><span class="tocnumber">1.2.5</span> <span class="toctext">Raspberry Pi</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Esquema_general"><span class="tocnumber">1.3</span> <span class="toctext">Esquema general</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#4._Estructura_del_proyecto"><span class="tocnumber">1.4</span> <span class="toctext">4. Estructura del proyecto</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#MyAppNFC_2"><span class="tocnumber">1.4.1</span> <span class="toctext">MyAppNFC</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="#Patrones_de_dise.C3.B1o"><span class="tocnumber">1.4.1.1</span> <span class="toctext">Patrones de diseño</span></a>
+<ul>
+<li class="toclevel-5 tocsection-15"><a href="#MVC"><span class="tocnumber">1.4.1.1.1</span> <span class="toctext">MVC</span></a></li>
+<li class="toclevel-5 tocsection-16"><a href="#Modelo"><span class="tocnumber">1.4.1.1.2</span> <span class="toctext">Modelo</span></a></li>
+<li class="toclevel-5 tocsection-17"><a href="#Vista"><span class="tocnumber">1.4.1.1.3</span> <span class="toctext">Vista</span></a></li>
+<li class="toclevel-5 tocsection-18"><a href="#Controlador"><span class="tocnumber">1.4.1.1.4</span> <span class="toctext">Controlador</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-19"><a href="#Estructura_Zend_Framework_2"><span class="tocnumber">1.4.1.2</span> <span class="toctext">Estructura Zend Framework 2</span></a>
+<ul>
+<li class="toclevel-5 tocsection-20"><a href="#Controller"><span class="tocnumber">1.4.1.2.1</span> <span class="toctext">Controller</span></a></li>
+<li class="toclevel-5 tocsection-21"><a href="#Factory"><span class="tocnumber">1.4.1.2.2</span> <span class="toctext">Factory</span></a></li>
+<li class="toclevel-5 tocsection-22"><a href="#Form"><span class="tocnumber">1.4.1.2.3</span> <span class="toctext">Form</span></a></li>
+<li class="toclevel-5 tocsection-23"><a href="#Mapper"><span class="tocnumber">1.4.1.2.4</span> <span class="toctext">Mapper</span></a></li>
+<li class="toclevel-5 tocsection-24"><a href="#Model"><span class="tocnumber">1.4.1.2.5</span> <span class="toctext">Model</span></a></li>
+<li class="toclevel-5 tocsection-25"><a href="#Service"><span class="tocnumber">1.4.1.2.6</span> <span class="toctext">Service</span></a></li>
+<li class="toclevel-5 tocsection-26"><a href="#Storage"><span class="tocnumber">1.4.1.2.7</span> <span class="toctext">Storage</span></a></li>
+<li class="toclevel-5 tocsection-27"><a href="#Router"><span class="tocnumber">1.4.1.2.8</span> <span class="toctext">Router</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-28"><a href="#Web_services"><span class="tocnumber">1.4.1.3</span> <span class="toctext">Web services</span></a>
+<ul>
+<li class="toclevel-5 tocsection-29"><a href="#LoginUser"><span class="tocnumber">1.4.1.3.1</span> <span class="toctext">LoginUser</span></a></li>
+<li class="toclevel-5 tocsection-30"><a href="#ProfileByUser"><span class="tocnumber">1.4.1.3.2</span> <span class="toctext">ProfileByUser</span></a></li>
+<li class="toclevel-5 tocsection-31"><a href="#SaveUser"><span class="tocnumber">1.4.1.3.3</span> <span class="toctext">SaveUser</span></a></li>
+<li class="toclevel-5 tocsection-32"><a href="#ServicesByUser"><span class="tocnumber">1.4.1.3.4</span> <span class="toctext">ServicesByUser</span></a></li>
+<li class="toclevel-5 tocsection-33"><a href="#SetServicesByUser"><span class="tocnumber">1.4.1.3.5</span> <span class="toctext">SetServicesByUser</span></a></li>
+<li class="toclevel-5 tocsection-34"><a href="#TokensUser"><span class="tocnumber">1.4.1.3.6</span> <span class="toctext">TokensUser</span></a></li>
+<li class="toclevel-5 tocsection-35"><a href="#SetTokenUser"><span class="tocnumber">1.4.1.3.7</span> <span class="toctext">SetTokenUser</span></a></li>
+<li class="toclevel-5 tocsection-36"><a href="#TokensUserById"><span class="tocnumber">1.4.1.3.8</span> <span class="toctext">TokensUserById</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="#4._Screenshots"><span class="tocnumber">1.5</span> <span class="toctext">4. Screenshots</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="#Web"><span class="tocnumber">1.5.1</span> <span class="toctext">Web</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Android"><span class="tocnumber">1.5.2</span> <span class="toctext">Android</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-40"><a href="#RunningApp_2"><span class="tocnumber">1.6</span> <span class="toctext">RunningApp</span></a>
+<ul>
+<li class="toclevel-3 tocsection-41"><a href="#Configuraci.C3.B3n_Raspberry"><span class="tocnumber">1.6.1</span> <span class="toctext">Configuración Raspberry</span></a>
+<ul>
+<li class="toclevel-4 tocsection-42"><a href="#Instalaci.C3.B3n_entorno"><span class="tocnumber">1.6.1.1</span> <span class="toctext">Instalación entorno</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="#Grabar_el_sistema_operativo_en_la_tarjeta_sd"><span class="tocnumber">1.6.1.2</span> <span class="toctext">Grabar el sistema operativo en la tarjeta sd</span></a></li>
+<li class="toclevel-4 tocsection-44"><a href="#Configuraci.C3.B3n_wifi"><span class="tocnumber">1.6.1.3</span> <span class="toctext">Configuración wifi</span></a></li>
+<li class="toclevel-4 tocsection-45"><a href="#Configuraci.C3.B3n_del_sistema_operativo"><span class="tocnumber">1.6.1.4</span> <span class="toctext">Configuración del sistema operativo</span></a></li>
+<li class="toclevel-4 tocsection-46"><a href="#Instalaci.C3.B3n_apache_y_php"><span class="tocnumber">1.6.1.5</span> <span class="toctext">Instalación apache y php</span></a></li>
+<li class="toclevel-4 tocsection-47"><a href="#Instalaci.C3.B3n_librer.C3.ADas_y_drivers_lector_nfc"><span class="tocnumber">1.6.1.6</span> <span class="toctext">Instalación librerías y drivers lector nfc</span></a></li>
+<li class="toclevel-4 tocsection-48"><a href="#nxppy"><span class="tocnumber">1.6.1.7</span> <span class="toctext">nxppy</span></a></li>
+<li class="toclevel-4 tocsection-49"><a href="#Compatibilidad"><span class="tocnumber">1.6.1.8</span> <span class="toctext">Compatibilidad</span></a></li>
+<li class="toclevel-4 tocsection-50"><a href="#Requisitos"><span class="tocnumber">1.6.1.9</span> <span class="toctext">Requisitos</span></a></li>
+<li class="toclevel-4 tocsection-51"><a href="#Instalaci.C3.B3n"><span class="tocnumber">1.6.1.10</span> <span class="toctext">Instalación</span></a></li>
+<li class="toclevel-4 tocsection-52"><a href="#Aplicaci.C3.B3n_python"><span class="tocnumber">1.6.1.11</span> <span class="toctext">Aplicación python</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-53"><a href="#Aplicaci.C3.B3n_m.C3.B3vil"><span class="tocnumber">1.6.2</span> <span class="toctext">Aplicación móvil</span></a>
+<ul>
+<li class="toclevel-4 tocsection-54"><a href="#Android_2"><span class="tocnumber">1.6.2.1</span> <span class="toctext">Android</span></a></li>
+<li class="toclevel-4 tocsection-55"><a href="#Clases_aplicaci.C3.B3n_android"><span class="tocnumber">1.6.2.2</span> <span class="toctext">Clases aplicación android</span></a>
+<ul>
+<li class="toclevel-5 tocsection-56"><a href="#BaseDeDatos"><span class="tocnumber">1.6.2.2.1</span> <span class="toctext">BaseDeDatos</span></a></li>
+<li class="toclevel-5 tocsection-57"><a href="#GcmBroadcastReceiver"><span class="tocnumber">1.6.2.2.2</span> <span class="toctext">GcmBroadcastReceiver</span></a></li>
+<li class="toclevel-5 tocsection-58"><a href="#GcmMessageHandler"><span class="tocnumber">1.6.2.2.3</span> <span class="toctext">GcmMessageHandler</span></a></li>
+<li class="toclevel-5 tocsection-59"><a href="#LoginActivity"><span class="tocnumber">1.6.2.2.4</span> <span class="toctext">LoginActivity</span></a></li>
+<li class="toclevel-5 tocsection-60"><a href="#RegisterActivity"><span class="tocnumber">1.6.2.2.5</span> <span class="toctext">RegisterActivity</span></a></li>
+<li class="toclevel-5 tocsection-61"><a href="#MainActivity"><span class="tocnumber">1.6.2.2.6</span> <span class="toctext">MainActivity</span></a></li>
+<li class="toclevel-5 tocsection-62"><a href="#EditProfileActivity"><span class="tocnumber">1.6.2.2.7</span> <span class="toctext">EditProfileActivity</span></a></li>
+<li class="toclevel-5 tocsection-63"><a href="#Treas_asincronas:"><span class="tocnumber">1.6.2.2.8</span> <span class="toctext">Treas asincronas:</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Proyecto_myAppNFC">Proyecto myAppNFC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=1" title="Edit section: Proyecto myAppNFC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=1" title="Edit section: Proyecto myAppNFC">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="1._Resumen_de_la_propuesta">1. Resumen de la propuesta</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=2" title="Edit section: 1. Resumen de la propuesta">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=2" title="Edit section: 1. Resumen de la propuesta">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="MyAppNFC">MyAppNFC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=3" title="Edit section: MyAppNFC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=3" title="Edit section: MyAppNFC">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El equipo de MyAppNFC después de realizar una investigación sobre el mercado actual
+tecnológico nos dimos cuenta que cada vez más se escucha hablar de “Internet of things” y
+el 5G, la mayoría de blogs tecnológicos hablan de que algún día todo estará todo
+interconectado.
+Con esta visión de la tecnología actual indaguemos más sobre el tema de “Internet of
+things” y actualmente hay una serie de dispositivos habitualmente utilizados para realizar las
+tareas de esta rama de la tecnología, que son dispositivos que responden con información
+al aplicar un campo electromagnético.
+Esta tecnología de comunicación inalámbrica, de corto alcance y alta frecuencia podemos
+diferenciar varios tipos como por ejemplo RFID o NFC.
+Hay muchas ideas y proyectos que son desarrollados utilizando estas tecnologías para ir
+interconectando las cosas pero hay un problema que no se ha solucionado aún, cómo vamos a
+interconectar todo si cada uno monta todo su sistema de almacenamiento de información y
+gestión de NFC.
+Es aquí donde nosotros aparecemos y es el problema que queremos solucionar, nuestra idea
+consiste en montar toda una infraestructura para crear y validar la información que se registran
+en los NFC y tener centralizado la información que se quiere consultar, que normalmente será
+información de un usuario.
+</p>
+<h3><span class="mw-headline" id="RunningApp">RunningApp</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=4" title="Edit section: RunningApp">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=4" title="Edit section: RunningApp">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>De forma paralela al proyecto MyAppNFC hemos implementado un proyecto para demostrar
+la utilidad de la plataforma de web services.
+El proyecto consiste en que somos una empresa de publicidad que tiene varios carteles de
+publicidad repartidos por la ciudad, se ha hecho un estudio para aumentar la efectividad en
+las visualizaciones de la publicidad, en el estudio se han dado cuenta que en algunas zonas
+que tiene carteles de publicidad los runners que hay por la zona siempre realizan el mismo
+circuito y pasan a pocos metros de los carteles.
+La empresa de marketing quiere premiar a los runners que observan la publicidad y se han
+enterado que las empresas importantes como nike o adidas están introduciendo unos tags
+NFC en la suela de las bambas y que hay una empresa que ofrece información del
+propietario de las bambas con el identificador que está grabado en el NFC.
+La idea que han tenido los responsables de marketing es la de ofrecer el tiempo por vuelta
+en ese circuito preestablecido y que el tiempo por vuelta será mostrado en alguna parte del
+cartel publicitario y ademas sera enviado al dispositivo móvil del usuario
+</p>
+<h2><span id="2._Tecnologías_utilizadas"></span><span class="mw-headline" id="2._Tecnolog.C3.ADas_utilizadas">2. Tecnologías utilizadas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=5" title="Edit section: 2. Tecnologías utilizadas">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=5" title="Edit section: 2. Tecnologías utilizadas">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Composer">Composer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=6" title="Edit section: Composer">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=6" title="Edit section: Composer">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Composer es un gestor de dependencias, no un gestor de paquetes. Instala las librerías
+que requiere el proyecto con las versiones que necesite, y resuelve las dependencias entre
+las librerías. La instalación siempre es local, las librerías se instalan en un directorio por
+defecto ‘/vendor’.
+</p>
+<h3><span class="mw-headline" id="Vagrant">Vagrant</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=7" title="Edit section: Vagrant">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=7" title="Edit section: Vagrant">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Vagrant es una herramienta para la creación y configuración de entornos de desarrollo
+virtualizados. En Vagrant podemos instalar y configurar software en una máquina virtual
+para que podamos simular que estamos en el servidor en el que se alojaría la aplicación
+Web. La principal ventaja es que si queremos desarrollar una aplicación Web, Vagrant tiene
+“cajas” con sistemas operativos y entornos ya preparados para desarrollar directamente en
+ellos.
+</p>
+<h3><span class="mw-headline" id="Zend_Framework_2">Zend Framework 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=8" title="Edit section: Zend Framework 2">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=8" title="Edit section: Zend Framework 2">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Zend framework 2 es un conjunto de librerías para el lenguaje de programación PHP, este
+framework sigue una arquitectura MVC.
+</p>
+<h3><span class="mw-headline" id="Apigility">Apigility</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=9" title="Edit section: Apigility">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=9" title="Edit section: Apigility">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Módulo del Zend framework para la gestión de los web services.
+SOA ­ Arquitectura orientada a servicios
+La Arquitectura Orientada a Servicios (SOA, siglas del inglés Service Oriented Architecture)
+es un paradigma de arquitectura para diseñar y desarrollar sistemas distribuidos. Las
+soluciones SOA han sido creadas para satisfacer los objetivos de negocio las cuales
+incluyen facilidad y flexibilidad de integración con sistemas legados, alineación directa a los
+procesos de negocio reduciendo costos de implementación, innovación de servicios a
+clientes y una adaptación ágil ante cambios incluyendo reacción temprana ante la
+competitividad.
+Permite la creación de sistemas de información altamente escalables que reflejan el negocio
+de la organización, a su vez brinda una forma bien definida de exposición e invocación de
+servicios (comúnmente pero no exclusivamente servicios web), lo cual facilita la interacción
+entre diferentes sistemas propios o de terceros.
+</p>
+<h3><span class="mw-headline" id="Raspberry_Pi">Raspberry Pi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=10" title="Edit section: Raspberry Pi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=10" title="Edit section: Raspberry Pi">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Raspberry Pi es un ordenador de placa reducida, ordenador de placa única u ordenador de
+placa simple (SBC) de bajo coste desarrollado en Reino Unido por la Fundación Raspberry
+Pi, con el objetivo de estimular la enseñanza de ciencias de la computación en las escuelas.
+</p>
+<h2><span class="mw-headline" id="Esquema_general">Esquema general</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=11" title="Edit section: Esquema general">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=11" title="Edit section: Esquema general">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="image" href="/pti/index.php/File:Scheme1.png"><img alt="Scheme1.png" data-file-height="844" data-file-width="1146" decoding="async" height="844" src="/pti/images/f/ff/Scheme1.png" width="1146"/></a>
+</p>
+<h2><span class="mw-headline" id="4._Estructura_del_proyecto">4. Estructura del proyecto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=12" title="Edit section: 4. Estructura del proyecto">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=12" title="Edit section: 4. Estructura del proyecto">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="MyAppNFC_2">MyAppNFC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=13" title="Edit section: MyAppNFC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=13" title="Edit section: MyAppNFC">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="Patrones_de_diseño"></span><span class="mw-headline" id="Patrones_de_dise.C3.B1o">Patrones de diseño</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=14" title="Edit section: Patrones de diseño">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=14" title="Edit section: Patrones de diseño">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h5><span class="mw-headline" id="MVC">MVC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=15" title="Edit section: MVC">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=15" title="Edit section: MVC">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Es probablemente uno de los patrones más usados y cotizados en el mundo de la programación web en los últimos años. 
+</p><p>Es un patrón de arquitectura que describe una forma de estructurar nuestra aplicación y las responsabilidades y las interacciones de cada parte en esa estructura. Separa los datos y la lógica de negocio de una aplicación de la interfaz de usuario y el módulo encargado de gestionar los eventos y las comunicaciones. Para ello MVC propone la construcción de tres componentes distintos que son el modelo, la vista y el controlador, es decir, por un lado define componentes para la representación de la información, y por otro lado para la interacción del usuario. Este patrón de arquitectura de software se basa en las ideas de reutilización de código y la separación de conceptos, características que buscan facilitar la tarea de desarrollo de aplicaciones y su posterior mantenimiento.
+</p>
+<h5><span class="mw-headline" id="Modelo">Modelo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=16" title="Edit section: Modelo">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=16" title="Edit section: Modelo">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>El modelo contiene la parte más importante de nuestra lógica de la aplicación, la lógica que se aplica al proyecto que desarrollamos. Es la representación de los datos, con lo que el sistema opera, y las reglas, que se aplican a estos datos. Por lo tanto, gestiona todos los accesos a dicha información, tanto consultas como actualizaciones, implementando también los privilegios de acceso que se hayan descrito en las especificaciones de la aplicación (lógica de negocio). Envía a la 'vista' aquella parte de la información que en cada momento se le solicita para que sea mostrada (típicamente a un usuario). Las peticiones de acceso o manipulación de información llegan al 'modelo' a través del 'controlador'.
+</p>
+<h5><span class="mw-headline" id="Vista">Vista</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=17" title="Edit section: Vista">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=17" title="Edit section: Vista">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Ofrece diferentes maneras de visualizar los datos recibidos del modelo. Pueden haber varias vistas diferentes y el controlador tiene que decidir cuál usar.
+Una aplicación web se compone generalmente de un conjunto de controladores, modelos y vistas. El controlador puede estar configurado como un controlador principal que recibe todas las peticiones y llama a los controladores específicos que maneja acciones para cada caso, representando la visualización de los datos que contiene el modelo.
+</p>
+<h5><span class="mw-headline" id="Controlador">Controlador</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=18" title="Edit section: Controlador">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=18" title="Edit section: Controlador">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Actúa tanto en el modelo como en la vista, haciendo de intermediario entre ambos. Controla el flujo de datos en un objeto de modelo, actualiza la vista siempre que cambian los datos, invoca y coordina los recursos/objetos necesarios para realizar la acción que el usuario desea. Responde a eventos (usualmente acciones del usuario), gestiona las peticiones de los usuarios (recibidos como peticiones HTTP GET o POST cuando el usuario hace clic en los elementos de interfaz gráfica de usuario para llevar a cabo las acciones). Mantiene la vista y el modelo separados.
+</p>
+<h4><span class="mw-headline" id="Estructura_Zend_Framework_2">Estructura Zend Framework 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=19" title="Edit section: Estructura Zend Framework 2">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=19" title="Edit section: Estructura Zend Framework 2">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h5><span class="mw-headline" id="Controller">Controller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=20" title="Edit section: Controller">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=20" title="Edit section: Controller">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Un conjunto de clases abstractas de controladores con responsabilidades básicas, tales como escribir eventos e invocar acciones 
+</p>
+<h5><span class="mw-headline" id="Factory">Factory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=21" title="Edit section: Factory">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=21" title="Edit section: Factory">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Proporciona un conjunto de gestores ServiceManager y definiciones para el predeterminado flujo de trabajo y correcto funcionamiento de la aplicación
+</p>
+<h5><span class="mw-headline" id="Form">Form</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=22" title="Edit section: Form">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=22" title="Edit section: Form">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Muestra un formulario para que el usuario proporcione información y 
+gestiona el envío de los datos del formulario y los almacena en la base de datos.
+</p>
+<h5><span class="mw-headline" id="Mapper">Mapper</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=23" title="Edit section: Mapper">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=23" title="Edit section: Mapper">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Es una capa de software que separa los objetos de la base de datos. Su responsabilidad es la transferencia de datos entre los dos y aislarlos unos de otros. Con el Mapper los objetos no tienen necesidad de código de interfaz SQL, ni ningún conocimiento del esquema de base de datos.
+</p>
+<h5><span class="mw-headline" id="Model">Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=24" title="Edit section: Model">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=24" title="Edit section: Model">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Representa cada entidad de la aplicación y utiliza los objetos Mapper para cargar y guardar la información detallada de estas entidades en la base de datos.
+</p>
+<h5><span class="mw-headline" id="Service">Service</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=25" title="Edit section: Service">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=25" title="Edit section: Service">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Es un objeto que ejecuta la lógica de aplicación compleja. Es la parte de la aplicación que enlaza todas las cosas difíciles y permite  entender de manera fácil los resultados.
+</p>
+<h5><span class="mw-headline" id="Storage">Storage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=26" title="Edit section: Storage">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=26" title="Edit section: Storage">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Es el intermediario entre el inicio y cierre de la sesión
+</p>
+<h5><span class="mw-headline" id="Router">Router</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=27" title="Edit section: Router">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=27" title="Edit section: Router">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Es la acción que asigna una petición a un controlador predeterminado. Por lo general, el enrutamiento examina la petición URI, y trata de enlazar el segmento de la ruta URI con las restricciones proporcionadas. Si las restricciones coinciden, se devuelve una serie de "coincidencias", uno de los cuales debe ser el nombre de controlador a ejecutar. Enrutamiento puede utilizar otras partes de la petición URI o del entorno, así - por ejemplo, el host o esquema, los parámetros de consulta, cabeceras, método de la petición, etc.
+</p><p><br/>
+</p>
+<h4><span class="mw-headline" id="Web_services">Web services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=28" title="Edit section: Web services">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=28" title="Edit section: Web services">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Los web services es la parte que comunica la lógica de negocio que tenemos implementada en el backend con al exterior, por ello todos los servicios que ofrecemos se tienen que identificar para poder consumir los servicios a través de la cabecera de autentificación introduciendo un usuario y password que para nosotros representa un usuario de tipo Service.
+Hay que indicar que para la transmisión de datos entre servicios web hay varias opciones en como enviar y responder en la estructura de datos, en nuestro caso hemos decidido que todo se transmita en JSON.
+</p>
+<h5><span class="mw-headline" id="LoginUser">LoginUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=29" title="Edit section: LoginUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=29" title="Edit section: LoginUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio se encarga de validar si un usuario está en el sistema y si la combinación username y password es válida.
+</p>
+<h5><span class="mw-headline" id="ProfileByUser">ProfileByUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=30" title="Edit section: ProfileByUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=30" title="Edit section: ProfileByUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio se encarga de facilitar la información de un usuario del tipo user introduciendo un username válido.
+En el caso que el servicio que está utilizando el web service el usuario ha configurado que este servicio no tiene permiso para consultar la información la respuesta sería un error.
+</p>
+<h5><span class="mw-headline" id="SaveUser">SaveUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=31" title="Edit section: SaveUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=31" title="Edit section: SaveUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio se encarga de insertar o modificar un usuario en la base de datos. Si al servicio se le envía un usuario sin ID este usuario será insertado pero hay que tener en cuenta que el username y el password no tienen que estar previamente en la base de datos, en el caso que enviemos el ID del usuario se realizará las modificaciones pertinentes al usuario con el ID indicado.
+</p>
+<h5><span class="mw-headline" id="ServicesByUser">ServicesByUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=32" title="Edit section: ServicesByUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=32" title="Edit section: ServicesByUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio devuelve un array con todos los servicios del sistema indicando si ese servicio lo tiene activado o no para el usuario consultado.
+</p>
+<h5><span class="mw-headline" id="SetServicesByUser">SetServicesByUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=33" title="Edit section: SetServicesByUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=33" title="Edit section: SetServicesByUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio se utiliza para modificar los permisos que tiene un usuario respecto los servicios.
+</p>
+<h5><span class="mw-headline" id="TokensUser">TokensUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=34" title="Edit section: TokensUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=34" title="Edit section: TokensUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio es para consultar todos los tokens GCM de un usuario
+</p>
+<h5><span class="mw-headline" id="SetTokenUser">SetTokenUser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=35" title="Edit section: SetTokenUser">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=35" title="Edit section: SetTokenUser">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio es para insertar un token a un usuario en concreto
+</p>
+<h5><span class="mw-headline" id="TokensUserById">TokensUserById</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=36" title="Edit section: TokensUserById">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=36" title="Edit section: TokensUserById">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Este servicio es para consultar todos los tokens de un usuario con un identificador de NFC
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="4._Screenshots">4. Screenshots</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=37" title="Edit section: 4. Screenshots">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=37" title="Edit section: 4. Screenshots">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Web">Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=38" title="Edit section: Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=38" title="Edit section: Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Android">Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=39" title="Edit section: Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=39" title="Edit section: Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table>
+<tbody><tr>
+<td>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Login.png"><img alt="Login.png" class="thumbimage" data-file-height="590" data-file-width="309" decoding="async" height="382" src="/pti/images/thumb/6/68/Login.png/200px-Login.png" srcset="/pti/images/thumb/6/68/Login.png/300px-Login.png 1.5x, /pti/images/6/68/Login.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Login.png" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tleft"><div class="thumbinner" style="width:182px;"><a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=New.png" title="File:New.png">File:New.png</a> <div class="thumbcaption">200px</div></div></div>
+</td>
+<td>
+<div class="thumb tleft"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Profile.png"><img alt="Profile.png" class="thumbimage" data-file-height="588" data-file-width="309" decoding="async" height="381" src="/pti/images/thumb/4/49/Profile.png/200px-Profile.png" srcset="/pti/images/thumb/4/49/Profile.png/300px-Profile.png 1.5x, /pti/images/4/49/Profile.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Profile.png" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Profile1.png"><img alt="Profile1.png" class="thumbimage" data-file-height="631" data-file-width="323" decoding="async" height="391" src="/pti/images/thumb/1/1c/Profile1.png/200px-Profile1.png" srcset="/pti/images/thumb/1/1c/Profile1.png/300px-Profile1.png 1.5x, /pti/images/1/1c/Profile1.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Profile1.png" title="Enlarge"></a></div></div></div></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Lap.png"><img alt="Lap.png" class="thumbimage" data-file-height="635" data-file-width="323" decoding="async" height="393" src="/pti/images/thumb/6/6f/Lap.png/200px-Lap.png" srcset="/pti/images/thumb/6/6f/Lap.png/300px-Lap.png 1.5x, /pti/images/6/6f/Lap.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Lap.png" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Services.png"><img alt="Services.png" class="thumbimage" data-file-height="635" data-file-width="338" decoding="async" height="376" src="/pti/images/thumb/3/3f/Services.png/200px-Services.png" srcset="/pti/images/thumb/3/3f/Services.png/300px-Services.png 1.5x, /pti/images/3/3f/Services.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Services.png" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Gcm.png"><img alt="Gcm.png" class="thumbimage" data-file-height="649" data-file-width="324" decoding="async" height="401" src="/pti/images/thumb/a/a3/Gcm.png/200px-Gcm.png" srcset="/pti/images/thumb/a/a3/Gcm.png/300px-Gcm.png 1.5x, /pti/images/a/a3/Gcm.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Gcm.png" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Signoff.png"><img alt="Signoff.png" class="thumbimage" data-file-height="650" data-file-width="324" decoding="async" height="401" src="/pti/images/thumb/7/7a/Signoff.png/200px-Signoff.png" srcset="/pti/images/thumb/7/7a/Signoff.png/300px-Signoff.png 1.5x, /pti/images/7/7a/Signoff.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Signoff.png" title="Enlarge"></a></div></div></div></div>
+</td>
+</tr>
+</tbody></table>
+<h2><span class="mw-headline" id="RunningApp_2">RunningApp</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=40" title="Edit section: RunningApp">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=40" title="Edit section: RunningApp">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Configuración_Raspberry"></span><span class="mw-headline" id="Configuraci.C3.B3n_Raspberry">Configuración Raspberry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=41" title="Edit section: Configuración Raspberry">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=41" title="Edit section: Configuración Raspberry">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Para configurar la raspberry pi necesitaremos una tarjeta sd con su adaptador para poder introducirla en el lector de tarjetas de ésta, un cable ethernet( o un acceso wifi), cable de corriente, una pantalla con entrada hdmi y en particular en nuestro proyecto un lector NFC de la marca NXP con entrada para los pines de la raspberry.
+</p>
+<h4><span id="Instalación_entorno"></span><span class="mw-headline" id="Instalaci.C3.B3n_entorno">Instalación entorno</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=42" title="Edit section: Instalación entorno">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=42" title="Edit section: Instalación entorno">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>El primer paso es descargar un sistema operativo para la Raspberry Pi. He elegido Raspbian, basado en la distribución de Linux Debian (optimizado para su uso en este dispositivo). La última versión se puede descargar desde la página oficial 
+<a class="external free" href="https://www.raspbian.org" rel="nofollow">https://www.raspbian.org</a> (unos 3.3GB).
+</p><p><br/>
+</p>
+<h4><span class="mw-headline" id="Grabar_el_sistema_operativo_en_la_tarjeta_sd">Grabar el sistema operativo en la tarjeta sd</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=43" title="Edit section: Grabar el sistema operativo en la tarjeta sd">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=43" title="Edit section: Grabar el sistema operativo en la tarjeta sd">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Hay muchas maneras de copiar la imagen en la tarjeta SD en función del sistema operativo. Yo lo he hecho en Ubuntu Linux con la utilidad “Discos”. Seleccionamos la tarjeta SD y le damos a “Restaurar imagen de disco”.
+</p>
+<h4><span id="Configuración_wifi"></span><span class="mw-headline" id="Configuraci.C3.B3n_wifi">Configuración wifi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=44" title="Edit section: Configuración wifi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=44" title="Edit section: Configuración wifi">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Sin quitar la tarjeta SD del ordenador, navegamos hasta el archivo /etc/network/interfaces de la tarjeta SD
+</p><p>sudo nano /path/a/la/tarjeta/sd/etc/network/interfaces
+</p><p>lo editamos para que incluya los siguientes parámetros:
+</p><p>auto lo
+iface lo inet loopback
+iface eth0 inet dhcp
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-ssid “nombre de tu RED WIFI”
+wpa-psk “tu password WIFI aquí”
+</p>
+<h4><span id="Configuración_del_sistema_operativo"></span><span class="mw-headline" id="Configuraci.C3.B3n_del_sistema_operativo">Configuración del sistema operativo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=45" title="Edit section: Configuración del sistema operativo">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=45" title="Edit section: Configuración del sistema operativo">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Ejecutamos el comando:
+</p><p>sudo raspi-config
+</p><p>Podremos expandir el sistema, configurar el teclado en nuestro caso al español/por defecto viene el americano) idioma, cambiar contraseña, y un paso muy importante, activar los pines de nuestra raspberry ya que por defecto no vienen activados.
+</p><p>Vamos a actualizar la Raspberry Pi con los siguientes comandos:
+</p><p>sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</p>
+<h4><span id="Instalación_apache_y_php"></span><span class="mw-headline" id="Instalaci.C3.B3n_apache_y_php">Instalación apache y php</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=46" title="Edit section: Instalación apache y php">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=46" title="Edit section: Instalación apache y php">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Para la instalación de Apache y php necesitamos introducir los siguientes comandos:
+</p><p>sudo apt-get install apache2 -y
+</p><p>sudo apt-get install php5 libapache2-mod-php5 -y
+</p><p>Para poder usar nuestras funciones Curl en nuestro fichero .php necesitamos instalar estas dependencias:
+</p><p>sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache php5-mysql php5-curl php5-gd
+</p>
+<h4><span id="Instalación_librerías_y_drivers_lector_nfc"></span><span class="mw-headline" id="Instalaci.C3.B3n_librer.C3.ADas_y_drivers_lector_nfc">Instalación librerías y drivers lector nfc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=47" title="Edit section: Instalación librerías y drivers lector nfc">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=47" title="Edit section: Instalación librerías y drivers lector nfc">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span class="mw-headline" id="nxppy">nxppy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=48" title="Edit section: nxppy">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=48" title="Edit section: nxppy">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Para poder usar el lector NFC de la marca NXP nos basaremos en el lenguaje python.
+Se necesita Reader Library de NXP ya que proporciona una capa para la detección de una etiqueta RFID Mifare, leyendo su UID (identificador único), y los datos de lectura / escritura desde / hasta el área de usuario.
+</p>
+<h4><span class="mw-headline" id="Compatibilidad">Compatibilidad</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=49" title="Edit section: Compatibilidad">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=49" title="Edit section: Compatibilidad">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Probado con tanto Python 2.7 y con una versión compilada manualmente de Python 3.4.
+</p>
+<h4><span class="mw-headline" id="Requisitos">Requisitos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=50" title="Edit section: Requisitos">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=50" title="Edit section: Requisitos">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>La tarjeta NXP se basa en SPI, por lo tanto tiene que estar habilitado. Se activa SPI usando Raspi-config antes de instalar nxppy (como se había nombrado en pasos anteriores).
+</p>
+<h4><span id="Instalación"></span><span class="mw-headline" id="Instalaci.C3.B3n">Instalación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=51" title="Edit section: Instalación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=51" title="Edit section: Instalación">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Nos situamos en el directorio donde queramos descargar los archivos para la instalación y ejecutamos los comandos siguientes:
+</p><p>wget <a class="external free" href="https://bootstrap.pypa.io/get-pip.py" rel="nofollow">https://bootstrap.pypa.io/get-pip.py</a>
+</p><p>sudo python get-pip.py
+</p><p>sudo pip install nxppy
+</p><p>La instalación tarda bastante, ya que tira hacia abajo automáticamente y construye NeardAL, WiringPi, y la Biblioteca del lector de NXP impulsoras.
+</p><p>Fuente
+</p><p>Para instalar desde el código fuente:
+</p><p>sudo apt-get install python-setuptools
+sudo python setup.py build install
+</p>
+<h4><span id="Aplicación_python"></span><span class="mw-headline" id="Aplicaci.C3.B3n_python">Aplicación python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=52" title="Edit section: Aplicación python">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=52" title="Edit section: Aplicación python">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>La aplicación python es la encargada de gestionar las lecturas del lector NFC provenientes de los chip nfc los cuales están asignados a los usuarios. Captura la hora en que se ha hecho la lectura, el identificador del chip NFC, el tipo de servicio.
+</p><p>Con estos datos hace una petición post a la aplicación web que os hablaremos más adelante para proporcionarle todos estos datos.
+Aplicación web
+La aplicación web de la raspberry se encarga de recibir los parametros por post de la aplicación python para tratarlos y hacer una petición post a nuestro backend pasándole el identificador NFC leído por el lector y de esta forma poder conseguir el token privado del usuario para poder enviarle un mensaje GCM(google cloud message).
+</p><p>Este mensaje consta de, los parámetros capturados por la aplicación python y anotar qué es multicast, es decir, se puede enviar a todos los dispositivos registrados por el usuario(todos los token que tenga)
+</p>
+<h3><span id="Aplicación_móvil"></span><span class="mw-headline" id="Aplicaci.C3.B3n_m.C3.B3vil">Aplicación móvil</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=53" title="Edit section: Aplicación móvil">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=53" title="Edit section: Aplicación móvil">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Android_2">Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=54" title="Edit section: Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=54" title="Edit section: Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Para la aplicación android nos hemos basado en el modelo vista controlador y el uso de threads para mejorar el rendimiento de la aplicación y entre otras cosas hacer las llamadas a nuestro servidor de backend de una forma óptima y sin hacer “visible” la espera al usuario.
+</p>
+<h4><span id="Clases_aplicación_android"></span><span class="mw-headline" id="Clases_aplicaci.C3.B3n_android">Clases aplicación android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=55" title="Edit section: Clases aplicación android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=55" title="Edit section: Clases aplicación android">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h5><span class="mw-headline" id="BaseDeDatos">BaseDeDatos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=56" title="Edit section: BaseDeDatos">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=56" title="Edit section: BaseDeDatos">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Esta clase se encarga de toda la gestión de salvado y carga de datos de la aplicación (perfil usuario, configuraciones, etc)
+Utiliza funciones propias de sqlite
+</p>
+<h5><span class="mw-headline" id="GcmBroadcastReceiver">GcmBroadcastReceiver</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=57" title="Edit section: GcmBroadcastReceiver">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=57" title="Edit section: GcmBroadcastReceiver">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Encargada de recibir el mensaje y levantar el servicio
+</p>
+<h5><span class="mw-headline" id="GcmMessageHandler">GcmMessageHandler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=58" title="Edit section: GcmMessageHandler">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=58" title="Edit section: GcmMessageHandler">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Trato el mensaje para mostrar la notificación push de la aplicación y llamada a la clase de datos para guardar las variables recibidas por el mensaje.
+</p><p><br/>
+</p>
+<h5><span class="mw-headline" id="LoginActivity">LoginActivity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=59" title="Edit section: LoginActivity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=59" title="Edit section: LoginActivity">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Clase encargada de gestionar el login del usuario, de cargar la vista de login y de hacer las llamadas asíncronas para que éstas gestionen la información del usuario como pueden ser el set del token privado del servidor de google o la comprobación de las credenciales
+</p>
+<h5><span class="mw-headline" id="RegisterActivity">RegisterActivity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=60" title="Edit section: RegisterActivity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=60" title="Edit section: RegisterActivity">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Clase encargada de registrar un usuario, para ello hace una llamada a la clase asíncrona correspondiente.
+Por otro lado hace una serie de comprobaciones, en el e-mail y contraseña para evitar enviarle peticiones al servidor innecesarias, aunque el servidor las vuelva a comprobar.
+</p>
+<h5><span class="mw-headline" id="MainActivity">MainActivity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=61" title="Edit section: MainActivity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=61" title="Edit section: MainActivity">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Clase encargada del control de contenido de la aplicación, su principal funcionalidad es la presentación de los datos, rellenando y vaciando contenidos dinámicos.
+</p>
+<h5><span class="mw-headline" id="EditProfileActivity">EditProfileActivity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=62" title="Edit section: EditProfileActivity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=62" title="Edit section: EditProfileActivity">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Clase encargada de cargar la vista de editar el perfil del usuario, y de hacer la llamada asincrona para guardar estos datos en el servidor.
+</p>
+<h5><span class="mw-headline" id="Treas_asincronas:">Treas asincronas:</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;veaction=edit&amp;section=63" title="Edit section: Treas asincronas:">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:myAppNFC&amp;action=edit&amp;section=63" title="Edit section: Treas asincronas:">edit source</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>MyAsyncTask
+MyAsyncTaskEditProfile
+MyAsyncTaskListProfile
+MyAsyncTaskRegister
+MyAsyncTaskServicesByUser
+MyAsyncTaskSetTokenUser
+MyAsyncTaskSetServicesByUser
+</p><p>Todas estas tareas hacen una llamada al servidor backend de tipo get o post según su funcionalidad, get para consultas y post para modificaciones, utilizan los threads del dispositivo móvil para una gestión más llevadera para la aplicación. Usan la clase BaseDeDatos para guardar la información de procesan.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083829
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.036 seconds
+Real time usage: 0.039 seconds
+Preprocessor visited node count: 197/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:161-0!canonical and timestamp 20250710083829 and revision id 191
+ -->
+</div>

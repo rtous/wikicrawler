@@ -1,0 +1,100 @@
+<div class="mw-parser-output"><p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Potencial_de_innovaci.C3.B3n"><span class="tocnumber">3</span> <span class="toctext">Potencial de innovación</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Tecnolog.C3.ADas_utilizadas"><span class="tocnumber">4</span> <span class="toctext">Tecnologías utilizadas</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Frontend"><span class="tocnumber">5</span> <span class="toctext">Frontend</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Backend"><span class="tocnumber">6</span> <span class="toctext">Backend</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Futuras_Mejoras"><span class="tocnumber">7</span> <span class="toctext">Futuras Mejoras</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Link"><span class="tocnumber">7.1</span> <span class="toctext">Link</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Nuestro proyecto consiste en crear un cluster de K3s alojado en una máquina de la facultad, que tiene el papel de nodo master/servidor. 
+A este nodo principal se le añaden nodos externos que tendrán el papel de trabajadores. Uno de los objetivos de nuestro proyecto, a parte de entender el funcionamiento de éstas nuevas tecnologías, era dar la posibilidad de poder montar clústers fácilmente entre un grupo de personas. La idea que principalmente nos vino a la cabeza era que este recurso fuese preferiblemente utilizado por grupos de amigos que quisieran compartir recursos entre ellos. Todo esto con la finalidad de poder crear un sistema de compartición de recursos de hardware que permite alojar servicios, siendo los mismos usuarios los que aportan estos recursos.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:KFC.png"><img alt="KFC.png" data-file-height="423" data-file-width="686" decoding="async" height="290" src="/pti/images/thumb/3/3b/KFC.png/471px-KFC.png" srcset="/pti/images/3/3b/KFC.png 1.5x" width="471"/></a></div></div>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=2" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=2" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Disponemos de un servidor HTTP en el que implementamos cinco APIs que a través de la web nos dan diferentes servicios:
+</p>
+<ul><li>Login (“/api/loginUser”) (para que el usuario pueda acceder a los servicios de la aplicación web)</li>
+<li>Register (“/api/registerUser”) (para registrar a los usuarios y puedan hacer el login)</li>
+<li>Descargar script de instalación para el cliente (“/api/getscript”)</li>
+<li>Mostrar el token de K3S (“/api/getToken”) (para conseguir el token de K3S y pueda acceder a los servicios)</li>
+<li>Enviar el fichero .yaml al servidor (“/api/uploadYAML”)) (para correr el servicio que se pasa como YAML).</li></ul>
+<p>Tanto las APIs como la aplicación web acceden a una base de datos Redis para autenticar a los usuarios.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:421px;"><a class="image" href="/pti/index.php/File:Untitled_Diagram-Page-3.drawio.png"><img alt="" class="thumbimage" data-file-height="664" data-file-width="772" decoding="async" height="360" src="/pti/images/thumb/6/68/Untitled_Diagram-Page-3.drawio.png/419px-Untitled_Diagram-Page-3.drawio.png" srcset="/pti/images/thumb/6/68/Untitled_Diagram-Page-3.drawio.png/629px-Untitled_Diagram-Page-3.drawio.png 1.5x, /pti/images/6/68/Untitled_Diagram-Page-3.drawio.png 2x" width="419"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Untitled_Diagram-Page-3.drawio.png" title="Enlarge"></a></div></div></div></div></div>
+<h1><span id="Potencial_de_innovación"></span><span class="mw-headline" id="Potencial_de_innovaci.C3.B3n">Potencial de innovación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=3" title="Edit section: Potencial de innovación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=3" title="Edit section: Potencial de innovación">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Con este proyecto se permite que usuarios privados o pequeñas empresas que disponen de recursos limitados, dispongan de una infraestructura mayor en momentos puntuales de necesidad, sin tener que hacer un desembolso muy elevado. 
+Los principales consumidores objetivo son todos aquellos usuarios independientes o empresas que quieran desplegar sus servicios o experimentar con ellos, sin tener que recurrir a opciones privadas de alto coste. 
+Los principales competidores de nuestro proyecto son todas las empresas que ofrecen servicios de alojamiento en la nube y que poseen su propia infraestructura de hardware para ofrecer estos servicios. La competitividad que ofrecemos es la ausencia de infraestructura propia a mantener, ya que son los usuarios del sistema los que aportan todo el hardware, reduciendo así los costes de operación. Aún así, creemos que nuestro modelo de negocio no va dirigido a la obtención de ingresos ni a competir contra otras opciones existentes en el mercado, sino a un enfoque orientado a la colaboración comunitaria. Nuestra intención es poder dar un servicio accesible y asequible para todos los usuarios, sin depender del pago a otras empresas que ofrecen este servicio.
+En cuanto a los principales riesgos y amenazas del proyecto, podemos decir que son todos los relacionados con la seguridad, ya que se trata de un sistema comunitario en el que todo el mundo puede acceder.
+Los gastos principales de la compañía consisten en el mantenimiento y funcionamiento del servidor central que gestiona los nodos y el servidor web. No habrá costes asociados a la adquisición de hardware para crear los nodos o a su mantenimiento, ya que estos serán cedidos por los usuarios.
+</p>
+<h1><span id="Tecnologías_utilizadas"></span><span class="mw-headline" id="Tecnolog.C3.ADas_utilizadas">Tecnologías utilizadas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=4" title="Edit section: Tecnologías utilizadas">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=4" title="Edit section: Tecnologías utilizadas">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p><b>React</b>:  teníamos la idea de hacer una interfaz rápida, limpia y simple para que el usuario pueda entender, de forma intuitiva, su funcionamiento. Es por eso que hemos escogido React que es un framework basado en javascript que se basa en el uso de componentes, es decir, cada componente es una pieza independiente de la UI y puede ser reutilizada varias veces en la aplicación. Así pues haría el proceso de desarrollo del frontend mucho más fácil.
+</p><p><b>Koa.js (NodeJS)</b>:  como nuestro frontend está en JavaScript, y que, gracias a NodeJS, puede ser utilizado en el backend y tiene librerías para todo, decidimos utilizar NodeJS. Escogimos Koa.js (framework de backend de NodeJS) por que tiene menos funcionalidades implementadas por defecto que Express (el framework de backend más conocido de NodeJS). 
+</p><p><b>Typescript</b>: en un punto bastante avanzado del proyecto nos dimos cuenta de que JavaScript era un falso amigo y nos causaba muchos problemas. En particular su tipado dinámico combinado con el sistema asíncrono causó muchos problemas difíciles de detectar. Por ese motivo añadimos TypeScript al proyecto, el uso principal de este era añadir anotaciones de tipos y utilizarlo como Linter, de esta manera resolvimos muchos de estos problemas rápidamente.
+</p><p><b>Redis:</b> como la mayor parte de nuestro proyecto recae sobre K3S y una sesión de la página web, los únicos datos que al final almacenamos serán los datos relacionados con cada usuario: username, password. Nos interesaba una DB que fuese rápida y eficiente. Es por eso que hemos decidido usar Redis ya que es una base de datos no relacional,  muy escalable y de alto rendimiento, ya que guarda los datos en memoria. Además tiene una muy buena integración con NodeJS.
+</p><p><b>K3S</b>: es una distribución de Kubernetes para entornos menos potentes ya que resulta ser una versión simplificada de Kubernetes (K8S). En un principio planteamos usar K8S pero al madurar un poco más la idea de nuestro proyecto, creímos oportuno usar K3S. Como este proyecto está dirigido al aprovechamiento de hardware, pensamos que K3S acabaría siendo una mejor opción por que asumimos que los recursos que se donan no son particularmente potentes.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:601px;"><a class="image" href="/pti/index.php/File:Image.png"><img alt="Image.png" class="thumbimage" data-file-height="639" data-file-width="903" decoding="async" height="424" src="/pti/images/thumb/3/34/Image.png/599px-Image.png" srcset="/pti/images/thumb/3/34/Image.png/899px-Image.png 1.5x, /pti/images/3/34/Image.png 2x" width="599"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Image.png" title="Enlarge"></a></div></div></div></div></div>
+<h1><span class="mw-headline" id="Frontend">Frontend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=5" title="Edit section: Frontend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=5" title="Edit section: Frontend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Para la implementación del frontend de la aplicación web, hemos usado el framework React para la lógica de las páginas y luego HTML + CSS para el diseño de la UI. La intención era tener un diseño limpio y intuitivo para el usuario, es por eso que hemos decidido que la página web tenga la siguiente estructura: Página de Home, página de login, página de registro, página de menú del usuario, página para registrar un nodo y página para correr un servicio.
+</p><p>La intención de la página web es simplemente cogerle la mano al usuario para que pueda acceder a las funcionalidades que nosotros aportamos. Es por eso que en cada una de las páginas que tienen un valor más técnico, le proporcionamos la ayuda suficiente. Así pues, cualquier usuario de cualquier contexto puede tener una buena experiencia.
+</p><p><br/>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:516px;"><a class="image" href="/pti/index.php/File:Frontend_pti.png"><img alt="" class="thumbimage" data-file-height="339" data-file-width="599" decoding="async" height="291" src="/pti/images/thumb/5/51/Frontend_pti.png/514px-Frontend_pti.png" srcset="/pti/images/5/51/Frontend_pti.png 1.5x" width="514"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Frontend_pti.png" title="Enlarge"></a></div></div></div></div></div>
+<h1><span class="mw-headline" id="Backend">Backend</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=6" title="Edit section: Backend">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=6" title="Edit section: Backend">edit source</a><span class="mw-editsection-bracket">]</span></span></h1><p>
+La estructura del código del backend sigue la estructura de los apartados de la web. La idea de este diseño es que en un futuro se podría dividir el webserver y separar las API y lógica de K3S y de Wireguard si esto fuese necesario. </p><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Estructura_backend2.png"><img alt="" class="thumbimage" data-file-height="410" data-file-width="300" decoding="async" height="410" src="/pti/images/c/c8/Estructura_backend2.png" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Estructura_backend2.png" title="Enlarge"></a></div></div></div></div></div>
+<p><b>main.ts:</b> Punto de entrada a la aplicación, contiene la función main que se ejecuta. Configura una instancia de Koa y la ejecuta.
+</p><p><b>api.ts</b>: Incluye el Router de Koa principal. Empaqueta todas las API declaradas y las exporta para ser montadas desde main. 
+</p><p><b>api/endpoints</b>: Directorio que contiene el código de cada API. Se han separado según su aplicación.
+</p><p><b>utils</b>: La mayoría de la lógica de nuestra aplicación se sitúa en estos ficheros. Las API utilizan funciones declaradas en estos ficheros para comunicarse con K3S, Redis o Wireguard.
+</p><p><b>types:</b> Contiene Tipos propios de TypeScript. Sólo fue añadido para reducir los avisos generados por TypeScript relacionados con el body de los requests a las API. Sólo incluye dos Tipos y són de poco interés, describen los campos que deberían tener bodys concretos.
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="Futuras_Mejoras">Futuras Mejoras</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=7" title="Edit section: Futuras Mejoras">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=7" title="Edit section: Futuras Mejoras">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En este proyecto nos hubiera gustado alcanzar más objetivos que por falta de tiempo no hemos podido conseguir como:
+</p>
+<ul><li>Un sistema de monitorización con Grafana y Prometheus</li>
+<li>Registro de imágenes de Docker propio</li>
+<li>Sistema de configuración de la aplicación</li>
+<li>Sistema de tokens para la propagación de identidad y privilegios</li>
+<li>Uso de Kubernetes Ingress para exponer los servicios al usuario.</li></ul>
+<h2><span class="mw-headline" id="Link">Link</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;veaction=edit&amp;section=8" title="Edit section: Link">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:ClusterK3SComunitario&amp;action=edit&amp;section=8" title="Edit section: Link">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Los códigos utilizados en este proyecto se pueden encontrar en: <a class="external free" href="https://github.com/zhesnaile/pti-cloud" rel="nofollow">https://github.com/zhesnaile/pti-cloud</a>
+</p><p>Video sobre como instalar el servidor: <a class="external free" href="https://drive.google.com/file/d/1j-JEz3LMa71f7WXdIUm2JVUnTYT_VOZb/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1j-JEz3LMa71f7WXdIUm2JVUnTYT_VOZb/view?usp=sharing</a>
+</p><p>Video donde se muestra la instalación del cliente: <a class="external free" href="https://drive.google.com/file/d/1JkRie19kGaPZ0EMivHF3OzKXj_SmLgMU/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1JkRie19kGaPZ0EMivHF3OzKXj_SmLgMU/view?usp=sharing</a>
+</p><p>Video donde se muestra como correr un servicio:  <a class="external free" href="https://drive.google.com/file/d/1cMH_8djfVFy1Lz2kHXFIk5JLPszpteIK/view?usp=sharing" rel="nofollow">https://drive.google.com/file/d/1cMH_8djfVFy1Lz2kHXFIk5JLPszpteIK/view?usp=sharing</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083842
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.030 seconds
+Real time usage: 0.032 seconds
+Preprocessor visited node count: 30/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:691-0!canonical and timestamp 20250710083841 and revision id 1547
+ -->
+</div>

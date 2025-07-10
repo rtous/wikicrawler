@@ -1,0 +1,138 @@
+<div class="mw-parser-output"><p><a class="image" href="/pti/index.php/File:LOGO.PNG"><img alt="LOGO.PNG" data-file-height="83" data-file-width="296" decoding="async" height="83" src="/pti/images/8/8a/LOGO.PNG" width="296"/></a>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_TrustVote.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es TrustVote?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#MongoDB"><span class="tocnumber">2.1</span> <span class="toctext">MongoDB</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#NodeJS"><span class="tocnumber">2.2</span> <span class="toctext">NodeJS</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Lector_DNI-e"><span class="tocnumber">2.3</span> <span class="toctext">Lector DNI-e</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Desarrolo_y_resultados"><span class="tocnumber">3</span> <span class="toctext">Desarrolo y resultados</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Aspecto_visual"><span class="tocnumber">3.1</span> <span class="toctext">Aspecto visual</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Interacci.C3.B3n"><span class="tocnumber">3.2</span> <span class="toctext">Interacción</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Identificaci.C3.B3n"><span class="tocnumber">3.3</span> <span class="toctext">Identificación</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Datos_y_gesti.C3.B3n"><span class="tocnumber">3.4</span> <span class="toctext">Datos y gestión</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Seguridad"><span class="tocnumber">3.5</span> <span class="toctext">Seguridad</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Bibliograf.C3.ADa"><span class="tocnumber">4</span> <span class="toctext">Bibliografía</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="¿Qué_es_TrustVote?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_TrustVote.3F">¿Qué es TrustVote?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es TrustVote?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es TrustVote?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Este proyecto consiste en un sistema electónico de votación. TrustVote se trata de un sistema electoral, que como el actual utiliza puntos de votación definidos y apuesta por mantener y mejorar las garantías del sistema actual.
+El escenario principal es que el usuario acuda a un punto de votación y, con el soporte de un lector de DNI, se identifique y emita el voto en una pantalla táctil de uso intuitivo. 
+El sistema estará siempre offline para evitar ataques durante el periodo de elecciones. Cuando haya finalizado la jornada, el dispositivo cliente abrirá una única conexión segura con el servidor para transmitir los datos.
+Este sistema está pensado para que pueda utilizarlo cualquier persona con un DNI 2.0 o posterior. En versiones posteriores está previsto permitir a personas sin DNIe introducir manualmente el número de identificación a través de un responsable del punto de voto.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="MongoDB">MongoDB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=4" title="Edit section: MongoDB">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=4" title="Edit section: MongoDB">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:Tecno.png"><img alt="" class="thumbimage" data-file-height="302" data-file-width="598" decoding="async" height="253" src="/pti/images/thumb/1/10/Tecno.png/500px-Tecno.png" srcset="/pti/images/1/10/Tecno.png 1.5x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Tecno.png" title="Enlarge"></a></div>Esquema conceptual de las tecnologías de TrustVote</div></div></div>
+<p>Los datos en MongoDB se almacenan en clúster. Un clúster es una agrupación de ordenadores, a menudo llamados en este contexto nodos. Los datos de cada colección se reparten entre los nodos, logrando así el soporte de cantidades masivas de datos.
+Hay que tener en cuenta a la hora de almacenar datos, el tiempo que tarda una operación de escritura (creación, modificación o eliminación) en llevarse a cabo en MongoDB, se bloquea el acceso a toda la base de datos en la que se efectúa la operación, como solo se podrá votar en un ordenador, nos servirá para assegurar que no se hace ningún otro tipo de acceso a la base de datos.
+Una de las grandes características de MongoDB es el escalado horizontal que se puede conseguir, si el almacenamiento del clúster llega a resultar escaso, siempre podemos añadir nuevos nodos aumentado así el escalado.
+La replicación en MongoDB permite conseguir una altísima disponibilidad y tolerancia a fallos,
+El formato de almacenamiento de los datos en Mongo DB no son las tablas ya que no existen las relaciones (NOSQL), los datos se almacenan en documentos y estos en colecciones, los documentos comparten un índice y se relacionan entre ellos de algún modo(decidido por nosotros).
+</p><p>En nuestra infraestructura, el servidor tendría una base de datos que contendría unicamente la unión de votos emitidos de todos los puntos de votación y cada nodo contendría 3 colecciones diferentes. La primera contendría el censo con los votantes y la información de si ya había ejercido su voto o no, la segunda contendría solamente los votos emitidos y la tercera contendría las preguntas y respuestas que se mostrarían en el programa.
+</p><p>En el momento de realizar la conexión segura con el servidor solamente se enviaría la colección con los votos emitidos independientes de los emisores de dichos votos.
+</p>
+<h2><span class="mw-headline" id="NodeJS">NodeJS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=5" title="Edit section: NodeJS">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=5" title="Edit section: NodeJS">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Node.js es una plataforma que se usa principalmente para desarrollar aplicaciones web usando Javascript en el servidor. Nos proporciona una manera fácil para construir un programa de red escalable, ya que en lugar de crear un nuevo hilo por cada conexión, esta dispara una ejecución de evento dentro del proceso del motor de Node.
+</p><p>Funciona de manera muy rápida, usa el motor v8 de Google, y está construido para funcionar de manera asíncrona, no se bloquea al recibir una petición de entrada/salida, funciona con eventos, y nos irá muy bien para hacer accesos a la base de datos MongoDB.
+</p><p>Permite a los desarrolladores escribir en javascript tanto en el lado del servidor como en el lado del cliente, de esta forma, no es necesario conocer varios lenguajes de programación.
+</p>
+<h2><span class="mw-headline" id="Lector_DNI-e">Lector DNI-e</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=6" title="Edit section: Lector DNI-e">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=6" title="Edit section: Lector DNI-e">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:352px;"><a class="image" href="/pti/index.php/File:Lector.png"><img alt="" class="thumbimage" data-file-height="525" data-file-width="1200" decoding="async" height="153" src="/pti/images/thumb/1/1e/Lector.png/350px-Lector.png" srcset="/pti/images/thumb/1/1e/Lector.png/525px-Lector.png 1.5x, /pti/images/thumb/1/1e/Lector.png/700px-Lector.png 2x" width="350"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Lector.png" title="Enlarge"></a></div>Lector de Dni-e</div></div></div>
+<p>El lector de DNI-e es un dispositivo electrónico que se utiliza para la obtención de datos, firmas digitales...
+En TrustVote lo utilizamos para obtener los datos del DNI-e introducido, esos datos son procesados a través de un script para comprovar la validez del mismo y si la persona se encuentra en el censo.
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="Desarrolo_y_resultados">Desarrolo y resultados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=7" title="Edit section: Desarrolo y resultados">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=7" title="Edit section: Desarrolo y resultados">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Aspecto_visual">Aspecto visual</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=8" title="Edit section: Aspecto visual">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=8" title="Edit section: Aspecto visual">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Inicialmente acordamos mantener las bases de material polls. Era sencillo, colorido e intuitivo pero necesitabamos adaptarlo al uso táctil y para todo tipo de usuarios. Además necesitábamos dividir el programa en 2 partes claramente diferenciadas. Por un lado la funcionalidad de crear diferentes encuestas y por otro la de consultarlas y emitir voto sobre las mismas.
+Claramente diferenciadas porque estaban destinadas a grupos de usuarios diferentes.
+Por una parte los organizadores de una votación y por otra a los usuarios de dicha votación.
+</p><p>Tras dividir el programa decidimos dejar la parte de creación de encuestas prácticamente igual que en la versión original a nivel visual, eso sí, añadiendo la opción de elegir el color con que se mostrará la opción en la encuesta.
+En este caso el aspecto es algo más complejo y son necesarios los periféricos habituales, ratón y teclado, para su correcto uso.
+Permite introducir la pregunta, las posibles opciones y un color para cada una de ellas.
+La segunda parte del programa iba dirigida a todo tipo de usuarios con todo tipo de conocimientos, edades, problemas, enfermedades y particularidades.
+Decidimos hacer opciones claras, grandes, contrastadas con el fondo por un recuadro blanco, fácilmente seleccionables con el dedo.
+Esta parte del programa se pensó para utilizarse únicamente con pantalla táctil.
+</p><p>Incluimos, además, una primera pantalla de identificación utilizando los colores rojo y verde para indicar con más facilidad el significado de las opciones con una única opción posible para maximizar la facilidad de uso además de unas instrucciones ilustradas de cómo debe introducirse el DNIe en el lector.
+</p>
+<h2><span id="Interacción"></span><span class="mw-headline" id="Interacci.C3.B3n">Interacción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=9" title="Edit section: Interacción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=9" title="Edit section: Interacción">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:Borrar2.PNG"><img alt="" class="thumbimage" data-file-height="220" data-file-width="604" decoding="async" height="182" src="/pti/images/thumb/d/dc/Borrar2.PNG/500px-Borrar2.PNG" srcset="/pti/images/d/dc/Borrar2.PNG 1.5x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Borrar2.PNG" title="Enlarge"></a></div>Lector de Dni-e</div></div></div>
+<p>Lo primero que pensamos y que teníamos claro desde un principio respecto a cómo los usuarios debían utilizar el programa es que sería a través de una pantalla táctil dado que el sistema exige un dispositivo lo más robusto posible y que fuesen cuales fuesen las funcionalidades finales debían poder llevarse a cabo rápido, de forma fácil e intuitiva con el mínimo número de “clicks” posibles.
+Especialmente nos preocupaba la parte del programa de voto dado que el generador de encuestas estaba destinado a un tipo de usuario capaz de manejarse con soltura en un sistema informático. Sin embargo el voto lo debía poder emitir cualquier tipo de persona incluyendo personas con capacidades visuales limitadas o personas que cariñosamente apodamos “dinosaurios digitales”.
+Nuestro objetivo era que con solo 2 “clicks” pudiéramos emitir el voto de forma que el sistema fuese muy rápido además de sencillo.
+Pese a que queríamos llevar a cabo la máxima simplicidad e intuitividad posible, debido al carácter irrestituible del ejercicio de voto, consideramos absolutamente necesario introducir constantemente avisos de confirmación para cada opción tomada lo que incrementó el número de pulsaciones necesarias a 4.
+</p><p>Una para seleccionar la opción, otra para confirmar, una tercera presionar la opción de emitir el voto seleccionado y una más para confirmar la emisión de voto.
+Aún con este incremento en el número de selecciones y la ligera reducción de simplicidad seguimos considerando TrustVote un sistema muy fácil de utilizar por cualquier persona.
+</p>
+<h2><span id="Identificación"></span><span class="mw-headline" id="Identificaci.C3.B3n">Identificación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=10" title="Edit section: Identificación">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=10" title="Edit section: Identificación">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:Borrar.PNG"><img alt="" class="thumbimage" data-file-height="267" data-file-width="605" decoding="async" height="221" src="/pti/images/thumb/d/d6/Borrar.PNG/500px-Borrar.PNG" srcset="/pti/images/d/d6/Borrar.PNG 1.5x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Borrar.PNG" title="Enlarge"></a></div>Lector de Dni-e</div></div></div>
+<p>En cuanto a la identificación debía ser por DNI-electrónico. Para conseguirlo encotnramos un programa en linux mediante terminal que leía los valores del DNI-e de la primera capa y los retornaba también por terminal.
+</p><p>Dado que siempre retornaba el mismo formato pudimos recortar específicamente el número de DNI entre todos los datos que ofrecía, guardarlo en un fichero local y leerlo desde la aplicación.
+Con lo anterior en mente hicimos un script que ejecutaba el comando cada 3 segundos y si el número de DNI era diferentes al último introducido lo guardabamos en un documento local. Desde la aplicación solo necesitábamos comprobar el número del DNI del documento contra la base de datos para verificar si esa identificación podía ejercer su derecho a voto.
+El resultado fue sorprendentemente bueno, fluido y cómodo de utilizar, transparente al usuario y muy preciso.
+</p>
+<h2><span id="Datos_y_gestión"></span><span class="mw-headline" id="Datos_y_gesti.C3.B3n">Datos y gestión</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=11" title="Edit section: Datos y gestión">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=11" title="Edit section: Datos y gestión">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Como hemos comentado utilizamos MongoDB. Nos encontramos ante una base de datos no relacional que, en lugar de tener tablas y tuplas, divide los datos en colecciones y documentos más sencillos de manejar que lo visto en SQL. Permite también la escalabilidad, una mejora de rendimiento, y gran disponibilidad. Una buena elección para el proyecto. 
+</p><p>En cuanto a datos se refiere, tenemos dos grandes focos: el censo, que permite reconocer a la persona a la hora de votar, y los votos, que deben desacoplarse de cualquier identificación previa. Con ese razonamiento, creamos dos colecciones totalmente independientes con los atributos específicos de cada cual. 
+En la colección CENSO se incluye: nombre, apellidos, dni, fecha de nacimiento, nodo de votación y un booleano. En la colección VOTOS, solo recopilamos el partido. 
+</p><p>Decidimos que el servidor tendría una base de datos que contendría únicamente la unión de votos emitidos de todos los puntos de votación y cada nodo contendría 3 colecciones diferentes. La primera contendría el censo con los votantes y la información de si ya había ejercido su voto o no, la segunda contendría solamente los votos emitidos y la tercera contendría las preguntas y respuestas que se mostrarían en el programa.
+</p><p>En el momento de realizar la conexión segura con el servidor solamente se enviaría la colección con los votos emitidos independientes de los emisores de dichos votos.
+</p>
+<h2><span class="mw-headline" id="Seguridad">Seguridad</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=12" title="Edit section: Seguridad">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=12" title="Edit section: Seguridad">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Desde un principio la seguridad fue el punto que más nos preocupaba.
+Inicialmente y dadas las características del proyecto del proyecto necesitábamos tener las comunicaciones encriptadas, autenticar puntos de voto y aplicar técnicas de hashing.
+</p><p>Decidimos utilizar llave simétrica (AES) para encriptar los datos y llave asimétrica (Diffie-Hellman) para encriptar la llave simétrica.
+La razón por la cual elegimos Diffie-Hellman es porqué este algoritmo no requiere de una autoridad certificadora y con el objetivo de tener un sistema fácilmente escalable queríamos complicar la estructura lo mínimo posible.
+</p><p>En cuanto a las técnicas de hashing, para garantizar que no se pudiese relacionar voto y votante queríamos hashear los datos. Y obtenerlos por fuerza bruta. Una mala idea que inicialmente no teníamos clara y la mantuvimos así hasta conocer mejor mongo y dar con algo mejor.
+Respecto a la autenticación queríamos usar tokens para garantizar que solamente los puntos autorizados podían conectarse al servidor central.
+Tras investigar un poco en el resto de direcciones llegamos a la conclusión de que mongo no disponía de soporte para el algoritmo de clave asimétrica Diffie-Hellman y que el único soporte que ofrecía en sus versiones básicas era SSL (AES+ASR).
+Debido al cambio nos vimos obligados también a incluir una autoridad certificadora propia en la estructura.
+</p><p>Respecto a la organización de las colecciones y con ellas los datos de los usuarios, decidimos modificar la estructura separando los datos de votantes y votaciones en colecciones diferentes e independientes que se modifican con cada votación, de forma que en el envío los datos serían independientes de los votantes.
+Con ello desaparecía la necesidad de hashear los datos de las colecciones aunque no descartamos hashear los datos de la tabla de votantes para garantizar que no se pudiese saber si alguien había votado ya o no obteniendo los datos de forma ilícita.
+</p><p>Respecto a los tokens dejaban de ser necesarios dado que los certificados digitales emitidos por la nueva y necesaria autoridad certificadora ya cumplen con la función de autenticación de los puntos de votación.
+Finalmente creamos la autoridad certificadora y firmamos los certificados de los puntos de voto y del servidor central y utilizamos las librerias SSL incluidas en mongo para implementar la encriptación.
+</p>
+<h1><span id="Bibliografía"></span><span class="mw-headline" id="Bibliograf.C3.ADa">Bibliografía</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;veaction=edit&amp;section=13" title="Edit section: Bibliografía">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:TrustVote&amp;action=edit&amp;section=13" title="Edit section: Bibliografía">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li>Documentación DNI-e<br/><a class="external free" href="https://www.incibe.es/extfrontinteco/img/File/intecocert/dnie/pdf/guiades.pdf" rel="nofollow">https://www.incibe.es/extfrontinteco/img/File/intecocert/dnie/pdf/guiades.pdf</a> '<b></b></li>
+<li>Controlador Java del DNI-e<br/><a class="external free" href="https://www.muycomputer.com/2012/10/10/acceso-a-dnie-mas-facil-para-todos-gracias-a-una-api-java/" rel="nofollow">https://www.muycomputer.com/2012/10/10/acceso-a-dnie-mas-facil-para-todos-gracias-a-una-api-java/</a> '<b></b></li>
+<li>Front-end API<br/><a class="external free" href="https://github.com/nearbycoder/materialpoll" rel="nofollow">https://github.com/nearbycoder/materialpoll</a> '<b></b></li>
+<li>Problemas del voto electrónico<br/><a class="external free" href="https://www.infobae.com/opinion/2016/10/31/problemas-que-el-voto-electronico-trae-y-los-que-no-evita/" rel="nofollow">https://www.infobae.com/opinion/2016/10/31/problemas-que-el-voto-electronico-trae-y-los-que-no-evita/</a> '<b></b></li>
+<li>Países que han implementado voto electrónico <br/><a class="external free" href="http://www.euskadi.eus/botoelek/otros_paises/ve_mundo_impl_c.htm" rel="nofollow">http://www.euskadi.eus/botoelek/otros_paises/ve_mundo_impl_c.htm</a></li>
+<li>Documentación oficial de <i>NodeJS </i><br/><a class="external free" href="https://nodejs.org/en/docs/" rel="nofollow">https://nodejs.org/en/docs/</a> '<b></b></li>
+<li>Documentación oficial de <i>MongoDB </i><br/><a class="external free" href="https://docs.mongodb.com/" rel="nofollow">https://docs.mongodb.com/</a> '<b></b></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20250710083832
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.017 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 50/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:322-0!canonical and timestamp 20250710083832 and revision id 356
+ -->
+</div>

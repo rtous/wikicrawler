@@ -1,0 +1,330 @@
+<div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_131224.png"><img alt="" class="thumbimage" data-file-height="153" data-file-width="742" decoding="async" height="62" src="/pti/images/thumb/5/59/Captura_de_pantalla_2025-05-25_131224.png/300px-Captura_de_pantalla_2025-05-25_131224.png" srcset="/pti/images/thumb/5/59/Captura_de_pantalla_2025-05-25_131224.png/450px-Captura_de_pantalla_2025-05-25_131224.png 1.5x, /pti/images/thumb/5/59/Captura_de_pantalla_2025-05-25_131224.png/600px-Captura_de_pantalla_2025-05-25_131224.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_131224.png" title="Enlarge"></a></div>Logo of WellTrack</div></div></div>
+<p><b>WellTrack</b> es una plataforma web inteligente que utiliza visión por computador e inteligencia artificial para <b>monitorear, analizar y mejorar los hábitos de salud durante el trabajo digital</b>, enfocándose especialmente en problemas derivados del teletrabajo como la mala postura, la fatiga visual o el sedentarismo.
+</p><p>Su propuesta es única: <b>monitoreo en tiempo real sin hardware adicional</b>, procesamiento local de datos sensibles, y un sistema completo de recomendaciones y gamificación para mejorar la adherencia a hábitos saludables.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Objetivos_principales"><span class="tocnumber">1</span> <span class="toctext">Objetivos principales</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Componentes_del_sistema"><span class="tocnumber">2</span> <span class="toctext">Componentes del sistema</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Frontend_Web"><span class="tocnumber">2.1</span> <span class="toctext">Frontend Web</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Backend_de_Microservicios"><span class="tocnumber">2.2</span> <span class="toctext">Backend de Microservicios</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Inteligencia_Artificial"><span class="tocnumber">2.3</span> <span class="toctext">Inteligencia Artificial</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Portal_de_Intranet"><span class="tocnumber">2.4</span> <span class="toctext">Portal de Intranet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Paquetes_de_Trabajo"><span class="tocnumber">3</span> <span class="toctext">Paquetes de Trabajo</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Funcionalidades_Clave"><span class="tocnumber">4</span> <span class="toctext">Funcionalidades Clave</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Resultados_Esperados"><span class="tocnumber">5</span> <span class="toctext">Resultados Esperados</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Innovaci.C3.B3n_y_Potencial"><span class="tocnumber">6</span> <span class="toctext">Innovación y Potencial</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Conclusi.C3.B3n"><span class="tocnumber">7</span> <span class="toctext">Conclusión</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Anexo:_Im.C3.A1genes_de_la_aplicaci.C3.B3n_final"><span class="tocnumber">8</span> <span class="toctext">Anexo: Imágenes de la aplicación final</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Objetivos_principales">Objetivos principales</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=1" title="Edit section: Objetivos principales">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=1" title="Edit section: Objetivos principales">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Monitorear la postura corporal, nivel de actividad, hidratación y signos de fatiga.</li>
+<li>Analizar comportamientos como uso de móvil vs. ordenador.</li>
+<li>Ofrecer recomendaciones personalizadas mediante un modelo de lenguaje (LLM).</li>
+<li>Proporcionar dashboards históricos, desafíos diarios y gamificación.</li></ul>
+<ul><li>Garantizar privacidad mediante procesamiento local y autenticación JWT.</li></ul>
+<h2><span class="mw-headline" id="Componentes_del_sistema">Componentes del sistema</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=2" title="Edit section: Componentes del sistema">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=2" title="Edit section: Componentes del sistema">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_132606.png"><img alt="" class="thumbimage" data-file-height="372" data-file-width="830" decoding="async" height="224" src="/pti/images/thumb/4/40/Captura_de_pantalla_2025-05-25_132606.png/500px-Captura_de_pantalla_2025-05-25_132606.png" srcset="/pti/images/thumb/4/40/Captura_de_pantalla_2025-05-25_132606.png/750px-Captura_de_pantalla_2025-05-25_132606.png 1.5x, /pti/images/4/40/Captura_de_pantalla_2025-05-25_132606.png 2x" width="500"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_132606.png" title="Enlarge"></a></div>Stacks diagram of WellTrack</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_134058.png"><img alt="" class="thumbimage" data-file-height="350" data-file-width="1248" decoding="async" height="168" src="/pti/images/thumb/c/c3/Captura_de_pantalla_2025-05-25_134058.png/600px-Captura_de_pantalla_2025-05-25_134058.png" srcset="/pti/images/thumb/c/c3/Captura_de_pantalla_2025-05-25_134058.png/900px-Captura_de_pantalla_2025-05-25_134058.png 1.5x, /pti/images/thumb/c/c3/Captura_de_pantalla_2025-05-25_134058.png/1200px-Captura_de_pantalla_2025-05-25_134058.png 2x" width="600"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_134058.png" title="Enlarge"></a></div>Deploy diagram of WellTrack</div></div></div>
+<h3><span class="mw-headline" id="Frontend_Web">Frontend Web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=3" title="Edit section: Frontend Web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=3" title="Edit section: Frontend Web">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Desarrollado con <b>Next JS + Tailwind (ShadCn)</b>.</li>
+<li>Captura de vídeo en tiempo real con superposición de análisis.</li>
+<li>Dashboards interactivos de métricas, alertas y preferencias.</li></ul>
+<h3><span class="mw-headline" id="Backend_de_Microservicios">Backend de Microservicios</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=4" title="Edit section: Backend de Microservicios">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=4" title="Edit section: Backend de Microservicios">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>API REST con <b>Npm + Hono</b>.</li>
+<li>Comunicación por HTTP/REST.</li></ul>
+<h3><span class="mw-headline" id="Inteligencia_Artificial">Inteligencia Artificial</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=5" title="Edit section: Inteligencia Artificial">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=5" title="Edit section: Inteligencia Artificial">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Modelos de detección de postura (MediaPipe, MoveNet).</li>
+<li>Reconocimiento de gestos y acciones (HAR con EfficientNetB7).</li>
+<li>Análisis de fatiga mediante expresiones faciales.</li>
+<li>Servicio de recomendaciones usando <b>LLM</b>  de <b>Dify AI</b>.</li></ul>
+<h3><span class="mw-headline" id="Portal_de_Intranet">Portal de Intranet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=6" title="Edit section: Portal de Intranet">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=6" title="Edit section: Portal de Intranet">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Calendario de objetivos y sistema de metas personalizadas.</li>
+<li>Visualización de progresos y tendencias a largo plazo.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:452px;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_134230.png"><img alt="" class="thumbimage" data-file-height="500" data-file-width="1043" decoding="async" height="216" src="/pti/images/thumb/d/d1/Captura_de_pantalla_2025-05-25_134230.png/450px-Captura_de_pantalla_2025-05-25_134230.png" srcset="/pti/images/thumb/d/d1/Captura_de_pantalla_2025-05-25_134230.png/675px-Captura_de_pantalla_2025-05-25_134230.png 1.5x, /pti/images/thumb/d/d1/Captura_de_pantalla_2025-05-25_134230.png/900px-Captura_de_pantalla_2025-05-25_134230.png 2x" width="450"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_134230.png" title="Enlarge"></a></div>Deploy diagram<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:444px;"><a class="image" href="/pti/index.php/File:Cluster.png"><img alt="" class="thumbimage" data-file-height="348" data-file-width="942" decoding="async" height="163" src="/pti/images/thumb/7/7d/Cluster.png/442px-Cluster.png" srcset="/pti/images/thumb/7/7d/Cluster.png/663px-Cluster.png 1.5x, /pti/images/thumb/7/7d/Cluster.png/884px-Cluster.png 2x" width="442"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Cluster.png" title="Enlarge"></a></div>Microservicios que hemos utilzado en el cluster de kubernetes</div></div></div></div>2 of WellTrack</div></div></div>
+<table class="wikitable">
+<caption>
+</caption>
+<tbody><tr>
+<th>Área
+</th>
+<th>Tecnologías destacadas
+</th></tr>
+<tr>
+<td>Frontend
+</td>
+<td>Next JS, TailwindCSS, ShadCn
+</td></tr>
+<tr>
+<td>Backend
+</td>
+<td>Npm, Bun, Hono, PostgreSQL, Supabase
+</td></tr>
+<tr>
+<td>ML/IA
+</td>
+<td>MediaPipe, MoveNet, EfficientNetB7
+</td></tr>
+<tr>
+<td>DevOps
+</td>
+<td>Docker, Kubernetes, Helm, Argo CD, GitHub Actions
+</td></tr>
+<tr>
+<td>Monitoreo
+</td>
+<td>Prometheus, Grafana, Loki, Promtail
+</td></tr>
+<tr>
+<td>Seguridad
+</td>
+<td>JWT, HTTPS, Network Policies, Secrets TLS
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Paquetes_de_Trabajo">Paquetes de Trabajo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=7" title="Edit section: Paquetes de Trabajo">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=7" title="Edit section: Paquetes de Trabajo">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Código
+</th>
+<th>Nombre del paquete
+</th>
+<th>Líder
+</th></tr>
+<tr>
+<td>PT1
+</td>
+<td>Contexto tecnológico y definición de arquitectura
+</td>
+<td>Coordinador
+</td></tr>
+<tr>
+<td>PT2
+</td>
+<td>Implementación de modelos de ML
+</td>
+<td>ML Engineer
+</td></tr>
+<tr>
+<td>PT3
+</td>
+<td>Desarrollo del frontend web
+</td>
+<td>Frontend
+</td></tr>
+<tr>
+<td>PT4
+</td>
+<td>Desarrollo de microservicios backend
+</td>
+<td>Backend
+</td></tr>
+<tr>
+<td>PT5
+</td>
+<td>Contenerización y despliegue en Kubernetes
+</td>
+<td>DevOps
+</td></tr>
+<tr>
+<td>PT6
+</td>
+<td>Monitoreo con Prometheus y Grafana
+</td>
+<td>DevOps
+</td></tr>
+<tr>
+<td>PT7
+</td>
+<td>Intranet y sistema de metas
+</td>
+<td>Frontend
+</td></tr>
+<tr>
+<td>PT8
+</td>
+<td>Análisis con LLM y generación de recomendaciones (extra)
+</td>
+<td>ML Engineer
+</td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_133619.png"><img alt="" class="thumbimage" data-file-height="497" data-file-width="1731" decoding="async" height="172" src="/pti/images/thumb/1/16/Captura_de_pantalla_2025-05-25_133619.png/600px-Captura_de_pantalla_2025-05-25_133619.png" srcset="/pti/images/thumb/1/16/Captura_de_pantalla_2025-05-25_133619.png/900px-Captura_de_pantalla_2025-05-25_133619.png 1.5x, /pti/images/thumb/1/16/Captura_de_pantalla_2025-05-25_133619.png/1200px-Captura_de_pantalla_2025-05-25_133619.png 2x" width="600"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_133619.png" title="Enlarge"></a></div>Diagrama de Gantt con la distribución de trabajo entre los miembros del equipo.</div></div></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Rol
+</th>
+<th>Miembro
+</th>
+<th>Responsabilidades clave
+</th></tr>
+<tr>
+<td>Coordinador General
+</td>
+<td>Marina Fabregat
+</td>
+<td>Gestión del proyecto y coordinación de equipos
+</td></tr>
+<tr>
+<td>Ingeniero de ML
+</td>
+<td>Songhe Wang
+</td>
+<td>Modelos de visión, fatiga, gestos y LLM
+</td></tr>
+<tr>
+<td>Desarrollador Frontend
+</td>
+<td>Marina Fabregat
+</td>
+<td>Interfaz React, dashboards, integración de modelos
+</td></tr>
+<tr>
+<td>Desarrollador Backend
+</td>
+<td>Shenghao Ye
+</td>
+<td>Microservicios, base de datos, APIs
+</td></tr>
+<tr>
+<td>Ingeniero DevOps
+</td>
+<td>Hongda Zhu
+</td>
+<td>Contenerización, CI/CD, monitoreo, seguridad
+</td></tr></tbody></table>
+<p><br/>
+</p>
+<h2><span class="mw-headline" id="Funcionalidades_Clave">Funcionalidades Clave</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=8" title="Edit section: Funcionalidades Clave">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=8" title="Edit section: Funcionalidades Clave">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Funcionalidad
+</th>
+<th>Detalles
+</th></tr>
+<tr>
+<td>Postura
+</td>
+<td>Detección de encorvamiento, cuello inclinado, alertas y ejercicios
+</td></tr>
+<tr>
+<td>Actividad física
+</td>
+<td>Detección de sedentarismo, pausas activas, desafíos personalizados
+</td></tr>
+<tr>
+<td>Hidratación
+</td>
+<td>Recordatorios, seguimiento, estadísticas y metas
+</td></tr>
+<tr>
+<td>Fatiga
+</td>
+<td>Parpadeo, bostezos, micromovimientos y sugerencias de descanso
+</td></tr>
+<tr>
+<td>Control por gestos
+</td>
+<td>Manos levantadas, dedos, movimientos para controlar la app
+</td></tr>
+<tr>
+<td>Análisis de comportamiento
+</td>
+<td>Diferenciar móvil vs. ordenador, tiempo invertido, recomendaciones
+</td></tr>
+<tr>
+<td>Sistema de metas
+</td>
+<td>Calendario, desafíos diarios.
+</td></tr>
+<tr>
+<td>Recomendaciones por LLM
+</td>
+<td>Informes automáticos, predicción de hábitos, consejos personalizados
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Resultados_Esperados">Resultados Esperados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=9" title="Edit section: Resultados Esperados">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=9" title="Edit section: Resultados Esperados">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol><li>Aplicación web funcional con análisis en tiempo real.</li>
+<li>Backend escalable y seguro desplegado en Kubernetes.</li>
+<li>Modelos IA integrados para detección precisa de hábitos.</li>
+<li>Sistema de monitoreo robusto con dashboards y alertas.</li>
+<li>Intranet con seguimiento de metas y visualización avanzada.</li>
+<li>Servicio de recomendaciones personalizadas con LLM.</li>
+<li>Documentación completa de arquitectura, APIs y uso.</li></ol>
+<h2><span id="Innovación_y_Potencial"></span><span class="mw-headline" id="Innovaci.C3.B3n_y_Potencial">Innovación y Potencial</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=10" title="Edit section: Innovación y Potencial">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=10" title="Edit section: Innovación y Potencial">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><b>Valor diferencial</b>: sin necesidad de sensores físicos ni dispositivos adicionales.</li>
+<li><b>Privacidad garantizada</b>: análisis local y datos protegidos.</li>
+<li><b>IA personalizada</b>: combina visión por computador + análisis de lenguaje.</li>
+<li><b>Modular y escalable</b>: ideal para teletrabajo, salud ocupacional y wellness corporativo.</li></ul>
+<h2><span id="Conclusión"></span><span class="mw-headline" id="Conclusi.C3.B3n">Conclusión</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=11" title="Edit section: Conclusión">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=11" title="Edit section: Conclusión">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El desarrollo de <b>WellTrack</b> ha supuesto un esfuerzo técnico y organizativo de gran envergadura. Desde la concepción del sistema hasta su implementación final, hemos abordado una cantidad considerable de desafíos que abarcan múltiples áreas de conocimiento: <b>visión por computador, machine learning, desarrollo frontend y backend, despliegue en Kubernetes, monitorización avanzada y seguridad de datos</b>.
+</p><p>Cada uno de los módulos planteados al inicio del proyecto —detección de postura, seguimiento de actividad, monitoreo de hidratación, análisis de fatiga, control por gestos, sistema de metas y desafíos, generación de recomendaciones personalizadas con LLM— ha sido <b>implementado con éxito</b>. El sistema resultante no es una simple prueba de concepto, sino una <b>aplicación web funcional, robusta y completamente desplegada</b>, capaz de ejecutarse en condiciones reales de uso.
+</p><p>La magnitud del trabajo queda reflejada no solo en la cantidad de componentes desarrollados, sino también en la calidad técnica alcanzada, el grado de integración entre subsistemas y el cumplimiento riguroso de los objetivos tecnológicos definidos. <b>Concluir un proyecto de estas características en el marco de un entorno académico, con recursos limitados y en un tiempo restringido, constituye un logro destacable.</b>
+</p><p>Este resultado demuestra la viabilidad de soluciones avanzadas de salud digital que no requieren dispositivos externos, y pone de manifiesto la capacidad del equipo para abordar proyectos complejos con una visión integral, aplicando buenas prácticas de ingeniería y metodologías ágiles.
+</p><p>Los urls correspondientes de repositorios son:
+</p><p><a class="external free" href="https://github.com/SalieeriW/PTI-WellTrackDevops" rel="nofollow">https://github.com/SalieeriW/PTI-WellTrackDevops</a>
+</p><p><a class="external free" href="https://github.com/SalieeriW/PTI-WellTrackGitOps" rel="nofollow">https://github.com/SalieeriW/PTI-WellTrackGitOps</a>
+</p><p><a class="external free" href="https://github.com/SalieeriW/PTI-WellTrackBack" rel="nofollow">https://github.com/SalieeriW/PTI-WellTrackBack</a>
+</p><p><a class="external free" href="https://github.com/SalieeriW/PTI-WellTrackFront" rel="nofollow">https://github.com/SalieeriW/PTI-WellTrackFront</a>
+</p><p><a class="external free" href="https://github.com/SalieeriW/PTI-WellTrackML" rel="nofollow">https://github.com/SalieeriW/PTI-WellTrackML</a>
+</p>
+<h2><span id="Anexo:_Imágenes_de_la_aplicación_final"></span><span class="mw-headline" id="Anexo:_Im.C3.A1genes_de_la_aplicaci.C3.B3n_final">Anexo: Imágenes de la aplicación final</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;veaction=edit&amp;section=12" title="Edit section: Anexo: Imágenes de la aplicación final">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:WellTrack&amp;action=edit&amp;section=12" title="Edit section: Anexo: Imágenes de la aplicación final">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul class="gallery mw-gallery-traditional">
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_135614.png"><img alt="Captura de pantalla 2025-05-25 135614.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/b/b9/Captura_de_pantalla_2025-05-25_135614.png/120px-Captura_de_pantalla_2025-05-25_135614.png" srcset="/pti/images/thumb/b/b9/Captura_de_pantalla_2025-05-25_135614.png/180px-Captura_de_pantalla_2025-05-25_135614.png 1.5x, /pti/images/thumb/b/b9/Captura_de_pantalla_2025-05-25_135614.png/240px-Captura_de_pantalla_2025-05-25_135614.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_135653.png"><img alt="Captura de pantalla 2025-05-25 135653.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/5/5e/Captura_de_pantalla_2025-05-25_135653.png/120px-Captura_de_pantalla_2025-05-25_135653.png" srcset="/pti/images/thumb/5/5e/Captura_de_pantalla_2025-05-25_135653.png/180px-Captura_de_pantalla_2025-05-25_135653.png 1.5x, /pti/images/thumb/5/5e/Captura_de_pantalla_2025-05-25_135653.png/240px-Captura_de_pantalla_2025-05-25_135653.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_135703.png"><img alt="Captura de pantalla 2025-05-25 135703.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/9/99/Captura_de_pantalla_2025-05-25_135703.png/120px-Captura_de_pantalla_2025-05-25_135703.png" srcset="/pti/images/thumb/9/99/Captura_de_pantalla_2025-05-25_135703.png/180px-Captura_de_pantalla_2025-05-25_135703.png 1.5x, /pti/images/thumb/9/99/Captura_de_pantalla_2025-05-25_135703.png/240px-Captura_de_pantalla_2025-05-25_135703.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_135715.png"><img alt="Captura de pantalla 2025-05-25 135715.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/9/98/Captura_de_pantalla_2025-05-25_135715.png/120px-Captura_de_pantalla_2025-05-25_135715.png" srcset="/pti/images/thumb/9/98/Captura_de_pantalla_2025-05-25_135715.png/180px-Captura_de_pantalla_2025-05-25_135715.png 1.5x, /pti/images/thumb/9/98/Captura_de_pantalla_2025-05-25_135715.png/240px-Captura_de_pantalla_2025-05-25_135715.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_135745.png"><img alt="Captura de pantalla 2025-05-25 135745.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/9/96/Captura_de_pantalla_2025-05-25_135745.png/120px-Captura_de_pantalla_2025-05-25_135745.png" srcset="/pti/images/thumb/9/96/Captura_de_pantalla_2025-05-25_135745.png/180px-Captura_de_pantalla_2025-05-25_135745.png 1.5x, /pti/images/thumb/9/96/Captura_de_pantalla_2025-05-25_135745.png/240px-Captura_de_pantalla_2025-05-25_135745.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_140442.png"><img alt="Captura de pantalla 2025-05-25 140442.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/5/58/Captura_de_pantalla_2025-05-25_140442.png/120px-Captura_de_pantalla_2025-05-25_140442.png" srcset="/pti/images/thumb/5/58/Captura_de_pantalla_2025-05-25_140442.png/180px-Captura_de_pantalla_2025-05-25_140442.png 1.5x, /pti/images/thumb/5/58/Captura_de_pantalla_2025-05-25_140442.png/240px-Captura_de_pantalla_2025-05-25_140442.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a class="image" href="/pti/index.php/File:Captura_de_pantalla_2025-05-25_140305.png"><img alt="Captura de pantalla 2025-05-25 140305.png" data-file-height="1080" data-file-width="1920" decoding="async" height="68" src="/pti/images/thumb/2/2f/Captura_de_pantalla_2025-05-25_140305.png/120px-Captura_de_pantalla_2025-05-25_140305.png" srcset="/pti/images/thumb/2/2f/Captura_de_pantalla_2025-05-25_140305.png/180px-Captura_de_pantalla_2025-05-25_140305.png 1.5x, /pti/images/thumb/2/2f/Captura_de_pantalla_2025-05-25_140305.png/240px-Captura_de_pantalla_2025-05-25_140305.png 2x" width="120"/></a></div></div>
+<div class="gallerytext">
+</div>
+</div></li>
+</ul>
+<!-- 
+NewPP limit report
+Cached time: 20250709133733
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.042 seconds
+Real time usage: 0.049 seconds
+Preprocessor visited node count: 45/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5726/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:875-0!canonical and timestamp 20250709133733 and revision id 2150
+ -->
+</div>

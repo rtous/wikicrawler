@@ -1,0 +1,140 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Logo-BlueLoc.png"><img alt="Logo-BlueLoc.png" data-file-height="608" data-file-width="2000" decoding="async" height="243" src="/pti/images/thumb/3/31/Logo-BlueLoc.png/800px-Logo-BlueLoc.png" srcset="/pti/images/thumb/3/31/Logo-BlueLoc.png/1200px-Logo-BlueLoc.png 1.5x, /pti/images/thumb/3/31/Logo-BlueLoc.png/1600px-Logo-BlueLoc.png 2x" width="800"/></a></div></div>
+<p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Proyecto_BlueLoc"><span class="tocnumber">1</span> <span class="toctext">Proyecto BlueLoc</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Tecnolog.C3.ADas"><span class="tocnumber">2</span> <span class="toctext">Tecnologías</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Flujo_principal"><span class="tocnumber">2.1</span> <span class="toctext">Flujo principal</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Servidor"><span class="tocnumber">2.2</span> <span class="toctext">Servidor</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#P.C3.A1gina_web"><span class="tocnumber">2.3</span> <span class="toctext">Página web</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Servicio_web_REST"><span class="tocnumber">2.4</span> <span class="toctext">Servicio web REST</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Beacons"><span class="tocnumber">2.5</span> <span class="toctext">Beacons</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Algoritmo_de_posicionamiento"><span class="tocnumber">2.6</span> <span class="toctext">Algoritmo de posicionamiento</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Aplicaci.C3.B3n_Android"><span class="tocnumber">2.7</span> <span class="toctext">Aplicación Android</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Resultado"><span class="tocnumber">3</span> <span class="toctext">Resultado</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Futuro"><span class="tocnumber">4</span> <span class="toctext">Futuro</span></a></li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Proyecto_BlueLoc">Proyecto BlueLoc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=1" title="Edit section: Proyecto BlueLoc">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=1" title="Edit section: Proyecto BlueLoc">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>BlueLoc es una plataforma que permite mantener localizados en tiempo real, dentro de escenarios generados por los propios usuarios, a los diferentes clientes mediante dispositivos móviles con tecnología Bluetooth. El principal objetivo tecnológico es crear una plataforma que permita localizar en tiempo real a los diferentes usuarios mediante Bluetooth, dando alternativas a la localización GPS, especialmente en entornos donde esta tecnología tenga menos cobertura o se necesite una mayor precisión y control del sistema.
+</p><p>Esta plataforma consta de una página web, una aplicación Android y un servicio web REST. La página web permite a los usuarios gestionar sus mapas y monitorizar a los usuarios dentro de los mapas. La apicación Android es la encargada de calcular el posicionamiento de los usuarios y además muestra la posición de los demás usuarios (hay un sistema de permisos que controla la visualización entre estos). Servicio web REST que se encarga de comunicar la página web con la aplicación Android y la base de datos.
+</p>
+<h1><span id="Tecnologías"></span><span class="mw-headline" id="Tecnolog.C3.ADas">Tecnologías</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=2" title="Edit section: Tecnologías">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=2" title="Edit section: Tecnologías">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Flujo_principal">Flujo principal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=3" title="Edit section: Flujo principal">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=3" title="Edit section: Flujo principal">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatleft"><a class="image" href="/pti/index.php/File:Flujo-BlueLoc.png"><img alt="Flujo-BlueLoc.png" data-file-height="578" data-file-width="909" decoding="async" height="223" src="/pti/images/thumb/7/73/Flujo-BlueLoc.png/350px-Flujo-BlueLoc.png" srcset="/pti/images/thumb/7/73/Flujo-BlueLoc.png/525px-Flujo-BlueLoc.png 1.5x, /pti/images/thumb/7/73/Flujo-BlueLoc.png/700px-Flujo-BlueLoc.png 2x" width="350"/></a></div>
+<p>El centro de nuestra plataforma es el servicio web REST que se comunica bidireccionalmente con la base de datos, la página web y la aplicación Android. Además las beacons solo envían una señal a los dispositivos móviles pero no guardan ninguna información de estos. Una vez el móvil recibe la señal de tres o más beacons comenzará a calcular su localización.
+</p><p>Esta nueva posición calculada será enviada al servicio REST y este la guardará en la base de datos y como respuesta le devolverá la posición del resto de usuarios de los cuales tenga permiso para visualizar. A su vez la web podrá visualizar todos estos datos y añadir nuevos mapas al sistema.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Servidor">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=4" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=4" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Datos del servidor donde se aloja nuestra web app y web service:
+</p>
+<ul><li>Intel(R) Atom(TM) CPU N2800 @ 1.86GHz</li>
+<li>Memoria RAM 3926 MB</li>
+<li>Placa base: DN2800MT</li>
+<li>Versión de bios: MTCDT10N.86A.0165.2013.0114.1540</li></ul>
+<p>● Discos 40GB ssd
+</p>
+<ul><li>Velocidad de lectura : 248.45 MB/s</li></ul>
+<p>El servicio de hosting elegido es Kimsufi.
+</p>
+<h2><span id="Página_web"></span><span class="mw-headline" id="P.C3.A1gina_web">Página web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=5" title="Edit section: Página web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=5" title="Edit section: Página web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La página web se adapta perfectamente a los distintos dispositivos ya que se ha empleado el framework de Bootstrap. La página web permite registrar usuarios, añadir y gestionar los mapas y monitorizar a los usuarios de los mapas que administra el usuario.
+</p>
+<ul><li>Bootstrap.</li>
+<li>HTML.</li>
+<li>CSS.</li>
+<li>Ajax.</li></ul>
+<div class="thumb tleft"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:Bluelocindex.png"><img alt="" class="thumbimage" data-file-height="681" data-file-width="1351" decoding="async" height="302" src="/pti/images/thumb/e/e9/Bluelocindex.png/600px-Bluelocindex.png" srcset="/pti/images/thumb/e/e9/Bluelocindex.png/900px-Bluelocindex.png 1.5x, /pti/images/thumb/e/e9/Bluelocindex.png/1200px-Bluelocindex.png 2x" width="600"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Bluelocindex.png" title="Enlarge"></a></div>Browser de un PC</div></div></div> <div class="thumb tright"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:Bluelocresponsive.png"><img alt="" class="thumbimage" data-file-height="662" data-file-width="391" decoding="async" height="339" src="/pti/images/thumb/f/fe/Bluelocresponsive.png/200px-Bluelocresponsive.png" srcset="/pti/images/thumb/f/fe/Bluelocresponsive.png/300px-Bluelocresponsive.png 1.5x, /pti/images/f/fe/Bluelocresponsive.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Bluelocresponsive.png" title="Enlarge"></a></div>Browser de un dispositivo móvil</div></div></div>
+<p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Servicio_web_REST">Servicio web REST</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=6" title="Edit section: Servicio web REST">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=6" title="Edit section: Servicio web REST">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El servicio web REST se ha implementado en PHP con los métodos HTTP GET, PUT y POST. Las respuestas de este servicio son en formato JSON. Este servicio permite:
+</p>
+<ul><li>Iniciar sesión.</li>
+<li>Registrarse.</li>
+<li>Vincularse a un mapa.</li>
+<li>Descargar imagen.</li>
+<li>Descargar descripción del mapa.</li>
+<li>Actualizar posición.</li>
+<li>Consultar posición.</li></ul>
+<h2><span class="mw-headline" id="Beacons">Beacons</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=7" title="Edit section: Beacons">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=7" title="Edit section: Beacons">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Se han empleado seis beacons con el protocolo <a class="external text" href="https://github.com/google/eddystone" rel="nofollow">Eddystone</a> para hacer las pruebas de posicionamiento de la empresa <a class="external text" href="http://kontakt.io/" rel="nofollow">Kontakt</a>. Estas beacons permiten:
+</p>
+<ul><li>Cambiar entre los diferentes protocolos (Eddystone o iBeacon).</li>
+<li>Modificar el ID y la potencia de transmisión.</li>
+<li>Autonomía de dos años.</li></ul>
+<h2><span class="mw-headline" id="Algoritmo_de_posicionamiento">Algoritmo de posicionamiento</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=8" title="Edit section: Algoritmo de posicionamiento">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=8" title="Edit section: Algoritmo de posicionamiento">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatright"><a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Triang.PNG" title="File:Triang.PNG">200 px</a></div>
+<p>Como hemos descrito anteriormente, tenemos un sistema con dispositivos repartidos por el “mapa” objetivo que envían mensajes con su identificador cada cierto tiempo. Sin embargo, conseguir a partir de éstos una posición precisa no es tarea sencilla.
+</p><p>La clave está en la <b>triangulación</b>: el proceso que nos permite calcular la posición de un punto conociendo su distancia a tres o más puntos no alineados del mismo plano. Para calcular nuestra posición triangularemos a partir de las distancias que midamos a cada una de las balizas que tenemos a nuestro alcance.
+</p><p>Sin embargo, nosotros disponemos de medidas con gran variabilidad, por lo que muchas veces no tendremos una intersección puntual de cada una de las circunferencias determinadas por las balizas y la distancia a ellas: tendremos que hacer un algoritmo que haga una <b>estimación de la posición real</b>.
+</p><p>El algoritmo escogido cumple dos características muy importantes en el entorno móvil en el que nos estamos moviendo: bajo consumo de energía y poco requerimiento de computación.
+</p>
+<h2><span id="Aplicación_Android"></span><span class="mw-headline" id="Aplicaci.C3.B3n_Android">Aplicación Android</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=9" title="Edit section: Aplicación Android">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=9" title="Edit section: Aplicación Android">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="floatleft"><a class="image" href="/pti/index.php/File:Storyboard-BlueLoc.png"><img alt="Storyboard-BlueLoc.png" data-file-height="2480" data-file-width="3508" decoding="async" height="283" src="/pti/images/thumb/e/e3/Storyboard-BlueLoc.png/400px-Storyboard-BlueLoc.png" srcset="/pti/images/thumb/e/e3/Storyboard-BlueLoc.png/600px-Storyboard-BlueLoc.png 1.5x, /pti/images/thumb/e/e3/Storyboard-BlueLoc.png/800px-Storyboard-BlueLoc.png 2x" width="400"/></a></div>
+<p>Inicialmente cuando se entra en la aplicación para dispositivos móviles Android, el sistema consulta si hay credenciales guardadas de sesiones anteriores. Si no las hay, usuario procederá a insertar sus credenciales para iniciar sesión o registrarse. Una vez ya ha insertado los datos o ya había unas credenciales guardadas de una sesión anterior, el usuario procederá a unirse a un mapa.
+</p><p>En esta sección el usuario debe insertar el identificador del mapa que deberá haber consultado con anterioridad al administrador del mapa y opcionalmente un rol o conjunto de permisos con los que acceder al mapa. Si no se inserta rol, el usuario entrará con los permisos por defecto que haya seleccionado el administrador.
+</p><p>Una vez se accede al mapa, se descarga toda la información del mapa y el usuario tan solo deberá darle al botón de empezar y la posición se irá recalculando gracias al algoritmo de triangulación anteriormente descrito.
+</p><p>Si el usuario quiere cerrar la sesión podrá realizarlo desde el menú superior que encontrará en cada una de las secciones.
+</p><p><br/>
+</p><p><br/>
+</p><p><br/>
+</p><p>.
+</p>
+<h1><span class="mw-headline" id="Resultado">Resultado</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=10" title="Edit section: Resultado">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=10" title="Edit section: Resultado">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El resultado de esta plataforma ha sido muy positivo, ya que se ha conseguido unir una aplicación web con una aplicación móvil que permiten a los usuarios localizarse en entornos definidos por ellos mismos mediante beacons bluetooth.
+</p><p>A pesar de haber aplicado numerosas mejoras al algoritmo, no se ha conseguido limitar el error lo suficiente. Por lo que sería más conveniente que en vez de dar el punto exacto de posicionamiento de cada usuario, se debería mostrar la posición de los usuarios por áreas definidas o en caso de ser escenarios que se encuentren en el interior de edificios, delimitarlo por habitaciones.
+</p>
+<h1><span class="mw-headline" id="Futuro">Futuro</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;veaction=edit&amp;section=11" title="Edit section: Futuro">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Blueloc&amp;action=edit&amp;section=11" title="Edit section: Futuro">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Próximos pasos propuestos para la mejora de a plataforma:
+</p>
+<ul><li>Mejorar la precisión de la localización.</li>
+<li>Implementar un generador de mapas personalizados en la web para hacer más intuitiva y simple la creación de mapas.</li>
+<li>Guardar el flujo de movimiento de los usuarios, ofreciendo más estadísticas a los administradores.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20250710083828
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.030 seconds
+Real time usage: 0.037 seconds
+Preprocessor visited node count: 39/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:143-0!canonical and timestamp 20250710083828 and revision id 173
+ -->
+</div>

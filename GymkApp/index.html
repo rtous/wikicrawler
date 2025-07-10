@@ -1,0 +1,90 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:310px;"><a class="image" href="/pti/index.php/File:Logo2.png"><img alt="" class="thumbimage" data-file-height="308" data-file-width="308" decoding="async" height="308" src="/pti/images/8/89/Logo2.png" width="308"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Logo2.png" title="Enlarge"></a></div>GymkApp</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Objectius"><span class="tocnumber">2</span> <span class="toctext">Objectius</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#M.C3.A8tode"><span class="tocnumber">3</span> <span class="toctext">Mètode</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Estructura_del_sistema"><span class="tocnumber">3.1</span> <span class="toctext">Estructura del sistema</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Tecnologies"><span class="tocnumber">3.2</span> <span class="toctext">Tecnologies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Producte_final"><span class="tocnumber">4</span> <span class="toctext">Producte final</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Conclusions"><span class="tocnumber">5</span> <span class="toctext">Conclusions</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>La present memòria recull per escrit la informació que fa referència al projecte de tecnologies de la informació que hem dut a terme: GymkApp. Es descriu el procés de planificació disseny i implementació del sistema, una aplicació Android per a construïr i jugar gimcanes pel món.
+Les gimkanes o mapes són conjunts de punts, que consten a més d’una descripció general que ajuda a definir quin tipus de joc ens trobarem. Els punts consten d’una posició en el mapa i un petit text que ens dona una pista sobre on anar. Per a jugar una gimcana cal passar per totes els punts, el text dels quals es revel·la quan es supera l’anterior.
+L’aplicació està pensada per a permetre la creació de punts i mapes als usuaris i per a poder jugar qualsevol d’ells. Finalment el desenvolupament ha arribat a poder jugar-ne una sola precarregada al sistema.
+</p>
+<h1><span class="mw-headline" id="Objectius">Objectius</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=2" title="Edit section: Objectius">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=2" title="Edit section: Objectius">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Havent analitzat les necessitats que presenta el món de la gimcana, ens plantegem els següents objectius:
+</p>
+<ul><li>Digitalitzar la gimcana
+<ul><li>Pot ser jugada sense suport físic.</li>
+<li>Pot ser jugada telemàticament.</li>
+<li>Permetre un nombre elevat de jugadors.</li></ul></li>
+<li>Fer les gimcanes reutilitzables.
+<ul><li>Mantenir un registre de les gimcanes</li>
+<li>Poder compartir les gimcanes amb altres persones.</li></ul></li>
+<li>Comprovar el compliment de proves.</li></ul>
+<h1><span id="Mètode"></span><span class="mw-headline" id="M.C3.A8tode">Mètode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=3" title="Edit section: Mètode">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=3" title="Edit section: Mètode">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>En aquesta secció trobem necessari una introducció del model el qual es recolza l’api creada i el conjunt que s’utilitzen tant en el Back End com en el FrontEnd.
+</p>
+<h2><span class="mw-headline" id="Estructura_del_sistema">Estructura del sistema</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=4" title="Edit section: Estructura del sistema">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=4" title="Edit section: Estructura del sistema">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En la figura podem veure les principals tecnologies que s’han implementat en el projecte i quina és la interacció entre elles.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Pasted_image_0.png"><img alt="" class="thumbimage" data-file-height="612" data-file-width="999" decoding="async" height="490" src="/pti/images/thumb/9/90/Pasted_image_0.png/800px-Pasted_image_0.png" srcset="/pti/images/9/90/Pasted_image_0.png 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Pasted_image_0.png" title="Enlarge"></a></div>Estructura del sistema.</div></div></div></div>
+<h2><span class="mw-headline" id="Tecnologies">Tecnologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=5" title="Edit section: Tecnologies">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=5" title="Edit section: Tecnologies">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Aquestes són totes les tecnologies usades per al desenvolupament de la app.
+</p>
+<ul><li>Node.js</li>
+<li>MongoDB</li>
+<li>Express</li>
+<li>JWT</li>
+<li>Docker</li>
+<li>Github</li>
+<li>UPCLink</li>
+<li>Android SDK</li>
+<li>Kotlin/JVM</li>
+<li>Android Jetpack</li>
+<li>Maps SDK</li>
+<li>Google Location Services</li>
+<li>Material Design</li>
+<li>Retrofit 2</li>
+<li>OkHTTP3</li>
+<li>Gson</li></ul>
+<h1><span class="mw-headline" id="Producte_final">Producte final</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=6" title="Edit section: Producte final">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=6" title="Edit section: Producte final">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Aparença final de l'aplicació.
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:290px;"><a class="image" href="/pti/index.php/File:Unnamed.png"><img alt="" class="thumbimage" data-file-height="512" data-file-width="288" decoding="async" height="512" src="/pti/images/a/a0/Unnamed.png" width="288"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Unnamed.png" title="Enlarge"></a></div>Pantalla de login</div></div></div> <div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:289px;"><a class="image" href="/pti/index.php/File:Unnamed2.png"><img alt="" class="thumbimage" data-file-height="512" data-file-width="287" decoding="async" height="512" src="/pti/images/7/71/Unnamed2.png" width="287"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Unnamed2.png" title="Enlarge"></a></div>Gimcana completada</div></div></div></div>
+<h1><span class="mw-headline" id="Conclusions">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;veaction=edit&amp;section=7" title="Edit section: Conclusions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:GymkApp&amp;action=edit&amp;section=7" title="Edit section: Conclusions">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El resultat d'aquest projecte ha estat un sistema que integra diferents tecnologies tan vistes a classe com algunes que ens ha semblat interessants aplicar-les.
+En primer lloc, com s'ha pogut veure al llarg del treball s'han complert els principals objectius del projecte amb un resultat satisfactori: digitalitzar les gimcanes, fer-les i comprovar el compliment de les proves mitjançant la ubicació de l'usuari. Es tracta de modernitzar les gimcanes i això pot tenir un gran impacte en el temps actual on es busca l'entreteniment digital.
+En segon lloc, hem ampliat els nostres coneixements en tecnologies utilitzades en l'actualitat i que tenen un impacte important a l'hora de crear, desenvolupar i desplegar un projecte tecnològic.
+Tot i això, fins al moment de presentació d’aquesta memòria, la implementació per part del servidor ha aconseguit la seva completesa, però per part de l’aplicació s’ha arribat a jugar a un mapa prefixat, sense poder crear-lo ni seleccionar quin volem jugar.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083838
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.013 seconds
+Real time usage: 0.017 seconds
+Preprocessor visited node count: 24/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:496-0!canonical and timestamp 20250710083838 and revision id 698
+ -->
+</div>

@@ -1,0 +1,111 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:482px;"><a class="image" href="/pti/index.php/File:Logo_bmx7.png"><img alt="" class="thumbimage" data-file-height="193" data-file-width="480" decoding="async" height="193" src="/pti/images/f/f3/Logo_bmx7.png" width="480"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Logo_bmx7.png" title="Enlarge"></a></div>Estructura del proyecto.</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A8_.C3.A9s_BMX7.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Què és BMX7?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Tecnologies"><span class="tocnumber">2</span> <span class="toctext">Tecnologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#GNS3"><span class="tocnumber">2.1</span> <span class="toctext">GNS3</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Docker"><span class="tocnumber">2.2</span> <span class="toctext">Docker</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#M.C3.A0quines_Virtuals_.28Virtualbox.29"><span class="tocnumber">2.3</span> <span class="toctext">Màquines Virtuals (Virtualbox)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Creaci.C3.B3_del_disc_dur_virtual_.28NodeX.vdi.29_a_partir_de_la_imatge_de_OpenWRT"><span class="tocnumber">2.3.1</span> <span class="toctext">Creació del disc dur virtual (NodeX.vdi) a partir de la imatge de OpenWRT</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Creaci.C3.B3_de_la_m.C3.A0quina_a_Virtualbox"><span class="tocnumber">2.3.2</span> <span class="toctext">Creació de la màquina a Virtualbox</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Instal.C2.B7laci.C3.B3_de_packages_necessaris"><span class="tocnumber">2.3.3</span> <span class="toctext">Instal·lació de packages necessaris</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Importaci.C3.B3_dins_de_GNS3"><span class="tocnumber">2.3.4</span> <span class="toctext">Importació dins de GNS3</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Configuraci.C3.B3_dins_de_GNS3"><span class="tocnumber">2.3.5</span> <span class="toctext">Configuració dins de GNS3</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#An.C3.A0lisi_de_dades"><span class="tocnumber">3</span> <span class="toctext">Anàlisi de dades</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Conclusions"><span class="tocnumber">4</span> <span class="toctext">Conclusions</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Històricament les zones rurals han sigut ignorades per les companyies de telecomunicacions. El poc interès per part d’aquestes companyies es deu a la poca rendibilitat que suposaria el nivell d’inversió necessari per portar connexió a internet en aquestes àrees. D’aquesta manera, la població que habita aquestes zones no disposava d’accés a internet, o l’accés era pobre i de baix rendiment. Per tal de cobrir aquesta necessitat van néixer organitzacions com Guifi.
+</p><p>Guifi és una organització impulsada des de la ciutadania, que com a objectiu té oferir accés a internet per a tothom, creant una xarxa oberta, lliure i neutral. En l’actualitat guifi compta amb més de 30.000 nodes actius, i es calcula que més de 50.000 persones reben servei a través de la xarxa que han impulsat.
+</p><p>Part de la xarxa de Guifi a Barcelona s’organitza per sectors, sent cada sector un barri de la ciutat. Alguns exemples son Sants, Sant Andreu o Vallcarca. A més, en cada barri els routers s’organitzen en xarxes mesh. Les xarxes mesh funcionen sense jerarquía i els nodes col·laboren entre ells per tal d’enrutar la informació de la forma més adient possible. Aquestes xarxes poden ser dinàmiques i la disponibilitat dels nodes que hi participen variable. Degut a la naturalesa oberta de la xarxa també pot ser que existeixin nodes malintencionats. Tots aquests factors van impulsar a la creació d’un protocol d’encaminament que pogués funcionar correctament en aquestes condicions. 
+</p><p><br/>
+</p>
+<h2><span id="¿Què_és_BMX7?"></span><span class="mw-headline" id=".C2.BFQu.C3.A8_.C3.A9s_BMX7.3F">¿Què és BMX7?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=2" title="Edit section: ¿Què és BMX7?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=2" title="Edit section: ¿Què és BMX7?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Actualment BMX6 és el protocol utilitzat per Guifi en les seves xarxes mesh, però existeix una versió actualitzada, que és BMX7. BMX7 té com a objectiu principal fer front a l’amenaça dels nodes malintencionats i proporcionar eines per a que l’administrador pugui definir preferències a l’hora de crear taules d’enrutament, així i com incloure millores de funcionament respecte BMX6.
+</p><p>L’objectiu d’aquest projecte consisteix en realitzar un estudi del funcionament, eficiència i rendiment del protocol BMX7. 
+</p>
+<h1><span class="mw-headline" id="Tecnologies">Tecnologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=3" title="Edit section: Tecnologies">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=3" title="Edit section: Tecnologies">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="GNS3">GNS3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=4" title="Edit section: GNS3">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=4" title="Edit section: GNS3">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En aquest projecte s’ha decidit utilitzar GNS3 com a simulador ja que té una interface bastant user-friendly i ens facilita la creació de les topologies que es vulguin estudiar.  A més, té suport pels containers de Docker i les VM emprades.
+</p><p><a class="image" href="/pti/index.php/File:Gns3.png"><img alt="Gns3.png" data-file-height="397" data-file-width="731" decoding="async" height="397" src="/pti/images/3/3f/Gns3.png" width="731"/></a>
+</p>
+<h2><span class="mw-headline" id="Docker">Docker</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=5" title="Edit section: Docker">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=5" title="Edit section: Docker">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Màquines_Virtuals_(Virtualbox)"></span><span class="mw-headline" id="M.C3.A0quines_Virtuals_.28Virtualbox.29">Màquines Virtuals (Virtualbox)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=6" title="Edit section: Màquines Virtuals (Virtualbox)">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=6" title="Edit section: Màquines Virtuals (Virtualbox)">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Primerament es va intentar utilitzar una imatge del SO per a routers OpenWRT, el qual es té un filesystem molt semblant al d’un host Linux, modificada per nosaltres amb el package de BMX7 instal·lat. 
+</p><p>Una vegada es tenia la imatge es va intentar importar dins del simulador com la resta de routers però no es va poder degut a que la versió soportada de OpenWRT no és la que es necessitava.
+Per aquest fet i degut a que el simulador ho permet, s’ha decidit fer màquines virtuals amb Virtualbox de les imatges dels routers.
+</p>
+<ul><li>Passos a seguir:</li></ul>
+<h3><span id="Creació_del_disc_dur_virtual_(NodeX.vdi)_a_partir_de_la_imatge_de_OpenWRT"></span><span class="mw-headline" id="Creaci.C3.B3_del_disc_dur_virtual_.28NodeX.vdi.29_a_partir_de_la_imatge_de_OpenWRT">Creació del disc dur virtual (NodeX.vdi) a partir de la imatge de OpenWRT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=7" title="Edit section: Creació del disc dur virtual (NodeX.vdi) a partir de la imatge de OpenWRT">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=7" title="Edit section: Creació del disc dur virtual (NodeX.vdi) a partir de la imatge de OpenWRT">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Aquesta tasca s’ha fet desde un Windows a partir de la imatge nativa de OpenWRT “openwrt-x86-generic-combined-ext4.img”. En concret amb la següent eina que ofereix virtualbox on NodeX és el nom del disc dur virtual que es vulgui tenir.
+</p>
+<ul><li>"C:\Program Files\oracle\VirtualBox\VBoxManage" convertdd openwrt-x86-generic-combined-ext4.img NodeX.vdi</li></ul>
+<h3><span id="Creació_de_la_màquina_a_Virtualbox"></span><span class="mw-headline" id="Creaci.C3.B3_de_la_m.C3.A0quina_a_Virtualbox">Creació de la màquina a Virtualbox</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=8" title="Edit section: Creació de la màquina a Virtualbox">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=8" title="Edit section: Creació de la màquina a Virtualbox">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>S’ha de posar el nom que li donarem a la màquina i escollir tipus i versió de sistema operatiu, en el nostre cas Other Linux ja que OpenWRT està basat en Linux.
+La quantitat de memòria està limitat per la que tinguem a la màquina os es faran les simulacions. Com nosaltres disposem de 8Gb i tenim ~25 màquines s’ha decidit 128MB per màquina. 
+Finalment s’ha de seleccionar el disc dur virtual creat prèviament.
+</p>
+<h3><span id="Instal·lació_de_packages_necessaris"></span><span class="mw-headline" id="Instal.C2.B7laci.C3.B3_de_packages_necessaris">Instal·lació de packages necessaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=9" title="Edit section: Instal·lació de packages necessaris">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=9" title="Edit section: Instal·lació de packages necessaris">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Dins del simulador no es té accés a internet per lo tant, si es vol instal·lar els packages necessaris pels nostres experiments s’ha de fer abans d’importar les màquines. Per això, s’ha de connectar el NAT a la màquina i arrencar-la des de Virtualbox.
+La configuració per defecte de la interfície on es té el NAT té una IPv4 asignada de forma estática i, per tant, no es podrà accedir a internet. El que s’ha de fer és canviar el protocol d’assignació static per dhcp al /etc/config/network. D’aquesta manera ja es pot reiniciar el servei de xarxa perquè es pugui utilitzar el gestor de packages.
+</p>
+<ul><li>Packages a instal·lar amb la comanda "opkg install nom-package":
+<ul><li>bmx7</li>
+<li>bmx7-uci-config</li>
+<li>luci-app-bmx7</li>
+<li>iperf3 (nomès als nodes que s'utilitzaran com a clinet/server)</li>
+<li>bmx6 (pels nodes on es vulgui provar bmx6)</li></ul></li></ul>
+<h3><span id="Importació_dins_de_GNS3"></span><span class="mw-headline" id="Importaci.C3.B3_dins_de_GNS3">Importació dins de GNS3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=10" title="Edit section: Importació dins de GNS3">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=10" title="Edit section: Importació dins de GNS3">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Edit -&gt; Preferences -&gt; Virtualbox VMs -&gt; New <br/>
+En aquest punt s’obre una llista desplegable en la qual s’actualitzen totes les màquines que tenim creades i podem seleccionar la que es vulgui importar.
+L’últim pas es donar a Finish i passar a configurar-la.
+</p>
+<h3><span id="Configuració_dins_de_GNS3"></span><span class="mw-headline" id="Configuraci.C3.B3_dins_de_GNS3">Configuració dins de GNS3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=11" title="Edit section: Configuració dins de GNS3">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=11" title="Edit section: Configuració dins de GNS3">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Després, s’han d’editar alguns paràmetres: a la pestanya de “General settings” ajustar la RAM si és necessari; a la pestanya de “Network” incrementar el nombre d’Adapters (targetes de xarxa) i clicar al checkbox de “Allow GNS3 to use any configured VirtualBox adapter”.
+Un cop ja s’han importat totes les màquines necessàries al simulador, apareixen a la part esquerra clicant sobre la icona amb forma de Host. Per utilitzar-les, només cal arrossegar-les i posteriorment es poden unir decidint en quina interfície de cada màquina anirà a parar aquest enllaç. 
+Després d’haver instal·lat els packages necessaris ja es poden canviar les configuracions dels fitxers networking i bmx7 del directori /etc/config.
+</p>
+<pre>      <a class="image" href="/pti/index.php/File:Config.png"><img alt="Config.png" data-file-height="444" data-file-width="294" decoding="async" height="444" src="/pti/images/b/b1/Config.png" width="294"/></a>     <a class="image" href="/pti/index.php/File:Bmx7.png"><img alt="Bmx7.png" data-file-height="455" data-file-width="272" decoding="async" height="455" src="/pti/images/d/df/Bmx7.png" width="272"/></a>
+</pre>
+<p>El deamon es posa en marxa al fer el boot del sistema i per tant, no s’ha de fer res per arrencar-lo però és important haver configurat bé el fitxer anterior ja que és la configuració que agafarà.
+Un cop ja es té configurada la xarxa i bmx7, es va veure que els nodes es veien mitjançant el protocol però no es tenia forwarding dels paquets. Aquest fet feia que, per exemple, no es pogués fer ping entre nodes. Com aquestes proves s’estan fent en un entorn local i, per tant és segur, es va decidir prescindir de les regles de firewall aplicades als paquets IPv6 per tal de facilitar aquesta tasca. Es fa descomentant la línea resaltada més abaix del fitxer /etc/config/firewall.
+</p>
+<h1><span id="Anàlisi_de_dades"></span><span class="mw-headline" id="An.C3.A0lisi_de_dades">Anàlisi de dades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=12" title="Edit section: Anàlisi de dades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=12" title="Edit section: Anàlisi de dades">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h1><span class="mw-headline" id="Conclusions">Conclusions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;veaction=edit&amp;section=13" title="Edit section: Conclusions">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:BMX7&amp;action=edit&amp;section=13" title="Edit section: Conclusions">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<hr/>
+<p>Memòria del projecte: <a class="new" href="/pti/index.php?title=Special:Upload&amp;wpDestFile=Memoria_BMX7.pdf" title="Memoria BMX7.pdf">Media:Memoria_BMX7.pdf</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710080929
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.023 seconds
+Real time usage: 0.034 seconds
+Preprocessor visited node count: 43/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:409-0!canonical and timestamp 20250710080929 and revision id 446
+ -->
+</div>

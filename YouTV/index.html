@@ -1,0 +1,49 @@
+<div class="mw-parser-output"><div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Youtv_black.png"><img alt="Youtv black.png" data-file-height="243" data-file-width="705" decoding="async" height="69" src="/pti/images/thumb/d/d2/Youtv_black.png/200px-Youtv_black.png" srcset="/pti/images/thumb/d/d2/Youtv_black.png/300px-Youtv_black.png 1.5x, /pti/images/thumb/d/d2/Youtv_black.png/400px-Youtv_black.png 2x" width="200"/></a></div></div>
+<p><a class="external text" href="http://youtv.aleixmurtra.com" rel="nofollow">Enlace a YouTV</a>
+</p>
+<h2><span id="1._¿Qué_es_YouTV?"></span><span class="mw-headline" id="1._.C2.BFQu.C3.A9_es_YouTV.3F">1. ¿Qué es YouTV?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:YouTV&amp;veaction=edit&amp;section=1" title="Edit section: 1. ¿Qué es YouTV?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:YouTV&amp;action=edit&amp;section=1" title="Edit section: 1. ¿Qué es YouTV?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Youtv es una plataforma de televisión por Internet con contenido de Youtube y está compuesto por diferentes canales agrupados por temáticas.
+Tenemos canales de música, humor, conocimiento y entretenimiento. Todos estos canales funcionan a tiempo real. Es decir, si dos personas miran un mismo canal veran el mismo contenido y, en el caso ideal, estarán sincronizados al segundo. 
+Creemos que tenemos dos componentes muy importantes para poder crecer en un futuro: el contenido es a tiempo real, y le damos la posibilidad a los usuarios a que puedan compartir lo que ven con sus amigos; el segundo componente es el hecho de tener canales temáticos. Los usuarios que no sepan qué visualizar en la televisión o en internet pueden escoger un canal o hacer zapping. Una vez encuentren el canal que mas les guste no tienen que preocuparse por los videos que vienen a continuación, todos están relacionados con la misma temática central.
+</p>
+<h2><span id="2._Tecnologías"></span><span class="mw-headline" id="2._Tecnolog.C3.ADas">2. Tecnologías</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:YouTV&amp;veaction=edit&amp;section=2" title="Edit section: 2. Tecnologías">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:YouTV&amp;action=edit&amp;section=2" title="Edit section: 2. Tecnologías">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Servidor</b>
+Hemos instalado Apache 2 para el servidor web y lo hemos configurado con los módulos rewrite y sslengine para que pueda ser llamado mediante HTTP y HTTPS.
+Junto al servidor Apache tenemos PHP5.5, que se usará para correr código PHP en el servidor, tanto proveniente de la página web, puesto que es uno de los lenguajes con los que está programada en PHP, como del propio servidor.
+Node.JS
+Es un entorno de programación asíncrono que se ejecuta al lado del servidor. Está programado en JavaScript y carga diferentes módulos para poder dar el servicio deseado. En la práctica hemos usado los siguientes módulos:
+- Socket.io: Éste módulo nos permite comunicar dos dispositivos y transmitir datos en JSON. Para realizar la comunicación se usan esencialmente dos métodos llamados socket.emit(nombre, función) y socket.on(nombre, función). El emit lo emite el que quiere interactuar con el otro y el on el que recibe la llamada. Reaccionan si el nombre es el mismo ejecutando así la función definida.
+- Node-MySQL: Éste módulo permite hacer conexiones a un servidor MySQL.
+- Temboo: Permite enviar tweets usando la API de una página web llamada Temboo. 
+</p><p><b>Web</b>
+Hemos decidido crear una interfaz web sencilla e intuitiva. Para el diseño hemos usado HTML5 y CSS3, compatibles con versiones de internet Explorer 10 o superior y últimas versiones de Firefox, Chrome,Opera y Safari.
+- JavaScript: Permite crear funciones que se ejecutarán en el navegador del cliente.
+- Ajax: Permite llamadas al servidor a través de JavaScript con las que podemos actualizar una parte del código (una parte específica de la web). En muchos casos mejoramos la eficiencia al no enviar información redundante (enviamos al servidor solo aquellos datos que sean necesarios y pedimos solo lo que nos interesa). También mejora la usabilidad de la aplicación haciéndola más cómoda y rápida para el usuario.
+</p><p><b>Android</b>
+Hemos desarrollado una aplicación Android para controlar algunos aspectos del funcionamiento de la página web remotamente, como si de un mando a distancia se tratara. Ésta está programada usando las herramientas básicas que ofrece el sistema Android (ofreciendo compatibilidad hasta la versión 4.1.2) y otra herramienta para la conexión:
+- Socket.io: Para la comunicación en red hemos usado una implementación abierta del cliente Socket.io que encontramos en GitHub.[1] El funcionamiento es el mismo que el de la implementación para el servidor, usando las funciones emit para llamar a funciones remotas y on para atender las peticiones entrantes.
+</p>
+<div class="center"><div class="floatnone"><a class="image" href="/pti/index.php/File:Youtv_screen.png"><img alt="Youtv screen.png" data-file-height="862" data-file-width="1281" decoding="async" height="538" src="/pti/images/thumb/2/25/Youtv_screen.png/800px-Youtv_screen.png" srcset="/pti/images/thumb/2/25/Youtv_screen.png/1200px-Youtv_screen.png 1.5x, /pti/images/2/25/Youtv_screen.png 2x" width="800"/></a></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250709143120
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.013 seconds
+Real time usage: 0.018 seconds
+Preprocessor visited node count: 6/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:76-0!canonical and timestamp 20250709143120 and revision id 105
+ -->
+</div>

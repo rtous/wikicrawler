@@ -1,0 +1,57 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Nfcdoor.png"><img alt="" class="thumbimage" data-file-height="496" data-file-width="897" decoding="async" height="442" src="/pti/images/thumb/4/4a/Nfcdoor.png/800px-Nfcdoor.png" srcset="/pti/images/4/4a/Nfcdoor.png 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Nfcdoor.png" title="Enlarge"></a></div>Estructura del proyecto.</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Tecnologies"><span class="tocnumber">2</span> <span class="toctext">Tecnologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Hardware"><span class="tocnumber">2.1</span> <span class="toctext">Hardware</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Software"><span class="tocnumber">2.2</span> <span class="toctext">Software</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Resultats"><span class="tocnumber">3</span> <span class="toctext">Resultats</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El projecte consisteix en una nova manera de gestionar les portes del nostre dia a dia. La nostra intenció era poder oblidar-nos de tota targeta o clau per obrir les nostres portes ja que com més portes tenim més utensilis necessitem per obrir-les i aquest fet pot arribar a ser una molèstia per segons quina roba vestim o quins llocs anem ja que sempre són una cosa més a portar a sobre. 
+</p><p>Es basa en una aplicació mòbil que mitjançant la tecnologia NFC és capaç d'obrir les portes que tingui disponible un determinat usuari, oblidant-nos així per sempre de les claus convencionals. És tan fàcil com sel·leccionar la porta que volem obrir i tot seguit apropar el nostre dispositiu al pany de la porta que disposarà d’un lector NFC que s’encarregarà de la resta.
+</p>
+<h1><span class="mw-headline" id="Tecnologies">Tecnologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;veaction=edit&amp;section=2" title="Edit section: Tecnologies">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;action=edit&amp;section=2" title="Edit section: Tecnologies">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Hardware">Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;veaction=edit&amp;section=3" title="Edit section: Hardware">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;action=edit&amp;section=3" title="Edit section: Hardware">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La nostra infraestructura consta de simplement dos terminals smartphone i un ordinador. Inicialment volíem fer servir una Raspberry Pi 3 i un pany amb lector NFC però vam trobar complicacions greus i vam haver d'abstenir-nos del seu ús.
+</p><p>L'ordinador actua com a servidor i base de dades per a què l'usuari pugui gaudir del servei complet d'obertura de portes quan ho desitgi.
+</p>
+<h2><span class="mw-headline" id="Software">Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;veaction=edit&amp;section=4" title="Edit section: Software">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;action=edit&amp;section=4" title="Edit section: Software">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>- MongoDB: Com a base de dades noSQL
+- NodeJS: Com a servidor
+- ReactNative: Framework en què l'aplicació ha estat disenyada
+- Docker : Containers on hi ha el servidor i la BBDD
+</pre>
+<h1><span class="mw-headline" id="Resultats">Resultats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;veaction=edit&amp;section=5" title="Edit section: Resultats">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:NFCdoor&amp;action=edit&amp;section=5" title="Edit section: Resultats">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:PortadaNFC.jpeg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="778" decoding="async" height="617" src="/pti/images/thumb/9/95/PortadaNFC.jpeg/300px-PortadaNFC.jpeg" srcset="/pti/images/thumb/9/95/PortadaNFC.jpeg/450px-PortadaNFC.jpeg 1.5x, /pti/images/thumb/9/95/PortadaNFC.jpeg/600px-PortadaNFC.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:PortadaNFC.jpeg" title="Enlarge"></a></div>Splash</div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:LoginNFC.jpeg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="778" decoding="async" height="617" src="/pti/images/thumb/7/77/LoginNFC.jpeg/300px-LoginNFC.jpeg" srcset="/pti/images/thumb/7/77/LoginNFC.jpeg/450px-LoginNFC.jpeg 1.5x, /pti/images/thumb/7/77/LoginNFC.jpeg/600px-LoginNFC.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:LoginNFC.jpeg" title="Enlarge"></a></div>Login</div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:MenuNFC.jpeg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="778" decoding="async" height="617" src="/pti/images/thumb/1/14/MenuNFC.jpeg/300px-MenuNFC.jpeg" srcset="/pti/images/thumb/1/14/MenuNFC.jpeg/450px-MenuNFC.jpeg 1.5x, /pti/images/thumb/1/14/MenuNFC.jpeg/600px-MenuNFC.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:MenuNFC.jpeg" title="Enlarge"></a></div>Menu principal</div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:KeysNFC.jpeg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="778" decoding="async" height="617" src="/pti/images/thumb/0/00/KeysNFC.jpeg/300px-KeysNFC.jpeg" srcset="/pti/images/thumb/0/00/KeysNFC.jpeg/450px-KeysNFC.jpeg 1.5x, /pti/images/thumb/0/00/KeysNFC.jpeg/600px-KeysNFC.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:KeysNFC.jpeg" title="Enlarge"></a></div>Keys</div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:DoorsNFC.jpeg"><img alt="" class="thumbimage" data-file-height="1600" data-file-width="778" decoding="async" height="617" src="/pti/images/thumb/c/c6/DoorsNFC.jpeg/300px-DoorsNFC.jpeg" srcset="/pti/images/thumb/c/c6/DoorsNFC.jpeg/450px-DoorsNFC.jpeg 1.5x, /pti/images/thumb/c/c6/DoorsNFC.jpeg/600px-DoorsNFC.jpeg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:DoorsNFC.jpeg" title="Enlarge"></a></div>"Door" NFC reader</div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250710083835
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.015 seconds
+Real time usage: 0.017 seconds
+Preprocessor visited node count: 15/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:425-0!canonical and timestamp 20250710083835 and revision id 462
+ -->
+</div>

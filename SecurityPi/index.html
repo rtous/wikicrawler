@@ -1,0 +1,71 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:Security-Pi.png"><img alt="" class="thumbimage" data-file-height="512" data-file-width="512" decoding="async" height="300" src="/pti/images/thumb/7/73/Security-Pi.png/300px-Security-Pi.png" srcset="/pti/images/thumb/7/73/Security-Pi.png/450px-Security-Pi.png 1.5x, /pti/images/7/73/Security-Pi.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Security-Pi.png" title="Enlarge"></a></div>Security Pi.</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Qu.C3.A8_.C3.A9s_Security_Pi.3F"><span class="tocnumber">1.1</span> <span class="toctext">Què és Security Pi?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Raspberry_Pi"><span class="tocnumber">2.1</span> <span class="toctext">Raspberry Pi</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Servidor"><span class="tocnumber">2.2</span> <span class="toctext">Servidor</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#App"><span class="tocnumber">2.3</span> <span class="toctext">App</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Vam decidir fer una app de seguretat perquè creiem que seria interessant veure el difícil que podia arribar a ser fer un sistema de seguretat; perquè quan una companyia et munta el seu sistema, el client només veu com munten les càmeres, no veu que hi ha "darrere".
+</p>
+<h2><span id="Què_és_Security_Pi?"></span><span class="mw-headline" id="Qu.C3.A8_.C3.A9s_Security_Pi.3F">Què és Security Pi?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=2" title="Edit section: Què és Security Pi?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=2" title="Edit section: Què és Security Pi?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>És un sistema de seguretat senzill el qual qualsevol persona amb una càmera web, una Raspberry Pi i un mòbil podria muntar seguint les instruccions. Amb el mòbil només s'haurà de registrar a l'app amb un correu propi i el servidor ja el tindrem com a usuari. Després s'hauria de configurar el Motion (programa que utilitzem per gravar) després d'haver-lo instal·lat i instal·lar la VPN per poder connectar-se amb el servidor.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Security Pi està construït sobre tres components: Una Raspberry Pi, un servidor i una aplicació per Android. Aquestes tres partes es comuniquen entre si per dur a terme les funcionalitats del sistema. 
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:602px;"><a class="image" href="/pti/index.php/File:Security-pi-esquema.png"><img alt="" class="thumbimage" data-file-height="712" data-file-width="1362" decoding="async" height="314" src="/pti/images/thumb/7/72/Security-pi-esquema.png/600px-Security-pi-esquema.png" srcset="/pti/images/thumb/7/72/Security-pi-esquema.png/900px-Security-pi-esquema.png 1.5x, /pti/images/thumb/7/72/Security-pi-esquema.png/1200px-Security-pi-esquema.png 2x" width="600"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Security-pi-esquema.png" title="Enlarge"></a></div>Estructura del sistema.</div></div></div></div>
+<h2><span class="mw-headline" id="Raspberry_Pi">Raspberry Pi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=4" title="Edit section: Raspberry Pi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=4" title="Edit section: Raspberry Pi">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per a fer els vídeos i gravar-los fem servir Motion, una aplicació centrada en les gravacions de seguretat.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:320px;"><a class="image" href="/pti/index.php/File:SecurityPi-Motion.png"><img alt="" class="thumbimage" data-file-height="159" data-file-width="318" decoding="async" height="159" src="/pti/images/0/0c/SecurityPi-Motion.png" width="318"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:SecurityPi-Motion.png" title="Enlarge"></a></div>Motion.</div></div></div></div>
+<p>Durant el procés, vam necessitar connectar la RP amb els altres dispositius; a més de fer que el streaming es pogués veure en una IP pública. Per fer això fem servir NO-IP, que és una pàgina web que et deixa crear un DNS dinàmic per crear HTTPS o SSH.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:No-ip-Security_Pi.png"><img alt="" class="thumbimage" data-file-height="200" data-file-width="400" decoding="async" height="150" src="/pti/images/thumb/4/42/No-ip-Security_Pi.png/300px-No-ip-Security_Pi.png" srcset="/pti/images/4/42/No-ip-Security_Pi.png 1.5x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:No-ip-Security_Pi.png" title="Enlarge"></a></div>No IP</div></div></div></div>
+<p>Per últim, per pujar els vídeos gravats fem servir scripts creats per nosaltres.
+</p>
+<h2><span class="mw-headline" id="Servidor">Servidor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=5" title="Edit section: Servidor">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=5" title="Edit section: Servidor">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per garantir l'objectiu de seguretat i vigilància ens cal tenir un lloc on emmagatzemar les nostres gravacions fetes amb la RB pi, per tal de poder consultar-les quan ho necessitem. Aquest lloc d'emmagatzematge depèn de l'ús que donis al sistema de vigilància, si només l'utilitzes unes poques hores al dia no cal invertir gaires diners en l'emmagatzematge, amb un disc dur a casa es podria fer o amb opcions de pagament com AWS (Amazon Web Services) que va ser una opció per nosaltres. 
+Finalment, per aquesta tasca vam fer servir la màquina virtual que ens proporcionava la FIB, com a servidor per emmagatzemar els vídeos que pujàvem. Fèiem servir Apache Web Server per fer les sol·licituds de l'App a la nostra màquina virtual.
+Fèiem servir scripts PHP per la seva senzillesa a l'hora de fer connexions a SSH o MYSQL, ja que tenia una documentació molt completa i ben explica, també vam escriure scripts en Bash, per facilitar les comandes a Linux.
+La base de dades està implementada en MySQL.
+</p>
+<h2><span class="mw-headline" id="App">App</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;veaction=edit&amp;section=6" title="Edit section: App">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:SecurityPi&amp;action=edit&amp;section=6" title="Edit section: App">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Per fer l'app de Security PI hem triat utilitzar l'eina oficial de disseny d'aplicacions d'Android: Android Studio, ja que ens permetria assegurar-nos que l'aplicació fos 100% compatible amb els nostres dispositius. La versió d'Android en la qual funciona l'app és la 7.0 (Nougat) o superior. 
+Per la correcta utilització de l’app és necessari connectar-se primer a la VPN de la Universitat Politècnica de Catalunya, ja que per accedir al servidor és necessari utilitzar aquesta connexió.
+Des de l'aplicació podem encendre o apagar la càmera i visualitzar els vídeos de l'usuari amb el qual hem iniciat sessió. Aquests es baixaran des del servidor quan l'usuari ho demani i es guardaran de manera local al dispositiu.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:App-Security_Pi.jpg"><img alt="" class="thumbimage" data-file-height="1599" data-file-width="899" decoding="async" height="534" src="/pti/images/thumb/2/2a/App-Security_Pi.jpg/300px-App-Security_Pi.jpg" srcset="/pti/images/thumb/2/2a/App-Security_Pi.jpg/450px-App-Security_Pi.jpg 1.5x, /pti/images/thumb/2/2a/App-Security_Pi.jpg/600px-App-Security_Pi.jpg 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:App-Security_Pi.jpg" title="Enlarge"></a></div>App</div></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20250710083837
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.015 seconds
+Real time usage: 0.017 seconds
+Preprocessor visited node count: 21/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:495-0!canonical and timestamp 20250710083837 and revision id 746
+ -->
+</div>

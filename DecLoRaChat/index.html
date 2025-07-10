@@ -1,0 +1,45 @@
+<div class="mw-parser-output"><h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El projecte Xat amb pagaments de criptodivises mitjançant LoRa és el treball en grup realitzat per a l'assignatura de Projecte de tecnologies de la informació.
+L'objectiu d'aquest projecte és proporcionar un xat que funcioni mitjançant la tecnologia LoRa, i que alhora tingui la capacitat de fer pagaments amb criptodivises als contactes de l'usuari.
+Els usuaris fan servir el xat a través d'una aplicació Android que es comunica per Bluetooth amb els dispositius LoRa, i els pagaments que realitzen els usuaris es propaguen per la xarxa de la criptodivisa Bitcoin Cash (BCH) a través d'un node que actua de gateway.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Lorachat_esquema.PNG"><img alt="" class="thumbimage" data-file-height="449" data-file-width="831" decoding="async" height="432" src="/pti/images/thumb/0/0f/Lorachat_esquema.PNG/800px-Lorachat_esquema.PNG" srcset="/pti/images/0/0f/Lorachat_esquema.PNG 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Lorachat_esquema.PNG" title="Enlarge"></a></div>Google.</div></div></div></div>
+<h2><span class="mw-headline" id="Plantejament_de_LoRaChat">Plantejament de LoRaChat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;veaction=edit&amp;section=2" title="Edit section: Plantejament de LoRaChat">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;action=edit&amp;section=2" title="Edit section: Plantejament de LoRaChat">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>-Xat descentralitzat. Enviar missatges per nodes sense haver d’estar coordinats per un servidor centralitzat, i sense la necessitat que el receptor dels missatges estigui connectat.
+</p><p>-Comunicació de llarg abast. Utilitzar la tecnología sense fils LoRa per a comunicar els nodes propers en absència de connectivitat a Internet.
+</p><p>-Xarxa mesh. Implementar una xarxa mesh amb els nodes propers.
+</p>
+<h2><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:DecLoRaChat&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El nostre projecte té els següents components:
+</p><p>-Dispositius ESP32 amb connectivitat LoRa, Bluetooth i WiFi.
+</p><p>-Dispositious Android amb connectivitat Bluetooth.
+</p><p>-Ordinador Linux amb connectivitat WiFi i accés a Internet.
+</p><p>Els components interactuen de la següent manera:
+</p><p>-L'usuari escriu els missatges als contactes que té propers en un dispositiu Android, el qual els envia als ESP32 per Bluetooth.
+</p><p>-Els ESP32 es comuniquen entre ells emprant la llibreria LoRaMesher i l'aplicació LoRaChat per a enviar-se missatges per LoRa.
+</p><p>-Un d'aquests dispositius ESP32 és el gateway, que es comunica amb un ordinador per WiFi i li passa les transaccions de Bitcoin Cash que realitzen els usuaris.
+</p><p>-L'ordinador rep les transaccions i les propaga a la xarxa de Bitcoin Cash utilitzant un node BCHD que es comunica amb Internet.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710081527
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.007 seconds
+Real time usage: 0.009 seconds
+Preprocessor visited node count: 10/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:689-0!canonical and timestamp 20250710081527 and revision id 1555
+ -->
+</div>

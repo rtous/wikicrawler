@@ -1,0 +1,68 @@
+<div class="mw-parser-output"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Why_is_CarSense_needed.3F"><span class="tocnumber">1.1</span> <span class="toctext">Why is CarSense needed?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Technologies_used"><span class="tocnumber">1.2</span> <span class="toctext">Technologies used</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Hardware_device"><span class="tocnumber">2</span> <span class="toctext">Hardware device</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Different_possibilities_and_specs"><span class="tocnumber">2.1</span> <span class="toctext">Different possibilities and specs</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Why_the_one_chosen.3F"><span class="tocnumber">2.2</span> <span class="toctext">Why the one chosen?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Configuration"><span class="tocnumber">2.3</span> <span class="toctext">Configuration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Server"><span class="tocnumber">3</span> <span class="toctext">Server</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Providers"><span class="tocnumber">3.1</span> <span class="toctext">Providers</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Why_is_CarSense_needed?"></span><span class="mw-headline" id="Why_is_CarSense_needed.3F">Why is CarSense needed?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=2" title="Edit section: Why is CarSense needed?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=2" title="Edit section: Why is CarSense needed?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Nowadays, most of the new cars include mobile applications that allow users to control some of their vehicle’s parameters and other functionalities, such as geolocation services. Despite this, older cars or even newer ones with limited technology don’t provide these services.
+</p><p>Since this type of functionality can be very useful to people who share their cars or even to a unique user, CarSense aims to create an affordable and easy to use alternative.
+</p><p>There are more than 25 million cars in Spain [1], of which a big proportion of them don’t have a brand-included service that provides real-time information of the vehicle. Furthermore, most of them count with an OBD-II connector, a European standard that applies to petrol cars sold in Europe from 2001 and diesels from 2004 which allows getting real-time information and parameters from their central computer. If we also count on trucks and vans, the number increases a couple millions. This is why CarSense can help lots of people and enterprises manage their vehicles from a centralized application.
+</p>
+<h2><span class="mw-headline" id="Technologies_used">Technologies used</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=3" title="Edit section: Technologies used">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=3" title="Edit section: Technologies used">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><b>Physical device</b>: the device that connects to the car and transmits the data to the servers uses an Arduino UNO board, which gets its power and information from the car using the OBD-II connector and a GSM/GPRS module allowing to get the geolocation of the device and forward information to the servers using the 2G infrastructure.</li></ul>
+<ul><li><b>Application backend</b>: the core of the solution, the application that receives data from the cars and delivers information to the users. It uses the Spring Boot framework with a PostgreSQL database, due to the easy compatibility between these two technologies, to attend petitions and store the data. The PostgreSQL database runs on a docker container, which is deployed with docker-compose due to the ease of making the data persist.</li></ul>
+<ul><li><b>CI/CD</b>: the point of having a CI/CD is to automate the integration of the code whenever a push to the main branch is made, and to deliver it to the server. The CI/CD can have different stages, such as ‘Checkout code from branch’, ‘build’, ‘test’, ‘deploy’ and ‘run on server’. In case of having all these stages, it ensures that the code deployed in the server has been tested, and will not fail to build/run, ensuring QoS. The Jenkins central server is also hosted in the CarSense server, being deployed in a docker container to isolate it from the rest of the components.</li></ul>
+<ul><li><b>Application frontend</b>: the visual part of the project that allow users to access their vehicle's data. It uses Flutter to provide an application that could also be exported to an Android native version, but the web-based one is the main used, since Flutter allows developing applications for multiple devices with the same code. This application connects to the CarSense API in the backend to request and update data and provide a usable and intuitive interface to the end-user.</li></ul>
+<h1><span class="mw-headline" id="Hardware_device">Hardware device</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=4" title="Edit section: Hardware device">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=4" title="Edit section: Hardware device">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Different_possibilities_and_specs">Different possibilities and specs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=5" title="Edit section: Different possibilities and specs">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=5" title="Edit section: Different possibilities and specs">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>...
+</p>
+<h2><span id="Why_the_one_chosen?"></span><span class="mw-headline" id="Why_the_one_chosen.3F">Why the one chosen?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=6" title="Edit section: Why the one chosen?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=6" title="Edit section: Why the one chosen?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>...
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=7" title="Edit section: Configuration">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=7" title="Edit section: Configuration">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>...
+</p>
+<h1><span class="mw-headline" id="Server">Server</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=8" title="Edit section: Server">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=8" title="Edit section: Server">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Providers">Providers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;veaction=edit&amp;section=9" title="Edit section: Providers">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:CarSense&amp;action=edit&amp;section=9" title="Edit section: Providers">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<!-- 
+NewPP limit report
+Cached time: 20250710070346
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.009 seconds
+Real time usage: 0.011 seconds
+Preprocessor visited node count: 26/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:758-0!canonical and timestamp 20250710070346 and revision id 1775
+ -->
+</div>

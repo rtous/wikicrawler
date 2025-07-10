@@ -1,0 +1,236 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a class="image" href="/pti/index.php/File:HomeAutomation.png"><img alt="" class="thumbimage" data-file-height="829" data-file-width="829" decoding="async" height="200" src="/pti/images/thumb/f/f9/HomeAutomation.png/200px-HomeAutomation.png" srcset="/pti/images/thumb/f/f9/HomeAutomation.png/300px-HomeAutomation.png 1.5x, /pti/images/thumb/f/f9/HomeAutomation.png/400px-HomeAutomation.png 2x" width="200"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:HomeAutomation.png" title="Enlarge"></a></div>HomeAutomation.</div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3"><span class="tocnumber">1</span> <span class="toctext">Introducció</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#En_qu.C3.A8_consisteix.3F"><span class="tocnumber">1.1</span> <span class="toctext">En què consisteix?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Objectius"><span class="tocnumber">1.2</span> <span class="toctext">Objectius</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Components"><span class="tocnumber">2</span> <span class="toctext">Components</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Workflow_del_projecte"><span class="tocnumber">2.1</span> <span class="toctext">Workflow del projecte</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Hardware"><span class="tocnumber">2.2</span> <span class="toctext">Hardware</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Raspberry_Pi"><span class="tocnumber">2.2.1</span> <span class="toctext">Raspberry Pi</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Aparell_de_recepci.C3.B3_de_senyals"><span class="tocnumber">2.2.2</span> <span class="toctext">Aparell de recepció de senyals</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Aparell_d.27emssi.C3.B3_de_senyals"><span class="tocnumber">2.2.3</span> <span class="toctext">Aparell d'emssió de senyals</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Assistents_de_veu"><span class="tocnumber">2.2.4</span> <span class="toctext">Assistents de veu</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Software"><span class="tocnumber">2.3</span> <span class="toctext">Software</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#IFTTT"><span class="tocnumber">2.3.1</span> <span class="toctext">IFTTT</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Dweet.io"><span class="tocnumber">2.3.2</span> <span class="toctext">Dweet.io</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Analisi_de_les_senyals"><span class="tocnumber">2.3.3</span> <span class="toctext">Analisi de les senyals</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Audacity"><span class="tocnumber">2.3.4</span> <span class="toctext">Audacity</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#El_codi"><span class="tocnumber">3</span> <span class="toctext">El codi</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Perqu.C3.A8_Python.3F"><span class="tocnumber">3.1</span> <span class="toctext">Perquè Python?</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Llibreries_utilitzades"><span class="tocnumber">3.2</span> <span class="toctext">Llibreries utilitzades</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#rpi-rf"><span class="tocnumber">3.2.1</span> <span class="toctext">rpi-rf</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Dweepy"><span class="tocnumber">3.2.2</span> <span class="toctext">Dweepy</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Fragments_de_codi_importants_i_breu_explicaci.C3.B3"><span class="tocnumber">3.3</span> <span class="toctext">Fragments de codi importants i breu explicació</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Subscripci.C3.B3_a_acci.C3.B3ns:_Tractament"><span class="tocnumber">3.3.1</span> <span class="toctext">Subscripció a accións: Tractament</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Subscripci.C3.B3_a_acci.C3.B3ns:_Retry"><span class="tocnumber">3.3.2</span> <span class="toctext">Subscripció a accións: Retry</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Problemes_afrontats_i_soluci.C3.B3ns"><span class="tocnumber">4</span> <span class="toctext">Problemes afrontats i solucións</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Lectura_de_les_senyals"><span class="tocnumber">4.1</span> <span class="toctext">Lectura de les senyals</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Emissi.C3.B3_de_les_senyals"><span class="tocnumber">4.2</span> <span class="toctext">Emissió de les senyals</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Mod_Llibreria:_Protocol_Gen.C3.A8ric"><span class="tocnumber">4.2.1</span> <span class="toctext">Mod Llibreria: Protocol Genèric</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Mod_Llibreria:_Millora_de_la_precisi.C3.B3"><span class="tocnumber">4.2.2</span> <span class="toctext">Mod Llibreria: Millora de la precisió</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-29"><a href="#Subscripci.C3.B3_a_acci.C3.B3ns"><span class="tocnumber">4.3</span> <span class="toctext">Subscripció a accións</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Servidor_web"><span class="tocnumber">4.4</span> <span class="toctext">Servidor web</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="En_què_consisteix?"></span><span class="mw-headline" id="En_qu.C3.A8_consisteix.3F">En què consisteix?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=2" title="Edit section: En què consisteix?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=2" title="Edit section: En què consisteix?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El nostre projecte es basa en un cas real d'una persona de mobilitat reduïda, la qual, actualment, no pot moure les extremitats. Fa uns anys va fer una gran inversió per tal d'automatitzar la seva casa amb portes i persianes controlats per RF, però actualment només pot utilitzar la veu. Com és comprensible, no vol fer una nova inversió i canviar de nou tota la tecnologia de la casa seva, i aquí es on neix la nostra idea.
+</p><p>El hem fet es adaptar el nostre sistema a la casa, en comptes del procés tipic d'adaptar la casa a la tecnologia. Per això, hem integrat els assistents de veu amb tot el sistema de RF del que disposa aquesta persona per tal que pugui controlar les portes i persianes de la seva casa a través de comandes de veu. A més a més, el producte final permetria controlar també el televisor o l'aire acondicionat, tot i que s'haurien de fer petites modificacions.
+</p>
+<h2><span class="mw-headline" id="Objectius">Objectius</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=3" title="Edit section: Objectius">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=3" title="Edit section: Objectius">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Comunicar un assistent de veu amb una Raspberry.</li>
+<li>Utilitzar comandes de veu concretes per accions específiques (no integrades amb les AV).</li>
+<li>Tenir una tecnologia pràcticament "Plug and Play" on la persona no necessiti configurar res.</li>
+<li>Que sigui escalable a més portes, persianes i cases i usuaris.</li>
+<li>Conseguir que la Raspberry emeti RF concrets per a obrir i tancar cada porta i persiana diferent.</li>
+<li>Que sigui fiable i que els usuaris piguin dependre de la nostra solució amb garanties.</li></ul>
+<h1><span class="mw-headline" id="Components">Components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=4" title="Edit section: Components">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=4" title="Edit section: Components">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Workflow_del_projecte">Workflow del projecte</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=5" title="Edit section: Workflow del projecte">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=5" title="Edit section: Workflow del projecte">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>En la imatge es mostra un diagrama amb les diferents tecnologies emprades en el projecte i com es connecten entre elles, des de l'usuari fins l'objectiu d'obrir la porta.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a class="image" href="/pti/index.php/File:HomeAutomation_1.png"><img alt="" class="thumbimage" data-file-height="587" data-file-width="706" decoding="async" height="249" src="/pti/images/thumb/7/77/HomeAutomation_1.png/300px-HomeAutomation_1.png" srcset="/pti/images/thumb/7/77/HomeAutomation_1.png/450px-HomeAutomation_1.png 1.5x, /pti/images/thumb/7/77/HomeAutomation_1.png/600px-HomeAutomation_1.png 2x" width="300"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:HomeAutomation_1.png" title="Enlarge"></a></div>Flow del projecte</div></div></div>
+<h2><span class="mw-headline" id="Hardware">Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=6" title="Edit section: Hardware">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=6" title="Edit section: Hardware">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>El hardware es la part més important del nostre projecte. Hem necessitat una Raspberry Pi que ha estat el cervell del nostre sistema, també un dispositiu amb assistent de veu per tal de poder donar-li les comandes. A més a més, hem hagut de comprar un accessori especial per a la Raspberry per a fer la emissió de les senyals i una antena externa amb USB per poder llegir-les.
+</p>
+<h3><span class="mw-headline" id="Raspberry_Pi">Raspberry Pi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=7" title="Edit section: Raspberry Pi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=7" title="Edit section: Raspberry Pi">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La elecció estava entre la RPI o un Arduino. El principal problema de l'Arduino era el fet de no tenir un sistema operatiu i stack TCP/IP i la desventatja de programar en C (ja que teniem poc temps per a fer el projecte).
+</p><p>Utilitzant una Raspberry teníem una llibertat molt més gran a l'hora d'escollir les diverses tecnologies que voliem utilitzar, com ara Python i les seves llibreries, que ens han facilitat moltes coses, deixant-nos centrar en altres problemes més importants del projecte.
+</p><p>El model utilitzat ha estat el 3B+. Un model assequible per a qualsevol butxaca, i que funciona perfectament amb el nostra sistema. De totes formes, qualsevol model de Raspberry o altres copies hauria de ser compatible amb el nostre projecte
+</p>
+<h3><span id="Aparell_de_recepció_de_senyals"></span><span class="mw-headline" id="Aparell_de_recepci.C3.B3_de_senyals">Aparell de recepció de senyals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=8" title="Edit section: Aparell de recepció de senyals">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=8" title="Edit section: Aparell de recepció de senyals">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Tot i que un dels objectius és la no intervenció física de l'usuari per a configurar el dispositiu, hem determinat que afegir senyals de manera dinamica afegeix massa complexitat al projecte. Per aixó hem decidit analitzar manualment les senyals dels mandos a copiar i incorporar-les manualment en el nostre codi. Per tant, un dels dispositius més necessàris era el que ens permetria capturar les senyals. Si no podiem llegir les senyals no podriem fer el projecte que teniem en ment. La recerca per a trobar una antena assequible i que poguessim utilitzar amb comoditat va ser extensa, ja que existeixen molts tipus d'antena. La nostra havia de ser compatible amb la banda de 433MHz, que és la que s'utilitza normalment en els comandaments que tenim a casa.
+</p><p>Finalment vam trobar el model <b>Nooelec NESDR Mini 2</b> que ens permetia capturar gran part de l'espectre radioelèctric. El vam comprar a través d'Amazon i ens va arribar relativament ràpid. Això ho vam poder fer abans del confinament, per sort.
+</p>
+<h3><span id="Aparell_d'emssió_de_senyals"></span><span class="mw-headline" id="Aparell_d.27emssi.C3.B3_de_senyals">Aparell d'emssió de senyals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=9" title="Edit section: Aparell d'emssió de senyals">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=9" title="Edit section: Aparell d'emssió de senyals">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En aquest apartat tenim moltes opcions disponibles, des de microncontroladors amb conexions I<sup>2</sup>C o algun protocol similar que s'han de configurar amb les especificacions del seu datasheet abans d'emtre qualsevol cosa fins a plaques amb un sol pin d'entrada de dades que emeten l'estat (Up o Down) del pin en qüestió. 
+</p><p>Un altre fet important és que vam detectat que tots els comandaments que voliem adaptar modulaven la seva senyal amb <b>ASK</b> (Amplitude Shift Keying), pel que vam centrar la nostre cerca en dispositius que permetessin aquesta modulació. Un avantatge és que és molt fàcil i barat d'implementar electrònicament, pel que la oferta és amplia
+</p><p>Per simplicitat hem acabat escollint un dels aparells més senzills que hem trobat. Aquest modula únicament en ASK i només té un pin de dades que conectem a la RaspBerry directament
+</p><p><br/>
+</p>
+<h3><span class="mw-headline" id="Assistents_de_veu">Assistents de veu</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=10" title="Edit section: Assistents de veu">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=10" title="Edit section: Assistents de veu">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Amb la decisió d'utilitzar IFTTT vam tenir la llibertat de poder escollir qualsevol dispositiu amb un assistent de veu. En el nostre cas el propi smartphone.
+</p>
+<h2><span class="mw-headline" id="Software">Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=11" title="Edit section: Software">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=11" title="Edit section: Software">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dividim el software en dos subgrups. El software utilitzar per a <b>comunicar els elements de Hardware entre ells</b> i el software utilitzar per al <b>processament i visualització de les senyals</b>.
+</p>
+<h3><span class="mw-headline" id="IFTTT">IFTTT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=12" title="Edit section: IFTTT">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=12" title="Edit section: IFTTT">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>IFTTT es l'acrònim per a "If This Then That". Bàsicament es un servei que permet la integració d'assistents virtuals per a executar comandes de veu personalitzades amb accions personalitzades.
+</p><p>Hem escollit IFTTT per la compatibilitat amb les diferents assistents de veu del mercat i la senzillesa de la seva interfaç d'usuari. IFTTT es comunica a través d'un webhook a un servei de subscripció a accións per a que aquest sigui consultat per la Raspberry Pi.
+</p><p>És a dir, IFTTT fa un canvi en una variable en el servei de subscripció a accións que farà de trigger per a que la Raspberry envii la senyal RF a la porta / persiana que toca.
+</p><p><b>Alternativa self-hosted</b>: Si es volgués obtenir els resultats que ens brinda IFTTT sense haver de dependre d'un tercer es podria utilitzar un software com <b><a class="external text" href="https://nodered.org/" rel="nofollow">Node-RED</a></b> amb <a class="external text" href="https://flows.nodered.org/node/node-red-contrib-google-action" rel="nofollow">el "node"</a> per integrar-lo amb Google assistant.
+</p>
+<h3><span class="mw-headline" id="Dweet.io">Dweet.io</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=13" title="Edit section: Dweet.io">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=13" title="Edit section: Dweet.io">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Dweet.io es un servei de subscripció a accións gratuït amb accés a través d'una API i que té una còmode llibreria Python. Vam estar contemplant altres alternatives com Pubnub o Jet, però Dweet era la més senzilla i la més còmode per al nostre projecte.
+</p><p>Podem veure Dweet com un Twitter per coses. Les coses publiquen Dweets que poden ser llegits posteriorment per altres dispositius. És a dir, l'assistent de veu a través de IFTTT publica un Dweet per la cosa "Porta 1" i la Raspberry, que <i>segueix</i> aquesta cosa (Porta 1) quan veu la publicació pot actuar.
+</p><p><b>Alternativa self-hosted</b>:  Si es volgués obtenir els resultats que ens brinda Dweet.io sense dependre d'un tercer es podria utilitzar una alternativa com <a class="external text" href="https://gotify.net/" rel="nofollow">Gotify</a>. Gotify es exactament el mateix que Dweet però és Open Source i es pot hostejar en un servidor propi. A més està escrit en Go i és força eficient.
+</p>
+<h3><span class="mw-headline" id="Analisi_de_les_senyals">Analisi de les senyals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=14" title="Edit section: Analisi de les senyals">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=14" title="Edit section: Analisi de les senyals">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El dispositiu que hem fet servir és el que s'anomena Software Defined Radio (SDR). Per tant, es pot utlitzar qualsevol programa per a interpetar les dades que aquest ens dona. Primer vam fer servir <b>SDR#</b> per Windows i més tard <b>gqrx</b> per GNU. Dos programes molt semblants que ens permetien veure l'espectre radioelectric de manera visual així com capturar part d'aquest espectre que més tard vam passar per l'Audacity per a tractar-lo com una senyal d'audio normal, i així poder apreciar visualment els codis que els comandaments emetien
+</p><p>Amb aquest programa hem pogut visualitzar a temps real l'emisió de la senyal del comandament, però no era suficientment ampliada com per a poder interpretar els bits d'aquesta. Amb aquest programa podiem grabar la senyal com si fos so i així poder-la obrira amb Audacity.
+</p>
+<h3><span class="mw-headline" id="Audacity">Audacity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=15" title="Edit section: Audacity">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=15" title="Edit section: Audacity">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Com que vam considerar que afegir les senyals de manera dninamica afegia molta complexitat al projecte, vam decidir analitzar les senyals de forma manual. Per aixo les vam tracat com a senyals d'audio normals ,després de haver-les capturat amb SDR# o gqrx, amb el programa Audacity. Un cop importats els arxius es pot fer zoom in per a apreciar molt bé els bits transmesos, i hem importat aquest valor en el nostre codi perque la llibreria <b>rpi-rf</b> ho emeti
+</p><p><br/>
+</p>
+<h1><span class="mw-headline" id="El_codi">El codi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=16" title="Edit section: El codi">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=16" title="Edit section: El codi">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>El codi es força breu. Només hem hagut de tractar la subscripció a accións a través d'una connexió HTTP oberta amb Dweet.io gràcies amb l'endpoint anomenat <b>/listen/for/dweets/from/{thing}</b>, on 
+</p><p>Per altra banda, la part més complicada ha estat que hem necessitat editar les diferentes llibreries de Python per tal que l'emissió de les senyals fos correcta, ja que ens trobavem amb petits retards i altres problemes explicats en l'apartat []
+</p>
+<h2><span id="Perquè_Python?"></span><span class="mw-headline" id="Perqu.C3.A8_Python.3F">Perquè Python?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=17" title="Edit section: Perquè Python?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=17" title="Edit section: Perquè Python?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sabiem que teniem poc temps per a fer el projecte, erem dues persones la qual cosa significava una major càrrega de treball per a cada un. Els dos coneixiem Python, creiem que es un llenguatge modern i molt utilitzat actualment i a més compta amb un gran nombre de llibreries útils. Per aquests motius vam escollir Python.
+</p><p>Per el tema d'eficiència i perquè vam fer un laboratori a PTI vam considerar decantar-nos per Go, però finalment com que cap dels dos havia treballat amb Go i ens podia complicar més les coses el vam descartar.
+</p>
+<h2><span class="mw-headline" id="Llibreries_utilitzades">Llibreries utilitzades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=18" title="Edit section: Llibreries utilitzades">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=18" title="Edit section: Llibreries utilitzades">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="rpi-rf">rpi-rf</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=19" title="Edit section: rpi-rf">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=19" title="Edit section: rpi-rf">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="external text" href="https://github.com/milaq/rpi-rf" rel="nofollow">rpi-rf</a> és una llibreria pensada per sistemes que corren en una Raspberry que permet rebre i emetre senyals radioelèctriques sempre que disposem del dispositiu adeqüat conectat en un dels pins GPIO de la propia raspberry. Malauradament, més tard hem descobert que aquesta llibreria tenia forçes limitacions pel que hem hagut de fer <a class="external text" href="https://github.com/sergimn/rpi-rf/commits/acb11c968f7d406b19da6a0992e10bed4c2b07ae" rel="nofollow">algunes modificacions</a> per a tenir una solució funcional.
+</p>
+<h3><span class="mw-headline" id="Dweepy">Dweepy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=20" title="Edit section: Dweepy">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=20" title="Edit section: Dweepy">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Buscant per Github, vam trobar que existia una llibreria creada per un individual per interactuar amb Dweet.io a través de Python d'una manera molt senzilla. 
+</p><p>Té crides tant senzilles com:
+</p>
+<pre>dweepy.dweet_for('Cosa X', {'clau': 'valor'})
+</pre>
+<p>Amb aquesta crida tant senzilla podem crear un nou dweet per la cosa <b>"Cosa X"</b>. També ens donava molta facilitat per a la subscripció a les accións amb un codi més net i breu, com per exemple:
+</p>
+<pre>for dweet in dweepy.listen_for_dweets_from('Cosa X'):
+</pre>
+<p>Amb aquesta sola línia podríem escoltar tots els Dweets d'una sola cosa. Bàsicament és el que ens interessa.
+</p>
+<h2><span id="Fragments_de_codi_importants_i_breu_explicació"></span><span class="mw-headline" id="Fragments_de_codi_importants_i_breu_explicaci.C3.B3">Fragments de codi importants i breu explicació</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=21" title="Edit section: Fragments de codi importants i breu explicació">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=21" title="Edit section: Fragments de codi importants i breu explicació">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h4><span id="Subscripció_a_accións:_Tractament"></span><span class="mw-headline" id="Subscripci.C3.B3_a_acci.C3.B3ns:_Tractament">Subscripció a accións: Tractament</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=22" title="Edit section: Subscripció a accións: Tractament">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=22" title="Edit section: Subscripció a accións: Tractament">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre> for dweet in dweepy.listen_for_dweets_from(id):
+        cnt = dweet['content']
+        if "keepalive" in cnt:
+            logger.debug("Keepalive Dweet")
+        if cnt.setdefault(porta_fora):
+            logger.info("Obrint la porta de fora")
+            rf.tx_code(679159...06659, 7, 320, len("11100...010"))</pre>
+<p>Aquest es un fragment de codi, que hem retallat per l'exemple, on es mostra com estem <i>escoltant</i> per nous Dweets. Quan un nou dweet arriba, la funció entra i busquem el contingut d'aquest Dweet. Si, per exemple, el Dweet coincideix amb el codi de <b>porta de fora</b> s'executa lacció i obrim la porta de fora a través de l'última acció que podem veure.
+</p><p>Com es pot observar, la primera comprovació es de si el contingut es un <i>keepalive</i>. Aquest es un dels primers problemes que ens vam trobar en el projecte i el qual vam haver de pensar una manera eficient per a solucionar-lo.
+</p><p>Resulta que Dweet, en la versió gratuïta, només et deixa tenir sessions TCP de fins a 59s obertes des de l'últim <i>dweet</i> rebut. Això vol dir que, si la persona obra la porta al matí i el següent cop és a la tarda ens trobariem que Dweet.io ha tancat la connexió TCP i ja no estem escoltant pels nous <i>dweets</i>. La solució a aquest problema s'explica en l'apartat 5.3 <i>Problemes amb la subscripció a accións</i>.
+</p>
+<h4><span id="Subscripció_a_accións:_Retry"></span><span class="mw-headline" id="Subscripci.C3.B3_a_acci.C3.B3ns:_Retry">Subscripció a accións: Retry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=23" title="Edit section: Subscripció a accións: Retry">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=23" title="Edit section: Subscripció a accións: Retry">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
+<pre> def retry(function, on_exceptions=None, attempts=2, every_s=0.5):
+    def _try_operation(retries_left=attempts):
+        try:
+            result = function()
+        except (on_exceptions or Exception) as e:
+            if retries_left &gt; 0:
+                time.sleep(every_s)
+                result = _try_operation(retries_left - 1)
+            else:
+                raise e
+
+        return result
+
+    return _try_operation()</pre>
+<h1><span id="Problemes_afrontats_i_solucións"></span><span class="mw-headline" id="Problemes_afrontats_i_soluci.C3.B3ns">Problemes afrontats i solucións</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=24" title="Edit section: Problemes afrontats i solucións">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=24" title="Edit section: Problemes afrontats i solucións">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span class="mw-headline" id="Lectura_de_les_senyals">Lectura de les senyals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=25" title="Edit section: Lectura de les senyals">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=25" title="Edit section: Lectura de les senyals">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La llibreria que hem decidit fer servir ofereix suport per a llegir senyals radioelèctriques. Tot i així, com hem comentat abans, aquesta no és una llibreria gaire flexible i no hi hauria manera de debugar problemes en la lectura de senyals. A més a més, vam creure que la càrrega dinàmica de noves senyals afegiria una complexitat que faria difícil la viabilitat del projecte. Al final, hem optat per a analitzar les senyals de forma visual nosaltres mateixos, sabent que aixó trenca l'objectiu de obtenir una solució PnP, pero entenem que és un sacrifici comprensible i que podria ser solucionat en un futur.
+</p>
+<h2><span id="Emissió_de_les_senyals"></span><span class="mw-headline" id="Emissi.C3.B3_de_les_senyals">Emissió de les senyals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=26" title="Edit section: Emissió de les senyals">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=26" title="Edit section: Emissió de les senyals">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Aquesta és la part més crítica del projecte, ja que si no aconseguim obrir les portes o aixecar les persianes, no estarem aconseguint l'objectiu primordial, que funcioni. Per aixó els requisits de l'emissió són força estrictes i és que si no aconseguim emetre una senyal molt semblant (de fet, necessitem que sigui gairebé igual) els dispositius no reaccionaran. Per aquest motiu vam haver de fer dues modificacions en la llibreria que haviem escollit.
+</p>
+<h3><span id="Mod_Llibreria:_Protocol_Genèric"></span><span class="mw-headline" id="Mod_Llibreria:_Protocol_Gen.C3.A8ric">Mod Llibreria: Protocol Genèric</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=27" title="Edit section: Mod Llibreria: Protocol Genèric">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=27" title="Edit section: Mod Llibreria: Protocol Genèric">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>rpi-rf no està específicament dissenyada per a interactuar amb qualsevol dispositiu. Més aviat es va crear pensant en dispositius concrets de marques conegudes pel que a priori no podiem interactuar amb cap dispositiu que no fos aquells inicialment pensats.
+Aquest problema es deu a que la llibreria intenta facilitar la feina al desenvolupador abstraient la codificació de les senyals a través del que anomena <i>Protocols</i>. Els Protocols, dins de l'argot de la llibreria, no són més que perfils de codificació, o sigui maneres en la que els '1' i els '0' són representats en al senyal emesa (per exemple, el símbol 0 podria consistir en les senyals 10, mentre que el simbol 1 consistiria en la senyal 11).
+Per aquest motiu vam crear el que anomenem un protocol genèric, en el que el símbol 0 és representat per la senyal 0 i el símbol 1 per la senyal 1, d'aquesta manera, podriem emetre qualsevol senyal.
+</p>
+<h3><span id="Mod_Llibreria:_Millora_de_la_precisió"></span><span class="mw-headline" id="Mod_Llibreria:_Millora_de_la_precisi.C3.B3">Mod Llibreria: Millora de la precisió</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=28" title="Edit section: Mod Llibreria: Millora de la precisió">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=28" title="Edit section: Mod Llibreria: Millora de la precisió">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Després d'aconseguir la senyal que haviem d'emetre per a activar els dispositius de la casa ens vam trobar amb un problema força curiós i és que la senyal que emeteiem semblava ser la que desitjavem, en realitat només ho semblava. El que es podia apreciar és que, evidentment, el missatge era correcte, pero no hi havia manera de aconseguir una llargada de bit constant o deterministica, pel que la llargada dels missatges no era constant i cap receptor entenia el missatge degut a que el mostreig de la senyal és fix.
+La sospita principal era que el procés que s'encarregava de establir el pin de la raspberry a Up i a Down feia un context switch en el moment que havia de fer el canvi i aquest passava instants després, quan ja era massa tard i l'error es propagava infinitament, ja que la llibreria no està preparada per detectar aquests errors. De totes formes, és difícil aclarir si aquest és realment el problema i encara més solucionar-lo en un Sistema Operatiu d'ús general i en un llenguatge d'alt nivell com Python. Per sort, analitzant la llibreria vam detectar que l'espera de una transició de bit a la següent es feia a través de un <b>sleep</b>, que posa el procés en la cua de <i>Sleeping</i>, pel que un procés de la cua de <i>Ready</i> entra en aquella CPU i tot i que el nostre procés es desperta gairebé immediatament, en un sistema com aquest, ja s'ha perdut el deadline de cambi de de bit. La solució que hem fet servir ha estat fer una espera activa, fent un sleep just després de un canvi d'estat, per evitar que el SO ens el forçi en el moment menys adeqüat, igual que abans.
+</p>
+<h2><span id="Subscripció_a_accións"></span><span class="mw-headline" id="Subscripci.C3.B3_a_acci.C3.B3ns">Subscripció a accións</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=29" title="Edit section: Subscripció a accións">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=29" title="Edit section: Subscripció a accións">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Com bé hem comentat anteriorment, en la subscripció a accións el principal problema que vam trobar va ser el fet que Dweet.io només deixa tenir connexions TCP de fins a 59s des de l'últim Dweet en la seva versió gratuïta.
+</p><p>Aquest problema feia que el projecte deixés de ser viable, ja que el sistema no podia estar més de 59s en estat <b>"idle"</b>, és a dir, la persona no podia estar més de 59s sense utilitzar el sistema o es tancaria la connexió. A més a més, la llibreria que utilitzem llança una excepció en aquest cas, pel que si no fem res al respecte, el programa acabaria la seva execució de forma anormal. 
+</p><p>Evidentment, això no es una opció ja que no tindria cap mena d'usabilitat ni comoditat. Per aquest motiu, va ser necessari pensar una manera senzilla però eficient de mantenir les connexións TCP obertes. La manera més senzilla i clara de solventar aquest problema va ser utilitzant el clàssic concepte de <i>keepalive</i>. Petits missatges sense informació cada x segons (x&lt;59) que ens mantenen la connexió viva.
+</p><p>El fragment de codi que aconsegueix això es el següent:
+</p>
+<pre> def keepalive(id):
+    logger.debug("Running keepaliver")
+    while True:
+        time.sleep(45)
+        logger.debug("Sending keepalive")
+        utils.retry(
+            function=lambda: dweepy.dweet_for(thing_name=id,payload={"keepalive": 1}),
+            on_exceptions=dweepy.api.DweepyError,
+            attempts=10000,
+            every_s=3
+        )</pre>
+<p>Com veiem, la funció conté un <b>while True</b> el qual s'estarà executant en bucle. S'esperarà 45 segons abans d'enviar el <i>keepalive</i>. A més a més també fem servir la funció <b>retry</b> que evita un corner case en el que s'envien múltiples peticions als servidors de dweet.io i aquest decideix bloquejar la IP origen durant uns segons. Aquest no és un cas que esperem que passi sovint, pero com que no podem preveure l'entorn en el que el nostre dispositiu s'acabarà desplegant, per exemple en uncas de internet a traves de CG-NAT, hem intentat solucionar aquest problema.
+</p>
+<h2><span class="mw-headline" id="Servidor_web">Servidor web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;veaction=edit&amp;section=30" title="Edit section: Servidor web">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:HomeAutomation&amp;action=edit&amp;section=30" title="Edit section: Servidor web">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Disposar de tots els components de la nostra solucó en un sol dispositiu, la Raspberry, en aquest cas, hagués estat una situació ideal. Per aixó necessitariem alguna mena de servei en la Raspberry que escoltes conexions entrants en forma de missatges com "Obra la porta". El problema, però, és que necessitem alguna manera de comunicar l'assistent de veu, que no té perqué estar a la mateixa xarxa que la Raspberry. En aquest cas, l'utilització comuna de NAT en les conexions domestiques ens obligaria a configurar el router per a fer <i>Port Forwarding</i> i a obtenir sempre la mateixa IP dins de la xarxa, cosa que implicaria la necessitat de configuració per l'usuari final, una acció que volem evitar. També podriem fer servir UPnP, pero aquest és un servei que no està sempre disponible i per tant hauriem de recòrrer al cas anterior.
+Degut a les complicacions mencionades hem acabat decidint que externalitzariem aquestes funcions i que seria dweet.io el que faria push de les actualitzacions amb una conexió previament oberta per nosaltres, de una manera semblant a les notificacions dels smartphones.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083837
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.018 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 106/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1133/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:492-0!canonical and timestamp 20250710083837 and revision id 854
+ -->
+</div>

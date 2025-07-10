@@ -1,0 +1,34 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:331px;"><a class="image" href="/pti/index.php/File:FilmNetLogo.PNG"><img alt="" class="thumbimage" data-file-height="454" data-file-width="329" decoding="async" height="454" src="/pti/images/0/0a/FilmNetLogo.PNG" width="329"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:FilmNetLogo.PNG" title="Enlarge"></a></div>FilmNet Logo</div></div></div></div>
+<h1><span id="Introducció"></span><span class="mw-headline" id="Introducci.C3.B3">Introducció</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;veaction=edit&amp;section=1" title="Edit section: Introducció">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;action=edit&amp;section=1" title="Edit section: Introducció">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="Que_és_FilmNet?"></span><span class="mw-headline" id="Que_.C3.A9s_FilmNet.3F">Que és FilmNet?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;veaction=edit&amp;section=2" title="Edit section: Que és FilmNet?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;action=edit&amp;section=2" title="Edit section: Que és FilmNet?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Filmnet. Inclou la descripció del projecte, el procés de planificació i de implementació d’aquesta nova tecnologia; una infraestructura per a poder veure pel·lícules amb els amics en remot i activat des de qualsevol dispositiu.
+</p><p>La nova tecnologia consta d’una Aplicació Web que permet visualitzar la cartellera de pel·lícules disponibles en un Servidor de fitxers i la possibilitat de reproduir la pel·lícula tant al mòbil com a una TV o Monitor per streaming mitjançant una Raspberry Pi (o qualsevol altre dispositiu que tingui la possibilitat de ser configurat com a servidor) connectada per HDMI. Per tal de pujar les pel·lícules al Servidor de Fitxers, és disposa a d’un servei Web que a través d’un formulari permet pujar la pel·lícula desitjada.
+</p>
+<h1><span class="mw-headline" id="Arquitectura">Arquitectura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;veaction=edit&amp;section=3" title="Edit section: Arquitectura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Filmnet&amp;action=edit&amp;section=3" title="Edit section: Arquitectura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="thumb tright"><div class="thumbinner" style="width:702px;"><a class="image" href="/pti/index.php/File:FilmNetArchitecture.jpg"><img alt="" class="thumbimage" data-file-height="1080" data-file-width="1920" decoding="async" height="394" src="/pti/images/thumb/d/d7/FilmNetArchitecture.jpg/700px-FilmNetArchitecture.jpg" srcset="/pti/images/thumb/d/d7/FilmNetArchitecture.jpg/1050px-FilmNetArchitecture.jpg 1.5x, /pti/images/thumb/d/d7/FilmNetArchitecture.jpg/1400px-FilmNetArchitecture.jpg 2x" width="700"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:FilmNetArchitecture.jpg" title="Enlarge"></a></div>Estructura del projecte.</div></div></div>
+<p>Filmnet utilitza dos APIs per poder servir el streaming. Per un costat tenim l’API del File Server que escolta en el port 8080 i que gestiona les peticions fetes per part de la web app. Per altra banda tenim l’API de streaming en el port 7000, que mitjançant Node Media Server s’encarrega de inicialitzar el procés per visualitzar la pel·lícula en viu. Per últim tenim un servidor Web que està connectat directament amb el servidor de fitxers per tal de crear i poder llistar tot el contingut disponible en aquesta plataforma.
+</p><p>Per poder utilitzar l'aplicació s'ha de fer servir la pàgina web per tal de introduïr les pel·lícules i enviar les dades a partir d'un fitxer JSON al servidor de fitxers. Seguidament podrem llistar les pel·lícules i seleccionar la pel·lícula que és vol reproduir. Si el servidor de streaming esta conectat a un televisó o pantalla, el contingut seleccionat es reproduirà a partir del reproductor VLC. En qualsevol moment podem anar a qualsevol dispositiu web, introduïr la pàgina de la pel·lícula en streaming i poder-la visualitzar.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083839
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.008 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 9/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:539-0!canonical and timestamp 20250710083839 and revision id 941
+ -->
+</div>

@@ -1,0 +1,53 @@
+<div class="mw-parser-output"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:455px;"><a class="image" href="/pti/index.php/File:CrowdChainlogo.png"><img alt="CrowdChainlogo.png" class="thumbimage" data-file-height="91" data-file-width="453" decoding="async" height="91" src="/pti/images/f/f0/CrowdChainlogo.png" width="453"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:CrowdChainlogo.png" title="Enlarge"></a></div></div></div></div></div>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.C2.BFQu.C3.A9_es_CrowdChain.3F"><span class="tocnumber">1.1</span> <span class="toctext">¿Qué es CrowdChain?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Infraestructura"><span class="tocnumber">2</span> <span class="toctext">Infraestructura</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Funcionamiento"><span class="tocnumber">3</span> <span class="toctext">Funcionamiento</span></a></li>
+</ul>
+</div>
+<h1><span id="Introducción"></span><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;veaction=edit&amp;section=1" title="Edit section: Introducción">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;action=edit&amp;section=1" title="Edit section: Introducción">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<h2><span id="¿Qué_es_CrowdChain?"></span><span class="mw-headline" id=".C2.BFQu.C3.A9_es_CrowdChain.3F">¿Qué es CrowdChain?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;veaction=edit&amp;section=2" title="Edit section: ¿Qué es CrowdChain?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;action=edit&amp;section=2" title="Edit section: ¿Qué es CrowdChain?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CrowdChain es un proyecto orientado a la financiación de startups. CrowdChain ofrece a los usuarios la posibilidad de registrarse, presentar su proyecto, y tener la capacidad de que otros usuarios financien su proyecto obteniendo más tarde beneficios si el proyecto tiene éxito. Por otro lado se usa BlockChain como herramienta, lo cual ayuda a blindar las transferencias para hacer más seguro el proceso y que los usuarios que invierten en startups tengan transparencia absoluta sobre el proceso de inversión y sobre el estado de su inversión.
+</p>
+<h1><span class="mw-headline" id="Infraestructura">Infraestructura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;veaction=edit&amp;section=3" title="Edit section: Infraestructura">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;action=edit&amp;section=3" title="Edit section: Infraestructura">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Crowdchain.png"><img alt="" class="thumbimage" data-file-height="831" data-file-width="1164" decoding="async" height="571" src="/pti/images/thumb/b/b2/Crowdchain.png/800px-Crowdchain.png" srcset="/pti/images/b/b2/Crowdchain.png 1.5x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Crowdchain.png" title="Enlarge"></a></div>Estructura del proyecto.</div></div></div></div>
+<p>Como podemos observar, nuestro proyecto se divide en una base de datos sql relacional común, creada con mySQL; una API REST creada con Express (Node.js) como backend, que se encargara de mediar entre la DB y el frontend; un frontend hecho con React, que se encargara de hablar tanto con el backend, como de usar el proveedor de Metamask (herramienta de gestión de wallets) para comunicarnos con nuestro Contract en la blockchain, y finalmente nuestro SmartContract que contendra todas las operaciones de inversión, alta de startups, registro de inversiones e inversores, etc...
+</p><p>Toda la información referente a las startups, sus miembros, inversores, inversiones realizadas, estará replicado en la base de datos mysql, ya que es mucho mas rápido leer de ahí para cargar el frontend, que llamando a las operaciones del contrato, ya que en la red principal o de test, al haber tantos bloques, estas acciones tardan bastante, especialmente las de escritura.
+</p>
+<h1><span class="mw-headline" id="Funcionamiento">Funcionamiento</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;veaction=edit&amp;section=4" title="Edit section: Funcionamiento">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Crowdchain&amp;action=edit&amp;section=4" title="Edit section: Funcionamiento">edit source</a><span class="mw-editsection-bracket">]</span></span></h1>
+<p>Nada más entrar en el portal vemos un listado de las startups que hay dadas de alta en el sistema. Arriba derecha tenemos la opción de logear o de crear una cuenta. Si creamos una cuenta (en caso de no tener cuenta) y logeamos tenemos dos opciones, acceder a las startups que hay en el listado para poder invertir en ellas o la opción de crear nuestra propia startup. Si le damos a crear startup (ver figura 3) esto nos abre una ventana de metamask donde tenemos el coste del gas y el límite de gas que tiene el proceso de crear esta startup. Tras aceptar, nuestra startup queda creada y aparece en el portal de entrada en el listado. Mientras no haya inversores podemos borrar la startup y volver a crear otra si así lo deseamos.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Metamask01.png"><img alt="" class="thumbimage" data-file-height="1080" data-file-width="1920" decoding="async" height="450" src="/pti/images/thumb/d/d9/Metamask01.png/800px-Metamask01.png" srcset="/pti/images/thumb/d/d9/Metamask01.png/1200px-Metamask01.png 1.5x, /pti/images/thumb/d/d9/Metamask01.png/1600px-Metamask01.png 2x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Metamask01.png" title="Enlarge"></a></div>Startups.</div></div></div></div>
+<p>Ahora supongamos que nosotros queremos invertir en una startup, accedemos a la que queramos en el portal (ver figura 4) e introducimos la cantidad de ethereum que queremos invertir y de nuevo se nos abre la ventana de metamask en este caso para el gas que vamos a utilizar para invertir en esta startup, una vez confirmamos se nos descuenta el gas y nuestra inversión queda guardada en la blockchain. Este es el funcionamiento básico de la aplicación
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a class="image" href="/pti/index.php/File:Metamask02.png"><img alt="" class="thumbimage" data-file-height="1080" data-file-width="1920" decoding="async" height="450" src="/pti/images/thumb/e/ea/Metamask02.png/800px-Metamask02.png" srcset="/pti/images/thumb/e/ea/Metamask02.png/1200px-Metamask02.png 1.5x, /pti/images/thumb/e/ea/Metamask02.png/1600px-Metamask02.png 2x" width="800"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/pti/index.php/File:Metamask02.png" title="Enlarge"></a></div>Inverion.</div></div></div></div>
+<p>En resumidas cuentas, así es como funciona CrowdChain, y así ofrecemos una gestión segura de las inversiones en las startups.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083838
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.012 seconds
+Real time usage: 0.015 seconds
+Preprocessor visited node count: 13/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:532-0!canonical and timestamp 20250710083838 and revision id 963
+ -->
+</div>

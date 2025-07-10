@@ -1,0 +1,70 @@
+<div class="mw-parser-output"><p><br/>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.C2.BFQu.C3.A8_.C3.A9s_MasterChef.3F"><span class="tocnumber">1</span> <span class="toctext">¿Què és MasterChef?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Tecnologia_utilitzada"><span class="tocnumber">2</span> <span class="toctext">Tecnologia utilitzada</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Chef"><span class="tocnumber">2.1</span> <span class="toctext">Chef</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Terraform"><span class="tocnumber">2.2</span> <span class="toctext">Terraform</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#API"><span class="tocnumber">2.3</span> <span class="toctext">API</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Com_funciona_el_nostre_servei_de_desplegament_d.27infraestructura_i_software.3F"><span class="tocnumber">3</span> <span class="toctext">Com funciona el nostre servei de desplegament d'infraestructura i software?</span></a></li>
+</ul>
+</div>
+<h2><span id="¿Què_és_MasterChef?"></span><span class="mw-headline" id=".C2.BFQu.C3.A8_.C3.A9s_MasterChef.3F">¿Què és MasterChef?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=1" title="Edit section: ¿Què és MasterChef?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=1" title="Edit section: ¿Què és MasterChef?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MasterChef és una empresa que s'encarrega de l'administració dels sistemes i que dins dels serveis que ofereix té el de desplegament d'infraestructures i software en un temps mínim i el manteniment constant d'aquest amb les versions més noves de programari sense la necessitat de preocupar-se. Això proporciona un nivell de seguretat molt alt que pot cobrir els buits de seguretat que hi ha als sistemes desactualitzats.
+Gràcies a l'utilització del programari Terraform i Chef i de les seves eines podem oferir als nostres clients el millor servei possible.
+</p><p><br/>
+</p>
+<h2><span class="mw-headline" id="Tecnologia_utilitzada">Tecnologia utilitzada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=2" title="Edit section: Tecnologia utilitzada">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=2" title="Edit section: Tecnologia utilitzada">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>La tecnologia utilitzada en el nostre projecte es basa en:
+</p>
+<ul><li>Chef: s'utilitza pel desplegament de programari en les diferents infraestructures creades.</li></ul>
+<ul><li>Terraform: aplicació que serveix per desplegar les màquines de forma fàcil i automatitzada. Té l'avantatge de ser compatible amb els principals cloud servers(AWS, Google Cloud, Azure).</li></ul>
+<ul><li>Google Cloud: plataforma cloud que utilitza MasterChef, es basa principalment en l'ús de Compute Engine per realitzar el deploy de les màquines. Es connecta amb Terraform per poder automatitzar el deploy.</li></ul>
+<ul><li>API: una API utilitzada per al processament de les dades rebudes per les execucions de Chef.</li></ul>
+<h3><span class="mw-headline" id="Chef">Chef</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=3" title="Edit section: Chef">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=3" title="Edit section: Chef">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Chef és una tecnologia de gestió de la configuració que s'utilitza per automatitzar l'aprovisionament d'infraestructura. Està desenvolupat sobre llenguatge Ruby DSL, un llenguatge declaratiu. S'utilitza per agilitzar la tasca de configuració i gestió dels servidors de les empreses. Té la capacitat d'integrar-se amb qualsevol tecnologia al núvol (AWS, Azure, Google Cloud).
+</p>
+<h3><span class="mw-headline" id="Terraform">Terraform</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=4" title="Edit section: Terraform">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=4" title="Edit section: Terraform">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Programari de HashiCorp utilitzat per poder realitzar el deploy de les màquines. Per al nostre projecte ens hem unit amb el proveïdor de cloud de Google. D'aquesta manera ens assegurem tenir màquines amb molta o poca potència depenent de les necessitats dels nostres clients. 
+Gràcies a la potència de Terraform podem configurar la màquina de infinitats de formes, podent modificar coses tan simples com el tipus de màquina (memòria ram i processadors que utilitzarà) fins modificar regles de firewall, crear noves xarxes dins de Google Cloud o fins i tot crear el nostre propi firewall.
+</p>
+<h3><span class="mw-headline" id="API">API</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=5" title="Edit section: API">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=5" title="Edit section: API">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La funció de l'API és recopilar els logs de les execucions de Chef, emmagatzemar-los i poder-los processar adequadament. Poder emmagatzemar i processar els outputs dels processos de forma automàtica ens permet obtenir un valor afegit adicional i ens proporciona vàries funcionalitats extres, com el control d’errors, la filtració d’informació rellevant, un històric de processos executats, etc.
+</p><p><br/>
+</p>
+<h2><span id="Com_funciona_el_nostre_servei_de_desplegament_d'infraestructura_i_software?"></span><span class="mw-headline" id="Com_funciona_el_nostre_servei_de_desplegament_d.27infraestructura_i_software.3F">Com funciona el nostre servei de desplegament d'infraestructura i software?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a class="mw-editsection-visualeditor" href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;veaction=edit&amp;section=6" title="Edit section: Com funciona el nostre servei de desplegament d'infraestructura i software?">edit</a><span class="mw-editsection-divider"> | </span><a href="/pti/index.php?title=Categor%C3%ADa:Masterchef&amp;action=edit&amp;section=6" title="Edit section: Com funciona el nostre servei de desplegament d'infraestructura i software?">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Donarem servei de la següent manera: 
+</p><p>Un client ens demana un servei necessari que es pot replicar fàcilment com pot, per exemple, ser dos servidor web de Nginx, dos servidors davant d'ambdós Nginx corrent Varnish i finalment dos balançejadors de càrrega com Haproxys que distribueixin la carrega entre els dos Varnish. En definitiva, un web en Nginx que tingui alta disponibilitat (HA).
+</p><p>Primer de tot, mitjançant un script de Terraform, creariem les sis màquines objectiu amb els recursos mínims per poder mantenir les necessitats de l'usuari i aquestes es crearàn en la nostra plataforma de Google Cloud. Amb això ja tindirem la part d'infraestructura creada, el que ens portaria més de 1 hora el desplegar i configurar cada servidor manualment nosaltres ho faiem en menys de 15 minuts.
+</p><p>Seguidament, des de la màquina workstation de Chef haurem d'instal·lar els cookbooks amb les configuracions pertinents en les màquines clients perquè puguin tenir tant Nginx, com Varnish, com Haproxy actualitzats en tot moment. El software s'instal·laria en els servidors corresponents i només acabar l'execució de totes les comandes, en menys de 10 minuts, tindriem tot el programari instal·lat i funcionant.
+</p><p>D'aquesta manera tenim totes les máquines amb el programari constantment actualitzat sense necessitat que l'usuari final hagi d'intervenir. Amb això reduïm temps i cost de mà d'obra per a les empreses perquè es tracta d'un procés molt automatitzat i lliure d'errors humans. 
+A més a més el desplegament de tot el programari en condicions normals i sense fer servir un sistema d'automatització ens portaria més de 4 hores sense problema, ja que sempre s'ha de passar un QA per tal de veure que tot funciona correctament. En canvi, utilitzant el software mencionat ho podem fer en menys de 30 minuts i amb la certesa de que tot estarà funcionant correctament ja que són idempotents.
+</p><p>També podriem veure els outputs de l'execució en la nostre API de manera que podriem veure si totes les característiques de les màquines objectiu són les desitjades.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20250710083839
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.005 seconds
+Real time usage: 0.006 seconds
+Preprocessor visited node count: 18/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key pti21:pcache:idhash:537-0!canonical and timestamp 20250710083839 and revision id 951
+ -->
+</div>
